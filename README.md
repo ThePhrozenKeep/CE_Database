@@ -1,4 +1,4 @@
-#The Phrozen Keep Code Editing database
+# The Phrozen Keep Code Editing database
 
 This repository is an attempt to centralize code editing knowledge of Diablo 2.
 The main objective is to be able to share things such as DLL ordinals names and structures more easily.
