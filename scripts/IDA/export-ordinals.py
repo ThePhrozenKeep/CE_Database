@@ -1,7 +1,6 @@
 # -----------------------------------------------------------------------
-# This is an example illustrating how to enumerate imports
-# (c) Hex-Rays
-#
+# IDA python script to export the dll exports ordinals information
+
 import idaapi
 import idautils
 
