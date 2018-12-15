@@ -27,7 +27,7 @@ def DumpExports():
     print "Found %d exports(s)..." % len(exportsList)
     inputFileBase = os.path.splitext(GetInputFile())[0]
     
-    outfileName = GetInputFile() + ".ordinals.h"
+    outfileName = GetInputFile() + ".exports.h"
     print "Dumping ordinals to " + outfileName
     outfile = file(outfileName,"w")
     
