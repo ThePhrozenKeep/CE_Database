@@ -2,32 +2,32 @@
 
 
 /// @ordinal 10000
-/// @name D2sound_10000
+/// @name OpenSoundSystem
 /// @address 6f9810e0
 /// @guessedtype int()
 
 /// @ordinal 10001
-/// @name D2sound_10001
+/// @name CloseSoundSystem
 /// @address 6f9821c0
 /// @guessedtype int()
 
 /// @ordinal 10002
-/// @name D2sound_10002
+/// @name GetDirectSound
 /// @address 6f9822b0
 /// @guessedtype int()
 
 /// @ordinal 10003
-/// @name D2sound_10003
+/// @name CheckSoundAvailable
 /// @address 6f9822c0
 /// @guessedtype int()
 
 /// @ordinal 10004
-/// @name D2sound_10004
+/// @name CheckSoundHasBuffers
 /// @address 6f9822d0
 /// @guessedtype int()
 
 /// @ordinal 10005
-/// @name D2sound_10005
+/// @name ReturnFalse
 /// @address 6f9822e0
 /// @guessedtype int()
 
@@ -37,94 +37,94 @@
 /// @guessedtype int()
 
 /// @ordinal 10007
-/// @name D2sound_10007
+/// @name CreateSoundSample
 /// @address 6f9836b0
-/// @guessedtype int()
+void *__fastcall CreateSoundSample(int nFlags);
 
 /// @ordinal 10008
-/// @name D2sound_10008
+/// @name DestroySoundSample
 /// @address 6f9838f0
-/// @guessedtype int()
+void __thiscall DestroySoundSample(SoundSample *ptSample);
 
 /// @ordinal 10009
 /// @name D2sound_10009
 /// @address 6f983a30
-/// @guessedtype int()
+void __usercall D2sound_10009(SoundSample *ptSample@<ecx>, double a2@<st0>);
 
 /// @ordinal 10010
 /// @name D2sound_10010
 /// @address 6f983cb0
-/// @guessedtype int __stdcall(int)
+signed int __fastcall D2sound_10010(SoundSample *ptSample, int pbWaveData, unsigned int dwWaveSize);
 
 /// @ordinal 10011
 /// @name D2sound_10011
 /// @address 6f983da0
-/// @guessedtype int()
+signed int __thiscall D2sound_10011(SoundSample *ptSample);
 
 /// @ordinal 10012
 /// @name D2sound_10012
 /// @address 6f983e10
-/// @guessedtype int()
+void __thiscall D2sound_10012(SoundSample *ptSample);
 
 /// @ordinal 10013
 /// @name D2sound_10013
 /// @address 6f983ee0
-/// @guessedtype int()
+int __thiscall D2sound_10013(SoundSample *this);
 
 /// @ordinal 10014
 /// @name D2sound_10014
 /// @address 6f983f80
-/// @guessedtype int()
+int __fastcall D2sound_10014(SoundSample *a1, int a2);
 
 /// @ordinal 10015
 /// @name D2sound_10015
 /// @address 6f984020
-/// @guessedtype int()
+int __thiscall D2sound_10015(SoundSample *this);
 
 /// @ordinal 10016
 /// @name D2sound_10016
 /// @address 6f984050
-/// @guessedtype int()
+int __fastcall D2sound_10016(SoundSample *ptSample, signed int a2);
 
 /// @ordinal 10017
 /// @name D2sound_10017
 /// @address 6f9840f0
-/// @guessedtype int __stdcall(int, int, int)
+int __thiscall D2sound_10017(SoundSample *ptSample, int a2, int a3, int a4);
 
 /// @ordinal 10018
 /// @name D2sound_10018
 /// @address 6f984140
-/// @guessedtype int()
+unsigned int __thiscall D2sound_10018(SoundSample *ptSample);
 
 /// @ordinal 10019
 /// @name D2sound_10019
 /// @address 6f9841c0
-/// @guessedtype int()
+void __fastcall D2sound_10019(SoundSample *ptSample, int a2);
 
 /// @ordinal 10020
-/// @name D2sound_10020
+/// @name SetSampleLoopBlockStart
 /// @address 6f9841f0
-/// @guessedtype int()
+void __fastcall SetSampleLoopBlockStart(SoundSample *ptSample, int dwLoopBlockStart);
 
 /// @ordinal 10021
 /// @name D2sound_10021
 /// @address 6f984220
-/// @guessedtype int __stdcall(int)
+void __thiscall D2sound_10021(SoundSample *ptSample, float a2);
 
 /// @ordinal 10022
 /// @name D2sound_10022
 /// @address 6f9842c0
-int __stdcall D2sound_10022(float);
+int __thiscall D2sound_10022(SoundSample *ptSample, float arg_8);
 
 /// @ordinal 10023
-/// @name D2sound_10023
+/// @name HasStreamFile
 /// @address 6f9843a0
-/// @guessedtype int()
+BOOL __thiscall HasStreamFile(SoundSample *ptSample);
 
 /// @ordinal 10024
 /// @name D2sound_10024
 /// @address 6f9845b0
-/// @guessedtype int __stdcall(int)
+void __fastcall D2sound_10024(SoundSample *ptSample, int a2, int a3);
 
 /// @ordinal 10025
 /// @name D2sound_10025
@@ -134,22 +134,22 @@ int __stdcall D2sound_10022(float);
 /// @ordinal 10026
 /// @name D2sound_10026
 /// @address 6f984870
-/// @guessedtype int()
+void __thiscall D2sound_10026(SoundSample *ptSample);
 
 /// @ordinal 10027
-/// @name D2sound_10027
+/// @name SetVolume
 /// @address 6f984630
-/// @guessedtype int()
+void __fastcall SetVolume(signed int nVolume);
 
 /// @ordinal 10028
-/// @name D2sound_10028
+/// @name GetVolume
 /// @address 6f984780
 /// @guessedtype int()
 
 /// @ordinal 10029
 /// @name D2sound_10029
 /// @address 6f9843d0
-/// @guessedtype int()
+void __fastcall D2sound_10029(int nDuration);
 
 /// @ordinal 10030
 /// @name D2sound_10030
@@ -172,7 +172,7 @@ int __stdcall D2sound_10022(float);
 /// @guessedtype int()
 
 /// @ordinal 10034
-/// @name D2sound_10034
+/// @name Stream_?
 /// @address 6f984d60
 /// @guessedtype int()
 
@@ -182,17 +182,17 @@ int __stdcall D2sound_10022(float);
 /// @guessedtype int()
 
 /// @ordinal 10036
-/// @name D2sound_10036
+/// @name InitSoundFast
 /// @address 6f982630
 /// @guessedtype int()
 
 /// @ordinal 10037
-/// @name D2sound_10037
+/// @name DestroySoundFast
 /// @address 6f9826a0
 /// @guessedtype int()
 
 /// @ordinal 10038
-/// @name D2sound_10038
+/// @name Fast_???
 /// @address 6f982750
 /// @guessedtype int()
 
@@ -217,64 +217,64 @@ int __stdcall D2sound_10022(float);
 /// @guessedtype int()
 
 /// @ordinal 10043
-/// @name D2sound_10043
+/// @name InitSoundSettings
 /// @address 6f9829a0
-/// @guessedtype int()
+void __fastcall InitSoundSettings(int nDefaultValue);
 
 /// @ordinal 10044
-/// @name D2sound_10044
+/// @name GetSoundMixer
 /// @address 6f982ad0
 /// @guessedtype int()
 
 /// @ordinal 10045
-/// @name D2sound_10045
+/// @name SetSoundMixer
 /// @address 6f982ae0
-/// @guessedtype int()
+void __fastcall SetSoundMixer(DWORD dwNewSoundMixer);
 
 /// @ordinal 10046
-/// @name D2sound_10046
+/// @name GetMasterVolume
 /// @address 6f982b00
 /// @guessedtype int()
 
 /// @ordinal 10047
-/// @name D2sound_10047
+/// @name SetMasterVolume
 /// @address 6f982b10
-/// @guessedtype int()
+void __fastcall SetMasterVolume(DWORD dwNewMasterVolume);
 
 /// @ordinal 10048
-/// @name D2sound_10048
+/// @name GetMusicVolume
 /// @address 6f982b30
 /// @guessedtype int()
 
 /// @ordinal 10049
-/// @name D2sound_10049
+/// @name SetMusicVolume
 /// @address 6f982b40
-/// @guessedtype int()
+void __thiscall SetMusicVolume(DWORD dwNewMusicVolume);
 
 /// @ordinal 10050
-/// @name D2sound_10050
+/// @name GetPositionalBias
 /// @address 6f982b60
 /// @guessedtype int()
 
 /// @ordinal 10051
-/// @name D2sound_10051
+/// @name SetPositionalBias
 /// @address 6f982b70
-/// @guessedtype int()
+void __fastcall SetPositionalBias(DWORD dwNewPositionalBias);
 
 /// @ordinal 10052
-/// @name D2sound_10052
+/// @name GetNPCSpeech
 /// @address 6f982b90
 /// @guessedtype int()
 
 /// @ordinal 10053
-/// @name D2sound_10053
+/// @name SetNPCSpeech
 /// @address 6f982ba0
-/// @guessedtype int()
+void __fastcall SetNPCSpeech(DWORD dwNewNPCSpeech);
 
 /// @ordinal 10054
-/// @name D2sound_10054
+/// @name GainToDirectSoundDecibel
 /// @address 6f984e30
-int __stdcall D2sound_10054(float, float, float);
+long double __stdcall GainToDirectSoundDecibel(float fMinVolume, float fMaxVolume, float fValue);
 
 /// @ordinal 10055
 /// @name D2sound_10055
@@ -292,39 +292,39 @@ int __stdcall D2sound_10055(float);
 int __stdcall D2sound_10057(float, float, float);
 
 /// @ordinal 10058
-/// @name D2sound_10058
+/// @name CreateSoundInstance
 /// @address 6f985140
-/// @guessedtype int()
+void __fastcall CreateSoundInstance(SoundInstance **pOutpSoundInstance, SoundSample *ptSoundSample);
 
 /// @ordinal 10059
-/// @name D2sound_10059
+/// @name DestroySampleInstances
 /// @address 6f985180
-/// @guessedtype int()
+void __fastcall DestroySampleInstances(SoundInstance **ptSoundInstancesHead, SoundSample *ptSampleToDestroy);
 
 /// @ordinal 10060
-/// @name D2sound_10060
+/// @name SampleHasInstance
 /// @address 6f9851d0
-/// @guessedtype int()
+BOOL __fastcall SampleHasInstance(SoundInstance *ptSoundInstance, SoundSample *ptSample);
 
 /// @ordinal 10061
-/// @name D2sound_10061
+/// @name CountNbSoundInstances
 /// @address 6f9851f0
-/// @guessedtype int()
+int __fastcall CountNbSoundInstances(SoundInstance *ptSoundInstance);
 
 /// @ordinal 10062
-/// @name D2sound_10062
+/// @name DestroyAllSoundInstances
 /// @address 6f985200
-/// @guessedtype int()
+void __thiscall DestroyAllSoundInstances(SoundInstance **ptptSoundInstancesHead);
 
 /// @ordinal 10063
-/// @name D2sound_10063
+/// @name AddNewInstanceToList
 /// @address 6f985250
-/// @guessedtype int()
+SoundInstance *__fastcall AddNewInstanceToList(SoundInstance **pInOutSoundInstance, SoundSample *a2);
 
 /// @ordinal 10064
 /// @name D2sound_10064
 /// @address 6f983f10
-/// @guessedtype int()
+int __thiscall D2sound_10064(SoundSample *this);
 
 /// @ordinal 10065
 /// @name D2sound_10065
@@ -332,27 +332,27 @@ int __stdcall D2sound_10057(float, float, float);
 /// @guessedtype int()
 
 /// @ordinal 10066
-/// @name D2sound_10066
+/// @name CheckSoundFastInitialized
 /// @address 6f982990
 /// @guessedtype int()
 
 /// @ordinal 10067
-/// @name D2Sound_10068
+/// @name D2sound_10068_Noop
 /// @address 6f9848e0
 /// @guessedtype int()
 
 /// @ordinal 10068
-/// @name D2sound_10068
+/// @name Noop
 /// @address 6f9848e0
 /// @guessedtype int()
 
 /// @ordinal 10069
-/// @name D2sound_10069
+/// @name CheckOptionsMusicEnabled
 /// @address 6f982bc0
-/// @guessedtype int()
+BOOL __cdecl CheckOptionsMusicEnabled();
 
 /// @ordinal 10070
-/// @name D2sound_10070
+/// @name SetOptionsMusicEnabled
 /// @address 6f982bd0
-/// @guessedtype int()
+void __fastcall SetOptionsMusicEnabled(BOOL newOptionsMusic);
 
