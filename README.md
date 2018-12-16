@@ -16,3 +16,26 @@ The `misc` folder can be used for DLLs that are not linked to a specific version
 
 This is an early export of some private databases, and is expected to have naming issues.
 Feel free to report / fix those.
+
+## Credits
+
+This could not have been done without the amazing help and work of the Phrozen Keep community!
+Non exhaustive list of members who helped putting this together (alphabetical order):
+
+ * @FearedBliss
+ * @Firehawk
+ * @Kingpin
+ * @Lectem
+ * @misiek1294
+ * @Mnw1995
+ * @Myhrginoc
+ * @Necrolis
+ * @Nefarius
+ * @Ogodei
+ * Paul Siramy
+ * @SVR
+ * @Szumigajowy
+ * @whist
+ * ...
+
+If you think you should be on this list, reach us on the forum, discord, or open a pull request!
