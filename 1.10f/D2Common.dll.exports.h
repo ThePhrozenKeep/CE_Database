@@ -167,9 +167,9 @@ void *__stdcall GetWallTilesFromRoom(D2RoomStrc *pRoom, int *pWallCount);
 void *__stdcall GetRoofTilesFromRoom(D2RoomStrc *pRoom, int *pRoofCount);
 
 /// @ordinal 10033
-/// @name D2Common_10033
+/// @name DUNGEON_GetTileDataFromAct
 /// @address 6fd8bba0
-/// @guessedtype int __stdcall(int)
+D2DrlgTileDataStrc *__stdcall DUNGEON_GetTileDataFromAct(D2DrlgActStrc *pAct);
 
 /// @ordinal 10034
 /// @name GetRoomCoordStrc
@@ -182,9 +182,9 @@ void __stdcall GetRoomCoordStrc(D2RoomStrc *pRoom, D2RoomCoordStrc *pCoord);
 void __stdcall GetLevelRoomList(D2RoomStrc *pRoom, D2RoomStrc ***pppRoom, int *pNumRooms);
 
 /// @ordinal 10036
-/// @name D2Common_10036
+/// @name GetAlliedCountFromRoom
 /// @address 6fd8c4f0
-/// @guessedtype int __stdcall(int)
+int __stdcall GetAlliedCountFromRoom(D2RoomStrc *pRoom);
 
 /// @ordinal 10037
 /// @name GetTownIdFromAct
@@ -202,24 +202,24 @@ D2DrlgActStrc *__stdcall AllocAct(BYTE nActNo, DWORD nInitSeed, BOOL bClient, D2
 void __stdcall FreeAct(D2DrlgActStrc *pAct);
 
 /// @ordinal 10040
-/// @name D2Common_10040
+/// @name DUNGEON_DoRoomsTouchOrOverlap
 /// @address 6fd8bd90
-/// @guessedtype int __stdcall(int, int)
+bool __stdcall DUNGEON_DoRoomsTouchOrOverlap(D2RoomStrc *ptFirst, D2RoomStrc *ptSecond);
 
 /// @ordinal 10041
-/// @name FindRoomForUnit
+/// @name DUNGEON_FindRoomByCoordinates
 /// @address 6fd8c240
-D2RoomStrc *__stdcall FindRoomForUnit(D2DrlgActStrc *pAct, int nX, int nY);
+D2RoomStrc *__stdcall DUNGEON_FindRoomByCoordinates(D2DrlgActStrc *pAct, int nX, int nY);
 
 /// @ordinal 10042
-/// @name sgptDataTable_6FDD6A20
+/// @name sgptDataTable
 /// @address 6fdd6a20
-D2DataTablesStrc *sgptDataTable_6FDD6A20;
+D2DataTablesStrc *sgptDataTable;
 
 /// @ordinal 10043
-/// @name D2Common_10043
+/// @name DUNGEON_AreCoordinatesInsideRoom
 /// @address 6fd8be30
-bool __stdcall D2Common_10043(D2RoomStrc *pRoom, int nX, int nY);
+bool __stdcall DUNGEON_AreCoordinatesInsideRoom(D2RoomStrc *pRoom, int nX, int nY);
 
 /// @ordinal 10044
 /// @name D2Common_10044
@@ -247,9 +247,9 @@ int __stdcall GetTombStaffLevel(D2DrlgActStrc *pAct);
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10049
-/// @name CallRoomCallbacks
+/// @name DUNGEON_ForEachRoom
 /// @address 6fd8bff0
-void __stdcall CallRoomCallbacks(D2RoomStrc *pRoom, FARPROC lpfn, void *a3);
+void __stdcall DUNGEON_ForEachRoom(D2RoomStrc *pRoom, FARPROC pfnRoomCallback, void *a3);
 
 /// @ordinal 10050
 /// @name D2Common_10050
@@ -267,9 +267,9 @@ int __stdcall D2Common_10051(int a1, int nX, int nY);
 void __stdcall D2Common_10052(D2RoomStrc *pRoom, RECT *pRect);
 
 /// @ordinal 10053
-/// @name D2Common_10053
+/// @name DUNGEON_GetSubtileRect
 /// @address 6fd8c170
-void __stdcall D2Common_10053(D2RoomStrc *pRoom, RECT *pRect);
+void __stdcall DUNGEON_GetSubtileRect(D2RoomStrc *pRoom, RECT *pRect);
 
 /// @ordinal 10054
 /// @name GetRGB_IntensityFromRoom
@@ -487,9 +487,9 @@ int __stdcall D2Common_10095(D2RoomStrc *pRoom, int nX, int nY);
 int __stdcall D2Common_10096(D2RoomStrc *pRoom, int nX, int nY);
 
 /// @ordinal 10097
-/// @name D2Common_10097
+/// @name DUNGEON_GetRoomCoordList
 /// @address 6fd8d3c0
-int __stdcall D2Common_10097(D2RoomStrc *pRoom);
+int __stdcall DUNGEON_GetRoomCoordList(D2RoomStrc *pRoom);
 
 /// @ordinal 10098
 /// @name D2Common_10098
@@ -532,9 +532,9 @@ void __stdcall D2Common_10104(D2RoomStrc *pRoom);
 void __stdcall D2Common_10105(D2DrlgActStrc *pAct, D2RoomStrc *pRoom1, D2RoomStrc *pRoom2);
 
 /// @ordinal 10106
-/// @name D2Common_10106
+/// @name DUNGEON_SaveKilledUnitGUID
 /// @address 6fd8d600
-void __stdcall D2Common_10106(D2RoomStrc *pRoom, int nUnitGUID);
+void __stdcall DUNGEON_SaveKilledUnitGUID(D2RoomStrc *pRoom, int nUnitGUID);
 
 /// @ordinal 10107
 /// @name D2Common_10107
@@ -617,9 +617,9 @@ __int16 __stdcall D2Common_10121(D2RoomStrc *pRoom, int nX, int nY, int nCollisi
 signed int __stdcall D2Common_10122(D2RoomStrc *pRoom, int nX, int nY, int nCollisionPattern, int nCollisionType);
 
 /// @ordinal 10123
-/// @name D2Common_10123
+/// @name COLLISION_ResetMask
 /// @address 6fd417f0
-void __stdcall D2Common_10123(D2RoomStrc *pNumRooms, int nX, int nY, __int16 nCollisionType);
+void __stdcall COLLISION_ResetMask(D2RoomStrc *pNumRooms, int nX, int nY, __int16 nCollisionType);
 
 /// @ordinal 10124
 /// @name D2Common_10124
@@ -632,14 +632,14 @@ void __stdcall D2Common_10124(D2RoomStrc *pRoom, int nX, int nY, int nUnitSize, 
 /// @guessedtype int __stdcall(D2RoomStrc *pRoom, int pNumRooms, D2RoomStrc **pppRoom, int, int, __int16 nCollisionType)
 
 /// @ordinal 10126
-/// @name D2Common_10126
+/// @name COLLISION_10126
 /// @address 6fd43e60
-void __stdcall D2Common_10126(D2RoomStrc *pRoom, int nX, int nY, int nCollisionPattern, int nCollisionType);
+void __stdcall COLLISION_10126(D2RoomStrc *pRoom, int nX, int nY, int nCollisionPattern, int nCollisionType);
 
 /// @ordinal 10127
-/// @name D2Common_10127
+/// @name COLLISION_SetMask
 /// @address 6fd41720
-void __stdcall D2Common_10127(D2RoomStrc *pRoom, int nX, int nY, __int16 nCollisionType);
+void __stdcall COLLISION_SetMask(D2RoomStrc *pRoom, int nX, int nY, __int16 nCollisionType);
 
 /// @ordinal 10128
 /// @name D2Common_10128
@@ -1629,7 +1629,7 @@ void __stdcall UNITS_SetUsedSkill(D2UnitStrc *pUnit, D2SkillStrc *pUsedSkill);
 /// @ordinal 10325
 /// @name UNITS_SetAnimData
 /// @address 6fdbe4c0
-void __stdcall UNITS_SetAnimData(D2UnitStrc *pUnit, int a2, int a3, int nMode);
+void __stdcall UNITS_SetAnimData(D2UnitStrc *pUnit, int nUnitType, int nClassId, int nMode);
 
 /// @ordinal 10327
 /// @name UNITS_GetPrecisionX
@@ -1897,9 +1897,9 @@ void __stdcall UNITS_GetShiftedFrameMetrics(D2UnitStrc *pUnit, int *pFrameNo, in
 void __stdcall UNITS_GetFrameMetrics(D2UnitStrc *pUnit, int *pFrame, int *pFrameCount);
 
 /// @ordinal 10381
-/// @name D2Common_10381
+/// @name UNITS_SetAnimActionFrame
 /// @address 6fdbfa40
-void __stdcall D2Common_10381(D2UnitStrc *pUnit, signed int nFrame);
+void __stdcall UNITS_SetAnimActionFrame(D2UnitStrc *pUnit, signed int nFrame);
 
 /// @ordinal 10382
 /// @name GetEventFrameInfo
@@ -2117,29 +2117,29 @@ char *__stdcall UNITS_GetPlayerName(D2UnitStrc *pUnit);
 D2PlayerDataStrc *__stdcall UNITS_GetPlayerData(D2UnitStrc *pUnit);
 
 /// @ordinal 10425
-/// @name D2Common_10425
+/// @name UNITS_SetPlayerPortalFlags
 /// @address 6fdc0600
-void __stdcall D2Common_10425(D2UnitStrc *pUnit, int a2);
+void __stdcall UNITS_SetPlayerPortalFlags(D2UnitStrc *pUnit, int a2);
 
 /// @ordinal 10426
-/// @name D2Common_10426
+/// @name UNITS_GetPlayerPortalFlags
 /// @address 6fdc0660
-DWORD __stdcall D2Common_10426(D2UnitStrc *pUnit);
+DWORD __stdcall UNITS_GetPlayerPortalFlags(D2UnitStrc *pUnit);
 
 /// @ordinal 10427
-/// @name UNITS_GetPortalFlags
+/// @name UNITS_GetObjectPortalFlags
 /// @address 6fdc0700
-BYTE __stdcall UNITS_GetPortalFlags(D2UnitStrc *pUnit);
+BYTE __stdcall UNITS_GetObjectPortalFlags(D2UnitStrc *pUnit);
 
 /// @ordinal 10428
-/// @name UNITS_SetPortalFlags
+/// @name UNITS_SetObjectPortalFlags
 /// @address 6fdc0760
-void __stdcall UNITS_SetPortalFlags(D2UnitStrc *pUnit, BYTE nPortalFlag);
+void __stdcall UNITS_SetObjectPortalFlags(D2UnitStrc *pUnit, BYTE nPortalFlag);
 
 /// @ordinal 10429
-/// @name UNITS_CheckPortalFlag
+/// @name UNITS_CheckObjectPortalFlag
 /// @address 6fdc07c0
-bool __stdcall UNITS_CheckPortalFlag(D2UnitStrc *pUnit, BYTE nFlag);
+bool __stdcall UNITS_CheckObjectPortalFlag(D2UnitStrc *pUnit, BYTE nFlag);
 
 /// @ordinal 10430
 /// @name UNITS_GetOverlayHeight
@@ -2887,9 +2887,9 @@ D2NpcTxt *__stdcall GetNpcTxtRecord(DWORD dwNpcId);
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10592
-/// @name D2Common_10592
+/// @name GetMonsterChainInfo
 /// @address 6fd64c40
-int __stdcall D2Common_10592(int nMonsterId, int *a2, int *a3);
+int __stdcall GetMonsterChainInfo(int nMonsterId, int *pMaxChainId, int *pChainId);
 
 /// @ordinal 10593
 /// @name GetCharstatsTxtTable
@@ -4127,9 +4127,9 @@ BOOL __stdcall D2Common_10860(D2UnitStrc *pItem, D2RareAffixTxt *pRareAffixTxtRe
 BOOL __stdcall D2Common_10861(D2UnitStrc *pItem, D2QualityItemsTxt *pQualityItemsTxtRecord);
 
 /// @ordinal 10862
-/// @name D2Common_10862
+/// @name ITEMS_ElixiInitStats
 /// @address 6fd95e90
-void __stdcall D2Common_10862(D2UnitStrc *pItem);
+void __stdcall ITEMS_ElixiInitStats(D2UnitStrc *pItem);
 
 /// @ordinal 10865
 /// @name ApplyEthereality
@@ -4442,14 +4442,14 @@ DWORD __stdcall ENVIRONMENT_GetimeRateFromAct(D2DrlgActStrc *pAct);
 char __stdcall ENVIRONMENT_SetNextTimeRate(D2DrlgActStrc *pAct, D2RoomStrc *pRoom);
 
 /// @ordinal 10936
-/// @name ENVIRONMENT_TaintSunBegin
+/// @name ENVIRONMENT_TaintedSunBegin
 /// @address 6fd8e1b0
-void __stdcall ENVIRONMENT_TaintSunBegin(D2DrlgActStrc *pAct);
+void __stdcall ENVIRONMENT_TaintedSunBegin(D2DrlgActStrc *pAct);
 
 /// @ordinal 10937
-/// @name ENVIRONMENT_TaintSunEnd
+/// @name ENVIRONMENT_TaintedSunEnd
 /// @address 6fd8e1e0
-void __stdcall ENVIRONMENT_TaintSunEnd(D2DrlgActStrc *pAct);
+void __stdcall ENVIRONMENT_TaintedSunEnd(D2DrlgActStrc *pAct);
 
 /// @ordinal 10938
 /// @name SKILLS_GetPassiveState
@@ -4562,14 +4562,14 @@ int __stdcall D2Common_10959(D2UnitStrc *pUnit);
 void __stdcall SKILLS_FreeSkillList(D2UnitStrc *pUnit);
 
 /// @ordinal 10961
-/// @name D2Common_10961
+/// @name SKILLS_SetLeftActiveSkill
 /// @address 6fdb09a0
-void __stdcall D2Common_10961(D2UnitStrc *pUnit, int nSkillId, int nFlags);
+void __stdcall SKILLS_SetLeftActiveSkill(D2UnitStrc *pUnit, int nSkillId, int nFlags);
 
 /// @ordinal 10962
-/// @name D2Common_10962
+/// @name SKILLS_SetRightActiveSkill
 /// @address 6fdb0a30
-void __stdcall D2Common_10962(D2UnitStrc *pUnit, int nSkillId, int nFlags);
+void __stdcall SKILLS_SetRightActiveSkill(D2UnitStrc *pUnit, int nSkillId, int nFlags);
 
 /// @ordinal 10963
 /// @name SKILLS_GetSkillIdFromSkill
@@ -5592,14 +5592,14 @@ D2MonSoundsTxt *__stdcall GetMonSoundsTxtRecord(int nMonsterId);
 D2MonSoundsTxt *__stdcall GetMonSoundsTxtRecord(int nSoundId);
 
 /// @ordinal 11255
-/// @name D2Common_11255
+/// @name GetCodeFromCompCodeTxt
 /// @address 6fd49660
-DWORD __stdcall D2Common_11255(int nCompCode);
+DWORD __stdcall GetCodeFromCompCodeTxt(int nCompCode);
 
 /// @ordinal 11256
-/// @name D2Common_11256
+/// @name GetMonPresetTxtActSection
 /// @address 6fd6ef30
-D2MonPresetTxt *__stdcall D2Common_11256(int nAct, int *a2);
+D2MonPresetTxt *__stdcall GetMonPresetTxtActSection(int nAct, int *a2);
 
 /// @ordinal 11257
 /// @name GetSuperUniquesTxtRecordCount
@@ -5607,9 +5607,9 @@ D2MonPresetTxt *__stdcall D2Common_11256(int nAct, int *a2);
 int __fastcall GetSuperUniquesTxtRecordCount();
 
 /// @ordinal 11258
-/// @name D2Common_11258
+/// @name MapSuperUniqueId
 /// @address 6fd6ef70
-int __stdcall D2Common_11258(int nMonsterType, int nMonsterId);
+int __stdcall MapSuperUniqueId(int nMonsterType, int nMonsterId);
 
 /// @ordinal 11259
 /// @name UNITS_AllocUnit
