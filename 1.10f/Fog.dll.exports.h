@@ -12,9 +12,9 @@ int __thiscall Fog_10000(SOCKET s);
 /// @guessedtype int()
 
 /// @ordinal 10002
-/// @name Fog_10002
+/// @name WSACleanup
 /// @address 6ff632c0
-int __stdcall Fog_10002();
+int __stdcall WSACleanup();
 
 /// @ordinal 10003
 /// @name Fog_10003
@@ -99,7 +99,7 @@ char *sprintf(char *destBuffer, const char *formatSring, ...);
 /// @ordinal 10019
 /// @name Fog_10019
 /// @address 6ff5e1b0
-/// @guessedtype int __stdcall(int, int)
+int __stdcall Fog_10019(int, int);
 
 /// @ordinal 10020
 /// @name Fog_10020
@@ -124,37 +124,37 @@ void Assertion(const char *Msg, const char *szFile, int nLine, ...);
 /// @ordinal 10024
 /// @name Fog_10024
 /// @address 6ff5ed60
-/// @guessedtype int __cdecl(int, int, int)
+/// @guessedtype int __cdecl(int, char *szFile, int nLine)
 
 /// @ordinal 10025
 /// @name Fog_10025
 /// @address 6ff5ed90
-/// @guessedtype int __cdecl(int, int, int)
+/// @guessedtype int __cdecl(int, char *szFile, int nLine)
 
 /// @ordinal 10026
 /// @name Fog_10026
 /// @address 6ff5edf0
-/// @guessedtype int __cdecl(int, int, int, int)
+/// @guessedtype int __cdecl(char *Msg, int, char *szFile, int nLine)
 
 /// @ordinal 10027
 /// @name Fog_10027
 /// @address 6ff5edc0
-/// @guessedtype int __cdecl(int, int)
+/// @guessedtype int __cdecl(char *szFile, int)
 
 /// @ordinal 10028
 /// @name Fog_10028
 /// @address 6ff5f100
-/// Failed to extract type
+void Fog_10028(int outputCategory, const char *szFile, const char *unk, int nLine, ...);
 
 /// @ordinal 10029
-/// @name Fog_10029
+/// @name PostToDebugFile
 /// @address 6ff620a0
-int __cdecl Fog_10029(char *);
+void PostToDebugFile(const char *format, ...);
 
 /// @ordinal 10030
 /// @name Fog_10030
 /// @address 6ff620e0
-int __cdecl Fog_10030(int, char *);
+void Fog_10030(int a1, const char *format, ...);
 
 /// @ordinal 10031
 /// @name Fog_10031
@@ -239,7 +239,7 @@ int __fastcall Fog_10045(int a1, int dwSize, char *sourceFile, int sourceLine, i
 /// @ordinal 10047
 /// @name Fog_10047
 /// @address 6ff59060
-/// @guessedtype int __stdcall(char, int, int, int)
+/// @guessedtype int __stdcall(char, char *szFile, int nLine, int)
 
 /// @ordinal 10048
 /// @name Fog_10243
@@ -1192,9 +1192,9 @@ void __fastcall GFXUTIL_GenerateGammaRamp(DWORD nGammaValue, void *pRamp, double
 /// @guessedtype int()
 
 /// @ordinal 10238
-/// @name Fog_10238
+/// @name LogToUnk
 /// @address 6ff621c0
-int __cdecl Fog_10238(int, char *);
+void LogToUnk(int a1, const char *format, ...);
 
 /// @ordinal 10239
 /// @name Fog_10239
