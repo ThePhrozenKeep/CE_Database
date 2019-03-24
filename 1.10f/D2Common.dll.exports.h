@@ -1942,14 +1942,14 @@ void __stdcall D2Common_10388(D2RoomStrc *pRoom);
 BOOL __stdcall UNITROOM_IsUnitInRoom(D2RoomStrc *pRoom, D2UnitStrc *pUnit);
 
 /// @ordinal 10390
-/// @name D2Common_10390
+/// @name UNITROOM_RemoveUnitFromRoomEx
 /// @address 6fdbd250
-void __stdcall D2Common_10390(D2UnitStrc *pUnit);
+void __stdcall UNITROOM_RemoveUnitFromRoomEx(D2UnitStrc *pUnit);
 
 /// @ordinal 10391
-/// @name D2Common_10391
+/// @name UNITROOM_ClearUpdateQueue
 /// @address 6fdbd2b0
-void __stdcall D2Common_10391(D2RoomStrc *pRoom);
+void __stdcall UNITROOM_ClearUpdateQueue(D2RoomStrc *pRoom);
 
 /// @ordinal 10392
 /// @name UNITS_IsDoor
@@ -1977,14 +1977,14 @@ D2ShrinesTxt *__stdcall UNITS_GetShrineTxtRecordFromObject(D2UnitStrc *pUnit);
 void __stdcall UNITS_SetShrineTxtRecordInObjectData(D2UnitStrc *pUnit, D2ShrinesTxt *pTxt);
 
 /// @ordinal 10397
-/// @name UNITS_GetDistance
+/// @name UNITS_GetDistanceToOtherUnit
 /// @address 6fdc2e40
-int __stdcall UNITS_GetDistance(D2UnitStrc *pUnit, D2UnitStrc *pOtherUnit);
+int __stdcall UNITS_GetDistanceToOtherUnit(D2UnitStrc *pUnit, D2UnitStrc *pOtherUnit);
 
 /// @ordinal 10398
-/// @name D2Common_10398
+/// @name UNITS_GetDistanceToCoordinates
 /// @address 6fdc2f50
-int __stdcall D2Common_10398(D2UnitStrc *pUnit, int nX, int nY);
+int __stdcall UNITS_GetDistanceToCoordinates(D2UnitStrc *pUnit, int nX, int nY);
 
 /// @ordinal 10399
 /// @name D2Common_10399
@@ -2907,9 +2907,9 @@ D2ArenaTxt *__fastcall GetArenaTxtRecord(int nArenaType);
 signed int __stdcall D2Common_10597(int nItemId);
 
 /// @ordinal 10599
-/// @name GetItemsTxtRecordCountPtr
+/// @name GetItemsTxt
 /// @address 6fd57620
-int *__stdcall GetItemsTxtRecordCountPtr();
+D2ItemDataTbl *__stdcall GetItemsTxt();
 
 /// @ordinal 10600
 /// @name GetItemsTxtRecord
@@ -2937,9 +2937,9 @@ D2MagicAffixInfoStrc *__stdcall GetMagicAffixInfo();
 D2MagicAffixTxt *__stdcall GetAffixTxtRecord(int nIndex);
 
 /// @ordinal 10605
-/// @name GetRareSuffixPrefixRecordCountPtr
+/// @name GetRareAffixTxt
 /// @address 6fd58480
-int *__fastcall GetRareSuffixPrefixRecordCountPtr();
+D2RareAffixDataTbl *__fastcall GetRareAffixTxt();
 
 /// @ordinal 10606
 /// @name GetRareSuffixPrefixTxtRecord
@@ -2947,9 +2947,9 @@ int *__fastcall GetRareSuffixPrefixRecordCountPtr();
 D2RareAffixTxt *__stdcall GetRareSuffixPrefixTxtRecord(int nId);
 
 /// @ordinal 10611
-/// @name GetQualityItemsTxtRecordCountPtr
+/// @name GetQualityItemsTxt
 /// @address 6fd5b260
-int *__fastcall GetQualityItemsTxtRecordCountPtr();
+D2QualityItemDataTbl *__fastcall GetQualityItemsTxt();
 
 /// @ordinal 10612
 /// @name GetQualityItemsTxtRecord
@@ -2957,9 +2957,9 @@ int *__fastcall GetQualityItemsTxtRecordCountPtr();
 D2QualityItemsTxt *__stdcall GetQualityItemsTxtRecord(int nIndex);
 
 /// @ordinal 10613
-/// @name GetLowQualityItemsRecordCountPtr
+/// @name GetLowQualityItemsTxt
 /// @address 6fd5be50
-int *__fastcall GetLowQualityItemsRecordCountPtr();
+D2LowQualityItemDataTbl *__fastcall GetLowQualityItemsTxt();
 
 /// @ordinal 10614
 /// @name GetLowQualityItemsTxtRecord
@@ -2967,9 +2967,9 @@ int *__fastcall GetLowQualityItemsRecordCountPtr();
 D2LowQualityItemsTxt *__stdcall GetLowQualityItemsTxtRecord(int nId);
 
 /// @ordinal 10615
-/// @name GetGemsTxtRecordCountPtr
+/// @name GetGemsTxt
 /// @address 6fd5baf0
-int *__fastcall GetGemsTxtRecordCountPtr();
+D2GemDataTbl *__fastcall GetGemsTxt();
 
 /// @ordinal 10616
 /// @name GetGemsTxtRecord
@@ -2977,9 +2977,9 @@ int *__fastcall GetGemsTxtRecordCountPtr();
 D2GemsTxt *__stdcall GetGemsTxtRecord(int nGemId);
 
 /// @ordinal 10617
-/// @name GetBooksTxtRecordCountPtr
+/// @name GetBooksTxt
 /// @address 6fd5bd20
-int *__fastcall GetBooksTxtRecordCountPtr();
+D2BookDataTbl *__fastcall GetBooksTxt();
 
 /// @ordinal 10618
 /// @name GetBooksTxtRecord
@@ -2987,9 +2987,9 @@ int *__fastcall GetBooksTxtRecordCountPtr();
 D2BooksTxt *__stdcall GetBooksTxtRecord(int nBookId);
 
 /// @ordinal 10619
-/// @name GetRunesTxtRecordCountPtr
+/// @name GetRunesTxt
 /// @address 6fd5e9e0
-int *__fastcall GetRunesTxtRecordCountPtr();
+D2RuneDataTbl *__fastcall GetRunesTxt();
 
 /// @ordinal 10620
 /// @name GetRunesTxtRecord
@@ -2997,14 +2997,14 @@ int *__fastcall GetRunesTxtRecordCountPtr();
 D2RunesTxt *__stdcall GetRunesTxtRecord(int nRunewordId);
 
 /// @ordinal 10621
-/// @name D2Common_10621
+/// @name SetRunesTxtRecord
 /// @address 6fd5e9f0
-void __stdcall D2Common_10621(int nRecords, D2RunesTxt *pRecord);
+void __stdcall SetRunesTxtRecord(int nRecordIdx, D2RunesTxt *pRecord);
 
 /// @ordinal 10622
-/// @name GetItemRatioTxtRecordCountPtr
+/// @name GetItemRatioTxt
 /// @address 6fd5c210
-int *__fastcall GetItemRatioTxtRecordCountPtr();
+D2ItemRatioDataTbl *__fastcall GetItemRatioTxt();
 
 /// @ordinal 10623
 /// @name GetItemRatioTxtRecord
@@ -3077,9 +3077,9 @@ void __stdcall GetRectFromInventoryTxt(int nInventoryTxtId, int bHigherRes, D2In
 void __stdcall DATATBLS_GetInventoryGridInfo(int nInventoryRecordId, BOOL bHigherRes, D2InventoryGridInfoStrc *pInventoryGridInfo);
 
 /// @ordinal 10637
-/// @name D2Common_10637
+/// @name GetInventoryComponentGrid
 /// @address 6fd55030
-void __stdcall D2Common_10637(int nInventoryTxtId, int bHigherRes, D2InvCompGridStrc *pInvCompGrid, int nComponent);
+void __stdcall GetInventoryComponentGrid(int nInventoryTxtId, int bHigherRes, D2InvCompGridStrc *pInvCompGrid, int nComponent);
 
 /// @ordinal 10638
 /// @name DATATBLS_GetBeltsTxtRecord
@@ -3087,9 +3087,9 @@ void __stdcall D2Common_10637(int nInventoryTxtId, int bHigherRes, D2InvCompGrid
 void __stdcall DATATBLS_GetBeltsTxtRecord(int nIndex, int bHigherRes, D2BeltsTxt *pBeltsTxtRecord);
 
 /// @ordinal 10639
-/// @name D2Common_10639
+/// @name DATATBLS_GetInvRectFromBeltsTxt
 /// @address 6fd49420
-void __stdcall D2Common_10639(int nIndex, int bHigherRes, D2InvRectStrc *pInvRect, int a4);
+void __stdcall DATATBLS_GetInvRectFromBeltsTxt(int nIndex, int bHigherRes, D2InvRectStrc *pInvRect, int a4);
 
 /// @ordinal 10640
 /// @name SetAnimDataSpeed
@@ -3102,24 +3102,24 @@ int __stdcall SetAnimDataSpeed(D2UnitStrc *pUnit, int animSpeed);
 signed int __stdcall GetAnimDataSpeedAndUnk(char *szPath, int *pLength, int *pOutAnimSpeed, int *pOutFirstFrameTagged);
 
 /// @ordinal 10642
-/// @name D2Common_10642
+/// @name SetVelocityInMonStatsTxtRecord
 /// @address 6fd689b0
-/// @guessedtype int __stdcall(__int16, int)
+__int16 __stdcall SetVelocityInMonStatsTxtRecord(int nMonsterId, WORD nVelocity);
 
 /// @ordinal 10643
-/// @name GetPlrMode_TypeTxtRecordCountPtr
+/// @name GetPlrMode_TypeTxt
 /// @address 6fd73150
-int *__fastcall GetPlrMode_TypeTxtRecordCountPtr();
+D2PlrModeDataTbl *__fastcall GetPlrMode_TypeTxt();
 
 /// @ordinal 10644
-/// @name GetMonModeTxtRecordCountPtr
+/// @name GetMonModeTxt
 /// @address 6fd73160
-int *__fastcall GetMonModeTxtRecordCountPtr();
+D2MonModeDataTbl *__fastcall GetMonModeTxt();
 
 /// @ordinal 10645
-/// @name GetObjMode_TypeTxtRecordCountPtr
+/// @name GetObjMode_TypeTxt
 /// @address 6fd73170
-int *__fastcall GetObjMode_TypeTxtRecordCountPtr();
+D2ObjModeDataTbl *__fastcall GetObjMode_TypeTxt();
 
 /// @ordinal 10646
 /// @name DATATBLS_GetPlrModeTypeTxtRecord
@@ -3147,24 +3147,24 @@ D2CompositTxt *__cdecl GetCompositTxtRecord(int nComposit);
 D2ArmTypeTxt *__stdcall GetArmtypeTxtRecord(int nId);
 
 /// @ordinal 10651
-/// @name D2Common_10651
+/// @name RollRandomUniqueTitleString
 /// @address 6fd68a10
-wchar_t *__fastcall D2Common_10651(D2UnitStrc *pUnit);
+wchar_t *__fastcall RollRandomUniqueTitleString(D2UnitStrc *pUnit);
 
 /// @ordinal 10652
-/// @name D2Common_10652
+/// @name RollRandomUniquePrefixString
 /// @address 6fd68a80
-wchar_t *__fastcall D2Common_10652(D2UnitStrc *pUnit);
+wchar_t *__fastcall RollRandomUniquePrefixString(D2UnitStrc *pUnit);
 
 /// @ordinal 10653
-/// @name D2Common_10653
+/// @name RollRandomUniqueSuffixString
 /// @address 6fd68af0
-wchar_t *__fastcall D2Common_10653(D2UnitStrc *pUnit);
+wchar_t *__fastcall RollRandomUniqueSuffixString(D2UnitStrc *pUnit);
 
 /// @ordinal 10654
-/// @name D2Common_10654
+/// @name RollRandomUniqueAppellationString
 /// @address 6fd68b60
-wchar_t *__fastcall D2Common_10654(D2UnitStrc *pUnit);
+wchar_t *__fastcall RollRandomUniqueAppellationString(D2UnitStrc *pUnit);
 
 /// @ordinal 10655
 /// @name GetDifficultyLevelsTxtRecord
@@ -3177,9 +3177,9 @@ D2DifficultyLevelsTxt *__stdcall GetDifficultyLevelsTxtRecord(int nDifficulty);
 int __stdcall ShouldNeverCallInExpansion();
 
 /// @ordinal 10658
-/// @name D2Common_10658
+/// @name GetTreasureClassExFromName
 /// @address 6fd68dc0
-/// @guessedtype int __stdcall(char *szText)
+D2TCExShortStrc *__stdcall GetTreasureClassExFromName(char *szName);
 
 /// @ordinal 10659
 /// @name GetTCExTxtRecord
@@ -3197,9 +3197,9 @@ D2TCExShortStrc *__stdcall GetTreasureClassEx(int nDifficulty, int nAct, int nIn
 int __stdcall D2Common_11079_Return0(int arg, int a2);
 
 /// @ordinal 10662
-/// @name GetMonItemPercentTxtRecordCountPtr
+/// @name GetMonItemPercentTxt
 /// @address 6fd69c50
-int *__fastcall GetMonItemPercentTxtRecordCountPtr();
+D2MonItemPercentDataTbl *__fastcall GetMonItemPercentTxt();
 
 /// @ordinal 10663
 /// @name GetMonItemPercentTxtRecord
@@ -3217,9 +3217,9 @@ int __fastcall GetCharTemplateTxtRecordCount();
 D2CharTemplateTxt *__fastcall GetCharTemplateTxtRecord(int nTemplate, int a2);
 
 /// @ordinal 10666
-/// @name D2Common_10666
+/// @name GetClassFromCharTemplateTxtRecord
 /// @address 6fd48810
-int __fastcall D2Common_10666(int nTemplate, int a2);
+int __fastcall GetClassFromCharTemplateTxtRecord(int nTemplate, int nLevel);
 
 /// @ordinal 10667
 /// @name UNUSED_Return0
@@ -3232,9 +3232,9 @@ int __stdcall UNUSED_Return0(int a1, int a2);
 D2SuperUniquesTxt *__stdcall GetSuperUniquesTxtRecord(int nSuperUniqueId);
 
 /// @ordinal 10671
-/// @name GetGambleTxtRecordCountPtr
+/// @name GetGambleTxt
 /// @address 6fd5d7f0
-int *__fastcall GetGambleTxtRecordCountPtr();
+D2GambleDataTbl *__cdecl GetGambleTxt();
 
 /// @ordinal 10674
 /// @name GetFramesFromOverlayTxt
@@ -4987,9 +4987,9 @@ BOOL __stdcall MONSTERS_IsUndead(D2UnitStrc *pUnit);
 DWORD __stdcall D2Common_11060(D2MonStatsTxt *pMonStatsTxt, D2UnitStrc *pUnit);
 
 /// @ordinal 11061
-/// @name D2Common_11061
+/// @name GetMinionSpawnInfo
 /// @address 6fda5b30
-void __stdcall D2Common_11061(D2UnitStrc *pMonster, int *pId, int *pX, int *pY, int *a5, int a6, int (__fastcall *pfCallback)(D2UnitStrc *));
+void __stdcall GetMinionSpawnInfo(D2UnitStrc *pMonster, int *pId, int *pX, int *pY, int *a5, int a6, int (__fastcall *pfCallback)(D2UnitStrc *));
 
 /// @ordinal 11062
 /// @name D2Common_11077_Return
@@ -5007,14 +5007,14 @@ int __stdcall D2Common_11063(D2RoomStrc *pRoom, int nMonsterId);
 int __stdcall MONSTERS_IsDead(D2UnitStrc *pUnit);
 
 /// @ordinal 11065
-/// @name D2Common_11065
+/// @name MONSTERS_IsPrimeEvil
 /// @address 6fda6620
-BOOL __stdcall D2Common_11065(D2UnitStrc *pMonster);
+BOOL __stdcall MONSTERS_IsPrimeEvil(D2UnitStrc *pMonster);
 
 /// @ordinal 11066
-/// @name D2Common_11066
+/// @name MONSTERS_GetMissileDirectionFromTurretMonster
 /// @address 6fda6680
-void __stdcall D2Common_11066(D2UnitStrc *pMonster, int *a2, int *a3);
+void __stdcall MONSTERS_GetMissileDirectionFromTurretMonster(D2UnitStrc *pMonster, int *pDirectionX, int *pDirectionY);
 
 /// @ordinal 11067
 /// @name MONSTERS_GetHirelingTypeId
