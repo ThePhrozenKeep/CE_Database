@@ -647,9 +647,9 @@ void __stdcall COLLISION_SetMask(D2RoomStrc *pRoom, int nX, int nY, __int16 nCol
 void __stdcall D2Common_10128(D2RoomStrc *pRoom, int nX, int nY, int nUnitSize, int nCollisionType);
 
 /// @ordinal 10129
-/// @name D2Common_10129
+/// @name UpdateCollisionMask
 /// @address 6fd443e0
-void __stdcall D2Common_10129(D2RoomStrc *pRoom, int nX, int nY, unsigned int nSizeX, unsigned int nSizeY, int nCollisionType);
+void __stdcall UpdateCollisionMask(D2RoomStrc *pRoom, int nX, int nY, unsigned int nSizeX, unsigned int nSizeY, int nCollisionType);
 
 /// @ordinal 10130
 /// @name D2Common_10130
@@ -1397,9 +1397,9 @@ D2UnitStrc *__stdcall GetFirstItemInInventory(D2InventoryStrc *pInventory);
 D2UnitStrc *__stdcall GetLastItemInInventory(D2InventoryStrc *pInventory);
 
 /// @ordinal 10279
-/// @name D2Common_10279
+/// @name INVENTORY_CleanInventory
 /// @address 6fd90910
-void __stdcall D2Common_10279(D2InventoryStrc *pInventory);
+void __stdcall INVENTORY_CleanInventory(D2InventoryStrc *pInventory);
 
 /// @ordinal 10280
 /// @name INVENTORY_GetFirstInventoryNode
@@ -1742,14 +1742,14 @@ BOOL __stdcall UNITS_ChangeAnimMode(D2UnitStrc *pUnit, int nMode);
 void __stdcall SetAnimStartFrame(D2UnitStrc *pUnit);
 
 /// @ordinal 10350
-/// @name D2Common_10350
+/// @name UNITS_SetUnitPathTarget
 /// @address 6fdbe1a0
-void __stdcall D2Common_10350(D2UnitStrc *pUnit, D2RoomStrc *pRoom, int nX, int nY);
+void __stdcall UNITS_SetUnitPathTarget(D2UnitStrc *pUnit, D2RoomStrc *pRoom, int nX, int nY);
 
 /// @ordinal 10351
-/// @name D2Common_10351
+/// @name UNITS_UpdateCollisionMaskForUnit
 /// @address 6fdbe060
-void __stdcall D2Common_10351(D2UnitStrc *pUnit, D2RoomStrc *pRoom, int nX, int nY);
+void __stdcall UNITS_UpdateCollisionMaskForUnit(D2UnitStrc *pUnit, D2RoomStrc *pRoom, int nX, int nY);
 
 /// @ordinal 10352
 /// @name UNITS_SetNoCollision
@@ -2369,7 +2369,7 @@ void __stdcall D2Common_10474(D2UnitStrc *pUnit, D2StatListExStrc *pStatList);
 /// @ordinal 10475
 /// @name PostStatToStatList
 /// @address 6fdb7340
-void __stdcall PostStatToStatList(D2UnitStrc *pUnit, D2StatListExStrc *pStatList, int a3);
+void __stdcall PostStatToStatList(D2UnitStrc *pUnit, D2StatListStrc *pStatList, BOOL bReset);
 
 /// @ordinal 10476
 /// @name D2Common_10528_STATLIST_SetExpireFrame
@@ -2577,9 +2577,9 @@ void __stdcall MergeStatlist(D2UnitStrc *pTarget, D2UnitStrc *pUnit, BOOL bType)
 void __stdcall ExpireUnitStatlist(D2UnitStrc *pOwner, D2UnitStrc *pUnit);
 
 /// @ordinal 10525
-/// @name D2Common_10525
+/// @name ITEMS_AddGemToSocket
 /// @address 6fdb8f30
-void __stdcall D2Common_10525(D2UnitStrc *a1, int a2);
+void __stdcall ITEMS_AddGemToSocket(D2UnitStrc *pItemGem, D2UnitStrc *pItemToSocket);
 
 /// @ordinal 10526
 /// @name AllocStatListEx
@@ -4142,14 +4142,14 @@ void __stdcall ApplyEthereality(D2UnitStrc *pUnit);
 BOOL __stdcall ITEMS_Last(D2UnitStrc *pPlayer, D2UnitStrc *pItem, int a3, int a4);
 
 /// @ordinal 10867
-/// @name D2Common_10867
+/// @name ITEMS_UpdateRuneword
 /// @address 6fd959f0
-BOOL __stdcall D2Common_10867(D2UnitStrc *pUnit, D2UnitStrc *pItem, int nUnused);
+BOOL __stdcall ITEMS_UpdateRuneword(D2UnitStrc *pUnit, D2UnitStrc *pItem, int nUnused);
 
 /// @ordinal 10868
 /// @name D2Common_10868
 /// @address 6fd95f90
-void __stdcall D2Common_10868(D2UnitStrc *pItem, D2PropertyStrc *pProperty, int nUnused);
+void __stdcall D2Common_10868(D2UnitStrc *pItem, D2PropertyStrc *pProperty, BOOL bExpansion);
 
 /// @ordinal 10875
 /// @name GetItemFormat
@@ -5777,9 +5777,9 @@ int __stdcall D2Common_11290(D2UnitStrc *pMissile, D2UnitStrc *pOwner, int, int 
 void __stdcall D2Common_11291(D2DynamicPathStrc *pDynamicPath, int a2);
 
 /// @ordinal 11292
-/// @name ItemAssignProperty
+/// @name ITEMS_ItemAssignProperty
 /// @address 6fd98160
-void __stdcall ItemAssignProperty(int nType, D2UnitStrc *pUnit, D2UnitStrc *pItem, void *pMods, int nIndex, int nPropSet, D2PropertyStrc *pProperty, int nState, int fStatlist, int nSubType);
+void __stdcall ITEMS_ItemAssignProperty(D2C_PropertyModes nPropertyMode, D2UnitStrc *pUnit, D2UnitStrc *pItem, void *pMods, int nIndex, int nPropSet, D2PropertyStrc *pProperty, int nState, int fStatlist, int nSubType);
 
 /// @ordinal 11293
 /// @name D2Common_11293
