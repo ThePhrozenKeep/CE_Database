@@ -1,0 +1,5 @@
+ReleaseDDThreadLock
+AcquireDDThreadLock
+DDInternalUnlock
+D3DParseUnknownCommand
+DDInternalLock

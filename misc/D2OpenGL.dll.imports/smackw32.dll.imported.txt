@@ -1,0 +1,8 @@
+_SmackToBuffer@28
+_SmackOpen@12
+_SmackSoundUseDirectSound@4
+_SmackSoundUseMSS@4
+_SmackNextFrame@4
+_SmackClose@4
+_SmackDoFrame@4
+_SmackWait@4

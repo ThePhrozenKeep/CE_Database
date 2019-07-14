@@ -1,0 +1,11 @@
+ImmGetContext
+ImmReleaseContext
+ImmGetOpenStatus
+ImmGetCompositionStringA
+ImmIsIME
+ImmGetCandidateListA
+ImmGetCandidateListCountA
+ImmGetConversionStatus
+ImmSimulateHotKey
+ImmSetConversionStatus
+ImmSetOpenStatus

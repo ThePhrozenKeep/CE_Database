@@ -1,0 +1,7 @@
+wvsprintfA
+SetRect
+DrawTextA
+MoveWindow
+PeekMessageA
+TranslateMessage
+DispatchMessageA

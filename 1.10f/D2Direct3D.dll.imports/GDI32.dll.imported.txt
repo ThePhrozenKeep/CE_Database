@@ -1,0 +1,11 @@
+CreateFontA
+CreateBitmap
+SelectObject
+SetTextColor
+SetBkColor
+SetBkMode
+GetPixel
+CreateDCA
+DeleteObject
+DeleteDC
+GetCharWidthA

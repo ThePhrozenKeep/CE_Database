@@ -1,0 +1,6 @@
+GetCursorPos
+PeekMessageA
+TranslateMessage
+DispatchMessageA
+wsprintfA
+MessageBoxA

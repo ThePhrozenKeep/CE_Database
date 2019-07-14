@@ -1,0 +1,16 @@
+CreateFontA
+SetTextColor
+SetBkColor
+SetBkMode
+CreatePalette
+CreateDIBSection
+DeleteObject
+DeleteDC
+GdiFlush
+BitBlt
+RealizePalette
+SelectPalette
+SetDIBColorTable
+SelectObject
+CreateCompatibleDC
+SetPaletteEntries

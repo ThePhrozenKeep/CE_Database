@@ -1,0 +1,15 @@
+GetPixel
+CreateDCA
+CreateFontA
+CreateBitmap
+SelectObject
+SetTextColor
+SetBkColor
+SetBkMode
+SwapBuffers
+GetCharWidthA
+DeleteObject
+DeleteDC
+GetStockObject
+ChoosePixelFormat
+SetPixelFormat

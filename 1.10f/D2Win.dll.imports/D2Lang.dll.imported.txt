@@ -1,0 +1,15 @@
+?utf8ToUnicode@Unicode@@SIPAU1@PAU1@PBDH@Z
+?isLineBreak@Unicode@@SIHPBU1@I@Z
+?strnicmp@Unicode@@SIHPBU1@0I@Z
+?strncmp@Unicode@@SIHPBU1@0I@Z
+?strncpy@Unicode@@SIPAU1@PAU1@PBU1@H@Z
+?sprintf@Unicode@@SAXHPAU1@PBU1@ZZ
+??_FUnicode@@QAEXXZ
+?strcpy@Unicode@@SIPAU1@PAU1@PBU1@@Z
+?strcat@Unicode@@SIPAU1@PAU1@PBU1@@Z
+?win2Unicode@Unicode@@SIPAU1@PAU1@PBDH@Z
+?strlen@Unicode@@SIHPBU1@@Z
+?toUnicode@Unicode@@SIPAU1@PAU1@PBDH@Z
+?unicode2Win@Unicode@@SIPADPADPBU1@H@Z
+10004
+10007

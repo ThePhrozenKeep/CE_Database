@@ -1,0 +1,2 @@
+GdiSetBatchLimit
+GetStockObject

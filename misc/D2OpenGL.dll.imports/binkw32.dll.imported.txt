@@ -1,0 +1,16 @@
+_BinkOpen@8
+_BinkOpenDirectSound@4
+_BinkNextFrame@4
+_BinkBufferBlit@12
+_BinkGetRects@8
+_BinkBufferUnlock@4
+_BinkCopyToBuffer@28
+_BinkBufferLock@4
+_BinkDoFrame@4
+_BinkOpenMiles@4
+_BinkSetSoundSystem@8
+_BinkWait@4
+_BinkBufferOpen@16
+_BinkClose@4
+_BinkBufferSetOffset@12
+_BinkSetVolume@8

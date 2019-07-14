@@ -1,0 +1,4 @@
+?Realm@BNGatewayAccess@@QAGPADH@Z
+?Name@BNGatewayAccess@@QAGPADH@Z
+?SetCurGateway@BNGatewayAccess@@QAGXH@Z
+?SaveAndUnload@BNGatewayAccess@@QAGXXZ

@@ -1,0 +1,7 @@
+RegCreateKeyExA
+RegSetValueExA
+RegCloseKey
+RegDeleteValueA
+RegOpenKeyExA
+RegQueryValueExA
+RegFlushKey

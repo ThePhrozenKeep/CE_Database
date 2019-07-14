@@ -1,0 +1,5 @@
+wvsprintfA
+SetRect
+DrawTextA
+GetDC
+ReleaseDC

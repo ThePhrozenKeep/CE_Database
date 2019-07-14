@@ -1,0 +1,6 @@
+_SmackToBuffer@28
+_SmackNextFrame@4
+_SmackClose@4
+_SmackOpen@12
+_SmackDoFrame@4
+_SmackWait@4

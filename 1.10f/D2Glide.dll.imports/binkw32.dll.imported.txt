@@ -1,0 +1,8 @@
+_BinkDoFrame@4
+_BinkSetSoundSystem@8
+_BinkOpen@8
+_BinkClose@4
+_BinkWait@4
+_BinkOpenDirectSound@4
+_BinkCopyToBuffer@28
+_BinkNextFrame@4

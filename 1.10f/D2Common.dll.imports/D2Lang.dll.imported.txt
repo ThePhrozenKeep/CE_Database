@@ -1,0 +1,11 @@
+?unicode2Win@Unicode@@SIPADPADPBU1@H@Z
+??_FUnicode@@QAEXXZ
+?strlen@Unicode@@SIHPBU1@@Z
+?strncpy@Unicode@@SIPAU1@PAU1@PBU1@H@Z
+?strcat@Unicode@@SIPAU1@PAU1@PBU1@@Z
+?strcpy@Unicode@@SIPAU1@PAU1@PBU1@@Z
+?toUnicode@Unicode@@SIPAU1@PAU1@PBDH@Z
+10003
+10004
+10007
+10013

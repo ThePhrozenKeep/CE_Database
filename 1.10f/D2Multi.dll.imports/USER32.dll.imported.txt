@@ -1,0 +1,4 @@
+SetRect
+GetDesktopWindow
+SetForegroundWindow
+wsprintfA

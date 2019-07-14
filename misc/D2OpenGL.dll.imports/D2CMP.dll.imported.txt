@@ -1,0 +1,11 @@
+CelGetOffsetY
+CelGetHeight
+CelSetHardwareFreeCallback
+D2CMPSpriteValidate
+D2CMPTileValidate
+TileSetHardwareFreeCallback
+CelGetHandle
+CelDraw
+CelGetHardwareData
+CelGetOffsetX
+CelGetWidth
