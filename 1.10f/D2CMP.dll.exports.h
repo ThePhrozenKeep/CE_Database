@@ -1,4 +1,15 @@
 // List of D2CMP.dll exports (base address 6fdf0000)
+// For each of the other .DLLs, here are the number of imports of the current module exports:
+// (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)
+// |- D2Direct3D.dll   :  10
+// |- D2Gdi.dll        :  11
+// |- D2Glide.dll      :  10
+// |- D2Common.dll     :   8
+// |- D2DDraw.dll      :  11
+// |- D2Win.dll        :  14
+// |- D2Game.dll       :   1
+// |- D2Client.dll     :  35
+// |- D2OpenGL.dll     :  11
 
 
 /// @ordinal 10000

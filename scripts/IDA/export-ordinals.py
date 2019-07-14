@@ -27,7 +27,7 @@ def LoadDllsImportForModule(moduleName):
         ordinalsFileName = os.path.join(directoryName, moduleName + ".imported.txt")
         try:
             ordinalsFile = file(ordinalsFileName, "r")
-            importedOrdinalList = [x.strip() for x in ordinalsFile.readlines()]
+            importedOrdinalList = [x.strip() for x in ordinalsFile.readlines() if x]
             if len(importedOrdinalList):
                 importers[importerName] = importedOrdinalList
                 print "Found %d imports in %s" %(len(importedOrdinalList),directoryName)
@@ -43,6 +43,14 @@ def GetImportersList(modulesImportsList, ordinal, name):
             importers.append(moduleName)
     return importers
 
+def PrintImportersStats(outfile, modulesImportsList):
+    if modulesImportsList:
+        print >> outfile, "// For each of the other .DLLs, here are the number of imports of the current module exports:"
+        print >> outfile, "// (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)"
+        for moduleName, importsList in modulesImportsList.iteritems():
+            print >> outfile, "// |- {:16} : {:>3}".format(moduleName, len(importsList))
+    else:
+        print >> outfile, "// No dll referencing the current module exports was found."
 
 def DumpExport(outfile, inputFileBase, modulesImportsList, exp_index, exp_ordinal, exp_ea, exp_name, invalidFormatNames):
     print >> outfile, "/// @ordinal {}".format(exp_ordinal)
@@ -94,7 +102,10 @@ def DumpAllExports():
     print "Dumping ordinals to " + outfileName
     outfile = file(outfileName,"w")
 
-    print >> outfile, "// List of {} exports (base address {:x})\n\n".format(GetInputFile(),baseaddr)
+    print >> outfile, "// List of {} exports (base address {:x})".format(GetInputFile(),baseaddr)
+    PrintImportersStats(outfile, modulesImportsList)
+    print >> outfile, "\n"
+
     for exp_index, exp_ordinal, exp_ea, exp_name in list(idautils.Entries()):
         if exp_name == "DllEntryPoint":
             continue

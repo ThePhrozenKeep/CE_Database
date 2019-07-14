@@ -1,4 +1,7 @@
 // List of D2Game.dll exports (base address 6fc30000)
+// For each of the other .DLLs, here are the number of imports of the current module exports:
+// (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)
+// |- D2Client.dll     :  13
 
 
 /// @ordinal 10001

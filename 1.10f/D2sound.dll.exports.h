@@ -1,4 +1,13 @@
 // List of D2sound.dll exports (base address 6f980000)
+// For each of the other .DLLs, here are the number of imports of the current module exports:
+// (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)
+// |- D2Launch.dll     :  11
+// |- D2Direct3D.dll   :   1
+// |- D2Glide.dll      :   1
+// |- D2Multi.dll      :   5
+// |- D2DDraw.dll      :   1
+// |- D2Win.dll        :   8
+// |- D2Client.dll     :  43
 
 
 /// @ordinal 10000

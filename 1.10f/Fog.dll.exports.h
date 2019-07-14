@@ -1,4 +1,23 @@
 // List of Fog.dll exports (base address 6ff50000)
+// For each of the other .DLLs, here are the number of imports of the current module exports:
+// (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)
+// |- D2gfx.dll        :   7
+// |- D2Launch.dll     :  25
+// |- D2Direct3D.dll   :   8
+// |- D2OpenGL.dll     :   1
+// |- D2Gdi.dll        :   4
+// |- D2Glide.dll      :   6
+// |- D2MCPClient.dll  :  15
+// |- D2CMP.dll        :  23
+// |- D2CMPd.dll       :  28
+// |- D2Common.dll     :  44
+// |- D2Multi.dll      :  14
+// |- D2DDraw.dll      :   8
+// |- D2sound.dll      :   9
+// |- D2Win.dll        :  27
+// |- D2Game.dll       :  31
+// |- D2Client.dll     :  55
+// |- D2Lang.dll       :  10
 
 
 /// @ordinal 10000

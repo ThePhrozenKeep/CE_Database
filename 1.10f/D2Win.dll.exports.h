@@ -1,4 +1,9 @@
 // List of D2Win.dll exports (base address 6f8a0000)
+// For each of the other .DLLs, here are the number of imports of the current module exports:
+// (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)
+// |- D2Multi.dll      :  77
+// |- D2Launch.dll     :  81
+// |- D2Client.dll     :  40
 
 
 /// @ordinal 10000

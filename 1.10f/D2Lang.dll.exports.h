@@ -1,4 +1,12 @@
 // List of D2Lang.dll exports (base address 6fc10000)
+// For each of the other .DLLs, here are the number of imports of the current module exports:
+// (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)
+// |- D2Launch.dll     :  19
+// |- D2Common.dll     :  11
+// |- D2Multi.dll      :  17
+// |- D2Win.dll        :  15
+// |- D2Game.dll       :   2
+// |- D2Client.dll     :  24
 
 
 /// @ordinal 10000

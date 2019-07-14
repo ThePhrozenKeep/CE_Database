@@ -1,4 +1,5 @@
 // List of D2Client.dll exports (base address 6faa0000)
+// No dll referencing the current module exports was found.
 
 
 /// @ordinal 10001

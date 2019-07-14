@@ -1,4 +1,10 @@
 // List of D2gfx.dll exports (base address 6faa0000)
+// For each of the other .DLLs, here are the number of imports of the current module exports:
+// (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)
+// |- D2Launch.dll     :   1
+// |- D2sound.dll      :   1
+// |- D2Win.dll        :  32
+// |- D2Client.dll     :  53
 
 
 /// @ordinal 10000

@@ -1,4 +1,23 @@
 // List of Storm.dll exports (base address 6ffb0000)
+// For each of the other .DLLs, here are the number of imports of the current module exports:
+// (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)
+// |- D2gfx.dll        :   1
+// |- D2Launch.dll     :  19
+// |- D2Direct3D.dll   :   7
+// |- D2OpenGL.dll     :   2
+// |- D2Gdi.dll        :   3
+// |- D2Glide.dll      :   5
+// |- Fog.dll          :  31
+// |- D2MCPClient.dll  :   2
+// |- D2CMP.dll        :   7
+// |- D2Common.dll     :   4
+// |- D2Multi.dll      :   8
+// |- D2DDraw.dll      :   7
+// |- D2sound.dll      :   8
+// |- D2Win.dll        :  17
+// |- D2Game.dll       :   8
+// |- D2Client.dll     :  35
+// |- D2Lang.dll       :   4
 
 
 /// @ordinal 101
