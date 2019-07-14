@@ -709,7 +709,7 @@ DWORD __fastcall Fog_10116(LPSTR lpFilename, DWORD nSize);
 /// @ordinal 10141
 /// @name Fog_10141
 /// @address 6ff54040
-/// @guessedtype int __stdcall(int, int)
+/// @guessedtype int __stdcall(__int64)
 
 /// @ordinal 10142
 /// @name Fog_10142
@@ -1274,7 +1274,7 @@ int __fastcall Fog_10251(void *lp, int);
 /// @ordinal 10254
 /// @name Fog_10254
 /// @address 6ff524f0
-/// @guessedtype int __stdcall(int, int, int, int, int, int)
+int __stdcall Fog_10254(const char *szFormulaString, _BYTE *pOutBuffer, int nOutBufferSize, int (__thiscall *pfnFunctionNameToId)(char *), int (__thiscall *a5)(int), int (__fastcall *a6)(char *, BOOL *, int, int));
 
 /// @ordinal 10255
 /// @name Fog_10255
@@ -1299,12 +1299,12 @@ int __fastcall Fog_10251(void *lp, int);
 /// @ordinal 10259
 /// @name gdwBitMasks
 /// @address 6ff71308
-int gdwBitMasks[];
+_BYTE gdwBitMasks[128];
 
 /// @ordinal 10260
 /// @name gdwInvBitMasks
 /// @address 6ff71388
-int gdwInvBitMasks[];
+_BYTE gdwInvBitMasks[128];
 
 /// @ordinal 10261
 /// @name gfTimeCriticalSections

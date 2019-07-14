@@ -887,9 +887,9 @@ PalShift *__fastcall GetPL2Shift(int variation);
 /// @guessedtype int()
 
 /// @ordinal 10177
-/// @name D2Win_10177
+/// @name LoadActPalette
 /// @address 6f8ae550
-int __fastcall D2Win_10177(unsigned __int8 actIndex);
+int __fastcall LoadActPalette(unsigned __int8 actIndex);
 
 /// @ordinal 10178
 /// @name D2Win_10178

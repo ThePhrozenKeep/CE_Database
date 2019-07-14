@@ -97,14 +97,14 @@ void __thiscall ??_FUnicode@@QAEXXZ(wchar_t *this);
 /// @guessedtype int __stdcall(int, int, int)
 
 /// @ordinal 10019
-/// @name 
+/// @name ?_toLowerTable@Unicode@@0PAGA
 /// @address 6fc1d508
-__int16[];
+__int16 ?_toLowerTable@Unicode@@0PAGA[];
 
 /// @ordinal 10020
-/// @name 
+/// @name ?_toUpperTable@Unicode@@0PAGA
 /// @address 6fc1d308
-__int16[];
+__int16 ?_toUpperTable@Unicode@@0PAGA[];
 
 /// @ordinal 10021
 /// @name ?compare@Unicode@@QBEHU1@@Z
@@ -167,7 +167,7 @@ int __thiscall ?isWhitespace@Unicode@@QBEHXZ(wchar_t *this);
 signed int __fastcall ?loadSysMap@Unicode@@SIHPAUHD2ARCHIVE__@@PBD@Z(int a1, char *szFileName);
 
 /// @ordinal 10033
-/// @name 
+/// @name ?sprintf@Unicode@@SAXHPAU1@PBU1@ZZ
 /// @address 6fc11670
 /// Failed to extract type
 

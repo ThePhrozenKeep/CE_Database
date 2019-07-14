@@ -854,7 +854,7 @@ int __stdcall SRegLoadString(DWORD Type, DWORD cbData, int, LPSTR, int);
 /// @ordinal 423
 /// @name SRegLoadValue
 /// @address 6ffd5ac0
-BOOL __stdcall SRegLoadValue(char *keyname, char *valuename, int a3, int value);
+BOOL __stdcall SRegLoadValue(const char *keyname, const char *valuename, int a3, DWORD *value);
 
 /// @ordinal 424
 /// @name SRegSaveData
@@ -869,7 +869,7 @@ BOOL __stdcall SRegSaveString(char *keyname, char *valuename, BYTE flags, char *
 /// @ordinal 426
 /// @name SRegSaveValue
 /// @address 6ffd5d80
-BOOL __stdcall SRegSaveValue(char *keyname, char *valuename, BYTE flags, DWORD result);
+BOOL __stdcall SRegSaveValue(const char *keyname, const char *valuename, BYTE flags, DWORD result);
 
 /// @ordinal 427
 /// @name SRegGetBaseKey

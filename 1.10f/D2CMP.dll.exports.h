@@ -392,9 +392,9 @@ void __stdcall D2SetLRUHardwareFreeCallback(void (__fastcall *a1)(struct_ptTile 
 int __stdcall D2GetTileOrientation(struct_ptTile *hTile);
 
 /// @ordinal 10078
-/// @name D2GetTileIndex
+/// @name D2GetTileIndex_Style
 /// @address 6fdfff30
-int __stdcall D2GetTileIndex(struct_ptTile *hTile);
+int __stdcall D2GetTileIndex_Style(struct_ptTile *hTile);
 
 /// @ordinal 10079
 /// @name D2GetTileFlags
@@ -407,14 +407,14 @@ int __stdcall D2GetTileFlags(struct_ptTile *hTile);
 int __stdcall D2GetTileWidth(struct_ptTile *hTile);
 
 /// @ordinal 10081
-/// @name D2GetTileFrame
+/// @name TileGetRarity
 /// @address 6fdfffc0
-int __stdcall D2GetTileFrame(struct_ptTile *hTile);
+int __stdcall TileGetRarity(struct_ptTile *hTile);
 
 /// @ordinal 10082
-/// @name D2GetTileSubIndex
+/// @name D2GetTileSubIndex_Sequence
 /// @address 6fdffff0
-int __stdcall D2GetTileSubIndex(struct_ptTile *hTile);
+int __stdcall D2GetTileSubIndex_Sequence(struct_ptTile *hTile);
 
 /// @ordinal 10083
 /// @name D2GetTileDirection
@@ -422,14 +422,14 @@ int __stdcall D2GetTileSubIndex(struct_ptTile *hTile);
 int __stdcall D2GetTileDirection(struct_ptTile *hTile);
 
 /// @ordinal 10084
-/// @name D2GetTileHeight
+/// @name D2GetTileTotalHeight
 /// @address 6fe00050
-int __stdcall D2GetTileHeight(struct_ptTile *hTile);
+int __stdcall D2GetTileTotalHeight(struct_ptTile *hTile);
 
 /// @ordinal 10085
-/// @name D2GetTileFlagArray
+/// @name TileGetCollisionInfo
 /// @address 6fe00080
-int __stdcall D2GetTileFlagArray(struct_ptTile *hTile);
+TileCollisionInfo *__stdcall TileGetCollisionInfo(struct_ptTile *hTile);
 
 /// @ordinal 10086
 /// @name D2GetTileUnknown
@@ -442,9 +442,9 @@ int __stdcall D2GetTileUnknown(struct_ptTile *hTile);
 struct_ptTileProject *__stdcall D2LoadTileLibrarySlot(D2TileLibraryHashStrc **ptTileLibrary, const char *szName);
 
 /// @ordinal 10088
-/// @name D2GetTileSize
+/// @name TileLibraryGetTiles
 /// @address 6fdffe70
-int __stdcall D2GetTileSize(D2TileLibraryHashStrc **__attribute__((__org_arrdim(0,32))) ptTileLibrary, int nOrientation, int nIndex, int nSubIndex, void *pTileList, int nSize);
+int __stdcall TileLibraryGetTiles(TileLibrary *ptTileLibrary, int nOrientation, int nIndex, int nSubIndex, void **pTileList, int nSize);
 
 /// @ordinal 10089
 /// @name D2InitTileCache
@@ -459,7 +459,7 @@ void __stdcall D2FreeTileCache(BOOL bFreeLRU);
 /// @ordinal 10091
 /// @name D2CacheTile
 /// @address 6fdfe6d0
-BOOL __stdcall D2CacheTile(struct_ptTileProject *pTile, BOOL bAsyncWait, BOOL bAsyncLoad);
+BOOL __stdcall D2CacheTile(struct_ptTile *pTile, BOOL bAsyncWait, BOOL bAsyncLoad);
 
 /// @ordinal 10092
 /// @name D2CMP_10092
@@ -517,12 +517,12 @@ const char *__stdcall D2GetLibraryName(struct_ptTile *hTile);
 /// @guessedtype int()
 
 /// @ordinal 10103
-/// @name unknown_libname_1
+/// @name D2CMP_10104_NOOP
 /// @address 6fdf3ed0
 /// Failed to extract type
 
 /// @ordinal 10104
-/// @name unknown_libname_1
+/// @name NOOP
 /// @address 6fdf3ed0
 /// Failed to extract type
 
@@ -532,7 +532,7 @@ const char *__stdcall D2GetLibraryName(struct_ptTile *hTile);
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10106
-/// @name unknown_libname_1
+/// @name D2CMP_10104_NOOP
 /// @address 6fdf3ed0
 /// Failed to extract type
 
