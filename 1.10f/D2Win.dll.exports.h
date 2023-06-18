@@ -1,45 +1,46 @@
 // List of D2Win.dll exports (base address 6f8a0000)
 // For each of the other .DLLs, here are the number of imports of the current module exports:
 // (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)
-// |- D2Multi.dll      :  77
-// |- D2Launch.dll     :  81
 // |- D2Client.dll     :  40
+// |- D2Launch.dll     :  81
+// |- D2Multi.dll      :  77
+// |- Game.exe         :   8
 
 
 /// @ordinal 10000
 /// @name D2Win_10000
 /// @address 6f8acc60
-/// Not imported by any .dll
+/// Imported by ['Game.exe']
 /// @guessedtype int __cdecl(int, int, int, int)
 
 /// @ordinal 10001
 /// @name D2Win_10001
 /// @address 6f8acc90
-/// Not imported by any .dll
+/// Imported by ['Game.exe']
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10002
 /// @name D2Win_10002
 /// @address 6f8acdb0
-/// Imported by ['D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'Game.exe']
 /// @guessedtype int()
 
 /// @ordinal 10003
 /// @name D2Win_10003
 /// @address 6f8acdd0
-/// Imported by ['D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll']
 /// @guessedtype int()
 
 /// @ordinal 10004
 /// @name D2Win_10004
 /// @address 6f8acde0
-/// Imported by ['D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll']
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 10005
 /// @name D2Win_10005
 /// @address 6f8acec0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 10006
@@ -51,19 +52,19 @@
 /// @ordinal 10007
 /// @name D2Win_10007
 /// @address 6f8acf30
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 10008
 /// @name D2Win_10008
 /// @address 6f8acf90
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 10009
 /// @name D2Win_10009
 /// @address 6f8acf80
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10010
@@ -75,13 +76,13 @@
 /// @ordinal 10011
 /// @name D2Win_10011
 /// @address 6f8acf50
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 10012
 /// @name D2Win_10012
 /// @address 6f8ad0d0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 10013
@@ -99,25 +100,25 @@
 /// @ordinal 10015
 /// @name D2Win_10015
 /// @address 6f8acd60
-/// Imported by ['D2Multi.dll', 'D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10016
 /// @name D2Win_10016
 /// @address 6f8ace20
-/// Imported by ['D2Multi.dll', 'D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10017
 /// @name D2Win_10017
 /// @address 6f8ad260
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 10018
 /// @name D2Win_10018
 /// @address 6f8ad450
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 int __stdcall D2Win_10018(D2WinWidget **ptptTextData);
 
 /// @ordinal 10019
@@ -153,13 +154,13 @@ int __stdcall D2Win_10018(D2WinWidget **ptptTextData);
 /// @ordinal 10024
 /// @name D2Win_10024
 /// @address 6f8ad5a0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10025
 /// @name D2Win_10025
 /// @address 6f8ad570
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10026
@@ -171,13 +172,13 @@ int __stdcall D2Win_10018(D2WinWidget **ptptTextData);
 /// @ordinal 10027
 /// @name D2Win_10027
 /// @address 6f8ad5d0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10028
 /// @name D2Win_10028
 /// @address 6f8ae9f0
-/// Imported by ['D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll']
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10029
@@ -189,13 +190,13 @@ int __stdcall D2Win_10018(D2WinWidget **ptptTextData);
 /// @ordinal 10030
 /// @name D2Win_10030
 /// @address 6f8ae4b0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10031
 /// @name D2Win_10031
 /// @address 6f8ae4f0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 10032
@@ -207,7 +208,7 @@ int __stdcall D2Win_10018(D2WinWidget **ptptTextData);
 /// @ordinal 10033
 /// @name D2Win_10033
 /// @address 6f8ae510
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10034
@@ -225,25 +226,25 @@ int __stdcall D2Win_10018(D2WinWidget **ptptTextData);
 /// @ordinal 10036
 /// @name D2Win_10036
 /// @address 6f8a5cb0
-/// Not imported by any .dll
+/// Imported by ['Game.exe']
 /// @guessedtype int()
 
 /// @ordinal 10037
 /// @name D2Win_10037
 /// @address 6f8a5b60
-/// Not imported by any .dll
+/// Imported by ['Game.exe']
 /// @guessedtype int()
 
 /// @ordinal 10038
 /// @name D2Win_10038
 /// @address 6f8a5de0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10039
 /// @name LoadCellFile
 /// @address 6f8a59c0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10040
@@ -255,7 +256,7 @@ int __stdcall D2Win_10018(D2WinWidget **ptptTextData);
 /// @ordinal 10041
 /// @name D2Win_10041
 /// @address 6f8a5ae0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10042
@@ -273,49 +274,49 @@ int __thiscall D2Win_10043(D2WinWidget *hChild);
 /// @ordinal 10044
 /// @name D2Win_10044
 /// @address 6f8b0030
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10045
 /// @name D2Win_10045
 /// @address 6f8aff30
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10046
 /// @name D2Win_10046
 /// @address 6f8affb0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 10047
 /// @name D2Win_10047
 /// @address 6f8afe30
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 void __fastcall D2Win_10047(D2WinWidget *ptTextData);
 
 /// @ordinal 10048
 /// @name D2Win_10048
 /// @address 6f8b0c50
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10049
 /// @name D2Win_10049
 /// @address 6f8b0a80
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10050
 /// @name D2Win_10050
 /// @address 6f8b0ad0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10051
 /// @name D2Win_10051
 /// @address 6f8b0040
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int, char, int)
 
 /// @ordinal 10052
@@ -327,19 +328,19 @@ void __fastcall D2Win_10047(D2WinWidget *ptTextData);
 /// @ordinal 10053
 /// @name D2Win_10053
 /// @address 6f8b0b30
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10054
 /// @name D2Win_10054
 /// @address 6f8b0a30
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10055
 /// @name D2Win_10055
 /// @address 6f8b0bc0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10056
@@ -381,7 +382,7 @@ void __fastcall D2Win_10047(D2WinWidget *ptTextData);
 /// @ordinal 10062
 /// @name D2Win_10062
 /// @address 6f8afed0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 10063
@@ -441,13 +442,13 @@ int __thiscall D2Win_10071(D2WinWidget *hChild);
 /// @ordinal 10072
 /// @name D2Win_10072
 /// @address 6f8a6e10
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10073
 /// @name D2Win_10073
 /// @address 6f8a6e60
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10074
@@ -465,13 +466,13 @@ int __thiscall D2Win_10071(D2WinWidget *hChild);
 /// @ordinal 10076
 /// @name D2Win_10076
 /// @address 6f8a80f0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10077
 /// @name D2Win_10077
 /// @address 6f8a81e0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10078
@@ -489,19 +490,19 @@ int __thiscall D2Win_10071(D2WinWidget *hChild);
 /// @ordinal 10080
 /// @name D2Win_10080
 /// @address 6f8a8230
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10081
 /// @name D2Win_10081
 /// @address 6f8a80a0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10082
 /// @name D2Win_10082
 /// @address 6f8a6f10
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10083
@@ -669,7 +670,7 @@ int __thiscall D2Win_10106(D2WinWidget *ptAnim);
 /// @ordinal 10110
 /// @name D2Win_10110
 /// @address 6f8a6330
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10111
@@ -735,7 +736,7 @@ int __thiscall D2Win_10106(D2WinWidget *ptAnim);
 /// @ordinal 10121
 /// @name D2Win_10121
 /// @address 6f8aa2a0
-/// Imported by ['D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll']
 /// @guessedtype int()
 
 /// @ordinal 10122
@@ -759,7 +760,7 @@ int __thiscall D2Win_10106(D2WinWidget *ptAnim);
 /// @ordinal 10125
 /// @name D2Win_10125
 /// @address 6f8aa2f0
-/// Imported by ['D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll']
 /// @guessedtype int()
 
 /// @ordinal 10126
@@ -771,7 +772,7 @@ int __thiscall D2Win_10106(D2WinWidget *ptAnim);
 /// @ordinal 10127
 /// @name D2Win_10127
 /// @address 6f8a9ff0
-/// Imported by ['D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll']
 /// @guessedtype int()
 
 /// @ordinal 10128
@@ -861,7 +862,7 @@ int __thiscall D2Win_10106(D2WinWidget *ptAnim);
 /// @ordinal 10142
 /// @name D2Win_10142
 /// @address 6f8a2a20
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10143
@@ -873,7 +874,7 @@ int __thiscall D2Win_10106(D2WinWidget *ptAnim);
 /// @ordinal 10144
 /// @name D2Win_10144
 /// @address 6f8a3390
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int, int, int, int)
 
 /// @ordinal 10145
@@ -903,7 +904,7 @@ int __thiscall D2Win_10106(D2WinWidget *ptAnim);
 /// @ordinal 10149
 /// @name D2Win_10149
 /// @address 6f8a4440
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10150
@@ -915,19 +916,19 @@ int __thiscall D2Win_10106(D2WinWidget *ptAnim);
 /// @ordinal 10151
 /// @name D2Win_10151
 /// @address 6f8a44f0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10152
 /// @name D2Win_10152
 /// @address 6f8a4540
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10153
 /// @name D2Win_10153
 /// @address 6f8a4570
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10154
@@ -945,7 +946,7 @@ int __thiscall D2Win_10106(D2WinWidget *ptAnim);
 /// @ordinal 10156
 /// @name D2Win_10156
 /// @address 6f8a45d0
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10157
@@ -975,7 +976,7 @@ int __stdcall D2Win_10158(int hCompositeUnit, int a2, unsigned __int8 a3, int a4
 /// @ordinal 10161
 /// @name D2Win_10161
 /// @address 6f8a4c70
-/// Imported by ['D2Multi.dll', 'D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int, int, int, int)
 
 /// @ordinal 10162
@@ -1035,25 +1036,25 @@ int __stdcall D2Win_10170(RECT *lprc);
 /// @ordinal 10171
 /// @name D2Win_10171
 /// @address 6f8a5e80
-/// Imported by ['D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'Game.exe']
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10172
 /// @name D2Win_10172
 /// @address 6f8a60a0
-/// Imported by ['D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll']
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 10173
 /// @name D2Win_10173
 /// @address 6f8a6110
-/// Imported by ['D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll']
 /// @guessedtype int()
 
 /// @ordinal 10174
 /// @name D2Win_10174
 /// @address 6f8a5b20
-/// Not imported by any .dll
+/// Imported by ['Game.exe']
 /// @guessedtype int()
 
 /// @ordinal 10175
@@ -1089,7 +1090,7 @@ int __fastcall LoadActPalette(unsigned __int8 actIndex);
 /// @ordinal 10180
 /// @name D2Win_10180
 /// @address 6f8b1c00
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 void __thiscall D2Win_10180(D2WinWidget *this);
 
 /// @ordinal 10181
@@ -1101,7 +1102,7 @@ int __thiscall D2Win_10181(D2WinWidget *this);
 /// @ordinal 10182
 /// @name D2Win_10182
 /// @address 6f8b1c30
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int()
 
 /// @ordinal 10183
@@ -1119,7 +1120,7 @@ int __thiscall D2Win_10181(D2WinWidget *this);
 /// @ordinal 10185
 /// @name D2Win_10185
 /// @address 6f8a5df0
-/// Imported by ['D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll']
 /// @guessedtype int()
 
 /// @ordinal 10186
@@ -1137,7 +1138,7 @@ int __thiscall D2Win_10181(D2WinWidget *this);
 /// @ordinal 10188
 /// @name D2Win_10188
 /// @address 6f8b1030
-/// Imported by ['D2Multi.dll', 'D2Launch.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll']
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 10189
@@ -1239,7 +1240,7 @@ int __thiscall D2Win_10181(D2WinWidget *this);
 /// @ordinal 10205
 /// @name D2Win_10205
 /// @address 6f8a5b00
-/// Not imported by any .dll
+/// Imported by ['Game.exe']
 /// @guessedtype int()
 
 /// @ordinal 10206

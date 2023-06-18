@@ -1,24 +1,25 @@
 // List of D2Lang.dll exports (base address 6fc10000)
 // For each of the other .DLLs, here are the number of imports of the current module exports:
 // (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)
-// |- D2Launch.dll     :  19
-// |- D2Common.dll     :  11
-// |- D2Multi.dll      :  17
-// |- D2Win.dll        :  15
-// |- D2Game.dll       :   2
 // |- D2Client.dll     :  24
+// |- D2Common.dll     :  11
+// |- D2Game.dll       :   2
+// |- D2Launch.dll     :  19
+// |- D2Multi.dll      :  17
+// |- D2Server.dll     :   2
+// |- D2Win.dll        :  15
 
 
 /// @ordinal 10000
 /// @name LoadStringTables
 /// @address 6fc12f90
-/// Imported by ['D2Launch.dll', 'D2Multi.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'D2Multi.dll', 'D2Server.dll']
 BOOL __fastcall LoadStringTables(int a1, char *szLanguageString, BOOL bLoadExpansion);
 
 /// @ordinal 10001
 /// @name FreeStringTables
 /// @address 6fc13be0
-/// Imported by ['D2Launch.dll', 'D2Multi.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'D2Multi.dll', 'D2Server.dll']
 void __fastcall FreeStringTables();
 
 /// @ordinal 10002
@@ -30,31 +31,31 @@ DWORD __stdcall CalculateHash(char *szString, unsigned int nHashTableSize);
 /// @ordinal 10003
 /// @name GetStringByReferenceString
 /// @address 6fc13bc0
-/// Imported by ['D2Common.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Common.dll']
 wchar_t *__fastcall GetStringByReferenceString(char *szReference);
 
 /// @ordinal 10004
 /// @name GetStringFromTblIndex
 /// @address 6fc13740
-/// Imported by ['D2Launch.dll', 'D2Common.dll', 'D2Multi.dll', 'D2Win.dll', 'D2Game.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Common.dll', 'D2Game.dll', 'D2Launch.dll', 'D2Multi.dll', 'D2Win.dll']
 wchar_t *__fastcall GetStringFromTblIndex(D2C_StringIndices nIndex);
 
 /// @ordinal 10005
 /// @name CalculateCRC
 /// @address 6fc13d80
 /// Not imported by any .dll
-void __stdcall CalculateCRC(D2TblHeaderStrc *pTblHeader, BYTE *a2, unsigned int dwIndexStart, unsigned int dwIndexEnd);
+void __stdcall CalculateCRC(D2TblHeaderStrc *pTblHeader, BYTE *pData, unsigned int dwIndexStart, unsigned int dwIndexEnd);
 
 /// @ordinal 10006
 /// @name GetLanguageString
 /// @address 6fc13fb0
-/// Imported by ['D2Launch.dll', 'D2Client.dll']
-void __stdcall GetLanguageString(char *szLangString, int a2);
+/// Imported by ['D2Client.dll', 'D2Launch.dll']
+void __stdcall GetLanguageString(char *szLangString, int nLocaleId?);
 
 /// @ordinal 10007
 /// @name GetLocaleId
 /// @address 6fc13df0
-/// Imported by ['D2Launch.dll', 'D2Common.dll', 'D2Multi.dll', 'D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Common.dll', 'D2Launch.dll', 'D2Multi.dll', 'D2Win.dll']
 int __fastcall GetLocaleId();
 
 /// @ordinal 10008
@@ -114,7 +115,7 @@ __int16 __thiscall ??BUnicode@@QBEGXZ(wchar_t *this);
 /// @ordinal 10017
 /// @name ??_FUnicode@@QAEXXZ
 /// @address 6fc11200
-/// Imported by ['D2Launch.dll', 'D2Common.dll', 'D2Multi.dll', 'D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Common.dll', 'D2Launch.dll', 'D2Multi.dll', 'D2Win.dll']
 void __thiscall ??_FUnicode@@QAEXXZ(wchar_t *this);
 
 /// @ordinal 10018
@@ -127,13 +128,13 @@ void __thiscall ??_FUnicode@@QAEXXZ(wchar_t *this);
 /// @name ?_toLowerTable@Unicode@@0PAGA
 /// @address 6fc1d508
 /// Imported by ['D2Client.dll']
-__int16 ?_toLowerTable@Unicode@@0PAGA[];
+__int16 ?_toLowerTable@Unicode@@0PAGA[256];
 
 /// @ordinal 10020
 /// @name ?_toUpperTable@Unicode@@0PAGA
 /// @address 6fc1d308
-/// Imported by ['D2Launch.dll', 'D2Client.dll']
-__int16 ?_toUpperTable@Unicode@@0PAGA[];
+/// Imported by ['D2Client.dll', 'D2Launch.dll']
+__int16 ?_toUpperTable@Unicode@@0PAGA[256];
 
 /// @ordinal 10021
 /// @name ?compare@Unicode@@QBEHU1@@Z
@@ -174,7 +175,7 @@ bool __thiscall ?isLeftToRight@Unicode@@QBEHXZ(wchar_t *this);
 /// @ordinal 10027
 /// @name ?isLineBreak@Unicode@@SIHPBU1@I@Z
 /// @address 6fc11a30
-/// Imported by ['D2Launch.dll', 'D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'D2Win.dll']
 /// @guessedtype int()
 
 /// @ordinal 10028
@@ -199,7 +200,7 @@ int __thiscall ?isWhitespace@Unicode@@QBEHXZ(wchar_t *this);
 /// @name ?isWordEnd@Unicode@@SIHPBU1@I@Z
 /// @address 6fc11190
 /// Not imported by any .dll
-/// @guessedtype int()
+BOOL __fastcall ?isWordEnd@Unicode@@SIHPBU1@I@Z(const Unicode *str, size_t index);
 
 /// @ordinal 10032
 /// @name ?loadSysMap@Unicode@@SIHPAUHD2ARCHIVE__@@PBD@Z
@@ -210,20 +211,20 @@ signed int __fastcall ?loadSysMap@Unicode@@SIHPAUHD2ARCHIVE__@@PBD@Z(int a1, cha
 /// @ordinal 10033
 /// @name ?sprintf@Unicode@@SAXHPAU1@PBU1@ZZ
 /// @address 6fc11670
-/// Imported by ['D2Launch.dll', 'D2Multi.dll', 'D2Win.dll', 'D2Client.dll']
-/// Failed to extract type
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'D2Multi.dll', 'D2Win.dll']
+void ?sprintf@Unicode@@SAXHPAU1@PBU1@ZZ(int buffer_size, wchar_t *buffer, const wchar_t *format, ...);
 
 /// @ordinal 10034
 /// @name ?strcat@Unicode@@SIPAU1@PAU1@PBU1@@Z
 /// @address 6fc113f0
-/// Imported by ['D2Launch.dll', 'D2Common.dll', 'D2Multi.dll', 'D2Win.dll', 'D2Client.dll']
-int __fastcall ?strcat@Unicode@@SIPAU1@PAU1@PBU1@@Z(wchar_t *a1, wchar_t *a2);
+/// Imported by ['D2Client.dll', 'D2Common.dll', 'D2Launch.dll', 'D2Multi.dll', 'D2Win.dll']
+wchar_t *__fastcall ?strcat@Unicode@@SIPAU1@PAU1@PBU1@@Z(wchar_t *a1, const wchar_t *a2);
 
 /// @ordinal 10035
 /// @name ?strchr@Unicode@@SIPAU1@PBU1@U1@@Z
 /// @address 6fc113c0
 /// Imported by ['D2Client.dll']
-void *__thiscall ?strchr@Unicode@@SIPAU1@PBU1@U1@@Z(wchar_t *this, __int16 a2);
+Unicode *__fastcall ?strchr@Unicode@@SIPAU1@PBU1@U1@@Z(const Unicode *str, Unicode ch);
 
 /// @ordinal 10036
 /// @name ?strcmp@Unicode@@SIHPBU1@0@Z
@@ -240,8 +241,8 @@ signed int __fastcall ?strcmp@Unicode@@SIHPBU1@0@Z(wchar_t *a1, wchar_t *a2);
 /// @ordinal 10038
 /// @name ?strcpy@Unicode@@SIPAU1@PAU1@PBU1@@Z
 /// @address 6fc114a0
-/// Imported by ['D2Launch.dll', 'D2Common.dll', 'D2Multi.dll', 'D2Win.dll', 'D2Client.dll']
-int __fastcall ?strcpy@Unicode@@SIPAU1@PAU1@PBU1@@Z(wchar_t *a1, wchar_t *a2);
+/// Imported by ['D2Client.dll', 'D2Common.dll', 'D2Launch.dll', 'D2Multi.dll', 'D2Win.dll']
+wchar_t *__fastcall ?strcpy@Unicode@@SIPAU1@PAU1@PBU1@@Z(wchar_t *pDest, wchar_t *a2);
 
 /// @ordinal 10039
 /// @name ?stricmp@Unicode@@SIHPBU1@0@Z
@@ -252,7 +253,7 @@ int __fastcall ?stricmp@Unicode@@SIHPBU1@0@Z(wchar_t *a1, wchar_t *a2);
 /// @ordinal 10040
 /// @name ?strlen@Unicode@@SIHPBU1@@Z
 /// @address 6fc114c0
-/// Imported by ['D2Launch.dll', 'D2Common.dll', 'D2Multi.dll', 'D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Common.dll', 'D2Launch.dll', 'D2Multi.dll', 'D2Win.dll']
 int __fastcall ?strlen@Unicode@@SIHPBU1@@Z(wchar_t *a1);
 
 /// @ordinal 10041
@@ -276,7 +277,7 @@ int __fastcall ?strncmp@Unicode@@SIHPBU1@0I@Z(wchar_t *a1, wchar_t *a2, int a3);
 /// @ordinal 10044
 /// @name ?strncpy@Unicode@@SIPAU1@PAU1@PBU1@H@Z
 /// @address 6fc11460
-/// Imported by ['D2Launch.dll', 'D2Common.dll', 'D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Common.dll', 'D2Launch.dll', 'D2Win.dll']
 void *__fastcall ?strncpy@Unicode@@SIPAU1@PAU1@PBU1@H@Z(wchar_t *a1, wchar_t *a2, int a3);
 
 /// @ordinal 10045
@@ -288,8 +289,8 @@ signed int __fastcall ?strnicmp@Unicode@@SIHPBU1@0I@Z(wchar_t *a1, wchar_t *a2, 
 /// @ordinal 10046
 /// @name ?strstr@Unicode@@SIPAU1@PBU1@0@Z
 /// @address 6fc115f0
-/// Imported by ['D2Multi.dll', 'D2Client.dll']
-int __fastcall ?strstr@Unicode@@SIPAU1@PBU1@0@Z(wchar_t *a1, wchar_t *a2);
+/// Imported by ['D2Client.dll', 'D2Multi.dll']
+wchar_t *__fastcall ?strstr@Unicode@@SIPAU1@PBU1@0@Z(wchar_t *str, wchar_t *substr);
 
 /// @ordinal 10047
 /// @name ?strstri@Unicode@@SIPAU1@PBU1@0@Z
@@ -313,25 +314,25 @@ int __fastcall ?strstri@Unicode@@SIPAU1@PBU1@0@Z(wchar_t *a1, wchar_t *a2);
 /// @name ?toLower@Unicode@@QBE?AU1@XZ
 /// @address 6fc110e0
 /// Not imported by any .dll
-int __thiscall ?toLower@Unicode@@QBE?AU1@XZ(wchar_t *this, wchar_t *a2);
+struct Unicode __thiscall ?toLower@Unicode@@QBE?AU1@XZ(Unicode *__hidden this);
 
 /// @ordinal 10051
 /// @name ?toUnicode@Unicode@@SIPAU1@PAU1@PBDH@Z
 /// @address 6fc12a40
-/// Imported by ['D2Launch.dll', 'D2Common.dll', 'D2Multi.dll', 'D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Common.dll', 'D2Launch.dll', 'D2Multi.dll', 'D2Win.dll']
 int __fastcall ?toUnicode@Unicode@@SIPAU1@PAU1@PBDH@Z(wchar_t *a1, const char *a2, int a3);
 
 /// @ordinal 10052
 /// @name ?toUpper@Unicode@@QBE?AU1@XZ
 /// @address 6fc110b0
 /// Not imported by any .dll
-int __thiscall ?toUpper@Unicode@@QBE?AU1@XZ(wchar_t *this, wchar_t *a2);
+/// @guessedtype struct Unicode __thiscall(Unicode *__hidden this)
 
 /// @ordinal 10053
 /// @name ?toUtf@Unicode@@SIPADPADPBU1@H@Z
 /// @address 6fc12b60
-/// Imported by ['D2Launch.dll', 'D2Multi.dll', 'D2Client.dll']
-/// @guessedtype int __stdcall(int)
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'D2Multi.dll']
+char *__fastcall ?toUtf@Unicode@@SIPADPADPBU1@H@Z(char *dest, const Unicode *src, int count);
 
 /// @ordinal 10054
 /// @name ?unicode2Sys@Unicode@@SIPADPADPBU1@H@Z
@@ -342,7 +343,7 @@ int __thiscall ?toUpper@Unicode@@QBE?AU1@XZ(wchar_t *this, wchar_t *a2);
 /// @ordinal 10055
 /// @name ?unicode2Win@Unicode@@SIPADPADPBU1@H@Z
 /// @address 6fc11c20
-/// Imported by ['D2Launch.dll', 'D2Common.dll', 'D2Multi.dll', 'D2Win.dll', 'D2Game.dll']
+/// Imported by ['D2Common.dll', 'D2Game.dll', 'D2Launch.dll', 'D2Multi.dll', 'D2Win.dll']
 int __fastcall ?unicode2Win@Unicode@@SIPADPADPBU1@H@Z(int a1, wchar_t *a2, signed int a3);
 
 /// @ordinal 10056
@@ -384,6 +385,6 @@ signed int __thiscall ?utfwidth@Unicode@@QBEHXZ(wchar_t *this);
 /// @ordinal 10062
 /// @name ?win2Unicode@Unicode@@SIPAU1@PAU1@PBDH@Z
 /// @address 6fc11bd0
-/// Imported by ['D2Launch.dll', 'D2Multi.dll', 'D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'D2Multi.dll', 'D2Win.dll']
 int __fastcall ?win2Unicode@Unicode@@SIPAU1@PAU1@PBDH@Z(wchar_t *a1, int a2, int a3);
 

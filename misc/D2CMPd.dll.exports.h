@@ -246,7 +246,7 @@ void __fastcall CelSetHardwareFreeCallback(void (__fastcall *callback)(TileHeade
 /// @name CmpDoLensEffect
 /// @address 6fc715e1
 /// Not imported by any .dll
-/// @guessedtype int __stdcall(int, int)
+/// @guessedtype int __stdcall(void *pBackBufferLine, int stride)
 
 /// @ordinal 42
 /// @name CreateD2Palette
@@ -306,7 +306,7 @@ int __stdcall D2CMPBuildFileName(char *, int, char *, va_list);
 /// @name D2CMPGetGfxFileExtension
 /// @address 6fc71177
 /// Not imported by any .dll
-/// @guessedtype const char *__stdcall(int a1)
+const char *__stdcall D2CMPGetGfxFileExtension(int a1);
 
 /// @ordinal 52
 /// @name D2CMPGetTileCacheHits
@@ -384,7 +384,7 @@ TileProjectHeader *__stdcall D2CMPLoadProjectRecord(D2TileLibraryHashStrc **a1, 
 /// @name D2CMPSpriteCacheInit
 /// @address 6fc71087
 /// Not imported by any .dll
-/// @guessedtype int __stdcall(int, int, int, int)
+/// @guessedtype int __stdcall(int edx0, int, int a1, int)
 
 /// @ordinal 65
 /// @name D2CMPSpriteFindAsynchSiblings
@@ -504,7 +504,7 @@ int __stdcall PaletteSetMask(void *);
 /// @name PaletteSetTransparency
 /// @address 6fc71262
 /// Not imported by any .dll
-/// @guessedtype int __stdcall(char)
+/// @guessedtype int __stdcall(__int16)
 
 /// @ordinal 85
 /// @name PaletteTestBackground

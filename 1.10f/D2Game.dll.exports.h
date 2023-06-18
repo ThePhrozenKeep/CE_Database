@@ -2,6 +2,7 @@
 // For each of the other .DLLs, here are the number of imports of the current module exports:
 // (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)
 // |- D2Client.dll     :  13
+// |- D2Server.dll     :  26
 
 
 /// @ordinal 10001
@@ -13,37 +14,37 @@
 /// @ordinal 10002
 /// @name D2Game_10002
 /// @address 6fc35880
-/// Imported by ['D2Client.dll']
-/// @guessedtype int __stdcall(int, int)
+/// Imported by ['D2Client.dll', 'D2Server.dll']
+void __stdcall D2Game_10002(D2GameManagerStrc *pGameDataTbl, void *pGameList);
 
 /// @ordinal 10003
 /// @name D2Game_10003
 /// @address 6fc38530
-/// Imported by ['D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Server.dll']
 /// @guessedtype int()
 
 /// @ordinal 10004
 /// @name D2Game_10004
 /// @address 6fc38e20
 /// Imported by ['D2Client.dll']
-/// @guessedtype int __stdcall(int)
+/// Failed to extract type
 
 /// @ordinal 10005
 /// @name D2Game_10005
 /// @address 6fc392a0
 /// Imported by ['D2Client.dll']
-/// @guessedtype int __stdcall(int, int)
+/// Failed to extract type
 
 /// @ordinal 10006
 /// @name D2Game_10006
 /// @address 6fc399c0
-/// Imported by ['D2Client.dll']
-/// @guessedtype int()
+/// Imported by ['D2Client.dll', 'D2Server.dll']
+/// Failed to extract type
 
 /// @ordinal 10007
 /// @name D2Game_10007
 /// @address 6fc36280
-/// Not imported by any .dll
+/// Imported by ['D2Server.dll']
 int __stdcall D2Game_10007(char Args, int, int, int, int, int, int, int);
 
 /// @ordinal 10008
@@ -68,85 +69,85 @@ int __stdcall D2Game_10007(char Args, int, int, int, int, int, int, int);
 /// @name D2Game_10011
 /// @address 6fc35930
 /// Not imported by any .dll
-/// @guessedtype int()
+DWORD __cdecl D2Game_10011();
 
 /// @ordinal 10012
-/// @name D2Game_10012
+/// @name GetGamesCount
 /// @address 6fc39b50
-/// Not imported by any .dll
+/// Imported by ['D2Server.dll']
 /// @guessedtype int()
 
 /// @ordinal 10013
 /// @name D2Game_10013
 /// @address 6fc39ef0
 /// Not imported by any .dll
-/// @guessedtype int __stdcall(int)
+/// Failed to extract type
 
 /// @ordinal 10014
 /// @name D2Game_10014
 /// @address 6fc39ff0
-/// Not imported by any .dll
-/// @guessedtype int __stdcall(int, int)
+/// Imported by ['D2Server.dll']
+/// Failed to extract type
 
 /// @ordinal 10015
-/// @name D2Game_10015
+/// @name GetGameIds
 /// @address 6fc3a390
-/// Not imported by any .dll
-/// @guessedtype int __stdcall(int, int)
+/// Imported by ['D2Server.dll']
+int __stdcall GetGameIds(WORD *ptwGameIds, int nBufferSize);
 
 /// @ordinal 10016
 /// @name D2Game_10016
 /// @address 6fc3a490
-/// Imported by ['D2Client.dll']
-/// @guessedtype int __stdcall(int)
+/// Imported by ['D2Client.dll', 'D2Server.dll']
+/// Failed to extract type
 
 /// @ordinal 10017
 /// @name D2Game_10017
 /// @address 6fc3a5a0
-/// Not imported by any .dll
-/// @guessedtype int __stdcall(int, int, int)
+/// Imported by ['D2Server.dll']
+/// Failed to extract type
 
 /// @ordinal 10018
 /// @name D2Game_10018
 /// @address 6fc3ab20
-/// Not imported by any .dll
-/// @guessedtype int __stdcall(D2GameStrc *, int, int, int, int)
+/// Imported by ['D2Server.dll']
+/// Failed to extract type
 
 /// @ordinal 10019
 /// @name D2Game_10019
 /// @address 6fc3a8b0
-/// Not imported by any .dll
-/// @guessedtype int __stdcall(int, int, int)
+/// Imported by ['D2Server.dll']
+void __stdcall D2Game_10019(unsigned __int16 a1, void *ptList, int eType);
 
 /// @ordinal 10020
-/// @name D2Game_10020
+/// @name GetStatistics
 /// @address 6fc3acd0
-/// Not imported by any .dll
-/// @guessedtype int __stdcall(int)
+/// Imported by ['D2Server.dll']
+void __stdcall GetStatistics(D2GameStatistics *pStats);
 
 /// @ordinal 10021
 /// @name D2Game_10021
 /// @address 6fc3ae10
-/// Not imported by any .dll
+/// Imported by ['D2Server.dll']
 int __stdcall D2Game_10021(int, int, char *Source);
 
 /// @ordinal 10022
 /// @name D2Game_10022
 /// @address 6fc3afb0
-/// Not imported by any .dll
+/// Imported by ['D2Server.dll']
 int __stdcall D2Game_10022(int, char *Str2);
 
 /// @ordinal 10023
-/// @name D2Game_10023
+/// @name D2Game_SetEventCallbacks_10023
 /// @address 6fc358e0
-/// Not imported by any .dll
-void __stdcall D2Game_10023(void *a1);
+/// Imported by ['D2Server.dll']
+void __stdcall D2Game_SetEventCallbacks_10023(D2ServerCallbackFunctions *ptEventCallbackTable);
 
 /// @ordinal 10024
 /// @name D2Game_10024
 /// @address 6fc379c0
 /// Not imported by any .dll
-/// @guessedtype int __stdcall(int nClientId)
+/// Failed to extract type
 
 /// @ordinal 10025
 /// @name D2Game_10025
@@ -217,73 +218,73 @@ BOOL __stdcall D2GAME_QUESTS_CheckNotIntroQuest_10038_6FC953A0(D2GameStrc *pGame
 /// @ordinal 10039
 /// @name ?__CxxSetUnhandledExceptionFilter@@YAXXZ
 /// @address 6fc404e0
-/// Not imported by any .dll
+/// Imported by ['D2Server.dll']
 void __cdecl ?__CxxSetUnhandledExceptionFilter@@YAXXZ();
 
 /// @ordinal 10040
-/// @name D2Game_10040
+/// @name TASK_FreeAllQueueSlots
 /// @address 6fc40500
-/// Not imported by any .dll
+/// Imported by ['D2Server.dll']
 /// @guessedtype int()
 
 /// @ordinal 10041
-/// @name D2Game_10041
+/// @name TASK_Create
 /// @address 6fc405b0
-/// Not imported by any .dll
+/// Imported by ['D2Server.dll']
 /// @guessedtype int()
 
 /// @ordinal 10042
 /// @name D2Game_10042
 /// @address 6fc407a0
 /// Not imported by any .dll
-/// @guessedtype int __stdcall(int)
+signed int __fastcall D2Game_10042(D2TaskStrc *pTask, int nTaskType, D2LinkStrc *pPrevTaskBalanceLink);
 
 /// @ordinal 10043
 /// @name D2Game_10043
 /// @address 6fc40930
-/// Not imported by any .dll
-/// @guessedtype int()
+/// Imported by ['D2Server.dll']
+signed int __fastcall D2Game_10043(char nTaskNumber, int a2);
 
 /// @ordinal 10044
 /// @name D2Game_10044
 /// @address 6fc40a40
 /// Not imported by any .dll
-/// @guessedtype int()
+signed int __fastcall D2Game_10044(char nTaskNumber);
 
 /// @ordinal 10045
-/// @name D2Game_10045
+/// @name sSrvTaskProcessGame
 /// @address 6fc40b30
-/// Not imported by any .dll
-/// @guessedtype int()
+/// Imported by ['D2Server.dll']
+void __fastcall sSrvTaskProcessGame(char nTaskSlot, D2TaskStrc *ptTask);
 
 /// @ordinal 10046
 /// @name D2Game_10046
 /// @address 6fc357c0
-/// Imported by ['D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Server.dll']
 /// @guessedtype int()
 
 /// @ordinal 10047
 /// @name D2Game_10047
 /// @address 6fc35e70
-/// Not imported by any .dll
-/// @guessedtype int __stdcall(int, char *szSource, int, char nFlags, char, char, char, int)
+/// Imported by ['D2Server.dll']
+/// Failed to extract type
 
 /// @ordinal 10048
 /// @name D2Game_10049_Return1
 /// @address 6fcf30d0
-/// Not imported by any .dll
+/// Imported by ['D2Server.dll']
 /// @guessedtype int __stdcall(int, int, int, int, int, int)
 
 /// @ordinal 10049
 /// @name Return1
 /// @address 6fcf30d0
-/// Not imported by any .dll
+/// Imported by ['D2Server.dll']
 /// @guessedtype int __stdcall(int, int, int, int, int, int)
 
 /// @ordinal 10050
 /// @name D2Game_10050
 /// @address 6fc35810
-/// Imported by ['D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Server.dll']
 /// @guessedtype int()
 
 /// @ordinal 10051
@@ -296,25 +297,25 @@ void __cdecl ?__CxxSetUnhandledExceptionFilter@@YAXXZ();
 /// @name D2Game_10052
 /// @address 6fc39ed0
 /// Not imported by any .dll
-/// @guessedtype int __stdcall(int, int)
+void __stdcall D2Game_10052(DWORD *a3, int a4);
 
 /// @ordinal 10053
 /// @name D2Game_10053
 /// @address 6fc39c70
 /// Not imported by any .dll
-/// @guessedtype int __stdcall(int, int)
+/// Failed to extract type
 
 /// @ordinal 10054
 /// @name D2Game_10054
 /// @address 6fc39d80
 /// Not imported by any .dll
-/// @guessedtype int __stdcall(int, int)
+/// Failed to extract type
 
 /// @ordinal 10055
 /// @name D2Game_10055
 /// @address 6fc37880
 /// Not imported by any .dll
-/// @guessedtype int __stdcall(int, char a3)
+/// Failed to extract type
 
 /// @ordinal 10056
 /// @name D2Game_10056
@@ -326,7 +327,7 @@ void __cdecl ?__CxxSetUnhandledExceptionFilter@@YAXXZ();
 /// @name D2Game_10057
 /// @address 6fc39b70
 /// Not imported by any .dll
-/// @guessedtype int()
+/// Failed to extract type
 
 /// @ordinal 10058
 /// @name D2Game_10058

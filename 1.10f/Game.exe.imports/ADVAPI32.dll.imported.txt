@@ -1,0 +1,15 @@
+RegCloseKey
+RegisterServiceCtrlHandlerA
+SetServiceStatus
+OpenServiceA
+OpenSCManagerA
+CloseServiceHandle
+StartServiceCtrlDispatcherA
+CreateServiceA
+RegCreateKeyA
+RegEnumValueA
+RegSetValueExA
+RegOpenKeyA
+RegDeleteKeyA
+RegOpenKeyExA
+RegQueryValueExA

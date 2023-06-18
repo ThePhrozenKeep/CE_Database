@@ -1,25 +1,26 @@
 // List of D2sound.dll exports (base address 6f980000)
 // For each of the other .DLLs, here are the number of imports of the current module exports:
 // (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)
-// |- D2Launch.dll     :  11
+// |- D2Client.dll     :  43
+// |- D2DDraw.dll      :   1
 // |- D2Direct3D.dll   :   1
 // |- D2Glide.dll      :   1
+// |- D2Launch.dll     :  11
 // |- D2Multi.dll      :   5
-// |- D2DDraw.dll      :   1
 // |- D2Win.dll        :   8
-// |- D2Client.dll     :  43
+// |- Game.exe         :   2
 
 
 /// @ordinal 10000
 /// @name OpenSoundSystem
 /// @address 6f9810e0
-/// Not imported by any .dll
+/// Imported by ['Game.exe']
 /// @guessedtype int()
 
 /// @ordinal 10001
 /// @name CloseSoundSystem
 /// @address 6f9821c0
-/// Not imported by any .dll
+/// Imported by ['Game.exe']
 /// @guessedtype int()
 
 /// @ordinal 10002
@@ -175,7 +176,7 @@ void __thiscall D2sound_10026(SoundSample *ptSample);
 /// @ordinal 10027
 /// @name SetVolume
 /// @address 6f984630
-/// Imported by ['D2Launch.dll', 'D2Direct3D.dll', 'D2Glide.dll', 'D2DDraw.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2DDraw.dll', 'D2Direct3D.dll', 'D2Glide.dll', 'D2Launch.dll']
 void __fastcall SetVolume(signed int nVolume);
 
 /// @ordinal 10028
@@ -187,7 +188,7 @@ void __fastcall SetVolume(signed int nVolume);
 /// @ordinal 10029
 /// @name D2sound_10029
 /// @address 6f9843d0
-/// Imported by ['D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll']
 void __fastcall D2sound_10029(int nDuration);
 
 /// @ordinal 10030
@@ -199,7 +200,7 @@ void __fastcall D2sound_10029(int nDuration);
 /// @ordinal 10031
 /// @name D2sound_10031
 /// @address 6f9849a0
-/// Imported by ['D2Launch.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll']
 /// @guessedtype int()
 
 /// @ordinal 10032
@@ -301,13 +302,13 @@ void __fastcall SetMasterVolume(DWORD dwNewMasterVolume);
 /// @ordinal 10048
 /// @name GetMusicVolume
 /// @address 6f982b30
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 /// @guessedtype int()
 
 /// @ordinal 10049
 /// @name SetMusicVolume
 /// @address 6f982b40
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 void __thiscall SetMusicVolume(DWORD dwNewMusicVolume);
 
 /// @ordinal 10050

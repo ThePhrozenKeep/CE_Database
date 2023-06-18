@@ -1,23 +1,26 @@
 // List of Storm.dll exports (base address 6ffb0000)
 // For each of the other .DLLs, here are the number of imports of the current module exports:
 // (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)
-// |- D2gfx.dll        :   1
-// |- D2Launch.dll     :  19
+// |- D2CMP.dll        :   7
+// |- D2Client.dll     :  35
+// |- D2Common.dll     :   4
+// |- D2DDraw.dll      :   7
 // |- D2Direct3D.dll   :   7
-// |- D2OpenGL.dll     :   2
+// |- D2Game.dll       :   8
 // |- D2Gdi.dll        :   3
 // |- D2Glide.dll      :   5
-// |- Fog.dll          :  31
-// |- D2MCPClient.dll  :   2
-// |- D2CMP.dll        :   7
-// |- D2Common.dll     :   4
-// |- D2Multi.dll      :   8
-// |- D2DDraw.dll      :   7
-// |- D2sound.dll      :   8
-// |- D2Win.dll        :  17
-// |- D2Game.dll       :   8
-// |- D2Client.dll     :  35
 // |- D2Lang.dll       :   4
+// |- D2Launch.dll     :  19
+// |- D2MCPClient.dll  :   2
+// |- D2Multi.dll      :   8
+// |- D2Net.dll        :   2
+// |- D2OpenGL.dll     :   2
+// |- D2Server.dll     :  12
+// |- D2Win.dll        :  17
+// |- D2gfx.dll        :   1
+// |- D2sound.dll      :   8
+// |- Fog.dll          :  31
+// |- Game.exe         :   8
 
 
 /// @ordinal 101
@@ -395,13 +398,13 @@ int __stdcall SFileAuthenticateArchive(HANDLE hArchive, int a2);
 /// @ordinal 252
 /// @name SFileCloseArchive
 /// @address 6ffc47c0
-/// Imported by ['D2Win.dll']
+/// Imported by ['D2Server.dll', 'D2Win.dll']
 BOOL __stdcall SFileCloseArchive(HANDLE hArchive);
 
 /// @ordinal 253
 /// @name SFileCloseFile
 /// @address 6ffc4900
-/// Imported by ['D2Launch.dll', 'Fog.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'Fog.dll']
 BOOL __stdcall SFileCloseFile(HANDLE hFile);
 
 /// @ordinal 254
@@ -479,7 +482,7 @@ int __stdcall SFileGetFileSize(int, LPDWORD lpFileSizeHigh);
 /// @ordinal 266
 /// @name SFileOpenArchive
 /// @address 6ffc7510
-/// Imported by ['D2Win.dll']
+/// Imported by ['D2Server.dll', 'D2Win.dll']
 int __stdcall SFileOpenArchive(char *Str, int, int, int);
 
 /// @ordinal 267
@@ -491,7 +494,7 @@ int __stdcall SFileOpenFile(char *Str, int);
 /// @ordinal 268
 /// @name SFileOpenFileEx
 /// @address 6ffc7ef0
-/// Imported by ['D2Launch.dll', 'D2Direct3D.dll', 'D2Glide.dll', 'D2DDraw.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2DDraw.dll', 'D2Direct3D.dll', 'D2Glide.dll', 'D2Launch.dll']
 int __stdcall SFileOpenFileEx(int, char *Str, char, int);
 
 /// @ordinal 269
@@ -539,7 +542,7 @@ BOOL __stdcall SFileGetArchiveName(HANDLE hArchive, char *name, int length);
 /// @ordinal 276
 /// @name SFileGetFileName
 /// @address 6ffc7290
-/// Imported by ['D2CMP.dll', 'D2Common.dll', 'D2sound.dll', 'D2Win.dll', 'D2Client.dll', 'D2Lang.dll']
+/// Imported by ['D2CMP.dll', 'D2Client.dll', 'D2Common.dll', 'D2Lang.dll', 'D2Server.dll', 'D2Win.dll', 'D2sound.dll']
 BOOL __stdcall SFileGetFileName(HANDLE hFile, char *buffer, int length);
 
 /// @ordinal 277
@@ -569,7 +572,7 @@ BOOL __stdcall SFileUnloadFile(void *buffer);
 /// @ordinal 281
 /// @name SFileLoadFileEx
 /// @address 6ffc73e0
-/// Imported by ['D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll', 'D2DDraw.dll']
+/// Imported by ['D2DDraw.dll', 'D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll']
 int __stdcall SFileLoadFileEx(int, char *Str, int, int, int, char, LONG lDistanceToMove);
 
 /// @ordinal 282
@@ -677,7 +680,7 @@ BOOL __stdcall SBltROP3Tiled(int a1, int a2, int a3, int a4, int a5, int a6, int
 /// @ordinal 321
 /// @name SBmpDecodeImage
 /// @address 6ffb5da0
-/// Imported by ['D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll', 'D2DDraw.dll']
+/// Imported by ['D2DDraw.dll', 'D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll']
 BOOL __stdcall SBmpDecodeImage(int a1, signed int *a2, unsigned int a3, int a4, int a5, int a6, int a7, int a8, int a9);
 
 /// @ordinal 323
@@ -959,13 +962,13 @@ BOOL __stdcall Ordinal393(int, int, int);
 /// @ordinal 401
 /// @name SMemAlloc
 /// @address 6ffcb130
-/// Imported by ['D2Launch.dll', 'D2OpenGL.dll', 'D2Glide.dll', 'Fog.dll', 'D2CMP.dll', 'D2Win.dll', 'D2Game.dll', 'D2Client.dll', 'D2Lang.dll']
+/// Imported by ['D2CMP.dll', 'D2Client.dll', 'D2Game.dll', 'D2Glide.dll', 'D2Lang.dll', 'D2Launch.dll', 'D2OpenGL.dll', 'D2Server.dll', 'D2Win.dll', 'Fog.dll', 'Game.exe']
 void *__stdcall SMemAlloc(int amount, char *logfilename, int logline, int defaultValue);
 
 /// @ordinal 403
 /// @name SMemFree
 /// @address 6ffcc2e0
-/// Imported by ['D2Launch.dll', 'D2Direct3D.dll', 'D2OpenGL.dll', 'D2Gdi.dll', 'D2Glide.dll', 'Fog.dll', 'D2CMP.dll', 'D2DDraw.dll', 'D2Win.dll', 'D2Game.dll', 'D2Client.dll', 'D2Lang.dll']
+/// Imported by ['D2CMP.dll', 'D2Client.dll', 'D2DDraw.dll', 'D2Direct3D.dll', 'D2Game.dll', 'D2Gdi.dll', 'D2Glide.dll', 'D2Lang.dll', 'D2Launch.dll', 'D2OpenGL.dll', 'D2Server.dll', 'D2Win.dll', 'Fog.dll', 'Game.exe']
 BOOL __stdcall SMemFree(void *location, char *logfilename, int logline, int defaultValue);
 
 /// @ordinal 404
@@ -977,13 +980,13 @@ int __stdcall SMemGetSize(void *location, char *logfilename, int logline);
 /// @ordinal 405
 /// @name SMemReAlloc
 /// @address 6ffcce40
-/// Imported by ['D2CMP.dll', 'D2Game.dll', 'D2Client.dll']
+/// Imported by ['D2CMP.dll', 'D2Client.dll', 'D2Game.dll', 'D2Server.dll']
 void *__stdcall SMemReAlloc(void *location, int amount, char *logfilename, int logline, int defaultValue);
 
 /// @ordinal 412
 /// @name SMsgDispatchMessage
 /// @address 6ffcd200
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 BOOL __stdcall SMsgDispatchMessage(HWND hWnd, DWORD messageID, WPARAM wParam, LPARAM lParam, int a5, int a6);
 
 /// @ordinal 413
@@ -995,25 +998,25 @@ WPARAM __stdcall SMsgDoMessageLoop(void *callback, int followWithStormDestroy);
 /// @ordinal 414
 /// @name SMsgRegisterCommand
 /// @address 6ffcd4c0
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 BOOL __stdcall SMsgRegisterCommand(int a1, int a2, int a3);
 
 /// @ordinal 415
 /// @name SMsgRegisterKeyDown
 /// @address 6ffcd5b0
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 BOOL __stdcall SMsgRegisterKeyDown(int a1, int a2, int a3);
 
 /// @ordinal 416
 /// @name SMsgRegisterKeyUp
 /// @address 6ffcd5d0
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 BOOL __stdcall SMsgRegisterKeyUp(int a1, int a2, int a3);
 
 /// @ordinal 417
 /// @name SMsgRegisterMessage
 /// @address 6ffcd5f0
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 BOOL __stdcall SMsgRegisterMessage(int a1, int a2, int a3);
 
 /// @ordinal 418
@@ -1031,19 +1034,19 @@ BOOL __stdcall SMsgPushRegisterState(int type);
 /// @ordinal 421
 /// @name SRegLoadData
 /// @address 6ffd5840
-/// Imported by ['D2Direct3D.dll', 'D2DDraw.dll']
+/// Imported by ['D2DDraw.dll', 'D2Direct3D.dll']
 int __stdcall SRegLoadData(int, DWORD Type, int, LPBYTE lpData, int, LPDWORD lpcbData);
 
 /// @ordinal 422
 /// @name SRegLoadString
 /// @address 6ffd5a00
-/// Imported by ['D2Launch.dll', 'D2Direct3D.dll', 'Fog.dll', 'D2DDraw.dll', 'D2Client.dll']
-int __stdcall SRegLoadString(DWORD Type, DWORD cbData, int, LPSTR, int);
+/// Imported by ['D2Client.dll', 'D2DDraw.dll', 'D2Direct3D.dll', 'D2Launch.dll', 'D2Server.dll', 'Fog.dll', 'Game.exe']
+int __stdcall SRegLoadString(const char *Type, const char *cbData, int a3, LPSTR pBuffer, int dwBufferSize);
 
 /// @ordinal 423
 /// @name SRegLoadValue
 /// @address 6ffd5ac0
-/// Imported by ['D2gfx.dll', 'D2Launch.dll', 'D2Direct3D.dll', 'Fog.dll', 'D2CMP.dll', 'D2Multi.dll', 'D2DDraw.dll', 'D2sound.dll', 'D2Game.dll', 'D2Client.dll']
+/// Imported by ['D2CMP.dll', 'D2Client.dll', 'D2DDraw.dll', 'D2Direct3D.dll', 'D2Game.dll', 'D2Launch.dll', 'D2Multi.dll', 'D2gfx.dll', 'D2sound.dll', 'Fog.dll', 'Game.exe']
 BOOL __stdcall SRegLoadValue(const char *keyname, const char *valuename, int a3, DWORD *value);
 
 /// @ordinal 424
@@ -1055,13 +1058,13 @@ BOOL __stdcall SRegSaveData(char *keyname, char *valuename, BYTE flags, BYTE *lp
 /// @ordinal 425
 /// @name SRegSaveString
 /// @address 6ffd5d10
-/// Imported by ['D2Launch.dll', 'Fog.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'D2Server.dll', 'Fog.dll', 'Game.exe']
 BOOL __stdcall SRegSaveString(char *keyname, char *valuename, BYTE flags, char *string);
 
 /// @ordinal 426
 /// @name SRegSaveValue
 /// @address 6ffd5d80
-/// Imported by ['D2Launch.dll', 'D2Multi.dll', 'D2sound.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'D2Multi.dll', 'D2sound.dll', 'Game.exe']
 BOOL __stdcall SRegSaveValue(const char *keyname, const char *valuename, BYTE flags, DWORD result);
 
 /// @ordinal 427
@@ -1308,7 +1311,7 @@ BOOL __stdcall SCmdGetString(int a1, char *dest, size_t size);
 /// @name SCmdProcess
 /// @address 6ffb8180
 /// Imported by ['D2Client.dll']
-BOOL __stdcall SCmdProcess(const char **string, int a2, int a3, int a4);
+BOOL __stdcall SCmdProcess(const char *string, int a2, int (__stdcall *a3)(int), int (__stdcall *a4)(int));
 
 /// @ordinal 476
 /// @name SCmdRegisterArgList
@@ -1397,7 +1400,7 @@ int __stdcall SMemHeapSize(int a1, int a2, void *a3);
 /// @ordinal 491
 /// @name SMemCopy
 /// @address 6ffccf80
-/// Imported by ['D2Launch.dll', 'Fog.dll', 'D2Game.dll']
+/// Imported by ['D2Game.dll', 'D2Launch.dll', 'Fog.dll']
 int __stdcall SMemCopy(void *dest, const void *source, size_t size);
 
 /// @ordinal 492
@@ -1415,7 +1418,7 @@ int __stdcall SMemMove(void *Dst, void *Src, size_t Size);
 /// @ordinal 494
 /// @name SMemZero
 /// @address 6ffcd010
-/// Imported by ['D2Launch.dll', 'Fog.dll', 'D2Multi.dll']
+/// Imported by ['D2Launch.dll', 'D2Multi.dll', 'Fog.dll']
 int __stdcall SMemZero(void *location, size_t length);
 
 /// @ordinal 495
@@ -1439,26 +1442,26 @@ BOOL __stdcall SMemDumpState(int, int);
 /// @ordinal 501
 /// @name SStrCopy
 /// @address 6ffda120
-/// Imported by ['D2Launch.dll', 'Fog.dll', 'D2MCPClient.dll', 'D2Common.dll', 'D2Multi.dll', 'D2Win.dll', 'D2Game.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Common.dll', 'D2Game.dll', 'D2Launch.dll', 'D2MCPClient.dll', 'D2Multi.dll', 'D2Net.dll', 'D2Server.dll', 'D2Win.dll', 'Fog.dll', 'Game.exe']
 int __stdcall SStrCopy(char *dest, const char *source, size_t size);
 
 /// @ordinal 502
 /// @name SStrHash
 /// @address 6ffdad40
-/// Imported by ['D2Launch.dll', 'Fog.dll', 'D2CMP.dll', 'D2Client.dll']
+/// Imported by ['D2CMP.dll', 'D2Client.dll', 'D2Launch.dll', 'Fog.dll']
 DWORD __stdcall SStrHash(const char *string, unsigned __int32 flags, unsigned __int32 Seed);
 
 /// @ordinal 503
 /// @name SStrNCat
 /// @address 6ffda3c0
-/// Imported by ['D2Launch.dll', 'Fog.dll', 'D2Win.dll']
+/// Imported by ['D2Launch.dll', 'D2Server.dll', 'D2Win.dll', 'Fog.dll']
 /// @guessedtype int __stdcall(int, int, int)
 
 /// @ordinal 504
 /// @name SStrTokenize
 /// @address 6ffdabe0
 /// Imported by ['D2Client.dll']
-void __stdcall SStrTokenize(const char **string, char **string, char *buffer, const char *whitespace, size_t size);
+void __stdcall SStrTokenize(const char **string, char *ppTokenizeBeginChar, char *buffer, const char *delimiter, size_t size);
 
 /// @ordinal 505
 /// @name SStrPack
@@ -1469,7 +1472,7 @@ char *__stdcall SStrPack(const char *string, char c, int type);
 /// @ordinal 506
 /// @name SStrLen
 /// @address 6ffda330
-/// Imported by ['D2Launch.dll', 'Fog.dll', 'D2MCPClient.dll', 'D2Multi.dll', 'D2Game.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Game.dll', 'D2Launch.dll', 'D2MCPClient.dll', 'D2Multi.dll', 'D2Net.dll', 'Fog.dll']
 int __stdcall SStrLen(const char *string);
 
 /// @ordinal 507
@@ -1481,13 +1484,13 @@ void *__stdcall SStrDup(int a1);
 /// @ordinal 508
 /// @name SStrCmp
 /// @address 6ffda0a0
-/// Imported by ['D2Launch.dll', 'Fog.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'D2Server.dll', 'Fog.dll']
 int __stdcall SStrCmp(char *Str1, char *Str2, size_t MaxCount);
 
 /// @ordinal 509
 /// @name SStrCmpI
 /// @address 6ffda0e0
-/// Imported by ['D2Launch.dll', 'Fog.dll', 'D2CMP.dll', 'D2Common.dll', 'D2Game.dll', 'D2Client.dll']
+/// Imported by ['D2CMP.dll', 'D2Client.dll', 'D2Common.dll', 'D2Game.dll', 'D2Launch.dll', 'Fog.dll']
 int __stdcall SStrCmpI(char *Str1, char *Str, size_t MaxCount);
 
 /// @ordinal 510
@@ -1499,31 +1502,31 @@ int __stdcall SStrUpper(char *Str);
 /// @ordinal 511
 /// @name SMsgBreakHandlerChain
 /// @address 6ffcd110
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 BOOL __stdcall SMsgBreakHandlerChain(int a1);
 
 /// @ordinal 512
 /// @name SMsgUnregisterCommand
 /// @address 6ffcd630
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 BOOL __stdcall SMsgUnregisterCommand(int a1, int a2, int a3);
 
 /// @ordinal 513
 /// @name SMsgUnregisterKeyDown
 /// @address 6ffcd680
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 BOOL __stdcall SMsgUnregisterKeyDown(int a1, int a2, int a3);
 
 /// @ordinal 514
 /// @name SMsgUnregisterKeyUp
 /// @address 6ffcd6a0
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 BOOL __stdcall SMsgUnregisterKeyUp(int a1, int a2, int a3);
 
 /// @ordinal 515
 /// @name SMsgUnregisterMessage
 /// @address 6ffcd6c0
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 BOOL __stdcall SMsgUnregisterMessage(int a1, int a2, int a3);
 
 /// @ordinal 516
@@ -1751,7 +1754,7 @@ int __stdcall SErrPrepareAppFatal(int a1, int a2);
 /// @ordinal 571
 /// @name SStrChr
 /// @address 6ffd9fe0
-/// Imported by ['D2Launch.dll', 'Fog.dll', 'D2Multi.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Launch.dll', 'D2Multi.dll', 'Fog.dll']
 char *__stdcall SStrChr(const char *string, char c);
 
 /// @ordinal 572
@@ -1793,7 +1796,7 @@ __int64 __stdcall SStrToInt64(const char *string);
 /// @ordinal 578
 /// @name SStrVPrintf
 /// @address 6ffda570
-/// Imported by ['D2Launch.dll', 'Fog.dll', 'D2Common.dll', 'D2Multi.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Common.dll', 'D2Launch.dll', 'D2Multi.dll', 'D2Server.dll', 'Fog.dll', 'Game.exe']
 int __cdecl SStrVPrintf(char *DstBuf, size_t MaxCount, char *Format, char ArgList);
 
 /// @ordinal 579

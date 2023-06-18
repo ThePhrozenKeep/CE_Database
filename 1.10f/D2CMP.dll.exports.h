@@ -1,15 +1,15 @@
 // List of D2CMP.dll exports (base address 6fdf0000)
 // For each of the other .DLLs, here are the number of imports of the current module exports:
 // (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)
-// |- D2Direct3D.dll   :  10
-// |- D2Gdi.dll        :  11
-// |- D2Glide.dll      :  10
+// |- D2Client.dll     :  35
 // |- D2Common.dll     :   8
 // |- D2DDraw.dll      :  11
-// |- D2Win.dll        :  14
+// |- D2Direct3D.dll   :  10
 // |- D2Game.dll       :   1
-// |- D2Client.dll     :  35
+// |- D2Gdi.dll        :  11
+// |- D2Glide.dll      :  10
 // |- D2OpenGL.dll     :  11
+// |- D2Win.dll        :  14
 
 
 /// @ordinal 10000
@@ -39,7 +39,7 @@ void __fastcall D2CalculatePL2ScreenPalette(PL2File *pPL2);
 /// @ordinal 10004
 /// @name D2GetNearestPaletteIndex
 /// @address 6fdfab20
-/// Imported by ['D2Gdi.dll', 'D2DDraw.dll', 'D2Win.dll']
+/// Imported by ['D2DDraw.dll', 'D2Gdi.dll', 'D2Win.dll']
 BYTE __stdcall D2GetNearestPaletteIndex(BYTE *pPalette, int nPaletteSize, int nRed, int nGreen, int nBlue);
 
 /// @ordinal 10005
@@ -159,7 +159,7 @@ BOOL __stdcall CelFileSerialize(CelFile *pCellFile, _DWORD *ppOutNodes, int *pOu
 /// @ordinal 10024
 /// @name CelFileNormalize
 /// @address 6fdf1ea0
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 void __stdcall CelFileNormalize(CelFile *pFile, CelFile **ppOutFile, const char *szFile, int nLine, int nSpecVersion);
 
 /// @ordinal 10025
@@ -207,55 +207,55 @@ void __stdcall CelFileTransform(CelFile *pCelFile, byte *pTransformData);
 /// @ordinal 10032
 /// @name CelFileFreeHardware
 /// @address 6fdf2750
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 BOOL __stdcall CelFileFreeHardware(CelFile *ptFile);
 
 /// @ordinal 10033
 /// @name CelDraw
 /// @address 6fdf20a0
-/// Imported by ['D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll', 'D2DDraw.dll', 'D2OpenGL.dll']
+/// Imported by ['D2DDraw.dll', 'D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll', 'D2OpenGL.dll']
 int __stdcall CelDraw(CelInstance *pCelInstance, int offsetX, int offsetY, int nDestClampXMin, int a5, int pDestSurface, int surfaceHeight, int surfaceStride, int a9, int a10, const BYTE *pPalette);
 
 /// @ordinal 10034
 /// @name CelDrawEx
 /// @address 6fdf22c0
-/// Imported by ['D2Gdi.dll', 'D2DDraw.dll']
+/// Imported by ['D2DDraw.dll', 'D2Gdi.dll']
 char *__stdcall CelDrawEx(CelInstance *pCelInstance, int a2, int a3, int a4, int a5, int pDestSurface, int surfaceHeight, unsigned int surfaceStride, int a9, int a10, int a11, int a12, int a13);
 
 /// @ordinal 10035
 /// @name CelDrawShadow
 /// @address 6fdf2410
-/// Imported by ['D2Gdi.dll', 'D2DDraw.dll']
+/// Imported by ['D2DDraw.dll', 'D2Gdi.dll']
 int __stdcall CelDrawShadow(CelInstance *pCelInstance, int arg_4, int arg_8, int XClipMin, int XClipMax, int pDestSurface, int destSurfaceHeight, int destSurfaceStride, int a9, char a10);
 
 /// @ordinal 10036
 /// @name CelGetHandle
 /// @address 6fdf2540
-/// Imported by ['D2Win.dll', 'D2Client.dll', 'D2OpenGL.dll']
+/// Imported by ['D2Client.dll', 'D2OpenGL.dll', 'D2Win.dll']
 int __stdcall CelGetHandle(CelContext *pCelContext);
 
 /// @ordinal 10037
 /// @name CelGetWidth
 /// @address 6fdf25e0
-/// Imported by ['D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll', 'D2DDraw.dll', 'D2Win.dll', 'D2Client.dll', 'D2OpenGL.dll']
+/// Imported by ['D2Client.dll', 'D2DDraw.dll', 'D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll', 'D2OpenGL.dll', 'D2Win.dll']
 int __stdcall CelGetWidth(struct_pCel *pCel);
 
 /// @ordinal 10038
 /// @name CelGetHeight
 /// @address 6fdf2610
-/// Imported by ['D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll', 'D2DDraw.dll', 'D2Win.dll', 'D2Client.dll', 'D2OpenGL.dll']
+/// Imported by ['D2Client.dll', 'D2DDraw.dll', 'D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll', 'D2OpenGL.dll', 'D2Win.dll']
 int __stdcall CelGetHeight(struct_pCel *pCel);
 
 /// @ordinal 10039
 /// @name CelGetOffsetX
 /// @address 6fdf2640
-/// Imported by ['D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll', 'D2DDraw.dll', 'D2Win.dll', 'D2Client.dll', 'D2OpenGL.dll']
+/// Imported by ['D2Client.dll', 'D2DDraw.dll', 'D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll', 'D2OpenGL.dll', 'D2Win.dll']
 int __stdcall CelGetOffsetX(struct_pCel *pCel);
 
 /// @ordinal 10040
 /// @name CelGetOffsetY
 /// @address 6fdf2670
-/// Imported by ['D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll', 'D2DDraw.dll', 'D2Win.dll', 'D2Client.dll', 'D2OpenGL.dll']
+/// Imported by ['D2Client.dll', 'D2DDraw.dll', 'D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll', 'D2OpenGL.dll', 'D2Win.dll']
 int __stdcall CelGetOffsetY(struct_pCel *pCel);
 
 /// @ordinal 10041
@@ -291,7 +291,7 @@ void __stdcall CelSetHardwareFreeCallback(void (__fastcall *pfCallback)(void *pG
 /// @ordinal 10046
 /// @name CelFileGetCelsPerDirection
 /// @address 6fdf2700
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 int __stdcall CelFileGetCelsPerDirection(CelFile *pFile);
 
 /// @ordinal 10047
@@ -303,7 +303,7 @@ int __stdcall CelFileGetNumDirections(CelFile *pFile);
 /// @ordinal 10048
 /// @name CmpDoLensEffect
 /// @address 6fdf7fb0
-/// Imported by ['D2Gdi.dll', 'D2DDraw.dll']
+/// Imported by ['D2DDraw.dll', 'D2Gdi.dll']
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10049
@@ -321,31 +321,31 @@ void __stdcall D2FormatCellFilePath(char *szBuffer, const char *szFormat, char *
 /// @ordinal 10051
 /// @name GetGfxFileExtension
 /// @address 6fdfb930
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 const char *__stdcall GetGfxFileExtension(int nFormat);
 
 /// @ordinal 10052
 /// @name D2InitSpriteCache
 /// @address 6fdfb9f0
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 int __stdcall D2InitSpriteCache(void *pMemPool, int dwSpriteCacheSize, int dwSize, unsigned int dwMemoryOverride);
 
 /// @ordinal 10053
 /// @name D2FlushSpriteCache
 /// @address 6fdfbbf0
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 void __stdcall D2FlushSpriteCache(BOOL realloc);
 
 /// @ordinal 10054
 /// @name D2SetCompressedDataMode
 /// @address 6fdfb9c0
-/// Imported by ['D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2Win.dll']
 void __stdcall D2SetCompressedDataMode(BOOL bUseRegistry);
 
 /// @ordinal 10055
 /// @name D2CacheCurrentCell_sFindCel
 /// @address 6fdfbd40
-/// Imported by ['D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll', 'D2DDraw.dll', 'D2Win.dll', 'D2Client.dll']
+/// Imported by ['D2Client.dll', 'D2DDraw.dll', 'D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll', 'D2Win.dll']
 BOOL __stdcall D2CacheCurrentCell_sFindCel(CelContext *ptCelContext, BOOL bAsyncWait, BOOL bAsyncLoad);
 
 /// @ordinal 10056
@@ -475,16 +475,16 @@ int __stdcall D2Load24BitTileProject(struct_ptTileProject *ptProject24, struct_p
 void __stdcall D2SetLRUHardwareFreeCallback(void (__fastcall *a1)(struct_ptTile *pTile));
 
 /// @ordinal 10077
-/// @name D2GetTileOrientation
+/// @name D2GetTileType
 /// @address 6fdfff00
 /// Imported by ['D2Client.dll']
-int __stdcall D2GetTileOrientation(struct_ptTile *hTile);
+int __stdcall D2GetTileType(struct_ptTile *hTile);
 
 /// @ordinal 10078
-/// @name D2GetTileIndex_Style
+/// @name D2GetTileStyle
 /// @address 6fdfff30
-/// Imported by ['D2Common.dll', 'D2Client.dll']
-int __stdcall D2GetTileIndex_Style(struct_ptTile *hTile);
+/// Imported by ['D2Client.dll', 'D2Common.dll']
+int __stdcall D2GetTileStyle(struct_ptTile *hTile);
 
 /// @ordinal 10079
 /// @name D2GetTileFlags
@@ -505,10 +505,10 @@ int __stdcall D2GetTileWidth(struct_ptTile *hTile);
 int __stdcall TileGetRarity(struct_ptTile *hTile);
 
 /// @ordinal 10082
-/// @name D2GetTileSubIndex_Sequence
+/// @name D2GetTileSequence
 /// @address 6fdffff0
-/// Imported by ['D2Common.dll', 'D2Client.dll']
-int __stdcall D2GetTileSubIndex_Sequence(struct_ptTile *hTile);
+/// Imported by ['D2Client.dll', 'D2Common.dll']
+int __stdcall D2GetTileSequence(struct_ptTile *hTile);
 
 /// @ordinal 10083
 /// @name D2GetTileDirection
@@ -561,7 +561,7 @@ void __stdcall D2FreeTileCache(BOOL bFreeLRU);
 /// @ordinal 10091
 /// @name D2CacheTile
 /// @address 6fdfe6d0
-/// Imported by ['D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll', 'D2DDraw.dll']
+/// Imported by ['D2DDraw.dll', 'D2Direct3D.dll', 'D2Gdi.dll', 'D2Glide.dll']
 BOOL __stdcall D2CacheTile(struct_ptTile *pTile, BOOL bAsyncWait, BOOL bAsyncLoad);
 
 /// @ordinal 10092
