@@ -3,6 +3,12 @@
 
 import idaapi
 import idautils
+import ida_loader
+import idc
+import getopt
+import os
+
+outputbasedir = "./CE_Database/"
 
 def tryNormalizeName(currentName, expectedStart):
     lowercaseName = currentName.lower()
@@ -19,18 +25,18 @@ def RemovePrefix(name, prefix):
 
 def LoadDllsImportForModule(moduleName):
     importers = {}
-    for directoryName in os.listdir("."):
+    for directoryName in sorted(os.listdir(outputbasedir)):
         importerName = directoryName.replace(".imports", "")
         if importerName == directoryName:
             continue
 
-        ordinalsFileName = os.path.join(directoryName, moduleName + ".imported.txt")
+        ordinalsFileName = os.path.join(outputbasedir, directoryName, moduleName + ".imported.txt")
         try:
-            ordinalsFile = file(ordinalsFileName, "r")
+            ordinalsFile = open(ordinalsFileName, "r")
             importedOrdinalList = [x.strip() for x in ordinalsFile.readlines() if x]
             if len(importedOrdinalList):
                 importers[importerName] = importedOrdinalList
-                print "Found %d imports in %s" %(len(importedOrdinalList),directoryName)
+                print("Found %d imports in %s" %(len(importedOrdinalList),directoryName))
 
         except:
             pass
@@ -38,84 +44,92 @@ def LoadDllsImportForModule(moduleName):
 
 def GetImportersList(modulesImportsList, ordinal, name):
     importers = []
-    for moduleName, importsList in modulesImportsList.iteritems():
+    for moduleName, importsList in modulesImportsList.items():
         if (str(ordinal) in importsList) or (name in importsList):
             importers.append(moduleName)
     return importers
 
 def PrintImportersStats(outfile, modulesImportsList):
     if modulesImportsList:
-        print >> outfile, "// For each of the other .DLLs, here are the number of imports of the current module exports:"
-        print >> outfile, "// (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)"
-        for moduleName, importsList in modulesImportsList.iteritems():
-            print >> outfile, "// |- {:16} : {:>3}".format(moduleName, len(importsList))
+        print("// For each of the other .DLLs, here are the number of imports of the current module exports:", file=outfile)
+        print("// (Note that this is not the number of uses/references, just the number of times the current module is listed in the import table)", file=outfile)
+        for moduleName, importsList in modulesImportsList.items():
+            print("// |- {:16} : {:>3}".format(moduleName, len(importsList)), file=outfile)
     else:
-        print >> outfile, "// No dll referencing the current module exports was found."
+        print("// No dll referencing the current module exports was found.", file=outfile)
 
 def DumpExport(outfile, inputFileBase, modulesImportsList, exp_index, exp_ordinal, exp_ea, exp_name, invalidFormatNames):
-    print >> outfile, "/// @ordinal {}".format(exp_ordinal)
-    name = GetTrueNameEx(BADADDR,exp_ea);
+    print("/// @ordinal {}".format(exp_ordinal), file=outfile)
+    name = idc.get_name(exp_ea, idc.calc_gtn_flags(idc.BADADDR,exp_ea))
     expectedNameStart = inputFileBase + "_" + str(exp_ordinal)
     if not name.startswith(expectedNameStart):
         normalizedName = tryNormalizeName(name,expectedNameStart)
         if normalizedName:
-            print "replacing " + name + " by " + normalizedName
-            MakeName(exp_ea, normalizedName)
+            print("replacing " + name + " by " + normalizedName)
+            idc.make_name(exp_ea, normalizedName)
             name = normalizedName
         else:
             invalidFormatNames.append(name + "(expected " + expectedNameStart + ")")
     if name != expectedNameStart:
         name = RemovePrefix(name, expectedNameStart)
-    print >> outfile, "/// @name {}".format(name)
-    print >> outfile, "/// @address {:x}".format(exp_ea)
+    print("/// @name {}".format(name), file=outfile)
+    print("/// @address {:x}".format(exp_ea), file=outfile)
     importers = GetImportersList(modulesImportsList, exp_ordinal, name)
     if importers:
-        print >> outfile, "/// Imported by {}".format(importers)
+        print("/// Imported by {}".format(importers), file=outfile)
     else:
-        print >> outfile, "/// Not imported by any .dll"
-    tinfo = GetTinfo(exp_ea)
+        print("/// Not imported by any .dll", file=outfile)
+    tinfo = idc.get_tinfo(exp_ea)
     # Note: One way to force types not to be guessed could be to call MakeName ?
     if tinfo is not None:
         (type, fields) = tinfo
-        print >> outfile,idaapi.idc_print_type(type, fields, name, 0) +";"
+        print(idaapi.idc_print_type(type, fields, name, 0) +";", file=outfile)
     else:
-        guessedType = GuessType(exp_ea)
+        guessedType = idc.guess_type(exp_ea)
         if guessedType is not None:
-            print >> outfile,"/// @guessedtype {}".format(guessedType)
+            print("/// @guessedtype {}".format(guessedType), file=outfile)
         else:
-            print >> outfile,"/// Failed to extract type"
+            print("/// Failed to extract type", file=outfile)
 
 def DumpAllExports():
     invalidFormatNames = []
     pe = peutils_t()
     baseaddr = pe.imagebase
-    print "Listing module {} exports with base address {:x}".format(GetInputFile(),baseaddr)
+    print ("Listing module {} exports with base address {:x}".format(idc.get_root_filename(),baseaddr))
     exportsList = list(idautils.Entries())
-    print "Found %d exports(s)..." % len(exportsList)
-    inputFileBase = os.path.splitext(GetInputFile())[0]
+    print ("Found %d exports(s)..." % len(exportsList))
+    inputFileBase = os.path.splitext(idc.get_root_filename())[0]
 
-    outfileName = GetInputFile() + ".exports.h"
+    outfileName = os.path.join(outputbasedir, idc.get_root_filename() + ".exports.h")
 
-    print "Loading list of dlls importing current module"
-    modulesImportsList = LoadDllsImportForModule(GetInputFile())
+    print ("Loading list of dlls importing current module")
+    modulesImportsList = LoadDllsImportForModule(idc.get_root_filename())
 
-    print "Dumping ordinals to " + outfileName
-    outfile = file(outfileName,"w")
+    print ("Dumping ordinals to " + outfileName)
+    outfile = open(outfileName, 'w')
 
-    print >> outfile, "// List of {} exports (base address {:x})".format(GetInputFile(),baseaddr)
+    print("// List of {} exports (base address {:x})".format(idc.get_root_filename(),baseaddr), file=outfile)
     PrintImportersStats(outfile, modulesImportsList)
-    print >> outfile, "\n"
+    print("\n", file=outfile)
 
     for exp_index, exp_ordinal, exp_ea, exp_name in list(idautils.Entries()):
         if exp_name == "DllEntryPoint":
             continue
         DumpExport(outfile, inputFileBase, modulesImportsList, exp_index, exp_ordinal, exp_ea, exp_name, invalidFormatNames)
-        print >> outfile,""
-    print "All done..."
+        print("", file=outfile)
+    print ("All done...")
 
     if invalidFormatNames:
-        print "Badly formated names:"
+        print ("Badly formated names:")
         for name in invalidFormatNames:
-            print name
+            print (name)
+
 
 DumpAllExports()
+
+# To be used with command line to exit ida at the end of the script
+if "--exitida" in idc.ARGV:
+    ida_loader.set_database_flag(ida_loader.DBFL_KILL)
+    idc.qexit(0)
+elif len(idc.ARGV) >= 2:
+    print ("Unknown argument" + str(idc.ARGV))
