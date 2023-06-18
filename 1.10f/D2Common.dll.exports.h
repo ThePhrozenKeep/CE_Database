@@ -7,100 +7,100 @@
 
 
 /// @ordinal 10000
-/// @name GetLevelType
+/// @name DRLG_GetLevelTypeFromLevelId
 /// @address 6fd75260
 /// Imported by ['D2Client.dll']
-int __stdcall GetLevelType(int nLevelId);
+int __stdcall DRLG_GetLevelTypeFromLevelId(int nLevelId);
 
 /// @ordinal 10001
-/// @name GetActNoFromLevelId
+/// @name DRLG_GetActNoFromLevelId
 /// @address 6fd75300
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BYTE __stdcall GetActNoFromLevelId(int nLevelId);
+BYTE __stdcall DRLG_GetActNoFromLevelId(int nLevelId);
 
 /// @ordinal 10002
-/// @name GetLOSDraw
+/// @name DRLG_GetLOSDrawFromLevelId
 /// @address 6fd75350
 /// Imported by ['D2Client.dll']
-int __stdcall GetLOSDraw(int nLevelId);
+int __stdcall DRLG_GetLOSDrawFromLevelId(int nLevelId);
 
 /// @ordinal 10003
-/// @name D2Common_10003
+/// @name DRLGACTIVATE_Update
 /// @address 6fd73f20
 /// Imported by ['D2Client.dll']
-void __stdcall D2Common_10003(D2DrlgStrc *pDrlg);
+void __stdcall DRLGACTIVATE_Update(D2DrlgStrc *pDrlg);
 
 /// @ordinal 10004
-/// @name GetSaveMonsters
+/// @name DRLG_GetSaveMonstersFromLevelId
 /// @address 6fd75330
 /// Imported by ['D2Game.dll']
-int __stdcall GetSaveMonsters(int nLevelId);
+int __stdcall DRLG_GetSaveMonstersFromLevelId(int nLevelId);
 
 /// @ordinal 10005
-/// @name GetLevel
+/// @name DRLG_GetLevel
 /// @address 6fd749a0
 /// Not imported by any .dll
-D2DrlgLevelStrc *__stdcall GetLevel(D2DrlgStrc *pDrlg, int nLevelId);
+D2DrlgLevelStrc *__stdcall DRLG_GetLevel(D2DrlgStrc *pDrlg, int nLevelId);
 
 /// @ordinal 10006
-/// @name InitLevel
+/// @name DRLG_InitLevel
 /// @address 6fd74c10
 /// Not imported by any .dll
-void __stdcall InitLevel(D2DrlgLevelStrc *pLevel);
+void __stdcall DRLG_InitLevel(D2DrlgLevelStrc *pLevel);
 
 /// @ordinal 10007
-/// @name GetRoomExFromRoom
+/// @name DUNGEON_GetRoomExFromRoom
 /// @address 6fd8d0c0
 /// Imported by ['D2Client.dll']
-D2RoomExStrc *__fastcall GetRoomExFromRoom(D2RoomStrc *pRoom);
+D2RoomExStrc *__fastcall DUNGEON_GetRoomExFromRoom(D2RoomStrc *pRoom);
 
 /// @ordinal 10008
-/// @name D2Common_10008
+/// @name DRLGPRESET_GetLevelPrestIdFromRoomEx
 /// @address 6fd881a0
 /// Not imported by any .dll
-int __thiscall D2Common_10008(D2DrlgStrc *this);
+int __thiscall DRLGPRESET_GetLevelPrestIdFromRoomEx(D2DrlgStrc *this);
 
 /// @ordinal 10009
-/// @name D2Common_10009
+/// @name DRLGPRESET_GetPickedLevelPrestFilePathFromRoomEx
 /// @address 6fd881b0
 /// Not imported by any .dll
-char *__fastcall D2Common_10009(D2RoomExStrc *pRoomEx);
+char *__fastcall DRLGPRESET_GetPickedLevelPrestFilePathFromRoomEx(D2RoomExStrc *pRoomEx);
 
 /// @ordinal 10010
-/// @name GetLevelDefsRecord
+/// @name DATATBLS_GetLevelDefRecord
 /// @address 6fd60d90
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2LevelDefBin *__fastcall GetLevelDefsRecord(int nLevelId);
+D2LevelDefBin *__fastcall DATATBLS_GetLevelDefRecord(int nLevelId);
 
 /// @ordinal 10011
-/// @name GetAutomapCell
+/// @name DATATBLS_GetAutomapCellId
 /// @address 6fd62d30
 /// Imported by ['D2Client.dll']
-int __fastcall GetAutomapCell(int dwAutomapLevelType, int dwAutomapTileType, int nStyle, signed int nSequence);
+int __fastcall DATATBLS_GetAutomapCellId(int dwAutomapLevelType, int dwAutomapTileType, int nStyle, signed int nSequence);
 
 /// @ordinal 10012
-/// @name FreeDrlgAndLevels
+/// @name DRLG_FreeDrlg
 /// @address 6fd743b0
 /// Not imported by any .dll
-void __fastcall FreeDrlgAndLevels(D2DrlgStrc *pDrlg);
+void __fastcall DRLG_FreeDrlg(D2DrlgStrc *pDrlg);
 
 /// @ordinal 10013
-/// @name AllocLevel
+/// @name DRLG_AllocLevel
 /// @address 6fd748d0
 /// Not imported by any .dll
-D2DrlgLevelStrc *__fastcall AllocLevel(D2DrlgStrc *pDrlg, int nLevelId);
+D2DrlgLevelStrc *__fastcall DRLG_AllocLevel(D2DrlgStrc *pDrlg, int nLevelId);
 
 /// @ordinal 10014
-/// @name AllocDrlg
+/// @name DRLG_AllocDrlg
 /// @address 6fd74120
 /// Not imported by any .dll
 /// @guessedtype int __stdcall(int a3, int nInitSeed, int nLevelId, int nFlags, int pGame, char nDifficulty, int a9, int a10)
 
 /// @ordinal 10015
-/// @name D2Common_10015
+/// @name DRLGACTIVATE_GetRoomsAllocationStats
 /// @address 6fd73ef0
 /// Not imported by any .dll
-void __fastcall D2Common_10015(int *a1, int *a2, int *a3, int *a4);
+void __fastcall DRLGACTIVATE_GetRoomsAllocationStats(int *a1, int *a2, int *a3, int *a4);
 
 /// @ordinal 10016
 /// @name D2Common_10018_Return0
@@ -109,10 +109,10 @@ void __fastcall D2Common_10015(int *a1, int *a2, int *a3, int *a4);
 int __stdcall D2Common_10018_Return0();
 
 /// @ordinal 10017
-/// @name GetNumberOfShadowsFromRoom
+/// @name DRLGROOMTILE_GetNumberOfShadowsFromRoom
 /// @address 6fd8a1b0
 /// Not imported by any .dll
-int __fastcall GetNumberOfShadowsFromRoom(D2RoomStrc *pRoom);
+int __fastcall DRLGROOMTILE_GetNumberOfShadowsFromRoom(D2RoomStrc *pRoom);
 
 /// @ordinal 10018
 /// @name Return0
@@ -121,10 +121,10 @@ int __fastcall GetNumberOfShadowsFromRoom(D2RoomStrc *pRoom);
 int __stdcall Return0();
 
 /// @ordinal 10019
-/// @name D2Common_11296_MONSTERS_Return
+/// @name D2Common_11296_Return
 /// @address 6fda5250
 /// Not imported by any .dll
-void __stdcall D2Common_11296_MONSTERS_Return(D2UnitStrc *pUnit);
+void __stdcall D2Common_11296_Return(D2UnitStrc *pUnit);
 
 /// @ordinal 10020
 /// @name DRLGPRESET_CreateCopyOfMapAI
@@ -133,76 +133,76 @@ void __stdcall D2Common_11296_MONSTERS_Return(D2UnitStrc *pUnit);
 D2MapAIStrc *__fastcall DRLGPRESET_CreateCopyOfMapAI(void *pMemPool, D2MapAIStrc *pMapAI);
 
 /// @ordinal 10021
-/// @name D2Common_10021
+/// @name DRLGPRESET_ChangeMapAI
 /// @address 6fd864f0
 /// Imported by ['D2Game.dll']
-int __fastcall D2Common_10021(int *a1, int *a2);
+int __fastcall DRLGPRESET_ChangeMapAI(int *a1, int *a2);
 
 /// @ordinal 10022
-/// @name D2Common_10022
+/// @name DRLGPRESET_FreeMapAI
 /// @address 6fd86500
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __fastcall(void *pMemPool, void *pFree)
 
 /// @ordinal 10023
-/// @name GetLevelTypesTxtRecord
+/// @name DATATBLS_GetLevelTypesTxtRecord
 /// @address 6fd61460
 /// Not imported by any .dll
-D2LvlTypesTxt *__stdcall GetLevelTypesTxtRecord(int nLevelType);
+D2LvlTypesTxt *__stdcall DATATBLS_GetLevelTypesTxtRecord(int nLevelType);
 
 /// @ordinal 10024
-/// @name GetLvlPrestTxtRecord
+/// @name DATATBLS_GetLvlPrestTxtRecord
 /// @address 6fd61b50
 /// Not imported by any .dll
-D2LvlPrestTxt *__stdcall GetLvlPrestTxtRecord(int nLvlPrestId);
+D2LvlPrestTxt *__stdcall DATATBLS_GetLvlPrestTxtRecord(int nLvlPrestId);
 
 /// @ordinal 10025
-/// @name DRLG_GetRoomCenterX_RoomWarpXFromRoom
+/// @name DUNGEON_GetWarpCoordinatesFromRoom
 /// @address 6fd8d1e0
 /// Imported by ['D2Game.dll']
-int *__stdcall DRLG_GetRoomCenterX_RoomWarpXFromRoom(D2RoomStrc *pRoom);
+int *__stdcall DUNGEON_GetWarpCoordinatesFromRoom(D2RoomStrc *pRoom);
 
 /// @ordinal 10026
-/// @name EnableOrDisableRoomTiles
+/// @name DUNGEON_ToggleRoomTilesEnableFlag
 /// @address 6fd8b9e0
 /// Not imported by any .dll
-void __stdcall EnableOrDisableRoomTiles(D2RoomStrc *pRoom, BOOL bEnabled);
+void __stdcall DUNGEON_ToggleRoomTilesEnableFlag(D2RoomStrc *pRoom, BOOL bEnabled);
 
 /// @ordinal 10027
-/// @name D2Common_10027
+/// @name DUNGEON_GetWarpTileFromRoomAndSourceLevelId
 /// @address 6fd8ba20
 /// Imported by ['D2Game.dll']
-D2UnitStrc *__stdcall D2Common_10027(D2RoomStrc *pRoom, int nSourceLevel, D2LvlWarpTxt **ppLvlWarpTxtRecord);
+D2UnitStrc *__stdcall DUNGEON_GetWarpTileFromRoomAndSourceLevelId(D2RoomStrc *pRoom, int nSourceLevel, D2LvlWarpTxt **ppLvlWarpTxtRecord);
 
 /// @ordinal 10028
-/// @name GetLvlWarpTxtRecord
+/// @name DUNGEON_GetLvlWarpTxtRecordFromRoomAndUnit
 /// @address 6fd8bab0
 /// Imported by ['D2Client.dll']
-D2LvlWarpTxt *__stdcall GetLvlWarpTxtRecord(D2RoomStrc *pRoom, D2UnitStrc *pUnit);
+D2LvlWarpTxt *__stdcall DUNGEON_GetLvlWarpTxtRecordFromRoomAndUnit(D2RoomStrc *pRoom, D2UnitStrc *pUnit);
 
 /// @ordinal 10029
-/// @name GetFirstUnitInRoom
+/// @name DUNGEON_GetFirstUnitInRoom
 /// @address 6fd8c4a0
 /// Imported by ['D2Client.dll']
-D2UnitStrc *__stdcall GetFirstUnitInRoom(D2RoomStrc *pRoom);
+D2UnitStrc *__stdcall DUNGEON_GetFirstUnitInRoom(D2RoomStrc *pRoom);
 
 /// @ordinal 10030
-/// @name GetFloorTilesFromRoom
+/// @name DUNGEON_GetFloorTilesFromRoom
 /// @address 6fd8baf0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetFloorTilesFromRoom(D2RoomStrc *pRoom, int *pFloorCount);
+int __stdcall DUNGEON_GetFloorTilesFromRoom(D2RoomStrc *pRoom, int *pFloorCount);
 
 /// @ordinal 10031
-/// @name GetWallTilesFromRoom
+/// @name DUNGEON_GetWallTilesFromRoom
 /// @address 6fd8bb20
 /// Imported by ['D2Client.dll']
-void *__stdcall GetWallTilesFromRoom(D2RoomStrc *pRoom, int *pWallCount);
+void *__stdcall DUNGEON_GetWallTilesFromRoom(D2RoomStrc *pRoom, int *pWallCount);
 
 /// @ordinal 10032
-/// @name GetRoofTilesFromRoom
+/// @name DUNGEON_GetRoofTilesFromRoom
 /// @address 6fd8bb60
 /// Imported by ['D2Client.dll']
-void *__stdcall GetRoofTilesFromRoom(D2RoomStrc *pRoom, int *pRoofCount);
+void *__stdcall DUNGEON_GetRoofTilesFromRoom(D2RoomStrc *pRoom, int *pRoofCount);
 
 /// @ordinal 10033
 /// @name DUNGEON_GetTileDataFromAct
@@ -211,10 +211,10 @@ void *__stdcall GetRoofTilesFromRoom(D2RoomStrc *pRoom, int *pRoofCount);
 D2DrlgTileDataStrc *__stdcall DUNGEON_GetTileDataFromAct(D2DrlgActStrc *pAct);
 
 /// @ordinal 10034
-/// @name GetRoomCoordStrc
+/// @name DUNGEON_GetRoomCoordinates
 /// @address 6fd8bbb0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall GetRoomCoordStrc(D2RoomStrc *pRoom, D2RoomCoordStrc *pCoord);
+void __stdcall DUNGEON_GetRoomCoordinates(D2RoomStrc *pRoom, D2RoomCoordStrc *pCoord);
 
 /// @ordinal 10035
 /// @name DUNGEON_GetAdjacentRoomsListFromRoom
@@ -223,28 +223,28 @@ void __stdcall GetRoomCoordStrc(D2RoomStrc *pRoom, D2RoomCoordStrc *pCoord);
 void __stdcall DUNGEON_GetAdjacentRoomsListFromRoom(D2RoomStrc *pRoom, D2RoomStrc ***pppRoom, DWORD *pNumRooms);
 
 /// @ordinal 10036
-/// @name GetAlliedCountFromRoom
+/// @name DUNGEON_GetAlliedCountFromRoom
 /// @address 6fd8c4f0
 /// Not imported by any .dll
-int __stdcall GetAlliedCountFromRoom(D2RoomStrc *pRoom);
+int __stdcall DUNGEON_GetAlliedCountFromRoom(D2RoomStrc *pRoom);
 
 /// @ordinal 10037
-/// @name GetTownIdFromAct
+/// @name DUNGEON_GetTownLevelIdFromAct
 /// @address 6fd8d4f0
 /// Imported by ['D2Game.dll']
-int __stdcall GetTownIdFromAct(D2DrlgActStrc *pAct);
+int __stdcall DUNGEON_GetTownLevelIdFromAct(D2DrlgActStrc *pAct);
 
 /// @ordinal 10038
-/// @name AllocAct
+/// @name DUNGEON_AllocAct
 /// @address 6fd8b8a0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int __stdcall(char nActNo, int nInitSeed, int bClient, int pGame, int nDifficulty, int pMemPool, int nTownLevelId, int a9, int a10)
 
 /// @ordinal 10039
-/// @name FreeAct
+/// @name DUNGEON_FreeAct
 /// @address 6fd8b950
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall FreeAct(D2DrlgActStrc *pAct);
+void __stdcall DUNGEON_FreeAct(D2DrlgActStrc *pAct);
 
 /// @ordinal 10040
 /// @name DUNGEON_DoRoomsTouchOrOverlap
@@ -253,76 +253,76 @@ void __stdcall FreeAct(D2DrlgActStrc *pAct);
 bool __stdcall DUNGEON_DoRoomsTouchOrOverlap(D2RoomStrc *ptFirst, D2RoomStrc *ptSecond);
 
 /// @ordinal 10041
-/// @name DUNGEON_FindRoomByCoordinates
+/// @name DUNGEON_FindRoomBySubtileCoordinates
 /// @address 6fd8c240
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2RoomStrc *__stdcall DUNGEON_FindRoomByCoordinates(D2DrlgActStrc *pAct, int nX, int nY);
+D2RoomStrc *__stdcall DUNGEON_FindRoomBySubtileCoordinates(D2DrlgActStrc *pAct, int nX, int nY);
 
 /// @ordinal 10042
-/// @name sgptDataTable
+/// @name sgptDataTables
 /// @address 6fdd6a20
-/// Not imported by any .dll
+/// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int *
 
 /// @ordinal 10043
-/// @name DUNGEON_AreCoordinatesInsideRoom
+/// @name DUNGEON_AreTileCoordinatesInsideRoom
 /// @address 6fd8be30
 /// Not imported by any .dll
-bool __stdcall DUNGEON_AreCoordinatesInsideRoom(D2RoomStrc *pRoom, int nX, int nY);
+bool __stdcall DUNGEON_AreTileCoordinatesInsideRoom(D2RoomStrc *pRoom, int nX, int nY);
 
 /// @ordinal 10044
-/// @name D2Common_10044
+/// @name DUNGEON_CheckLOSDraw
 /// @address 6fd8d040
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall D2Common_10044(D2RoomStrc *pRoom);
+int __stdcall DUNGEON_CheckLOSDraw(D2RoomStrc *pRoom);
 
 /// @ordinal 10045
-/// @name D2Common_10045
+/// @name DUNGEON_FindActSpawnLocationEx
 /// @address 6fd8c340
 /// Imported by ['D2Game.dll']
-D2RoomStrc *__stdcall D2Common_10045(D2DrlgActStrc *pAct, int nLevelId, int a3, int *a4, int a5, int nUnitSize);
+D2RoomStrc *__stdcall DUNGEON_FindActSpawnLocationEx(D2DrlgActStrc *pAct, int nLevelId, int a3, int *a4, int a5, int nUnitSize);
 
 /// @ordinal 10046
-/// @name D2Common_10046
+/// @name DUNGEON_FindActSpawnLocation
 /// @address 6fd8c2f0
 /// Imported by ['D2Game.dll']
-D2RoomStrc *__stdcall D2Common_10046(D2DrlgActStrc *pAct, int nLevelId, int a3, int *a4, int *a5);
+D2RoomStrc *__stdcall DUNGEON_FindActSpawnLocation(D2DrlgActStrc *pAct, int nLevelId, int a3, int *a4, int *a5);
 
 /// @ordinal 10047
-/// @name GetTombStaffLevel
+/// @name DUNGEON_GetHoradricStaffTombLevelId
 /// @address 6fd8d520
 /// Imported by ['D2Game.dll']
-int __stdcall GetTombStaffLevel(D2DrlgActStrc *pAct);
+int __stdcall DUNGEON_GetHoradricStaffTombLevelId(D2DrlgActStrc *pAct);
 
 /// @ordinal 10048
-/// @name D2Common_10048
+/// @name DUNGEON_CheckRoomsOverlapping_BROKEN
 /// @address 6fd8be90
 /// Not imported by any .dll
-int __stdcall D2Common_10048(D2RoomStrc *pRoom, int nUnused);
+int __stdcall DUNGEON_CheckRoomsOverlapping_BROKEN(D2RoomStrc *pRoom, int nUnused);
 
 /// @ordinal 10049
-/// @name DUNGEON_ForEachRoom
+/// @name DUNGEON_CallRoomCallback
 /// @address 6fd8bff0
 /// Imported by ['D2Client.dll']
-void __stdcall DUNGEON_ForEachRoom(D2RoomStrc *pRoom, FARPROC pfnRoomCallback, void *a3);
+void __stdcall DUNGEON_CallRoomCallback(D2RoomStrc *pRoom, FARPROC pfnRoomCallback, void *a3);
 
 /// @ordinal 10050
-/// @name D2Common_10050
+/// @name DUNGEON_GetAdjacentRoomByTileCoordinates
 /// @address 6fd8bf50
 /// Not imported by any .dll
-D2RoomStrc *__stdcall D2Common_10050(D2RoomStrc *pRoom, int nX, int nY);
+D2RoomStrc *__stdcall DUNGEON_GetAdjacentRoomByTileCoordinates(D2RoomStrc *pRoom, int nX, int nY);
 
 /// @ordinal 10051
-/// @name D2Common_10051
+/// @name DUNGEON_FindRoomByTileCoordinates
 /// @address 6fd8bf00
 /// Not imported by any .dll
-int __stdcall D2Common_10051(int a1, int nX, int nY);
+int __stdcall DUNGEON_FindRoomByTileCoordinates(int a1, int nX, int nY);
 
 /// @ordinal 10052
-/// @name D2Common_10052
+/// @name 
 /// @address 6fd8c080
 /// Imported by ['D2Client.dll']
-void __stdcall D2Common_10052(D2RoomStrc *pRoom, RECT *pRect);
+void __stdcall(D2RoomStrc *pRoom, RECT *pRect);
 
 /// @ordinal 10053
 /// @name DUNGEON_GetSubtileRect
@@ -331,163 +331,163 @@ void __stdcall D2Common_10052(D2RoomStrc *pRoom, RECT *pRect);
 void __stdcall DUNGEON_GetSubtileRect(D2RoomStrc *pRoom, RECT *pRect);
 
 /// @ordinal 10054
-/// @name GetRGB_IntensityFromRoom
+/// @name DUNGEON_GetRGB_IntensityFromRoom
 /// @address 6fd8c210
 /// Imported by ['D2Client.dll']
-void __stdcall GetRGB_IntensityFromRoom(D2RoomStrc *pRoom, BYTE *pIntensity, BYTE *pRed, BYTE *pGreen, BYTE *pBlue);
+void __stdcall DUNGEON_GetRGB_IntensityFromRoom(D2RoomStrc *pRoom, BYTE *pIntensity, BYTE *pRed, BYTE *pGreen, BYTE *pBlue);
 
 /// @ordinal 10055
-/// @name D2Common_10055
+/// @name DUNGEON_GetPresetUnitsFromRoom
 /// @address 6fd8c5c0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2PresetUnitStrc *__stdcall D2Common_10055(D2RoomStrc *pRoom);
+D2PresetUnitStrc *__stdcall DUNGEON_GetPresetUnitsFromRoom(D2RoomStrc *pRoom);
 
 /// @ordinal 10056
-/// @name GetRoomFromAct
+/// @name DUNGEON_GetRoomFromAct
 /// @address 6fd8c770
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2RoomStrc *__stdcall GetRoomFromAct(D2DrlgActStrc *pAct);
+D2RoomStrc *__stdcall DUNGEON_GetRoomFromAct(D2DrlgActStrc *pAct);
 
 /// @ordinal 10057
-/// @name GetLevelIdFromRoom
+/// @name DUNGEON_GetLevelIdFromRoom
 /// @address 6fd8c7a0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetLevelIdFromRoom(D2RoomStrc *pRoom);
+int __stdcall DUNGEON_GetLevelIdFromRoom(D2RoomStrc *pRoom);
 
 /// @ordinal 10058
-/// @name GetLevelIdFromTile
+/// @name DUNGEON_GetWarpDestinationLevel
 /// @address 6fd8c7c0
 /// Imported by ['D2Client.dll']
-int __stdcall GetLevelIdFromTile(D2RoomStrc *pRoom, int nClassId);
+int __stdcall DUNGEON_GetWarpDestinationLevel(D2RoomStrc *pRoom, int nClassId);
 
 /// @ordinal 10059
-/// @name GetLevelIdFromRoom
+/// @name DUNGEON_GetLevelIdFromPopulatedRoom
 /// @address 6fd8c7e0
 /// Imported by ['D2Game.dll']
-int __stdcall GetLevelIdFromRoom(D2RoomStrc *pRoom);
+int __stdcall DUNGEON_GetLevelIdFromPopulatedRoom(D2RoomStrc *pRoom);
 
 /// @ordinal 10060
-/// @name D2Common_10060
+/// @name DUNGEON_HasWaypoint
 /// @address 6fd8c800
 /// Imported by ['D2Game.dll']
-BOOL __stdcall D2Common_10060(D2RoomStrc *pRoom);
+BOOL __stdcall DUNGEON_HasWaypoint(D2RoomStrc *pRoom);
 
 /// @ordinal 10061
-/// @name D2Common_10061
+/// @name DUNGEON_GetPickedLevelPrestFilePathFromRoom
 /// @address 6fd8c840
 /// Not imported by any .dll
-void *__stdcall D2Common_10061(D2RoomStrc *pRoom);
+void *__stdcall DUNGEON_GetPickedLevelPrestFilePathFromRoom(D2RoomStrc *pRoom);
 
 /// @ordinal 10062
-/// @name D2Common_10062
+/// @name DUNGEON_ChangeClientRoom
 /// @address 6fd8c700
 /// Imported by ['D2Game.dll']
-void __stdcall D2Common_10062(D2RoomStrc *pRoom1, D2RoomStrc *pRoom2);
+void __stdcall DUNGEON_ChangeClientRoom(D2RoomStrc *pRoom1, D2RoomStrc *pRoom2);
 
 /// @ordinal 10063
-/// @name AddRoomData
+/// @name DUNGEON_SetClientIsInSight
 /// @address 6fd8c660
 /// Imported by ['D2Client.dll']
-void __stdcall AddRoomData(D2DrlgActStrc *pAct, int nLevelId, int nX, int nY, D2RoomStrc *pRoom);
+void __stdcall DUNGEON_SetClientIsInSight(D2DrlgActStrc *pAct, int nLevelId, int nX, int nY, D2RoomStrc *pRoom);
 
 /// @ordinal 10064
-/// @name RemoveRoomData
+/// @name DUNGEON_UnsetClientIsInSight
 /// @address 6fd8c6b0
 /// Imported by ['D2Client.dll']
-void __stdcall RemoveRoomData(D2DrlgActStrc *pAct, int nLevelId, int nX, int nY, D2RoomStrc *pRoom);
+void __stdcall DUNGEON_UnsetClientIsInSight(D2DrlgActStrc *pAct, int nLevelId, int nX, int nY, D2RoomStrc *pRoom);
 
 /// @ordinal 10065
-/// @name GetRoomFromActAndCoord
+/// @name DUNGEON_StreamRoomAtCoords
 /// @address 6fd8c730
 /// Imported by ['D2Game.dll']
-D2RoomStrc *__stdcall GetRoomFromActAndCoord(D2DrlgActStrc *pAct, int nX, int nY);
+D2RoomStrc *__stdcall DUNGEON_StreamRoomAtCoords(D2DrlgActStrc *pAct, int nX, int nY);
 
 /// @ordinal 10066
-/// @name AllocDrlgDelete
+/// @name DUNGEON_AllocDrlgDelete
 /// @address 6fd8c860
 /// Imported by ['D2Game.dll']
-void __stdcall AllocDrlgDelete(D2RoomStrc *pRoom, int nUnitType, int nUnitId);
+void __stdcall DUNGEON_AllocDrlgDelete(D2RoomStrc *pRoom, int nUnitType, int nUnitId);
 
 /// @ordinal 10067
-/// @name D2Common_10067
+/// @name DUNGEON_FreeDrlgDelete
 /// @address 6fd8c8b0
 /// Imported by ['D2Game.dll']
-void __stdcall D2Common_10067(D2RoomStrc *pRoom);
+void __stdcall DUNGEON_FreeDrlgDelete(D2RoomStrc *pRoom);
 
 /// @ordinal 10068
-/// @name DRLG_GetDrlgDeleteFromRoom
+/// @name DUNGEON_GetDrlgDeleteFromRoom
 /// @address 6fd8c910
 /// Imported by ['D2Game.dll']
-D2DrlgDeleteStrc *__stdcall DRLG_GetDrlgDeleteFromRoom(D2RoomStrc *pRoom);
+D2DrlgDeleteStrc *__stdcall DUNGEON_GetDrlgDeleteFromRoom(D2RoomStrc *pRoom);
 
 /// @ordinal 10069
-/// @name D2Common_10069
+/// @name DUNGEON_GetARoomInClientSight
 /// @address 6fd8c940
 /// Not imported by any .dll
-int __stdcall D2Common_10069(D2DrlgActStrc *pAct);
+int __stdcall DUNGEON_GetARoomInClientSight(D2DrlgActStrc *pAct);
 
 /// @ordinal 10070
-/// @name D2Common_10070
+/// @name DUNGEON_GetARoomInSightButWithoutClient
 /// @address 6fd8c980
 /// Not imported by any .dll
-int __stdcall D2Common_10070(D2DrlgActStrc *pAct, D2RoomStrc *pRoom);
+int __stdcall DUNGEON_GetARoomInSightButWithoutClient(D2DrlgActStrc *pAct, D2RoomStrc *pRoom);
 
 /// @ordinal 10071
-/// @name DungeonTestRoomCanUnTile
+/// @name DUNGEON_TestRoomCanUnTile
 /// @address 6fd8c9e0
 /// Imported by ['D2Game.dll']
-signed int __stdcall DungeonTestRoomCanUnTile(D2DrlgActStrc *pAct, D2RoomStrc *pRoom);
+signed int __stdcall DUNGEON_TestRoomCanUnTile(D2DrlgActStrc *pAct, D2RoomStrc *pRoom);
 
 /// @ordinal 10072
-/// @name D2Common_10072
+/// @name DUNGEON_GetRoomStatusFlags
 /// @address 6fd8ca60
 /// Not imported by any .dll
-bool __stdcall D2Common_10072(D2RoomStrc *pRoom);
+bool __stdcall DUNGEON_GetRoomStatusFlags(D2RoomStrc *pRoom);
 
 /// @ordinal 10073
-/// @name D2Common_10073
+/// @name 
 /// @address 6fd8ca80
 /// Imported by ['D2Game.dll']
-signed int __stdcall D2Common_10073(D2RoomStrc *pRoom);
+signed int __stdcall(D2RoomStrc *pRoom);
 
 /// @ordinal 10074
-/// @name D2Common_10074
+/// @name 
 /// @address 6fd8cae0
 /// Imported by ['D2Game.dll']
-DWORD __stdcall D2Common_10074(D2RoomStrc *pRoom);
+DWORD __stdcall(D2RoomStrc *pRoom);
 
 /// @ordinal 10075
-/// @name D2Common_10075
+/// @name 
 /// @address 6fd8cb10
 /// Imported by ['D2Game.dll']
-void __stdcall D2Common_10075(D2RoomStrc *pRoom, BOOL bSet);
+void __stdcall(D2RoomStrc *pRoom, BOOL bSet);
 
 /// @ordinal 10076
-/// @name D2Common_10076
+/// @name DUNGEON_RemoveRoomFromAct
 /// @address 6fd8cf10
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_10076(D2DrlgActStrc *pAct, D2RoomStrc *pRoom);
+int __stdcall DUNGEON_RemoveRoomFromAct(D2DrlgActStrc *pAct, D2RoomStrc *pRoom);
 
 /// @ordinal 10077
-/// @name D2Common_10077
+/// @name 
 /// @address 6fd8d000
 /// Imported by ['D2Game.dll']
-void __stdcall D2Common_10077(D2RoomStrc *pRoom1, D2RoomStrc *pRoom2);
+void __stdcall(D2RoomStrc *pRoom1, D2RoomStrc *pRoom2);
 
 /// @ordinal 10078
-/// @name D2Common_10078
+/// @name DUNGEON_UpdateAndFreeInactiveRooms
 /// @address 6fd8d030
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10078(D2DrlgActStrc *pAct);
+void __stdcall DUNGEON_UpdateAndFreeInactiveRooms(D2DrlgActStrc *pAct);
 
 /// @ordinal 10079
-/// @name D2Common_10079
+/// @name DUNGEON_AddClientToRoom
 /// @address 6fd8cb60
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int pRoom, int pClient)
 
 /// @ordinal 10080
-/// @name D2Common_10080
+/// @name DUNGEON_RemoveClientFromRoom
 /// @address 6fd8cd10
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int pRoom, int pClient)
@@ -499,10 +499,10 @@ void __stdcall D2Common_10078(D2DrlgActStrc *pAct);
 int __stdcall GetTileCountFromRoom(D2RoomStrc *pRoom);
 
 /// @ordinal 10082
-/// @name TestRoomIfTown
+/// @name DUNGEON_IsRoomInTown
 /// @address 6fd8d0e0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall TestRoomIfTown(D2RoomStrc *pRoom);
+BOOL __stdcall DUNGEON_IsRoomInTown(D2RoomStrc *pRoom);
 
 /// @ordinal 10083
 /// @name Return0
@@ -511,82 +511,82 @@ BOOL __stdcall TestRoomIfTown(D2RoomStrc *pRoom);
 int __stdcall Return0(D2RoomStrc *pRoom);
 
 /// @ordinal 10084
-/// @name D2Common_10084
+/// @name 
 /// @address 6fd8d130
 /// Not imported by any .dll
-int __stdcall D2Common_10084(D2RoomStrc *pRoom);
+int __stdcall(D2RoomStrc *pRoom);
 
 /// @ordinal 10085
-/// @name GetTownLevelIdFromActNo
+/// @name DUNGEON_GetTownLevelIdFromActNo
 /// @address 6fd8d140
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetTownLevelIdFromActNo(int nAct);
+int __stdcall DUNGEON_GetTownLevelIdFromActNo(int nAct);
 
 /// @ordinal 10086
-/// @name TestLevelIdIfTown
+/// @name DUNGEON_IsTownLevelId
 /// @address 6fd8d0d0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall TestLevelIdIfTown(int nLevelId);
+BOOL __stdcall DUNGEON_IsTownLevelId(int nLevelId);
 
 /// @ordinal 10087
-/// @name D2Common_10087
+/// @name 
 /// @address 6fd8d180
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_10087(D2RoomStrc *pRoom);
+int __stdcall(D2RoomStrc *pRoom);
 
 /// @ordinal 10088
-/// @name GetDrlgFromAct
+/// @name DUNGEON_GetDrlgFromAct
 /// @address 6fd8d090
 /// Imported by ['D2Client.dll']
-D2DrlgStrc *__stdcall GetDrlgFromAct(D2DrlgActStrc *pAct);
+D2DrlgStrc *__stdcall DUNGEON_GetDrlgFromAct(D2DrlgActStrc *pAct);
 
 /// @ordinal 10089
-/// @name D2Common_10472_GetStatListOwnerId
+/// @name D2Common_10472_STATLIST_GetOwnerGUID
 /// @address 6fd912d0
 /// Imported by ['D2Client.dll']
-DWORD __stdcall D2Common_10472_GetStatListOwnerId(D2StatListStrc *pStatList);
+DWORD __stdcall D2Common_10472_STATLIST_GetOwnerGUID(D2StatListStrc *pStatList);
 
 /// @ordinal 10090
-/// @name D2Common_10090
+/// @name DUNGEON_GetNumberOfPopulatedRoomsInLevel
 /// @address 6fd8d1c0
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_10090(D2DrlgActStrc *pAct, int nLevelId);
+int __stdcall DUNGEON_GetNumberOfPopulatedRoomsInLevel(D2DrlgActStrc *pAct, int nLevelId);
 
 /// @ordinal 10091
-/// @name D2Common_10091
+/// @name DUNGEON_UpdateWarpRoomSelect
 /// @address 6fd8d220
 /// Imported by ['D2Client.dll']
-void __stdcall D2Common_10091(D2RoomStrc *pRoom, int nLevelId);
+void __stdcall DUNGEON_UpdateWarpRoomSelect(D2RoomStrc *pRoom, int nLevelId);
 
 /// @ordinal 10092
-/// @name D2Common_10092
+/// @name DUNGEON_UpdateWarpRoomDeselect
 /// @address 6fd8d260
 /// Imported by ['D2Client.dll']
-void __stdcall D2Common_10092(D2RoomStrc *pRoom, int nLevelId);
+void __stdcall DUNGEON_UpdateWarpRoomDeselect(D2RoomStrc *pRoom, int nLevelId);
 
 /// @ordinal 10093
-/// @name D2Common_10093
+/// @name DUNGEON_UpdatePops
 /// @address 6fd8d2a0
 /// Imported by ['D2Client.dll']
-void __stdcall D2Common_10093(D2RoomStrc *pRoom, int nX, int nY, int a4);
+void __stdcall DUNGEON_UpdatePops(D2RoomStrc *pRoom, int nX, int nY, int a4);
 
 /// @ordinal 10094
-/// @name D2Common_10094
+/// @name DUNGEON_GetTombStoneTileCoords
 /// @address 6fd8d2e0
 /// Not imported by any .dll
-int *__stdcall D2Common_10094(D2RoomStrc *pRoom, int *a2, int *a3);
+int *__stdcall DUNGEON_GetTombStoneTileCoords(D2RoomStrc *pRoom, int *a2, int *a3);
 
 /// @ordinal 10095
-/// @name D2Common_10095
+/// @name 
 /// @address 6fd8d300
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall D2Common_10095(D2RoomStrc *pRoom, int nX, int nY);
+int __stdcall(D2RoomStrc *pRoom, int nX, int nY);
 
 /// @ordinal 10096
-/// @name D2Common_10096
+/// @name 
 /// @address 6fd8d3a0
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_10096(D2RoomStrc *pRoom, int nX, int nY);
+int __stdcall(D2RoomStrc *pRoom, int nX, int nY);
 
 /// @ordinal 10097
 /// @name DUNGEON_GetRoomCoordList
@@ -595,52 +595,52 @@ int __stdcall D2Common_10096(D2RoomStrc *pRoom, int nX, int nY);
 int __stdcall DUNGEON_GetRoomCoordList(D2RoomStrc *pRoom);
 
 /// @ordinal 10098
-/// @name D2Common_10098
+/// @name DUNGEON_GetPortalLevelArrayFromPortalFlags
 /// @address 6fd8d3d0
 /// Not imported by any .dll
-void *__stdcall D2Common_10098(void *pMemPool, int a2, void *a3, int *a4);
+void *__stdcall DUNGEON_GetPortalLevelArrayFromPortalFlags(void *pMemPool, int a2, void *a3, int *a4);
 
 /// @ordinal 10099
-/// @name D2Common_10099
+/// @name DUNGEON_GetPortalFlagFromLevelId
 /// @address 6fd8d4b0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall D2Common_10099(int nPortalId);
+int __stdcall DUNGEON_GetPortalFlagFromLevelId(int nPortalId);
 
 /// @ordinal 10100
-/// @name IncreasePlayerUnitsCountInRoom
+/// @name DUNGEON_IncreaseAlliedCountOfRoom
 /// @address 6fd8c4e0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall IncreasePlayerUnitsCountInRoom(D2RoomStrc *pRoom);
+void __stdcall DUNGEON_IncreaseAlliedCountOfRoom(D2RoomStrc *pRoom);
 
 /// @ordinal 10101
-/// @name DecreasePlayerUnitsCountInRoom
+/// @name DUNGEON_DecreaseAlliedCountOfRoom
 /// @address 6fd8c510
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall DecreasePlayerUnitsCountInRoom(D2RoomStrc *pRoom);
+void __stdcall DUNGEON_DecreaseAlliedCountOfRoom(D2RoomStrc *pRoom);
 
 /// @ordinal 10102
-/// @name RoomSetFrame
+/// @name DUNGEON_ToggleHasPortalFlag
 /// @address 6fd8d540
 /// Imported by ['D2Game.dll']
-void __stdcall RoomSetFrame(D2RoomStrc *pRoom, int nFrame);
+void __stdcall DUNGEON_ToggleHasPortalFlag(D2RoomStrc *pRoom, int nFrame);
 
 /// @ordinal 10103
-/// @name SetActCallbackFunc
+/// @name DUNGEON_SetActCallbackFunc
 /// @address 6fd8d5c0
 /// Imported by ['D2Client.dll']
-void __stdcall SetActCallbackFunc(D2DrlgActStrc *pAct, void *pFunc);
+void __stdcall DUNGEON_SetActCallbackFunc(D2DrlgActStrc *pAct, void *pFunc);
 
 /// @ordinal 10104
-/// @name D2Common_10104
+/// @name DUNGEON_AnimateTiles
 /// @address 6fd8d560
 /// Imported by ['D2Client.dll']
-void __stdcall D2Common_10104(D2RoomStrc *pRoom);
+void __stdcall DUNGEON_AnimateTiles(D2RoomStrc *pRoom);
 
 /// @ordinal 10105
-/// @name D2Common_10105
+/// @name DUNGEON_InitRoomTileAnimation
 /// @address 6fd8d580
 /// Imported by ['D2Client.dll']
-void __stdcall D2Common_10105(D2DrlgActStrc *pAct, D2RoomStrc *pRoom1, D2RoomStrc *pRoom2);
+void __stdcall DUNGEON_InitRoomTileAnimation(D2DrlgActStrc *pAct, D2RoomStrc *pRoom1, D2RoomStrc *pRoom2);
 
 /// @ordinal 10106
 /// @name DUNGEON_SaveKilledUnitGUID
@@ -649,34 +649,34 @@ void __stdcall D2Common_10105(D2DrlgActStrc *pAct, D2RoomStrc *pRoom1, D2RoomStr
 void __stdcall DUNGEON_SaveKilledUnitGUID(D2RoomStrc *pRoom, int nUnitGUID);
 
 /// @ordinal 10107
-/// @name DUNGEON_CartesianToIsoTileCoords
+/// @name DUNGEON_ClientToGameTileCoords
 /// @address 6fd8d690
 /// Not imported by any .dll
-void __stdcall DUNGEON_CartesianToIsoTileCoords(int *pX, int *pY);
+void __stdcall DUNGEON_ClientToGameTileCoords(int *pX, int *pY);
 
 /// @ordinal 10108
-/// @name DUNGEON_CartesianToIsoSubtileCoords
+/// @name DUNGEON_ClientToGameSubtileCoords
 /// @address 6fd8d870
 /// Imported by ['D2Client.dll']
-void __stdcall DUNGEON_CartesianToIsoSubtileCoords(int *pX, int *pY);
+void __stdcall DUNGEON_ClientToGameSubtileCoords(int *pX, int *pY);
 
 /// @ordinal 10109
-/// @name DUNGEON_CartesianToIsometricCoords
+/// @name DUNGEON_ClientToGameCoords
 /// @address 6fd8d8a0
 /// Not imported by any .dll
-void __stdcall DUNGEON_CartesianToIsometricCoords(int *pX, int *pY);
+void __stdcall DUNGEON_ClientToGameCoords(int *pX, int *pY);
 
 /// @ordinal 10110
-/// @name DUNGEON_IsoTileToCartesianCoords
+/// @name DUNGEON_GameTileToClientCoords
 /// @address 6fd8d6e0
 /// Imported by ['D2Client.dll']
-void __stdcall DUNGEON_IsoTileToCartesianCoords(int *pX, int *pY);
+void __stdcall DUNGEON_GameTileToClientCoords(int *pX, int *pY);
 
 /// @ordinal 10111
-/// @name DUNGEON_IsoSubTileToCartesianCoords
+/// @name DUNGEON_GameSubtileToClientCoords
 /// @address 6fd8d630
 /// Imported by ['D2Client.dll']
-void __stdcall DUNGEON_IsoSubTileToCartesianCoords(int *pX, int *pY);
+void __stdcall DUNGEON_GameSubtileToClientCoords(int *pX, int *pY);
 
 /// @ordinal 10112
 /// @name DUNGEON_GameToClientCoords
@@ -691,28 +691,28 @@ void __stdcall DUNGEON_GameToClientCoords(int *pX, int *pY);
 void __stdcall DUNGEON_GameTileToSubtileCoords(int *pX, int *pY);
 
 /// @ordinal 10114
-/// @name DUNGEON_CartesianTileBboxOriginToIsometricCoords
+/// @name DUNGEON_ClientTileDrawPositionToGameCoords
 /// @address 6fd8d710
 /// Imported by ['D2Client.dll']
-void __stdcall DUNGEON_CartesianTileBboxOriginToIsometricCoords(int nX, int nY, int *pX, int *pY);
+void __stdcall DUNGEON_ClientTileDrawPositionToGameCoords(int nX, int nY, int *pX, int *pY);
 
 /// @ordinal 10115
-/// @name DUNGEON_IsometricToCartesianTileBboxOriginCoords
+/// @name DUNGEON_GameToClientTileDrawPositionCoords
 /// @address 6fd8d790
 /// Not imported by any .dll
-void __stdcall DUNGEON_IsometricToCartesianTileBboxOriginCoords(int nX, int nY, int *pX, int *pY);
+void __stdcall DUNGEON_GameToClientTileDrawPositionCoords(int nX, int nY, int *pX, int *pY);
 
 /// @ordinal 10116
-/// @name DUNGEON_CartesianSubileBboxOriginToIsometricCoords
+/// @name DUNGEON_ClientSubileDrawPositionToGameCoords
 /// @address 6fd8d7d0
 /// Not imported by any .dll
-void __stdcall DUNGEON_CartesianSubileBboxOriginToIsometricCoords(int nX, int nY, int *pX, int *pY);
+void __stdcall DUNGEON_ClientSubileDrawPositionToGameCoords(int nX, int nY, int *pX, int *pY);
 
 /// @ordinal 10117
-/// @name DUNGEON_IsometricToCartesianSubtileBboxOriginCoords
+/// @name DUNGEON_GameToClientSubtileDrawPositionCoords
 /// @address 6fd8d830
 /// Not imported by any .dll
-void __stdcall DUNGEON_IsometricToCartesianSubtileBboxOriginCoords(int nX, int nY, int *pX, int *pY);
+void __stdcall DUNGEON_GameToClientSubtileDrawPositionCoords(int nX, int nY, int *pX, int *pY);
 
 /// @ordinal 10118
 /// @name COLLISION_CheckMask
@@ -721,10 +721,10 @@ void __stdcall DUNGEON_IsometricToCartesianSubtileBboxOriginCoords(int nX, int n
 uint16_t __stdcall COLLISION_CheckMask(D2RoomStrc *pRoom, int nX, int nY, uint16_t nMask);
 
 /// @ordinal 10119
-/// @name D2Common_10119
+/// @name COLLISION_CheckMaskWithSize
 /// @address 6fd43080
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-__int16 __stdcall D2Common_10119(D2RoomStrc *pRoom, int nX, int nY, int nUnitSize, int nCollisionType);
+__int16 __stdcall COLLISION_CheckMaskWithSize(D2RoomStrc *pRoom, int nX, int nY, int nUnitSize, int nCollisionType);
 
 /// @ordinal 10120
 /// @name COLLISION_CheckMaskWithSizeXY
@@ -733,10 +733,10 @@ __int16 __stdcall D2Common_10119(D2RoomStrc *pRoom, int nX, int nY, int nUnitSiz
 int __stdcall COLLISION_CheckMaskWithSizeXY(D2RoomStrc *pRoom, int nX, int nY, signed int nSizeX, signed int nSizeY, uint16_t nFlag);
 
 /// @ordinal 10121
-/// @name D2Common_10121
+/// @name COLLISION_CheckMaskWithPattern
 /// @address 6fd41de0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-__int16 __stdcall D2Common_10121(D2RoomStrc *pRoom, int nX, int nY, int nCollisionPattern, int nCollisionType);
+__int16 __stdcall COLLISION_CheckMaskWithPattern(D2RoomStrc *pRoom, int nX, int nY, int nCollisionPattern, int nCollisionType);
 
 /// @ordinal 10122
 /// @name COLLISION_CheckAnyCollisionWithPattern
@@ -793,76 +793,76 @@ void __stdcall COLLISION_SetMaskWithSizeXY(D2RoomStrc *pRoom, int nX, int nY, un
 void __stdcall COLLISION_SetMaskWithPattern(D2RoomStrc *pRoom, int nX, int nY, int nCollisionPattern, int nCollisionType);
 
 /// @ordinal 10131
-/// @name D2Common_10131
+/// @name COLLISION_TryMoveUnitCollisionMask
 /// @address 6fd44660
 /// Not imported by any .dll
-uint16_t __fastcall D2Common_10131(D2RoomStrc *pRoom, int nX1, int nY1, int nX2, int nY2, int nUnitSize, uint16_t nResetCollisionMask, uint16_t nMask);
+uint16_t __fastcall COLLISION_TryMoveUnitCollisionMask(D2RoomStrc *pRoom, int nX1, int nY1, int nX2, int nY2, int nUnitSize, uint16_t nResetCollisionMask, uint16_t nMask);
 
 /// @ordinal 10132
-/// @name D2Common_10132
+/// @name COLLISION_TryTeleportUnitCollisionMask
 /// @address 6fd44950
 /// Not imported by any .dll
-__int16 __fastcall D2Common_10132(D2RoomStrc *pRoom, int nX1, int nY1, int nX2, int nY2, int nCollisionPattern, int nCollisionType, int nMask);
+__int16 __fastcall COLLISION_TryTeleportUnitCollisionMask(D2RoomStrc *pRoom, int nX1, int nY1, int nX2, int nY2, int nCollisionPattern, int nCollisionType, int nMask);
 
 /// @ordinal 10133
-/// @name D2Common_10133
+/// @name COLLISION_SetUnitCollisionMask
 /// @address 6fd451d0
 /// Not imported by any .dll
-void __fastcall D2Common_10133(D2RoomStrc *pRoom1, int nX1, int nY1, D2RoomStrc *pRoom2, int nX2, int nY2, int nCollisionPattern, int nCollisionType);
+void __fastcall COLLISION_SetUnitCollisionMask(D2RoomStrc *pRoom1, int nX1, int nY1, D2RoomStrc *pRoom2, int nX2, int nY2, int nCollisionPattern, int nCollisionType);
 
 /// @ordinal 10134
-/// @name GetFreeCoords
+/// @name COLLISION_GetFreeCoordinates
 /// @address 6fd46280
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2RoomStrc *__stdcall GetFreeCoords(D2RoomStrc *pRoom, D2CoordStrc *pCoord, int nUnitSize, int a4, int a5);
+D2RoomStrc *__stdcall COLLISION_GetFreeCoordinates(D2RoomStrc *pRoom, D2CoordStrc *pCoord, int nUnitSize, int a4, int a5);
 
 /// @ordinal 10135
-/// @name D2Common_10135
+/// @name COLLISION_GetFreeCoordinatesWithMaxDistance
 /// @address 6fd459d0
 /// Imported by ['D2Client.dll']
-D2RoomStrc *__stdcall D2Common_10135(D2RoomStrc *pRoom, D2CoordStrc *pCoord, int a3, int a4, int a5, int a6);
+D2RoomStrc *__stdcall COLLISION_GetFreeCoordinatesWithMaxDistance(D2RoomStrc *pRoom, D2CoordStrc *pCoord, int a3, int a4, int a5, int a6);
 
 /// @ordinal 10136
-/// @name D2Common_10136
+/// @name 
 /// @address 6fd46310
 /// Imported by ['D2Game.dll']
-void __fastcall D2Common_10136(D2RoomStrc *pRoom, int edx0, int a3, int nCollisionType, D2RoomStrc **a5);
+void __fastcall(D2RoomStrc *pRoom, int edx0, int a3, int nCollisionType, D2RoomStrc **a5);
 
 /// @ordinal 10137
-/// @name D2Common_10137
+/// @name COLLISION_GetFreeCoordinatesEx
 /// @address 6fd462b0
 /// Imported by ['D2Game.dll']
-D2RoomStrc *__stdcall D2Common_10137(D2RoomStrc *pRoom, D2CoordStrc *pCoord, int nUnitSize, int a4, int a5);
+D2RoomStrc *__stdcall COLLISION_GetFreeCoordinatesEx(D2RoomStrc *pRoom, D2CoordStrc *pCoord, int nUnitSize, int a4, int a5);
 
 /// @ordinal 10138
-/// @name GetFreeRoomCoords
+/// @name COLLISION_GetFreeCoordinatesWithField
 /// @address 6fd462e0
 /// Imported by ['D2Game.dll']
-D2RoomStrc *__stdcall GetFreeRoomCoords(D2RoomStrc *pRoom, D2CoordStrc *pCoord1, D2CoordStrc *pCoord2, int nUnitSize, int a5, int a6, BOOL a7);
+D2RoomStrc *__stdcall COLLISION_GetFreeCoordinatesWithField(D2RoomStrc *pRoom, D2CoordStrc *pCoord1, D2CoordStrc *pCoord2, int nUnitSize, int a5, int a6, BOOL a7);
 
 /// @ordinal 10139
-/// @name D2Common_10916_MONSTERS_Return
+/// @name D2Common_10916_SEED_Return
 /// @address 6fda5260
 /// Not imported by any .dll
-void __stdcall D2Common_10916_MONSTERS_Return();
+void __stdcall D2Common_10916_SEED_Return();
 
 /// @ordinal 10140
-/// @name D2Common_10916_MONSTERS_Return
+/// @name D2Common_10916_SEED_Return
 /// @address 6fda5260
 /// Not imported by any .dll
-void __stdcall D2Common_10916_MONSTERS_Return();
+void __stdcall D2Common_10916_SEED_Return();
 
 /// @ordinal 10141
-/// @name D2Common_10141
+/// @name PATH_GetClientCoordsVelocity
 /// @address 6fda82a0
 /// Imported by ['D2Client.dll']
-void __stdcall D2Common_10141(D2UnitStrc *pUnit, int *pX, int *pY);
+void __stdcall PATH_GetClientCoordsVelocity(D2UnitStrc *pUnit, int *pX, int *pY);
 
 /// @ordinal 10142
-/// @name D2Common_10142
+/// @name 
 /// @address 6fda8600
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall D2Common_10142(D2DynamicPathStrc *pDynamicPath, D2UnitStrc *pUnit, int a3);
+DWORD __stdcall(D2DynamicPathStrc *pDynamicPath, D2UnitStrc *pUnit, int a3);
 
 /// @ordinal 10143
 /// @name PATH_SetUnitDeadCollision
@@ -871,16 +871,16 @@ DWORD __stdcall D2Common_10142(D2DynamicPathStrc *pDynamicPath, D2UnitStrc *pUni
 void __stdcall PATH_SetUnitDeadCollision(D2UnitStrc *pUnit, int bForceUnitSize3x3);
 
 /// @ordinal 10144
-/// @name D2Common_10144
+/// @name PATH_SetUnitAliveCollision
 /// @address 6fda98f0
 /// Imported by ['D2Client.dll']
-void __stdcall D2Common_10144(D2UnitStrc *pUnit, int bDoNothing);
+void __stdcall PATH_SetUnitAliveCollision(D2UnitStrc *pUnit, int bDoNothing);
 
 /// @ordinal 10145
-/// @name D2Common_10145
+/// @name PATH_SetUnusedFlag_0x00004
 /// @address 6fda9f00
 /// Not imported by any .dll
-void __stdcall D2Common_10145(D2DynamicPathStrc *pDynamicPath, BOOL bSet);
+void __stdcall PATH_SetUnusedFlag_0x00004(D2DynamicPathStrc *pDynamicPath, BOOL bSet);
 
 /// @ordinal 10146
 /// @name PATH_SetVelocity
@@ -907,40 +907,40 @@ void __stdcall PATH_SetMaxVelocity(D2DynamicPathStrc *pDynamicPath, int a2);
 int __stdcall PATH_GetMaxVelocity(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10150
-/// @name D2Common_10150
+/// @name PATH_SetAcceleration
 /// @address 6fda9af0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10150(D2DynamicPathStrc *pDynamicPath, int a2);
+void __stdcall PATH_SetAcceleration(D2DynamicPathStrc *pDynamicPath, int a2);
 
 /// @ordinal 10151
-/// @name D2Common_10151
+/// @name PATH_GetAcceleration
 /// @address 6fda9b10
 /// Not imported by any .dll
-int __stdcall D2Common_10151(D2DynamicPathStrc *pDynamicPath);
+int __stdcall PATH_GetAcceleration(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10152
-/// @name AllocDynamicPath
+/// @name PATH_AllocDynamicPath
 /// @address 6fda9480
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall AllocDynamicPath(void *pMemPool, D2RoomStrc *pRoom, int nX, int nY, D2UnitStrc *pUnit, DWORD a6);
+void __stdcall PATH_AllocDynamicPath(void *pMemPool, D2RoomStrc *pRoom, int nX, int nY, D2UnitStrc *pUnit, DWORD a6);
 
 /// @ordinal 10153
-/// @name D2Common_10153
+/// @name 
 /// @address 6fda9b20
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10153(D2DynamicPathStrc *pDynamicPath);
+void __stdcall(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10154
-/// @name D2Common_10154
+/// @name PATH_GetNumberOfPathPoints
 /// @address 6fda9b80
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall D2Common_10154(D2DynamicPathStrc *pDynamicPath);
+int __stdcall PATH_GetNumberOfPathPoints(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10155
-/// @name D2Common_10155
+/// @name 
 /// @address 6fda9bc0
 /// Not imported by any .dll
-int __stdcall D2Common_10155(D2DynamicPathStrc *pDynamicPath);
+int __stdcall(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10156
 /// @name PATH_FreeDynamicPath
@@ -991,34 +991,34 @@ int __stdcall PATH_GetXPosition(D2DynamicPathStrc *pDynamicPath);
 int __stdcall PATH_GetYPosition(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10164
-/// @name PATH_GetTargetX
+/// @name PATH_GetClientCoordX
 /// @address 6fda9db0
 /// Not imported by any .dll
-int __stdcall PATH_GetTargetX(D2DynamicPathStrc *pDynamicPath);
+int __stdcall PATH_GetClientCoordX(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10165
-/// @name PathGetTargetY
+/// @name D2Common_10897_CHAT_GetUsedFromHoverMsg
 /// @address 6fdc3ce0
 /// Not imported by any .dll
-DWORD __stdcall PathGetTargetY(D2DynamicPathStrc *pPath);
+DWORD __stdcall D2Common_10897_CHAT_GetUsedFromHoverMsg(D2DynamicPathStrc *pPath);
 
 /// @ordinal 10166
-/// @name PathGetRoom
+/// @name D2Common_11265_STATLIST_GetSkillId
 /// @address 6fdb9c10
 /// Not imported by any .dll
-D2RoomStrc *__stdcall PathGetRoom(D2DynamicPathStrc *pPath);
+D2RoomStrc *__stdcall D2Common_11265_STATLIST_GetSkillId(D2DynamicPathStrc *pPath);
 
 /// @ordinal 10167
-/// @name PATH_SetRoom
+/// @name D2Common_11264_STATLIST_SetSkillId
 /// @address 6fda9e60
 /// Not imported by any .dll
-void __stdcall PATH_SetRoom(D2DynamicPathStrc *pDynamicPath, D2RoomStrc *pRoom);
+void __stdcall D2Common_11264_STATLIST_SetSkillId(D2DynamicPathStrc *pDynamicPath, D2RoomStrc *pRoom);
 
 /// @ordinal 10168
-/// @name PATH_GetNextRoom
+/// @name D2Common_11267_STATLIST_GetSkillLevel
 /// @address 6fda9e70
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2RoomStrc *__stdcall PATH_GetNextRoom(D2DynamicPathStrc *pDynamicPath);
+D2RoomStrc *__stdcall D2Common_11267_STATLIST_GetSkillLevel(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10169
 /// @name PATH_ClearNextRoom
@@ -1033,28 +1033,28 @@ void __stdcall PATH_ClearNextRoom(D2DynamicPathStrc *pDynamicPath);
 void __stdcall PathSetTargetPos(D2DynamicPathStrc *pDynamicPath, int nX, int nY);
 
 /// @ordinal 10171
-/// @name PATH_GetTargetTypeAndId
+/// @name PATH_GetTargetTypeAndGUID
 /// @address 6fda9f60
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall PATH_GetTargetTypeAndId(D2DynamicPathStrc *pDynamicPath, int *pTargetType, int *pTargetGUID);
+void __stdcall PATH_GetTargetTypeAndGUID(D2DynamicPathStrc *pDynamicPath, int *pTargetType, int *pTargetGUID);
 
 /// @ordinal 10172
-/// @name D2Common_10172
+/// @name PATH_IsCurrentRoomInvalid
 /// @address 6fda9ec0
 /// Not imported by any .dll
-BOOL __stdcall D2Common_10172(D2DynamicPathStrc *pDynamicPath);
+BOOL __stdcall PATH_IsCurrentRoomInvalid(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10173
-/// @name D2Common_10173
+/// @name PATH_SetCurrentRoomInvalid
 /// @address 6fda9ed0
 /// Imported by ['D2Game.dll']
-void __stdcall D2Common_10173(D2DynamicPathStrc *pDynamicPath, BOOL bSet);
+void __stdcall PATH_SetCurrentRoomInvalid(D2DynamicPathStrc *pDynamicPath, BOOL bSet);
 
 /// @ordinal 10174
-/// @name D2Common_10174
+/// @name PATH_GetUnusedFlag_0x00004
 /// @address 6fda9f30
 /// Not imported by any .dll
-BOOL __stdcall D2Common_10174(D2DynamicPathStrc *pDynamicPath);
+BOOL __stdcall PATH_GetUnusedFlag_0x00004(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10175
 /// @name PathGetFirstPointX
@@ -1069,16 +1069,16 @@ DWORD __stdcall PathGetFirstPointX(D2DynamicPathStrc *pDynamicPath);
 int __stdcall PathGetFirstPointY(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10177
-/// @name PathGetLastPointX
+/// @name PATH_GetLastPointX
 /// @address 6fda9e20
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall PathGetLastPointX(D2DynamicPathStrc *pDynamicPath);
+DWORD __stdcall PATH_GetLastPointX(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10178
-/// @name PathGetLastPointY
+/// @name PATH_GetLastPointY
 /// @address 6fda9e40
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall PathGetLastPointY(D2DynamicPathStrc *pDynamicPath);
+DWORD __stdcall PATH_GetLastPointY(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10179
 /// @name PATH_SetTargetUnit
@@ -1099,34 +1099,34 @@ D2UnitStrc *__stdcall PATH_GetTargetUnit(D2DynamicPathStrc *pDynamicPath);
 int __stdcall PATH_GetCollisionType(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10182
-/// @name PathSetCollisionType
+/// @name PATH_SetCollisionType
 /// @address 6fda9fe0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall PathSetCollisionType(D2DynamicPathStrc *pDynamicPath, int nCollisionType);
+void __stdcall PATH_SetCollisionType(D2DynamicPathStrc *pDynamicPath, int nCollisionType);
 
 /// @ordinal 10183
-/// @name D2Common_10183
+/// @name 
 /// @address 6fdaa0c0
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_10183(D2DynamicPathStrc *pDynamicPath);
+int __stdcall(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10184
-/// @name D2Common_10184
+/// @name 
 /// @address 6fdaa0d0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10184(D2DynamicPathStrc *pDynamicPath, int a2);
+void __stdcall(D2DynamicPathStrc *pDynamicPath, int a2);
 
 /// @ordinal 10185
-/// @name PathSetType
+/// @name PATH_SetType
 /// @address 6fdaa0e0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall PathSetType(D2DynamicPathStrc *pDynamicPath, int nPathType);
+void __stdcall PATH_SetType(D2DynamicPathStrc *pDynamicPath, int nPathType);
 
 /// @ordinal 10186
-/// @name PathSetAsLastType
+/// @name PATH_ResetToPreviousType
 /// @address 6fdaa1e0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall PathSetAsLastType(D2DynamicPathStrc *pDynamicPath);
+void __stdcall PATH_ResetToPreviousType(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10187
 /// @name PATH_GetType
@@ -1135,10 +1135,10 @@ void __stdcall PathSetAsLastType(D2DynamicPathStrc *pDynamicPath);
 int __stdcall PATH_GetType(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10188
-/// @name PathSetNewDistance
+/// @name PATH_SetNewDistance
 /// @address 6fdaa280
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall PathSetNewDistance(D2DynamicPathStrc *pDynamicPath, BYTE nNewDistance);
+void __stdcall PATH_SetNewDistance(D2DynamicPathStrc *pDynamicPath, BYTE nNewDistance);
 
 /// @ordinal 10189
 /// @name PATH_GetMaxDistance
@@ -1147,16 +1147,16 @@ void __stdcall PathSetNewDistance(D2DynamicPathStrc *pDynamicPath, BYTE nNewDist
 BYTE __stdcall PATH_GetMaxDistance(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10190
-/// @name PATH_SetDistance
+/// @name _10190_PATH_SetDistance
 /// @address 6fdaa250
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall PATH_SetDistance(D2DynamicPathStrc *pDynamicPath, BYTE nDistance);
+void __stdcall _10190_PATH_SetDistance(D2DynamicPathStrc *pDynamicPath, BYTE nDistance);
 
 /// @ordinal 10191
-/// @name PATH_GetDistance
+/// @name _10191_PATH_GetDistance
 /// @address 6fdaa270
 /// Imported by ['D2Game.dll']
-BYTE __stdcall PATH_GetDistance(D2DynamicPathStrc *pPath);
+BYTE __stdcall _10191_PATH_GetDistance(D2DynamicPathStrc *pPath);
 
 /// @ordinal 10192
 /// @name PathSetIDAMax
@@ -1213,16 +1213,16 @@ DWORD __stdcall PathGetSaveX(D2DynamicPathStrc *pDynamicPath);
 DWORD __stdcall PathGetSaveY(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10201
-/// @name D2Common_10201
+/// @name 
 /// @address 6fdaa2c0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-WORD __stdcall D2Common_10201(D2DynamicPathStrc *pDynamicPath);
+WORD __stdcall(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10202
-/// @name D2Common_10202
+/// @name 
 /// @address 6fdaa300
 /// Not imported by any .dll
-WORD __stdcall D2Common_10202(D2DynamicPathStrc *pDynamicPath);
+WORD __stdcall(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10203
 /// @name PATH_SetRotateFlag
@@ -1249,10 +1249,10 @@ void __stdcall PATH_SetStepNum(D2DynamicPathStrc *pDynamicPath, BYTE nSteps);
 BYTE __stdcall PATH_GetStepNum(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10207
-/// @name D2Common_10207
+/// @name 
 /// @address 6fdaa4c0
 /// Not imported by any .dll
-void __stdcall D2Common_10207(D2DynamicPathStrc *a1, char a2, char a3);
+void __stdcall(D2DynamicPathStrc *a1, char a2, char a3);
 
 /// @ordinal 10208
 /// @name PathSetPathingFlag
@@ -1267,16 +1267,16 @@ void __stdcall PathSetPathingFlag(D2DynamicPathStrc *pDynamicPath, BOOL bSet);
 BOOL __stdcall PathCheckPathingFlag(D2DynamicPathStrc *pPath);
 
 /// @ordinal 10210
-/// @name PathGetUnitCollisionPattern
+/// @name PATH_GetUnitCollisionPattern
 /// @address 6fdaa570
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall PathGetUnitCollisionPattern(D2UnitStrc *pDynamicPath);
+DWORD __stdcall PATH_GetUnitCollisionPattern(D2UnitStrc *pDynamicPath);
 
 /// @ordinal 10211
-/// @name PATH_SetCollisionPattern
+/// @name PATH_SetUnitCollisionPattern
 /// @address 6fdaa580
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall PATH_SetCollisionPattern(D2UnitStrc *pUnit, int nCollisionPattern);
+void __stdcall PATH_SetUnitCollisionPattern(D2UnitStrc *pUnit, int nCollisionPattern);
 
 /// @ordinal 10212
 /// @name PATH_SetMoveFlags
@@ -1285,28 +1285,28 @@ void __stdcall PATH_SetCollisionPattern(D2UnitStrc *pUnit, int nCollisionPattern
 void __stdcall PATH_SetMoveFlags(D2UnitStrc *pUnit, BOOL bSet);
 
 /// @ordinal 10213
-/// @name D2Common_10213
+/// @name 
 /// @address 6fdaa600
 /// Imported by ['D2Client.dll']
 /// @guessedtype int __stdcall(int pUnit)
 
 /// @ordinal 10214
-/// @name D2Common_10214
+/// @name 
 /// @address 6fda92f0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int __stdcall(int pUnit)
 
 /// @ordinal 10215
-/// @name D2Common_10215
+/// @name PATH_ComputeDirection
 /// @address 6fdac700
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_10215(int nX1, int nY1, int nX2, int nY2);
+int __stdcall PATH_ComputeDirection(int nX1, int nY1, int nX2, int nY2);
 
 /// @ordinal 10216
-/// @name D2Common_10216
+/// @name 
 /// @address 6fda97c0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10216(D2DynamicPathStrc *pDynamicPath, int nX, int nY, int a4);
+void __stdcall(D2DynamicPathStrc *pDynamicPath, int nX, int nY, int a4);
 
 /// @ordinal 10217
 /// @name PATH_SetDistance
@@ -1333,112 +1333,112 @@ void __stdcall PATH_AddToDistance(D2DynamicPathStrc *pDynamicPath, int nAddition
 int __stdcall PATH_ComputeSquaredDistance(int nX1, int nY1, int nX2, int nY2);
 
 /// @ordinal 10221
-/// @name PATH_UpdateCollisionMaskForOptionalUnit
+/// @name PATH_AddCollisionFootprintForOptionalUnit
 /// @address 6fdaa6d0
 /// Imported by ['D2Client.dll']
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 10222
-/// @name PATH_UpdateCollisionMaskForUnit
+/// @name PATH_AddCollisionFootprintForUnit
 /// @address 6fda8320
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int pUnit)
 
 /// @ordinal 10223
-/// @name D2Common_10223
+/// @name PATH_RemoveCollisionFootprintForUnit
 /// @address 6fda8450
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_10223(D2UnitStrc *pUnit, int a2);
+BOOL __stdcall PATH_RemoveCollisionFootprintForUnit(D2UnitStrc *pUnit, int a2);
 
 /// @ordinal 10224
-/// @name D2Common_10224
+/// @name 
 /// @address 6fda9e00
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_10224(D2DynamicPathStrc *pDynamicPath);
+int __stdcall(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10225
-/// @name D2Common_10225
+/// @name 
 /// @address 6fda9e10
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_10225(D2DynamicPathStrc *pDynamicPath);
+int __stdcall(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10226
-/// @name D2Common_10226
+/// @name 
 /// @address 6fdac9a0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_10226(D2UnitStrc *pUnit, signed int a2);
+BOOL __stdcall(D2UnitStrc *pUnit, signed int a2);
 
 /// @ordinal 10227
-/// @name D2Common_10227
+/// @name 
 /// @address 6fdad530
 /// Not imported by any .dll
-signed int __stdcall D2Common_10227(D2UnitStrc *pUnit);
+signed int __stdcall(D2UnitStrc *pUnit);
 
 /// @ordinal 10228
-/// @name D2Common_10228
+/// @name 
 /// @address 6fda9850
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10228(D2UnitStrc *pUnit);
+void __stdcall(D2UnitStrc *pUnit);
 
 /// @ordinal 10229
-/// @name D2Common_10229
+/// @name 
 /// @address 6fdad590
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_10229(D2DynamicPathStrc *pDynamicPath, D2UnitStrc *pUnit, D2RoomStrc *a3, DWORD a4, DWORD a5);
+BOOL __stdcall(D2DynamicPathStrc *pDynamicPath, D2UnitStrc *pUnit, D2RoomStrc *a3, DWORD a4, DWORD a5);
 
 /// @ordinal 10230
-/// @name D2Common_10230
+/// @name 
 /// @address 6fdadf00
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2Common_10230(D2DynamicPathStrc *pDynamicPath, int a2, D2RoomStrc *a3, unsigned int a4, __int16 a5);
+BOOL __stdcall(D2DynamicPathStrc *pDynamicPath, int a2, D2RoomStrc *a3, unsigned int a4, __int16 a5);
 
 /// @ordinal 10231
-/// @name D2Common_10231
+/// @name 
 /// @address 6fdadc20
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall D2Common_10231(D2DynamicPathStrc *a1, D2UnitStrc *a2, D2RoomStrc *pRooms, int nX, int nY);
+int __stdcall(D2DynamicPathStrc *a1, D2UnitStrc *a2, D2RoomStrc *pRooms, int nX, int nY);
 
 /// @ordinal 10232
-/// @name D2Common_10232
+/// @name 
 /// @address 6fdadf50
 /// Not imported by any .dll
-signed int __stdcall D2Common_10232(D2DynamicPathStrc *pDynamicPath, D2UnitStrc *pUnit, D2RoomStrc *pRoom, int nX, int nY);
+signed int __stdcall(D2DynamicPathStrc *pDynamicPath, D2UnitStrc *pUnit, D2RoomStrc *pRoom, int nX, int nY);
 
 /// @ordinal 10233
-/// @name D2Common_10233
+/// @name 
 /// @address 6fdae290
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10233(D2DynamicPathStrc *pDynamicPath);
+void __stdcall(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10234
-/// @name D2Common_10234
+/// @name 
 /// @address 6fdae500
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_10234(D2DynamicPathStrc *pDynamicPath);
+BOOL __stdcall(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 10235
-/// @name PATH_Last
+/// @name PATH_UpdateRiderPath
 /// @address 6fdae520
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall PATH_Last(D2UnitStrc *pRiderUnit, D2UnitStrc *pHorseUnit);
+void __stdcall PATH_UpdateRiderPath(D2UnitStrc *pRiderUnit, D2UnitStrc *pHorseUnit);
 
 /// @ordinal 10236
-/// @name D2Common_10236
+/// @name 
 /// @address 6fdac8f0
 /// Not imported by any .dll
 /// @guessedtype int __stdcall(int a2, int)
 
 /// @ordinal 10237
-/// @name D2Common_10237
+/// @name 
 /// @address 6fdaa6f0
 /// Not imported by any .dll
-void *__stdcall D2Common_10237(D2UnitStrc *pUnit);
+void *__stdcall(D2UnitStrc *pUnit);
 
 /// @ordinal 10238
-/// @name D2Common_10916_MONSTERS_Return
+/// @name D2Common_10916_SEED_Return
 /// @address 6fda5260
 /// Not imported by any .dll
-void __stdcall D2Common_10916_MONSTERS_Return();
+void __stdcall D2Common_10916_SEED_Return();
 
 /// @ordinal 10239
 /// @name D2Common_11079_Return0
@@ -1471,10 +1471,10 @@ BOOL __stdcall INVENTORY_PlaceItemInSocket(D2InventoryStrc *pInventory, D2UnitSt
 D2UnitStrc *__stdcall INVENTORY_RemoveItemFromInventory(D2InventoryStrc *pInventory, D2UnitStrc *pItem);
 
 /// @ordinal 10244
-/// @name INVENTORY_CompareInventoryWithItemsParentInventory
+/// @name INVENTORY_CompareWithItemsParentInventory
 /// @address 6fd8e620
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall INVENTORY_CompareInventoryWithItemsParentInventory(D2InventoryStrc *pInventory, D2UnitStrc *pItem);
+BOOL __stdcall INVENTORY_CompareWithItemsParentInventory(D2InventoryStrc *pInventory, D2UnitStrc *pItem);
 
 /// @ordinal 10245
 /// @name INVENTORY_GetFreePosition
@@ -1483,10 +1483,10 @@ BOOL __stdcall INVENTORY_CompareInventoryWithItemsParentInventory(D2InventoryStr
 BOOL __stdcall INVENTORY_GetFreePosition(D2InventoryStrc *pInventory, D2UnitStrc *pItem, int nInventoryRecordId, int *pFreeX, int *pFreeY, BYTE nPage);
 
 /// @ordinal 10246
-/// @name D2Common_10246
+/// @name INVENTORY_PlaceItemAtFreePosition
 /// @address 6fd8f1e0
 /// Imported by ['D2Game.dll']
-signed int __stdcall D2Common_10246(D2InventoryStrc *pInventory, D2UnitStrc *pItem, int a3, int a4, int a5, char *szFile, int nLine);
+signed int __stdcall INVENTORY_PlaceItemAtFreePosition(D2InventoryStrc *pInventory, D2UnitStrc *pItem, int a3, int a4, int a5, char *szFile, int nLine);
 
 /// @ordinal 10247
 /// @name INVENTORY_CanItemBePlaced
@@ -1507,16 +1507,16 @@ BOOL __stdcall INVENTORY_CanItemsBeExchanged(D2InventoryStrc *pInventory, D2Unit
 BOOL __stdcall INVENTORY_PlaceItemAtInventoryPage(D2InventoryStrc *pInventory, D2UnitStrc *pItem, int nXPos, int nYPos, int nInventoryRecordId, BOOL bUnused, BYTE nPage);
 
 /// @ordinal 10250
-/// @name Return
+/// @name INVENTORY_Return
 /// @address 6fd8f970
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall Return(char *szFile, int nLine, D2InventoryStrc *pInventory, int nX, int nY, int nInventoryRecordId, int a7, int nPage);
+void __stdcall INVENTORY_Return(char *szFile, int nLine, D2InventoryStrc *pInventory, int nX, int nY, int nInventoryRecordId, int a7, int nPage);
 
 /// @ordinal 10251
-/// @name D2Common_11296_MONSTERS_Return
+/// @name D2Common_11296_Return
 /// @address 6fda5250
 /// Imported by ['D2Client.dll']
-void __stdcall D2Common_11296_MONSTERS_Return(D2UnitStrc *pUnit);
+void __stdcall D2Common_11296_Return(D2UnitStrc *pUnit);
 
 /// @ordinal 10252
 /// @name INVENTORY_GetItemFromInventoryPage
@@ -1537,16 +1537,16 @@ BOOL __stdcall INVENTORY_PlaceItemInBodyLoc(D2InventoryStrc *pInventory, D2UnitS
 void __stdcall D2Common_11077_Return(int arg, int a2);
 
 /// @ordinal 10255
-/// @name D2Common_10255
+/// @name INVENTORY_GetSecondWieldingWeapon
 /// @address 6fd8fb20
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10255(D2UnitStrc *pPlayer, D2InventoryStrc *pInventory, D2UnitStrc **ppItem, int nBodyLoc);
+void __stdcall INVENTORY_GetSecondWieldingWeapon(D2UnitStrc *pPlayer, D2InventoryStrc *pInventory, D2UnitStrc **ppItem, int nBodyLoc);
 
 /// @ordinal 10256
-/// @name D2Common_10256
+/// @name INVENTORY_CheckEquipmentForWeaponByClass
 /// @address 6fd8fbb0
 /// Not imported by any .dll
-BOOL __stdcall D2Common_10256(D2InventoryStrc *pInventory, int nItemType);
+BOOL __stdcall INVENTORY_CheckEquipmentForWeaponByClass(D2InventoryStrc *pInventory, int nItemType);
 
 /// @ordinal 10257
 /// @name INVENTORY_GetItemFromBodyLoc
@@ -1555,22 +1555,22 @@ BOOL __stdcall D2Common_10256(D2InventoryStrc *pInventory, int nItemType);
 D2UnitStrc *__stdcall INVENTORY_GetItemFromBodyLoc(D2InventoryStrc *pInventory, int nBodyLoc);
 
 /// @ordinal 10258
-/// @name GetLeftHandItem
+/// @name INVENTORY_GetLeftHandWeapon
 /// @address 6fd8fc60
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetLeftHandItem(D2InventoryStrc *pInventory);
+int __stdcall INVENTORY_GetLeftHandWeapon(D2InventoryStrc *pInventory);
 
 /// @ordinal 10259
-/// @name GetItemFromComponent
+/// @name INVENTORY_GetCompositItem
 /// @address 6fd8fdd0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2UnitStrc *__stdcall GetItemFromComponent(D2InventoryStrc *pInventory, int nComponent);
+D2UnitStrc *__stdcall INVENTORY_GetCompositItem(D2InventoryStrc *pInventory, int nComponent);
 
 /// @ordinal 10260
-/// @name INVENTORY_GetItemsXPosCapped
+/// @name INVENTORY_GetBodyLocFromEquippedItem
 /// @address 6fd8fe80
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall INVENTORY_GetItemsXPosCapped(D2InventoryStrc *pInventory, D2UnitStrc *pItem);
+DWORD __stdcall INVENTORY_GetBodyLocFromEquippedItem(D2InventoryStrc *pInventory, D2UnitStrc *pItem);
 
 /// @ordinal 10261
 /// @name INVENTORY_SetCursorItem
@@ -1585,22 +1585,22 @@ void __stdcall INVENTORY_SetCursorItem(D2InventoryStrc *pInventory, D2UnitStrc *
 D2UnitStrc *__stdcall INVENTORY_GetCursorItem(D2InventoryStrc *pInventory);
 
 /// @ordinal 10263
-/// @name D2Common_10263
+/// @name INVENTORY_FindBackPackItemForStack
 /// @address 6fd8ffa0
 /// Imported by ['D2Game.dll']
-D2UnitStrc *__stdcall D2Common_10263(D2InventoryStrc *pInventory, D2UnitStrc *a2, D2UnitStrc *a3);
+D2UnitStrc *__stdcall INVENTORY_FindBackPackItemForStack(D2InventoryStrc *pInventory, D2UnitStrc *a2, D2UnitStrc *a3);
 
 /// @ordinal 10264
-/// @name D2Common_10264
+/// @name INVENTORY_FindEquippedItemForStack
 /// @address 6fd90080
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_10264(D2InventoryStrc *pInventory, int a2, int a3);
+int __stdcall INVENTORY_FindEquippedItemForStack(D2InventoryStrc *pInventory, int a2, int a3);
 
 /// @ordinal 10265
-/// @name D2Common_10265
+/// @name INVENTORY_FindFillableBook
 /// @address 6fd90130
 /// Imported by ['D2Game.dll']
-D2UnitStrc *__stdcall D2Common_10265(D2InventoryStrc *pInventory, D2UnitStrc *a2, D2UnitStrc *a3);
+D2UnitStrc *__stdcall INVENTORY_FindFillableBook(D2InventoryStrc *pInventory, D2UnitStrc *a2, D2UnitStrc *a3);
 
 /// @ordinal 10266
 /// @name INVENTORY_PlaceItemInBeltSlot
@@ -1615,10 +1615,10 @@ BOOL __stdcall INVENTORY_PlaceItemInBeltSlot(D2InventoryStrc *pInventory, D2Unit
 void __stdcall D2Common_11077_Return(int arg, int a2);
 
 /// @ordinal 10268
-/// @name INVENTORY_HasSimiliarPotionInBelt
+/// @name INVENTORY_HasSimilarPotionInBelt
 /// @address 6fd902b0
 /// Not imported by any .dll
-BOOL __stdcall INVENTORY_HasSimiliarPotionInBelt(D2InventoryStrc *pInventory, D2UnitStrc *pPotion);
+BOOL __stdcall INVENTORY_HasSimilarPotionInBelt(D2InventoryStrc *pInventory, D2UnitStrc *pPotion);
 
 /// @ordinal 10269
 /// @name INVENTORY_GetFreeBeltSlot
@@ -1651,10 +1651,10 @@ BOOL __stdcall INVENTORY_GetUseableItemFromBeltSlot(D2InventoryStrc *pInventory,
 BOOL __stdcall INVENTORY_GetEquippedShield(D2InventoryStrc *pInventory, D2UnitStrc **ppItem);
 
 /// @ordinal 10274
-/// @name D2Common_10274
+/// @name INVENTORY_GetEquippedWeapon
 /// @address 6fd90760
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_10274(D2InventoryStrc *pInventory, D2UnitStrc **ppItem, int *pBodyLoc, BOOL *pIsLeftHandItem);
+BOOL __stdcall INVENTORY_GetEquippedWeapon(D2InventoryStrc *pInventory, D2UnitStrc **ppItem, int *pBodyLoc, BOOL *pIsLeftHandItem);
 
 /// @ordinal 10275
 /// @name INVENTORY_HasBodyArmorEquipped
@@ -1663,94 +1663,94 @@ BOOL __stdcall D2Common_10274(D2InventoryStrc *pInventory, D2UnitStrc **ppItem, 
 bool __stdcall INVENTORY_HasBodyArmorEquipped(D2InventoryStrc *pInventory);
 
 /// @ordinal 10276
-/// @name D2Common_10276
+/// @name INVENTORY_IsItemBodyLocFree
 /// @address 6fd908a0
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_10276(D2InventoryStrc *pInventory, int a2, signed int a3, int a4);
+int __stdcall INVENTORY_IsItemBodyLocFree(D2InventoryStrc *pInventory, int a2, signed int a3, int a4);
 
 /// @ordinal 10277
-/// @name INVENTORY_GetFirstItemInInventory
+/// @name INVENTORY_GetFirstItem
 /// @address 6fd8e7a0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2UnitStrc *__stdcall INVENTORY_GetFirstItemInInventory(D2InventoryStrc *pInventory);
+D2UnitStrc *__stdcall INVENTORY_GetFirstItem(D2InventoryStrc *pInventory);
 
 /// @ordinal 10278
-/// @name INVENTORY_GetLastItemInInventory
+/// @name INVENTORY_GetLastItem
 /// @address 6fd8e7c0
 /// Not imported by any .dll
-D2UnitStrc *__stdcall INVENTORY_GetLastItemInInventory(D2InventoryStrc *pInventory);
+D2UnitStrc *__stdcall INVENTORY_GetLastItem(D2InventoryStrc *pInventory);
 
 /// @ordinal 10279
-/// @name INVENTORY_CleanInventory
+/// @name INVENTORY_RemoveInventoryItems
 /// @address 6fd90910
 /// Imported by ['D2Client.dll']
-void __stdcall INVENTORY_CleanInventory(D2InventoryStrc *pInventory);
+void __stdcall INVENTORY_RemoveInventoryItems(D2InventoryStrc *pInventory);
 
 /// @ordinal 10280
-/// @name INVENTORY_GetFirstInventoryNode
+/// @name INVENTORY_GetTradeInventory
 /// @address 6fd90940
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int pInventory)
 
 /// @ordinal 10281
-/// @name INVENTORY_FreeInventoryNodes
+/// @name INVENTORY_FreeTradeInventory
 /// @address 6fd90960
 /// Imported by ['D2Game.dll']
-void __stdcall INVENTORY_FreeInventoryNodes(D2InventoryStrc *pInventory);
+void __stdcall INVENTORY_FreeTradeInventory(D2InventoryStrc *pInventory);
 
 /// @ordinal 10282
-/// @name D2Common_10282
+/// @name INVENTORY_CheckForItemInTradeInventory
 /// @address 6fd909b0
 /// Not imported by any .dll
-BOOL __stdcall D2Common_10282(D2InventoryStrc *pInventory, int nItemId);
+BOOL __stdcall INVENTORY_CheckForItemInTradeInventory(D2InventoryStrc *pInventory, int nItemId);
 
 /// @ordinal 10283
-/// @name INVENTORY_AddToContainer
+/// @name INVENTORY_AddItemToTradeInventory
 /// @address 6fd909f0
 /// Imported by ['D2Game.dll']
-void __stdcall INVENTORY_AddToContainer(D2InventoryStrc *pInventory, D2UnitStrc *pItem);
+void __stdcall INVENTORY_AddItemToTradeInventory(D2InventoryStrc *pInventory, D2UnitStrc *pItem);
 
 /// @ordinal 10284
-/// @name INVENTORY_GetNoOfFilledSockets
+/// @name INVENTORY_GetItemCount
 /// @address 6fd90ac0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall INVENTORY_GetNoOfFilledSockets(D2InventoryStrc *pInventory);
+int __stdcall INVENTORY_GetItemCount(D2InventoryStrc *pInventory);
 
 /// @ordinal 10285
-/// @name D2Common_10285
+/// @name INVENTORY_GetBackPackItemByType
 /// @address 6fd90ae0
 /// Imported by ['D2Game.dll']
-D2UnitStrc *__stdcall D2Common_10285(D2InventoryStrc *pInventory, int nItemType, D2UnitStrc *a3);
+D2UnitStrc *__stdcall INVENTORY_GetBackPackItemByType(D2InventoryStrc *pInventory, int nItemType, D2UnitStrc *a3);
 
 /// @ordinal 10286
-/// @name D2Common_10286
+/// @name INVENTORY_GetEquippedItemByType
 /// @address 6fd90bc0
 /// Not imported by any .dll
-D2UnitStrc *__stdcall D2Common_10286(D2InventoryStrc *pInventory, int nItemType, D2UnitStrc *a3);
+D2UnitStrc *__stdcall INVENTORY_GetEquippedItemByType(D2InventoryStrc *pInventory, int nItemType, D2UnitStrc *a3);
 
 /// @ordinal 10287
-/// @name D2Common_10287
+/// @name INVENTORY_GetEquippedItemByCode
 /// @address 6fd90c80
 /// Not imported by any .dll
-D2UnitStrc *__stdcall D2Common_10287(D2InventoryStrc *pInventory, int nItemCode, D2UnitStrc *a3);
+D2UnitStrc *__stdcall INVENTORY_GetEquippedItemByCode(D2InventoryStrc *pInventory, int nItemCode, D2UnitStrc *a3);
 
 /// @ordinal 10288
-/// @name D2Common_10288
+/// @name INVENTORY_GetSetItemEquipCountByFileIndex
 /// @address 6fd90e20
 /// Not imported by any .dll
 /// @guessedtype int __stdcall(int pInventory, int)
 
 /// @ordinal 10289
-/// @name D2Common_10289
+/// @name INVENTORY_UpdateWeaponGUIDOnInsert
 /// @address 6fd90ed0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10289(D2InventoryStrc *pInventory, D2UnitStrc *pItem);
+void __stdcall INVENTORY_UpdateWeaponGUIDOnInsert(D2InventoryStrc *pInventory, D2UnitStrc *pItem);
 
 /// @ordinal 10290
-/// @name D2Common_10290
+/// @name INVENTORY_UpdateWeaponGUIDOnRemoval
 /// @address 6fd90f80
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10290(D2InventoryStrc *pInventory, D2UnitStrc *pItem);
+void __stdcall INVENTORY_UpdateWeaponGUIDOnRemoval(D2InventoryStrc *pInventory, D2UnitStrc *pItem);
 
 /// @ordinal 10291
 /// @name INVENTORY_GetWieldType
@@ -1759,70 +1759,70 @@ void __stdcall D2Common_10290(D2InventoryStrc *pInventory, D2UnitStrc *pItem);
 signed int __stdcall INVENTORY_GetWieldType(D2UnitStrc *pPlayer, D2InventoryStrc *pInventory);
 
 /// @ordinal 10292
-/// @name SetOwnerIdOfInventory
+/// @name INVENTORY_SetOwnerId
 /// @address 6fd91140
 /// Imported by ['D2Game.dll']
-void __stdcall SetOwnerIdOfInventory(D2InventoryStrc *pInventory, DWORD nOwnerId);
+void __stdcall INVENTORY_SetOwnerId(D2InventoryStrc *pInventory, DWORD nOwnerId);
 
 /// @ordinal 10293
-/// @name GetInventoryOwnerId
+/// @name INVENTORY_GetOwnerId
 /// @address 6fd91160
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall GetInventoryOwnerId(D2InventoryStrc *pInventory);
+DWORD __stdcall INVENTORY_GetOwnerId(D2InventoryStrc *pInventory);
 
 /// @ordinal 10294
-/// @name CreateCorpseForPlayer
+/// @name INVENTORY_CreateCorpseForPlayer
 /// @address 6fd91190
 /// Imported by ['D2Game.dll']
-void __stdcall CreateCorpseForPlayer(D2InventoryStrc *pInventory, int nUnitId, int a3, int a4);
+void __stdcall INVENTORY_CreateCorpseForPlayer(D2InventoryStrc *pInventory, int nUnitId, int a3, int a4);
 
 /// @ordinal 10295
-/// @name FreeCorpse
+/// @name INVENTORY_FreeCorpse
 /// @address 6fd91210
 /// Imported by ['D2Game.dll']
-BOOL __stdcall FreeCorpse(D2InventoryStrc *pInventory, int nUnitId, int a3);
+BOOL __stdcall INVENTORY_FreeCorpse(D2InventoryStrc *pInventory, int nUnitId, int a3);
 
 /// @ordinal 10296
-/// @name GetCorpseFromInventory
+/// @name INVENTORY_GetFirstCorpse
 /// @address 6fd91290
 /// Imported by ['D2Game.dll']
-D2CorpseStrc *__stdcall GetCorpseFromInventory(D2InventoryStrc *pInventory);
+D2CorpseStrc *__stdcall INVENTORY_GetFirstCorpse(D2InventoryStrc *pInventory);
 
 /// @ordinal 10297
-/// @name GetNumberOfCorpses
+/// @name INVENTORY_GetCorpseCount
 /// @address 6fd912b0
 /// Imported by ['D2Game.dll']
-DWORD __stdcall GetNumberOfCorpses(D2InventoryStrc *pInventory);
+DWORD __stdcall INVENTORY_GetCorpseCount(D2InventoryStrc *pInventory);
 
 /// @ordinal 10298
-/// @name D2Common_10298
+/// @name INVENTORY_GetItemSaveGfxInfo
 /// @address 6fd912f0
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int pUnit, int a2, int pColor)
 
 /// @ordinal 10299
-/// @name D2Common_10299
+/// @name 
 /// @address 6fd91b60
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall D2Common_10299(D2UnitStrc *pUnit, int nBodyLoc, D2UnitStrc *pItem, int bDontCheckReqs);
+int __stdcall(D2UnitStrc *pUnit, int nBodyLoc, D2UnitStrc *pItem, int bDontCheckReqs);
 
 /// @ordinal 10300
-/// @name D2Common_10300
+/// @name INVENTORY_RemoveAllItems
 /// @address 6fd92180
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-signed int __stdcall D2Common_10300(D2InventoryStrc *pInventory);
+signed int __stdcall INVENTORY_RemoveAllItems(D2InventoryStrc *pInventory);
 
 /// @ordinal 10301
-/// @name D2Common_11239_Return0
+/// @name D2Common_11239_SKILLS_Return0
 /// @address 6fdb2e70
 /// Not imported by any .dll
-int __stdcall D2Common_11239_Return0(int arg);
+int __stdcall D2Common_11239_SKILLS_Return0(int arg);
 
 /// @ordinal 10302
-/// @name D2Common_10302
+/// @name INVENTORY_CanItemsBeTraded
 /// @address 6fd921d0
 /// Imported by ['D2Game.dll']
-signed int __stdcall D2Common_10302(void *pInventory, D2UnitStrc *a2, D2UnitStrc *a3, int *a4);
+signed int __stdcall INVENTORY_CanItemsBeTraded(void *pInventory, D2UnitStrc *a2, D2UnitStrc *a3, int *a4);
 
 /// @ordinal 10303
 /// @name D2Common_11077_Return
@@ -1831,28 +1831,28 @@ signed int __stdcall D2Common_10302(void *pInventory, D2UnitStrc *a2, D2UnitStrc
 void __stdcall D2Common_11077_Return(int arg, int a2);
 
 /// @ordinal 10304
-/// @name GetNextInventoryItem
+/// @name INVENTORY_GetNextItem
 /// @address 6fd92080
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2UnitStrc *__stdcall GetNextInventoryItem(D2UnitStrc *pPreviousItem);
+D2UnitStrc *__stdcall INVENTORY_GetNextItem(D2UnitStrc *pPreviousItem);
 
 /// @ordinal 10305
-/// @name CheckUnitIfItem
+/// @name INVENTORY_UnitIsItem
 /// @address 6fd920c0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2UnitStrc *__stdcall CheckUnitIfItem(D2UnitStrc *pItem);
+D2UnitStrc *__stdcall INVENTORY_UnitIsItem(D2UnitStrc *pItem);
 
 /// @ordinal 10306
-/// @name GetItemId
+/// @name INVENTORY_GetItemGUID
 /// @address 6fd920e0
 /// Imported by ['D2Client.dll']
-DWORD __stdcall GetItemId(D2UnitStrc *pItem);
+DWORD __stdcall INVENTORY_GetItemGUID(D2UnitStrc *pItem);
 
 /// @ordinal 10307
-/// @name GetNodePageOfItem
+/// @name INVENTORY_GetItemNodePage
 /// @address 6fd92100
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetNodePageOfItem(D2UnitStrc *pUnit);
+int __stdcall INVENTORY_GetItemNodePage(D2UnitStrc *pUnit);
 
 /// @ordinal 10308
 /// @name D2Common_11077_Return
@@ -1861,16 +1861,16 @@ int __stdcall GetNodePageOfItem(D2UnitStrc *pUnit);
 void __stdcall D2Common_11077_Return(int arg, int a2);
 
 /// @ordinal 10309
-/// @name D2Common_11239_Return0
+/// @name D2Common_11239_SKILLS_Return0
 /// @address 6fdb2e70
 /// Not imported by any .dll
-int __stdcall D2Common_11239_Return0(int arg);
+int __stdcall D2Common_11239_SKILLS_Return0(int arg);
 
 /// @ordinal 10310
-/// @name D2Common_10310
+/// @name INVENTORY_IsItemInInventory
 /// @address 6fd92140
 /// Not imported by any .dll
-D2UnitStrc *__stdcall D2Common_10310(D2InventoryStrc *pParentInventory, D2UnitStrc *pItem);
+D2UnitStrc *__stdcall INVENTORY_IsItemInInventory(D2InventoryStrc *pParentInventory, D2UnitStrc *pItem);
 
 /// @ordinal 10311
 /// @name D2Common_10948_SKILLS_GetFirstSkillFromSkillList
@@ -1879,16 +1879,16 @@ D2UnitStrc *__stdcall D2Common_10310(D2InventoryStrc *pParentInventory, D2UnitSt
 D2SkillStrc *__stdcall D2Common_10948_SKILLS_GetFirstSkillFromSkillList(D2SkillListStrc *pSkillList);
 
 /// @ordinal 10312
-/// @name D2Common_10316
+/// @name INVENTORY_GetItemGUIDFromNode
 /// @address 6fd90ab0
 /// Imported by ['D2Game.dll']
-DWORD __stdcall D2Common_10316(D2CorpseStrc *pCorpse);
+DWORD __stdcall INVENTORY_GetItemGUIDFromNode(D2CorpseStrc *pCorpse);
 
 /// @ordinal 10313
-/// @name D2Common_10472_GetStatListOwnerId
+/// @name D2Common_10472_STATLIST_GetOwnerGUID
 /// @address 6fd912d0
 /// Imported by ['D2Game.dll']
-DWORD __stdcall D2Common_10472_GetStatListOwnerId(D2StatListStrc *pStatList);
+DWORD __stdcall D2Common_10472_STATLIST_GetOwnerGUID(D2StatListStrc *pStatList);
 
 /// @ordinal 10314
 /// @name D2Common_10948_SKILLS_GetFirstSkillFromSkillList
@@ -1903,28 +1903,28 @@ D2SkillStrc *__stdcall D2Common_10948_SKILLS_GetFirstSkillFromSkillList(D2SkillL
 int __stdcall D2Common_10975_SKILLS_GetSkillMode(D2SkillStrc *pSkill);
 
 /// @ordinal 10316
-/// @name D2Common_10316
+/// @name D2Common_10312_INVENTORY_GetItemGUIDFromNode
 /// @address 6fd90ab0
 /// Imported by ['D2Game.dll']
-DWORD __stdcall D2Common_10316(D2CorpseStrc *pCorpse);
+DWORD __stdcall D2Common_10312_INVENTORY_GetItemGUIDFromNode(D2CorpseStrc *pCorpse);
 
 /// @ordinal 10317
-/// @name D2Common_10317
+/// @name UNITS_CanSwitchAI
 /// @address 6fdc2680
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __fastcall D2Common_10317(int nMonsterId);
+int __fastcall UNITS_CanSwitchAI(int nMonsterId);
 
 /// @ordinal 10318
-/// @name D2Common_10318
+/// @name UNITS_IsInMovingMode
 /// @address 6fdc1b40
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_10318(D2UnitStrc *pUnit);
+BOOL __stdcall UNITS_IsInMovingMode(D2UnitStrc *pUnit);
 
 /// @ordinal 10319
-/// @name D2Common_10319
+/// @name UNITS_IsInMovingModeEx
 /// @address 6fdc1c30
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_10319(D2UnitStrc *pUnit);
+BOOL __stdcall UNITS_IsInMovingModeEx(D2UnitStrc *pUnit);
 
 /// @ordinal 10320
 /// @name UNITS_GetStartSkill
@@ -1933,10 +1933,10 @@ BOOL __stdcall D2Common_10319(D2UnitStrc *pUnit);
 D2SkillStrc *__stdcall UNITS_GetStartSkill(D2UnitStrc *pUnit);
 
 /// @ordinal 10321
-/// @name UNITS_GetGetLeftSkill
+/// @name UNITS_GetLeftSkill
 /// @address 6fdbd5b0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2SkillStrc *__stdcall UNITS_GetGetLeftSkill(D2UnitStrc *pUnit);
+D2SkillStrc *__stdcall UNITS_GetLeftSkill(D2UnitStrc *pUnit);
 
 /// @ordinal 10322
 /// @name UNITS_GetRightSkill
@@ -1993,22 +1993,22 @@ void __stdcall UNITS_SetYForStaticUnit(D2UnitStrc *pUnit, int nY);
 void __stdcall UNITS_GetCoords(D2UnitStrc *pUnit, D2CoordStrc *pCoord);
 
 /// @ordinal 10333
-/// @name UNITS_GetTargetX
+/// @name UNITS_GetClientCoordX
 /// @address 6fdbdb10
 /// Imported by ['D2Client.dll']
-int __stdcall UNITS_GetTargetX(D2UnitStrc *pUnit);
+int __stdcall UNITS_GetClientCoordX(D2UnitStrc *pUnit);
 
 /// @ordinal 10334
-/// @name UNITS_GetTargetY
+/// @name UNITS_GetClientCoordY
 /// @address 6fdbdb60
 /// Imported by ['D2Client.dll']
-int __stdcall UNITS_GetTargetY(D2UnitStrc *pUnit);
+int __stdcall UNITS_GetClientCoordY(D2UnitStrc *pUnit);
 
 /// @ordinal 10335
-/// @name UNITS_GetTargetCoords
+/// @name UNITS_GetClientCoords
 /// @address 6fdbdda0
 /// Imported by ['D2Client.dll']
-void __stdcall UNITS_GetTargetCoords(D2UnitStrc *pUnit, D2CoordStrc *pTargetCoords);
+void __stdcall UNITS_GetClientCoords(D2UnitStrc *pUnit, D2CoordStrc *pTargetCoords);
 
 /// @ordinal 10336
 /// @name UNITS_GetUnitSizeX
@@ -2089,28 +2089,28 @@ void __stdcall UNITS_SetTargetUnitForPlayerOrMonster(D2UnitStrc *pUnit, D2UnitSt
 BOOL __stdcall UNITS_ChangeAnimMode(D2UnitStrc *pUnit, int nMode);
 
 /// @ordinal 10349
-/// @name SetAnimStartFrame
+/// @name UNITS_SetAnimStartFrame
 /// @address 6fdbe510
 /// Imported by ['D2Client.dll']
-void __stdcall SetAnimStartFrame(D2UnitStrc *pUnit);
+void __stdcall UNITS_SetAnimStartFrame(D2UnitStrc *pUnit);
 
 /// @ordinal 10350
-/// @name UNITS_SetUnitPathTarget
+/// @name UNITS_InitializeStaticPath
 /// @address 6fdbe1a0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall UNITS_SetUnitPathTarget(D2UnitStrc *pUnit, D2RoomStrc *pRoom, int nX, int nY);
+void __stdcall UNITS_InitializeStaticPath(D2UnitStrc *pUnit, D2RoomStrc *pRoom, int nX, int nY);
 
 /// @ordinal 10351
-/// @name UNITS_UpdateCollisionMaskForUnit
+/// @name UNITS_BlockCollisionPath
 /// @address 6fdbe060
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall UNITS_UpdateCollisionMaskForUnit(D2UnitStrc *pUnit, D2RoomStrc *pRoom, int nX, int nY);
+void __stdcall UNITS_BlockCollisionPath(D2UnitStrc *pUnit, D2RoomStrc *pRoom, int nX, int nY);
 
 /// @ordinal 10352
-/// @name UNITS_SetNoCollision
+/// @name UNITS_FreeCollisionPath
 /// @address 6fdbdec0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall UNITS_SetNoCollision(D2UnitStrc *pUnit);
+void __stdcall UNITS_FreeCollisionPath(D2UnitStrc *pUnit);
 
 /// @ordinal 10353
 /// @name UNITS_GetNameOffsetFromObject
@@ -2125,16 +2125,16 @@ DWORD __stdcall UNITS_GetNameOffsetFromObject(D2UnitStrc *pUnit);
 void __stdcall UNITS_GetRunAndWalkSpeedForPlayer(int nUnused, int nCharId, int *pWalkSpeed, int *pRunSpeed);
 
 /// @ordinal 10355
-/// @name D2Common_10355
+/// @name UNITS_IsCurrentRoomInvalid
 /// @address 6fdbead0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall D2Common_10355(D2UnitStrc *pUnit);
+DWORD __stdcall UNITS_IsCurrentRoomInvalid(D2UnitStrc *pUnit);
 
 /// @ordinal 10356
-/// @name D2Common_10356
+/// @name UNITS_SetCurrentRoomInvalid
 /// @address 6fdbeb20
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10356(D2UnitStrc *pUnit, int a2);
+void __stdcall UNITS_SetCurrentRoomInvalid(D2UnitStrc *pUnit, int a2);
 
 /// @ordinal 10357
 /// @name UNITS_RefreshInventory
@@ -2149,40 +2149,40 @@ void __stdcall UNITS_RefreshInventory(D2UnitStrc *pItem, BOOL bSetFlag);
 D2SkillStrc *__stdcall UNITS_GetSkillFromSkillId(D2UnitStrc *pUnit, int nSkillId);
 
 /// @ordinal 10359
-/// @name D2Common_10359
+/// @name UNITS_IsSoftMonster
 /// @address 6fdc02a0
 /// Imported by ['D2Client.dll']
-int __stdcall D2Common_10359(D2UnitStrc *pUnit);
+int __stdcall UNITS_IsSoftMonster(D2UnitStrc *pUnit);
 
 /// @ordinal 10360
-/// @name GetMeleeRange
+/// @name UNITS_GetMeleeRange
 /// @address 6fdc1120
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetMeleeRange(D2UnitStrc *pUnit);
+int __stdcall UNITS_GetMeleeRange(D2UnitStrc *pUnit);
 
 /// @ordinal 10361
-/// @name D2Common_10361
+/// @name UNITS_IsInMeleeRange
 /// @address 6fdc1a70
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-signed int __stdcall D2Common_10361(D2UnitStrc *pUnit1, D2UnitStrc *pUnit2, int a3);
+signed int __stdcall UNITS_IsInMeleeRange(D2UnitStrc *pUnit1, D2UnitStrc *pUnit2, int a3);
 
 /// @ordinal 10362
-/// @name D2Common_10362
+/// @name UNITS_TestCollisionWithUnit
 /// @address 6fdc14c0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-signed int __stdcall D2Common_10362(D2UnitStrc *hUnit1, D2UnitStrc *hUnit2, int a3);
+signed int __stdcall UNITS_TestCollisionWithUnit(D2UnitStrc *hUnit1, D2UnitStrc *hUnit2, int a3);
 
 /// @ordinal 10363
-/// @name D2Common_10363
+/// @name UNITS_TestCollisionBetweenInteractingUnits
 /// @address 6fdc1790
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-signed int __stdcall D2Common_10363(D2UnitStrc *pUnit, D2UnitStrc *a2, int a3);
+signed int __stdcall UNITS_TestCollisionBetweenInteractingUnits(D2UnitStrc *pUnit, D2UnitStrc *a2, int a3);
 
 /// @ordinal 10364
-/// @name D2Common_10364
+/// @name UNITS_TestCollisionByCoordinates
 /// @address 6fdc1230
 /// Imported by ['D2Game.dll']
-signed int __stdcall D2Common_10364(D2UnitStrc *pUnit, int nX, int nY, int nFlags);
+signed int __stdcall UNITS_TestCollisionByCoordinates(D2UnitStrc *pUnit, int nX, int nY, int nFlags);
 
 /// @ordinal 10365
 /// @name UNITS_GetHitClass
@@ -2191,10 +2191,10 @@ signed int __stdcall D2Common_10364(D2UnitStrc *pUnit, int nX, int nY, int nFlag
 int __fastcall UNITS_GetHitClass(D2UnitStrc *pUnit);
 
 /// @ordinal 10366
-/// @name D2Common_10366
+/// @name UNITS_GetWeaponClass
 /// @address 6fdc1ce0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __fastcall D2Common_10366(D2UnitStrc *pUnit);
+int __fastcall UNITS_GetWeaponClass(D2UnitStrc *pUnit);
 
 /// @ordinal 10367
 /// @name UNITS_GetBeltType
@@ -2221,10 +2221,10 @@ int __stdcall UNITS_GetAnimOrSeqMode(D2UnitStrc *pUnit);
 void __stdcall UNITS_SetAnimOrSeqMode(D2UnitStrc *pUnit, int nAnimMode);
 
 /// @ordinal 10371
-/// @name D2Common_10371
+/// @name UNITS_InitializeSequence
 /// @address 6fdbed90
 /// Imported by ['D2Game.dll']
-void __stdcall D2Common_10371(D2UnitStrc *pUnit);
+void __stdcall UNITS_InitializeSequence(D2UnitStrc *pUnit);
 
 /// @ordinal 10372
 /// @name UNITS_SetAnimationFrame
@@ -2251,10 +2251,10 @@ void __stdcall UNITS_UpdateFrame(D2UnitStrc *pUnit);
 void __stdcall UNITS_SetFrameNonRate(D2UnitStrc *pUnit, int nRate, int nFailRate);
 
 /// @ordinal 10376
-/// @name UnitUpdateAnimRateAndVel
+/// @name UpdateAnimRateAndVelocity
 /// @address 6fdbf050
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall UnitUpdateAnimRateAndVel(D2UnitStrc *pUnit, char *szFile, int nLine);
+void __stdcall UpdateAnimRateAndVelocity(D2UnitStrc *pUnit, char *szFile, int nLine);
 
 /// @ordinal 10377
 /// @name UNITS_SetAnimationSpeed
@@ -2263,10 +2263,10 @@ void __stdcall UnitUpdateAnimRateAndVel(D2UnitStrc *pUnit, char *szFile, int nLi
 void __stdcall UNITS_SetAnimationSpeed(D2UnitStrc *pUnit, int nSpeed);
 
 /// @ordinal 10378
-/// @name UNITS_IsUnitAtEndOfFrameCycle
+/// @name UNITS_IsAtEndOfFrameCycle
 /// @address 6fdbf910
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall UNITS_IsUnitAtEndOfFrameCycle(D2UnitStrc *pUnit);
+int __stdcall UNITS_IsAtEndOfFrameCycle(D2UnitStrc *pUnit);
 
 /// @ordinal 10379
 /// @name UNITS_GetShiftedFrameMetrics
@@ -2287,13 +2287,13 @@ void __stdcall UNITS_GetFrameMetrics(D2UnitStrc *pUnit, int *pFrame, int *pFrame
 void __stdcall UNITS_SetAnimActionFrame(D2UnitStrc *pUnit, signed int nFrame);
 
 /// @ordinal 10382
-/// @name GetEventFrameInfo
+/// @name UNITS_GetEventFrameInfo
 /// @address 6fdbfa90
 /// Not imported by any .dll
-int __stdcall GetEventFrameInfo(D2UnitStrc *pUnit, int nFrame);
+int __stdcall UNITS_GetEventFrameInfo(D2UnitStrc *pUnit, int nFrame);
 
 /// @ordinal 10383
-/// @name UNITS_GetLightMap
+/// @name UNITS_ResetLightMap
 /// @address 6fdbecd0
 /// Imported by ['D2Client.dll']
 /// @guessedtype int __stdcall(int pUnit)
@@ -2317,16 +2317,16 @@ void __stdcall UNITROOM_RefreshUnit(D2UnitStrc *pUnit);
 /// @guessedtype int __stdcall(int pUnit)
 
 /// @ordinal 10387
-/// @name D2Common_10387
+/// @name UNITROOM_RemoveUnitFromUpdateQueue
 /// @address 6fdbd400
 /// Not imported by any .dll
-void __stdcall D2Common_10387(D2UnitStrc *pUnit);
+void __stdcall UNITROOM_RemoveUnitFromUpdateQueue(D2UnitStrc *pUnit);
 
 /// @ordinal 10388
-/// @name D2Common_10388
+/// @name UNITROOM_SortUnitListByTargetY
 /// @address 6fdbd1b0
 /// Not imported by any .dll
-void __stdcall D2Common_10388(D2RoomStrc *pRoom);
+void __stdcall UNITROOM_SortUnitListByTargetY(D2RoomStrc *pRoom);
 
 /// @ordinal 10389
 /// @name UNITROOM_IsUnitInRoom
@@ -2335,10 +2335,10 @@ void __stdcall D2Common_10388(D2RoomStrc *pRoom);
 BOOL __stdcall UNITROOM_IsUnitInRoom(D2RoomStrc *pRoom, D2UnitStrc *pUnit);
 
 /// @ordinal 10390
-/// @name UNITROOM_RemoveUnitFromRoomEx
+/// @name UNITROOM_UpdatePath
 /// @address 6fdbd250
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall UNITROOM_RemoveUnitFromRoomEx(D2UnitStrc *pUnit);
+void __stdcall UNITROOM_UpdatePath(D2UnitStrc *pUnit);
 
 /// @ordinal 10391
 /// @name UNITROOM_ClearUpdateQueue
@@ -2389,10 +2389,10 @@ int __stdcall UNITS_GetDistanceToOtherUnit(D2UnitStrc *pUnit, D2UnitStrc *pOther
 int __stdcall UNITS_GetDistanceToCoordinates(D2UnitStrc *pUnit, int nX, int nY);
 
 /// @ordinal 10399
-/// @name D2Common_10399
+/// @name 
 /// @address 6fdc2cb0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall D2Common_10399(D2UnitStrc *pUnit1, D2UnitStrc *pUnit2);
+int __stdcall(D2UnitStrc *pUnit1, D2UnitStrc *pUnit2);
 
 /// @ordinal 10400
 /// @name UNITS_IsInRange
@@ -2431,13 +2431,13 @@ int __stdcall UNITFINDS_TestUnit(D2UnitStrc *pUnit, D2UnitFindArgStrc *pUnitFind
 int __stdcall UNITFINDS_GetTestedUnitsFromRoom(D2RoomStrc *pRoom, D2UnitStrc **ppUnits, int (__fastcall *pfnUnitTest)(D2UnitStrc *, void *), void *pUnitTestArg);
 
 /// @ordinal 10406
-/// @name D2Common_10406
+/// @name 
 /// @address 6fdc3090
 /// Not imported by any .dll
 /// @guessedtype int __stdcall(int pUnit, int, int)
 
 /// @ordinal 10407
-/// @name D2Common_10407
+/// @name 
 /// @address 6fdc33c0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int __stdcall(int pppRoom, int, int, int, int, int)
@@ -2473,16 +2473,16 @@ int __stdcall UNITS_GetAbsoluteXDistance(D2UnitStrc *pUnit1, D2UnitStrc *pUnit2)
 int __stdcall UNITS_GetAbsoluteYDistance(D2UnitStrc *pUnit1, D2UnitStrc *pUnit2);
 
 /// @ordinal 10413
-/// @name UpdateDirection
+/// @name UNITS_UpdateDirectionAndSpeed
 /// @address 6fdbfdb0
 /// Imported by ['D2Client.dll']
-void __stdcall UpdateDirection(D2UnitStrc *pUnit, int nX, int nY);
+void __stdcall UNITS_UpdateDirectionAndSpeed(D2UnitStrc *pUnit, int nX, int nY);
 
 /// @ordinal 10414
-/// @name GetNewDirection
+/// @name UNITS_GetNewDirection
 /// @address 6fdbfdd0
 /// Imported by ['D2Client.dll']
-int __stdcall GetNewDirection(D2UnitStrc *pUnit);
+int __stdcall UNITS_GetNewDirection(D2UnitStrc *pUnit);
 
 /// @ordinal 10415
 /// @name UNITS_StoreOwner
@@ -2503,16 +2503,16 @@ void __stdcall UNITS_StoreOwnerTypeAndGUID(D2UnitStrc *pUnit, int nOwnerType, in
 void __stdcall UNITS_StoreLastAttacker(D2UnitStrc *pUnit, D2UnitStrc *pKiller);
 
 /// @ordinal 10418
-/// @name GetNewDirection
+/// @name UNITS_GetDirectionToCoords
 /// @address 6fdc00e0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetNewDirection(D2UnitStrc *pUnit, int nNewX, int nNewY);
+int __stdcall UNITS_GetDirectionToCoords(D2UnitStrc *pUnit, int nNewX, int nNewY);
 
 /// @ordinal 10419
-/// @name D2Common_10419
+/// @name UNITS_SetInteractData
 /// @address 6fdc3680
 /// Imported by ['D2Game.dll']
-void __fastcall D2Common_10419(D2UnitStrc *pUnit, int a2, int a3, int nAnyUnitGUID);
+void __fastcall UNITS_SetInteractData(D2UnitStrc *pUnit, int a2, int a3, int nAnyUnitGUID);
 
 /// @ordinal 10420
 /// @name UNITS_AllocPlayerData
@@ -2581,10 +2581,10 @@ bool __stdcall UNITS_CheckObjectPortalFlag(D2UnitStrc *pUnit, BYTE nFlag);
 int __stdcall UNITS_GetOverlayHeight(D2UnitStrc *pUnit);
 
 /// @ordinal 10431
-/// @name UNITS_GetDefenseRate
+/// @name UNITS_GetDefense
 /// @address 6fdc08b0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall UNITS_GetDefenseRate(D2UnitStrc *pShield);
+int __stdcall UNITS_GetDefense(D2UnitStrc *pShield);
 
 /// @ordinal 10432
 /// @name UNITS_GetAttackRate
@@ -2599,28 +2599,28 @@ int __stdcall UNITS_GetAttackRate(D2UnitStrc *pUnit);
 int __stdcall UNITS_GetBlockRate(D2UnitStrc *pUnit, BOOL bExpansion);
 
 /// @ordinal 10434
-/// @name D2Common_10434
+/// @name 
 /// @address 6fdc0da0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2UnitStrc *__stdcall D2Common_10434(D2UnitStrc *pUnit, int a2);
+D2UnitStrc *__stdcall(D2UnitStrc *pUnit, int a2);
 
 /// @ordinal 10435
-/// @name D2Common_10435
+/// @name UNITS_GetEquippedWeaponFromMonster
 /// @address 6fdc0f70
 /// Not imported by any .dll
-D2UnitStrc *__stdcall D2Common_10435(D2UnitStrc *pUnit);
+D2UnitStrc *__stdcall UNITS_GetEquippedWeaponFromMonster(D2UnitStrc *pUnit);
 
 /// @ordinal 10436
-/// @name D2Common_10436
+/// @name UNITS_GetFrameBonus
 /// @address 6fdc0fc0
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_10436(D2UnitStrc *pClass);
+int __stdcall UNITS_GetFrameBonus(D2UnitStrc *pClass);
 
 /// @ordinal 10437
-/// @name AddOverlay
+/// @name UNITS_SetOverlay
 /// @address 6fdc0160
 /// Imported by ['D2Game.dll']
-void __stdcall AddOverlay(D2UnitStrc *pUnit, int nOverlay, int nUnused);
+void __stdcall UNITS_SetOverlay(D2UnitStrc *pUnit, int nOverlay, int nUnused);
 
 /// @ordinal 10438
 /// @name UNITS_GetHealingCost
@@ -2635,10 +2635,10 @@ unsigned int __stdcall UNITS_GetHealingCost(D2UnitStrc *pUnit);
 unsigned int __stdcall UNITS_GetInventoryGoldLimit(D2UnitStrc *pUnit);
 
 /// @ordinal 10440
-/// @name D2Common_10440
+/// @name UNITS_MergeDualWieldWeaponStatLists
 /// @address 6fdc1db0
 /// Not imported by any .dll
-void __stdcall D2Common_10440(D2UnitStrc *pUnit, int a2);
+void __stdcall UNITS_MergeDualWieldWeaponStatLists(D2UnitStrc *pUnit, int a2);
 
 /// @ordinal 10441
 /// @name D2Common_11077_Return
@@ -2773,64 +2773,64 @@ void __stdcall UNITS_FreeStaticPath(D2UnitStrc *pUnit);
 BOOL __stdcall UNITS_CanDualWield(D2UnitStrc *pUnit);
 
 /// @ordinal 10463
-/// @name SetStatInStatList
+/// @name STATLIST_SetStat
 /// @address 6fdb77b0
 /// Imported by ['D2Game.dll']
-int __stdcall SetStatInStatList(D2StatListExStrc *pList, int nStatId, int nValue, int nParam);
+int __stdcall STATLIST_SetStat(D2StatListExStrc *pList, int nStatId, int nValue, int nParam);
 
 /// @ordinal 10464
-/// @name AddStatToStatList
+/// @name STATLIST_AddStat
 /// @address 6fdb7560
 /// Imported by ['D2Game.dll']
-void __stdcall AddStatToStatList(D2StatListExStrc *pStatList, int nStatId, int nValue, uint16_t nParam);
+void __stdcall STATLIST_AddStat(D2StatListExStrc *pStatList, int nStatId, int nValue, uint16_t nParam);
 
 /// @ordinal 10465
-/// @name SetStatIfListIsValid
+/// @name STATLIST_SetStatIfListIsValid
 /// @address 6fdb7910
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall SetStatIfListIsValid(D2StatListExStrc *pList, int nStatId, int nValue, int nParam);
+void __stdcall STATLIST_SetStatIfListIsValid(D2StatListExStrc *pList, int nStatId, int nValue, int nParam);
 
 /// @ordinal 10466
-/// @name STATLIST_GetStat
+/// @name STATLIST_GetStatValue
 /// @address 6fdb7d40
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall STATLIST_GetStat(D2StatListExStrc *pStatListEx, __int16 nStat, __int16 nLayer);
+int __stdcall STATLIST_GetStatValue(D2StatListExStrc *pStatListEx, __int16 nStat, __int16 nLayer);
 
 /// @ordinal 10467
-/// @name D2Common_10467
+/// @name 
 /// @address 6fdb8120
 /// Not imported by any .dll
-int __stdcall D2Common_10467(D2StatListStrc *pStatList, signed int nStat);
+int __stdcall(D2StatListStrc *pStatList, signed int nStat);
 
 /// @ordinal 10468
-/// @name D2Common_10468
+/// @name STATLIST_RemoveAllStats
 /// @address 6fdb8150
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10468(D2StatListStrc *pStatList);
+void __stdcall STATLIST_RemoveAllStats(D2StatListStrc *pStatList);
 
 /// @ordinal 10469
-/// @name D2Common_10469
+/// @name 
 /// @address 6fdb8cc0
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int pUnit)
 
 /// @ordinal 10470
-/// @name STATLIST_Create
+/// @name STATLIST_AllocStatList
 /// @address 6fdb7140
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2StatListStrc *__stdcall STATLIST_Create(void *pMemPool, DWORD fFilter, DWORD dwTimeout, int nUnitType, DWORD dwUnitGUID);
+D2StatListStrc *__stdcall STATLIST_AllocStatList(void *pMemPool, DWORD fFilter, DWORD dwTimeout, int nUnitType, DWORD dwUnitGUID);
 
 /// @ordinal 10471
-/// @name GetStatListOwnerType
+/// @name STATLIST_GetOwnerType
 /// @address 6fdb7260
 /// Imported by ['D2Game.dll']
-DWORD __stdcall GetStatListOwnerType(D2StatListStrc *pStatList);
+DWORD __stdcall STATLIST_GetOwnerType(D2StatListStrc *pStatList);
 
 /// @ordinal 10472
-/// @name GetStatListOwnerId
+/// @name STATLIST_GetOwnerGUID
 /// @address 6fd912d0
 /// Imported by ['D2Game.dll']
-DWORD __stdcall GetStatListOwnerId(D2StatListStrc *pStatList);
+DWORD __stdcall STATLIST_GetOwnerGUID(D2StatListStrc *pStatList);
 
 /// @ordinal 10473
 /// @name D2Common_10529_STATLIST_GetExpireFrame
@@ -2839,10 +2839,10 @@ DWORD __stdcall GetStatListOwnerId(D2StatListStrc *pStatList);
 int __stdcall D2Common_10529_STATLIST_GetExpireFrame(D2StatListStrc *pStatList);
 
 /// @ordinal 10474
-/// @name D2Common_10474
+/// @name 
 /// @address 6fdb91c0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10474(D2UnitStrc *pUnit, D2StatListExStrc *pStatList);
+void __stdcall(D2UnitStrc *pUnit, D2StatListExStrc *pStatList);
 
 /// @ordinal 10475
 /// @name PostStatToStatList
@@ -2857,58 +2857,58 @@ void __stdcall PostStatToStatList(D2UnitStrc *pUnit, D2StatListStrc *pStatList, 
 void __stdcall D2Common_10528_STATLIST_SetExpireFrame(D2StatListStrc *pStatList, int nExpireFrame);
 
 /// @ordinal 10477
-/// @name SetStatRemoveFnInStatList
+/// @name STATLIST_SetStatRemoveCallback
 /// @address 6fdb8ca0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall SetStatRemoveFnInStatList(D2StatListStrc *pStatList, void *fpStatRemove);
+void __stdcall STATLIST_SetStatRemoveCallback(D2StatListStrc *pStatList, void *fpStatRemove);
 
 /// @ordinal 10478
-/// @name SetStateInStatList
+/// @name STATLIST_SetState
 /// @address 6fdb72c0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall SetStateInStatList(D2StatListStrc *pStatList, int nState);
+void __stdcall STATLIST_SetState(D2StatListStrc *pStatList, int nState);
 
 /// @ordinal 10479
-/// @name GetState
+/// @name STATLIST_GetState
 /// @address 6fdb72e0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetState(D2StatListStrc *pStatList);
+int __stdcall STATLIST_GetState(D2StatListStrc *pStatList);
 
 /// @ordinal 10480
-/// @name STATES_GetStatList
+/// @name STATLIST_GetStatListFromUnitAndState
 /// @address 6fdb81e0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2StatListStrc *__stdcall STATES_GetStatList(D2UnitStrc *pUnit, int nState);
+D2StatListStrc *__stdcall STATLIST_GetStatListFromUnitAndState(D2UnitStrc *pUnit, int nState);
 
 /// @ordinal 10481
-/// @name GetListFromItem
+/// @name STATLIST_GetStatListFromUnitAndFlag
 /// @address 6fdb8230
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2StatListExStrc *__stdcall GetListFromItem(D2UnitStrc *pItem, DWORD dwFlag);
+D2StatListExStrc *__stdcall STATLIST_GetStatListFromUnitAndFlag(D2UnitStrc *pItem, DWORD dwFlag);
 
 /// @ordinal 10482
-/// @name D2Common_10482
+/// @name STATLIST_GetStatListFromFlag
 /// @address 6fdb8200
 /// Imported by ['D2Client.dll']
-D2StatListExStrc *__stdcall D2Common_10482(D2StatListExStrc *pStatListEx, int a2);
+D2StatListExStrc *__stdcall STATLIST_GetStatListFromFlag(D2StatListExStrc *pStatListEx, int a2);
 
 /// @ordinal 10483
-/// @name STATLIST_GetFirstByFilterEx
+/// @name STATLIST_GetStatListFromUnitStateOrFlag
 /// @address 6fdb8270
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2StatListExStrc *__stdcall STATLIST_GetFirstByFilterEx(D2UnitStrc *pUnit, int nStateId, DWORD dwFlag);
+D2StatListExStrc *__stdcall STATLIST_GetStatListFromUnitStateOrFlag(D2UnitStrc *pUnit, int nStateId, DWORD dwFlag);
 
 /// @ordinal 10484
-/// @name STATLIST_GetFirst
+/// @name STATLIST_GetStatListFromUnitStateAndFlag
 /// @address 6fdb82c0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2StatListExStrc *__stdcall STATLIST_GetFirst(D2UnitStrc *pUnit, int nState, DWORD dwFlag);
+D2StatListExStrc *__stdcall STATLIST_GetStatListFromUnitStateAndFlag(D2UnitStrc *pUnit, int nState, DWORD dwFlag);
 
 /// @ordinal 10485
-/// @name STATLIST_Free
+/// @name STATLIST_FreeStatList
 /// @address 6fdb7030
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall STATLIST_Free(D2StatListStrc *pStatList);
+void __stdcall STATLIST_FreeStatList(D2StatListStrc *pStatList);
 
 /// @ordinal 10486
 /// @name STATES_ToggleState
@@ -2947,13 +2947,13 @@ BOOL __stdcall STATES_IsAnyGfxStateFlagSet(D2UnitStrc *pUnit);
 void __stdcall STATES_ClearGfxStateFlags(D2UnitStrc *pUnit);
 
 /// @ordinal 10492
-/// @name STATES_GetListGfxFlags
+/// @name STATES_GetGfxStateFlags
 /// @address 6fdb4760
 /// Imported by ['D2Game.dll']
-DWORD *__stdcall STATES_GetListGfxFlags(D2UnitStrc *pUnit);
+DWORD *__stdcall STATES_GetGfxStateFlags(D2UnitStrc *pUnit);
 
 /// @ordinal 10493
-/// @name D2Common_10493
+/// @name STATES_UpdateStayDeathFlags
 /// @address 6fdb4790
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int pUnit, int)
@@ -2971,148 +2971,148 @@ DWORD *__stdcall STATES_GetStatFlags(D2UnitStrc *pUnit);
 int __fastcall STATES_GetNumberOfStateFlags();
 
 /// @ordinal 10496
-/// @name D2Common_10496
+/// @name STATES_CheckStateMaskAuraByStateId
 /// @address 6fdb4920
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2Common_10496(int nState);
+BOOL __stdcall STATES_CheckStateMaskAuraByStateId(int nState);
 
 /// @ordinal 10497
-/// @name D2Common_10497
+/// @name STATES_CheckStateMaskCurseByStateId
 /// @address 6fdb4e80
 /// Imported by ['D2Game.dll']
-BOOL __stdcall D2Common_10497(int nState);
+BOOL __stdcall STATES_CheckStateMaskCurseByStateId(int nState);
 
 /// @ordinal 10498
-/// @name D2Common_10498
+/// @name STATES_CheckStateMaskCurableByStateId
 /// @address 6fdb4ec0
 /// Imported by ['D2Game.dll']
-BOOL __stdcall D2Common_10498(int nState);
+BOOL __stdcall STATES_CheckStateMaskCurableByStateId(int nState);
 
 /// @ordinal 10500
-/// @name D2Common_10500
+/// @name STATES_CheckStateMaskPgsvByStateId
 /// @address 6fdb49d0
 /// Not imported by any .dll
-BOOL __stdcall D2Common_10500(int nState);
+BOOL __stdcall STATES_CheckStateMaskPgsvByStateId(int nState);
 
 /// @ordinal 10501
-/// @name D2Common_10501
+/// @name STATES_UpdatePgsvFlags
 /// @address 6fdb4a80
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int pUnit)
 
 /// @ordinal 10502
-/// @name D2Common_10502
+/// @name STATES_CheckStateMaskActiveOnUnit
 /// @address 6fdb4bc0
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2Common_10502(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskActiveOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10503
-/// @name D2Common_10503
+/// @name STATES_CheckStateMaskAuraOnUnit
 /// @address 6fdb4960
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2Common_10503(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskAuraOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10511
-/// @name D2Common_10511
+/// @name STATLIST_FreeModStats
 /// @address 6fdb85d0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10511(D2UnitStrc *pUnit);
+void __stdcall STATLIST_FreeModStats(D2UnitStrc *pUnit);
 
 /// @ordinal 10512
-/// @name D2Common_10512
+/// @name 
 /// @address 6fdb8420
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int, int, int, int)
 
 /// @ordinal 10513
-/// @name D2Common_10513
+/// @name 
 /// @address 6fdb84e0
 /// Imported by ['D2Game.dll']
-void __stdcall D2Common_10513(D2UnitStrc *pUnit1, D2UnitStrc *pUnit2, void (__fastcall *pfCallback)(_DWORD, _DWORD, _DWORD, _DWORD));
+void __stdcall(D2UnitStrc *pUnit1, D2UnitStrc *pUnit2, void (__fastcall *pfCallback)(_DWORD, _DWORD, _DWORD, _DWORD));
 
 /// @ordinal 10514
-/// @name D2Common_10514
+/// @name STATLIST_ClampStaminaManaHP
 /// @address 6fdb8d30
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10514(D2UnitStrc *pUnit);
+void __stdcall STATLIST_ClampStaminaManaHP(D2UnitStrc *pUnit);
 
 /// @ordinal 10515
-/// @name D2Common_10515
+/// @name STATLIST_DeactivateTemporaryStates
 /// @address 6fdb80c0
 /// Imported by ['D2Client.dll']
-void __stdcall D2Common_10515(D2UnitStrc *pUnit);
+void __stdcall STATLIST_DeactivateTemporaryStates(D2UnitStrc *pUnit);
 
 /// @ordinal 10516
-/// @name D2Common_10516
+/// @name STATLIST_UpdateStatListsExpiration
 /// @address 6fdb8b10
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10516(D2UnitStrc *pUnit, int nFrame);
+void __stdcall STATLIST_UpdateStatListsExpiration(D2UnitStrc *pUnit, int nFrame);
 
 /// @ordinal 10517
-/// @name SetStat
+/// @name STATLIST_SetUnitStat
 /// @address 6fdb7ab0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall SetStat(D2UnitStrc *pUnit, int nStat, int nValue, int nParam);
+void __stdcall STATLIST_SetUnitStat(D2UnitStrc *pUnit, int nStat, int nValue, int nParam);
 
 /// @ordinal 10518
-/// @name AddStat
+/// @name STATLIST_AddUnitStat
 /// @address 6fdb7b00
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall AddStat(D2UnitStrc *pUnit, int nStat, int nValue, int nParam);
+void __stdcall STATLIST_AddUnitStat(D2UnitStrc *pUnit, int nStat, int nValue, int nParam);
 
 /// @ordinal 10519
-/// @name GetUnitStat
+/// @name STATLIST_UnitGetStatValue
 /// @address 6fdb7c30
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetUnitStat(D2UnitStrc *pUnit, int nStat, WORD nLayer);
+int __stdcall STATLIST_UnitGetStatValue(D2UnitStrc *pUnit, int nStat, WORD nLayer);
 
 /// @ordinal 10520
-/// @name GetStatSigned
+/// @name STATLIST_UnitGetItemStatOrSkillStatValue
 /// @address 6fdb7e30
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetStatSigned(D2UnitStrc *pUnit, int nStat, WORD nLayer);
+int __stdcall STATLIST_UnitGetItemStatOrSkillStatValue(D2UnitStrc *pUnit, int nStat, WORD nLayer);
 
 /// @ordinal 10521
-/// @name GetBaseStat
+/// @name STATLIST_GetUnitBaseStat
 /// @address 6fdb7b30
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetBaseStat(D2UnitStrc *pUnit, int nStat, int nParam);
+int __stdcall STATLIST_GetUnitBaseStat(D2UnitStrc *pUnit, int nStat, int nParam);
 
 /// @ordinal 10522
-/// @name GetBonusStats
+/// @name STATLIST_GetUnitStatBonus
 /// @address 6fdb7f40
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetBonusStats(D2UnitStrc *pUnit, int nStatId, uint16_t nLayer);
+int __stdcall STATLIST_GetUnitStatBonus(D2UnitStrc *pUnit, int nStatId, uint16_t nLayer);
 
 /// @ordinal 10523
-/// @name MergeStatlist
+/// @name STATLIST_MergeStatLists
 /// @address 6fdb8310
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall MergeStatlist(D2UnitStrc *pTarget, D2UnitStrc *pUnit, BOOL bType);
+void __stdcall STATLIST_MergeStatLists(D2UnitStrc *pTarget, D2UnitStrc *pUnit, BOOL bType);
 
 /// @ordinal 10524
-/// @name ExpireUnitStatlist
+/// @name STATLIST_ExpireUnitStatlist
 /// @address 6fdb9ae0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall ExpireUnitStatlist(D2UnitStrc *pOwner, D2UnitStrc *pUnit);
+void __stdcall STATLIST_ExpireUnitStatlist(D2UnitStrc *pOwner, D2UnitStrc *pUnit);
 
 /// @ordinal 10525
-/// @name ITEMS_AddGemToSocket
+/// @name 
 /// @address 6fdb8f30
 /// Imported by ['D2Game.dll']
-void __stdcall ITEMS_AddGemToSocket(D2UnitStrc *pItemGem, D2UnitStrc *pItemToSocket);
+void __stdcall(D2UnitStrc *pItemGem, D2UnitStrc *pItemToSocket);
 
 /// @ordinal 10526
-/// @name AllocStatListEx
+/// @name STATLIST_AllocStatListEx
 /// @address 6fdb7190
 /// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int __stdcall(int pUnit, int nFlags, int pCallbackFunc, int pGame)
 
 /// @ordinal 10527
-/// @name FreeStatListEx
+/// @name STATLIST_FreeStatListEx
 /// @address 6fdb7110
 /// Not imported by any .dll
-void __stdcall FreeStatListEx(D2UnitStrc *pUnit);
+void __stdcall STATLIST_FreeStatListEx(D2UnitStrc *pUnit);
 
 /// @ordinal 10528
 /// @name STATLIST_SetExpireFrame
@@ -3139,22 +3139,22 @@ DWORD __stdcall D2CheckStatlistFlagDMGRed(D2UnitStrc *pUnit);
 int __stdcall SetStatInStatListLayer0(D2StatListStrc *pList, int nStatId, int nValue, int nUnused);
 
 /// @ordinal 10532
-/// @name D2Common_10532
+/// @name STATLIST_GetTotalStatValue_Layer0
 /// @address 6fdb87a0
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10533
-/// @name D2Common_10533
+/// @name STATLIST_RemoveAllStatsFromOverlay
 /// @address 6fdb8890
 /// Imported by ['D2Game.dll']
-void __stdcall D2Common_10533(D2UnitStrc *pUnit);
+void __stdcall STATLIST_RemoveAllStatsFromOverlay(D2UnitStrc *pUnit);
 
 /// @ordinal 10534
-/// @name D2Common_10534
+/// @name 
 /// @address 6fdb8750
 /// Not imported by any .dll
-void __stdcall D2Common_10534(D2UnitStrc *pUnit);
+void __stdcall(D2UnitStrc *pUnit);
 
 /// @ordinal 10535
 /// @name STATLIST_GetOwner
@@ -3163,94 +3163,94 @@ void __stdcall D2Common_10534(D2UnitStrc *pUnit);
 D2UnitStrc *__stdcall STATLIST_GetOwner(D2UnitStrc *pUnit, BOOL *pDynamic);
 
 /// @ordinal 10536
-/// @name D2CheckStateMaskBlue
+/// @name STATES_CheckStateMaskBlueOnUnit
 /// @address 6fdb4fc0
 /// Not imported by any .dll
-BOOL __stdcall D2CheckStateMaskBlue(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskBlueOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10537
-/// @name D2CheckStateMaskATBlue
+/// @name STATES_CheckStateMaskAttBlueOnUnit
 /// @address 6fdb4d80
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2CheckStateMaskATBlue(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskAttBlueOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10538
-/// @name D2CheckStateMaskDMGBlue
+/// @name STATES_CheckStateMaskDamBlueOnUnit
 /// @address 6fdb4ca0
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2CheckStateMaskDMGBlue(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskDamBlueOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10539
-/// @name D2CheckStateMaskPlayerStayDeath
+/// @name STATES_CheckStateMaskArmBlueOnUnit
 /// @address 6fdb5030
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2CheckStateMaskPlayerStayDeath(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskArmBlueOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10540
-/// @name D2CheckStateMaskRFBlue
+/// @name STATES_CheckStateMaskRFBlueOnUnit
 /// @address 6fdb50a0
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2CheckStateMaskRFBlue(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskRFBlueOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10541
-/// @name D2CheckStateMaskRCBlue
+/// @name STATES_CheckStateMaskRCBlueOnUnit
 /// @address 6fdb5110
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2CheckStateMaskRCBlue(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskRCBlueOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10542
-/// @name D2CheckStateMaskRLBlue
+/// @name STATES_CheckStateMaskRLBlueOnUnit
 /// @address 6fdb5180
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2CheckStateMaskRLBlue(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskRLBlueOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10543
-/// @name D2CheckStateMaskRPBlue
+/// @name STATES_CheckStateMaskRPBlueOnUnit
 /// @address 6fdb51f0
 /// Imported by ['D2Client.dll']
-DWORD __stdcall D2CheckStateMaskRPBlue(D2UnitStrc *pUnit);
+DWORD __stdcall STATES_CheckStateMaskRPBlueOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10544
-/// @name D2CheckStateMaskATRed
+/// @name STATES_CheckStateMaskAttRedOnUnit
 /// @address 6fdb4df0
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2CheckStateMaskATRed(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskAttRedOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10545
-/// @name D2CheckStateMaskDMGRed
+/// @name STATES_CheckStateMaskDamRedOnUnit
 /// @address 6fdb4d10
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2CheckStateMaskDMGRed(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskDamRedOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10546
-/// @name D2Common_10546
+/// @name STATES_CheckStateMaskArmRedOnUnit
 /// @address 6fdb5260
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2Common_10546(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskArmRedOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10547
-/// @name D2CheckStateMaskRFRed
+/// @name STATES_CheckStateMaskRFRedOnUnit
 /// @address 6fdb52d0
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2CheckStateMaskRFRed(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskRFRedOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10548
-/// @name D2CheckStateMaskRCRed
+/// @name STATES_CheckStateMaskRCRedOnUnit
 /// @address 6fdb5340
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2CheckStateMaskRCRed(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskRCRedOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10549
-/// @name D2CheckStateMaskRLRed
+/// @name STATES_CheckStateMaskRLRedOnUnit
 /// @address 6fdb53b0
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2CheckStateMaskRLRed(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskRLRedOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10550
-/// @name D2CheckStateMaskRPRed
+/// @name STATES_CheckStateMaskRPRedOnUnit
 /// @address 6fdb5420
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2CheckStateMaskRPRed(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskRPRedOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10551
 /// @name STATES_IsUnitShapeShifted
@@ -3259,436 +3259,436 @@ BOOL __stdcall D2CheckStateMaskRPRed(D2UnitStrc *pUnit);
 BOOL __stdcall STATES_IsUnitShapeShifted(D2UnitStrc *pUnit);
 
 /// @ordinal 10552
-/// @name D2CheckStateMaskExp
+/// @name STATES_CheckStateMaskExpOnUnit
 /// @address 6fdb5490
 /// Imported by ['D2Game.dll']
-BOOL __stdcall D2CheckStateMaskExp(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskExpOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10553
-/// @name D2CheckStateMaskExp2
+/// @name STATES_CheckStateMaskExpByStateId
 /// @address 6fdb5500
 /// Imported by ['D2Game.dll', 'D2Server.dll']
-BOOL __stdcall D2CheckStateMaskExp2(int nState);
+BOOL __stdcall STATES_CheckStateMaskExpByStateId(int nState);
 
 /// @ordinal 10554
-/// @name D2CheckStateMaskStayDeath
+/// @name STATES_CheckStateMaskStayDeathOnUnitByStateId
 /// @address 6fdb4f00
 /// Imported by ['D2Game.dll', 'D2Server.dll']
-BOOL __stdcall D2CheckStateMaskStayDeath(D2UnitStrc *pUnit, int nState);
+BOOL __stdcall STATES_CheckStateMaskStayDeathOnUnitByStateId(D2UnitStrc *pUnit, int nState);
 
 /// @ordinal 10555
-/// @name D2CheckStateMaskShatter
+/// @name STATES_CheckStateMaskShatterOnUnit
 /// @address 6fdb5540
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2CheckStateMaskShatter(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskShatterOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10556
-/// @name D2Common_10556
+/// @name STATES_CheckStateMaskShatterByStateId
 /// @address 6fdb55b0
 /// Not imported by any .dll
-BOOL __stdcall D2Common_10556(int nState);
+BOOL __stdcall STATES_CheckStateMaskShatterByStateId(int nState);
 
 /// @ordinal 10557
-/// @name D2CheckStateMaskHide
+/// @name STATES_CheckStateMaskHideOnUnit
 /// @address 6fdb4b50
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2CheckStateMaskHide(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskHideOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10558
-/// @name D2Common_10558
+/// @name STATES_CheckStateMaskHideByStateId
 /// @address 6fdb4b20
 /// Not imported by any .dll
-BOOL __stdcall D2Common_10558(int nState);
+BOOL __stdcall STATES_CheckStateMaskHideByStateId(int nState);
 
 /// @ordinal 10559
-/// @name D2CheckStateMaskLife
+/// @name STATES_CheckStateMaskLifeOnUnit
 /// @address 6fdb55f0
 /// Imported by ['D2Game.dll']
-BOOL __stdcall D2CheckStateMaskLife(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskLifeOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10560
-/// @name D2CheckStateMaskUdead
+/// @name STATES_CheckStateMaskUdeadOnUnit
 /// @address 6fdb5660
 /// Imported by ['D2Game.dll']
-BOOL __stdcall D2CheckStateMaskUdead(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskUdeadOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10561
-/// @name D2CheckStateMaskGreen
+/// @name STATES_CheckStateMaskGreenOnUnit
 /// @address 6fdb56d0
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2CheckStateMaskGreen(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskGreenOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10562
-/// @name D2Common_10562
+/// @name STATLIST_GetUnitAlignment
 /// @address 6fdb8620
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-signed int __stdcall D2Common_10562(D2UnitStrc *pUnit);
+signed int __stdcall STATLIST_GetUnitAlignment(D2UnitStrc *pUnit);
 
 /// @ordinal 10563
-/// @name D2Common_10563
+/// @name STATLIST_AreUnitsAligned
 /// @address 6fdb57c0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_10563(D2UnitStrc *pUnit1, D2UnitStrc *pUnit2);
+BOOL __stdcall STATLIST_AreUnitsAligned(D2UnitStrc *pUnit1, D2UnitStrc *pUnit2);
 
 /// @ordinal 10564
-/// @name QuickGetTotalMaxLife
+/// @name STATLIST_GetMaxLifeFromUnit
 /// @address 6fdb91d0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall QuickGetTotalMaxLife(D2UnitStrc *pUnit);
+int __stdcall STATLIST_GetMaxLifeFromUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10565
-/// @name QuickGetTotalMaxMana
+/// @name STATLIST_GetMaxManaFromUnit
 /// @address 6fdb92c0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall QuickGetTotalMaxMana(D2UnitStrc *pUnit);
+DWORD __stdcall STATLIST_GetMaxManaFromUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10566
-/// @name QuickGetTotalMaxStamina
+/// @name STATLIST_GetMaxStaminaFromUnit
 /// @address 6fdb93b0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall QuickGetTotalMaxStamina(D2UnitStrc *pUnit);
+DWORD __stdcall STATLIST_GetMaxStaminaFromUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10567
-/// @name GetMaxDuraFromItem
+/// @name STATLIST_GetMaxDurabilityFromUnit
 /// @address 6fdb94a0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall GetMaxDuraFromItem(D2UnitStrc *pUnit);
+DWORD __stdcall STATLIST_GetMaxDurabilityFromUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10568
-/// @name GetItemMaxDamage
+/// @name STATLIST_GetMaxDamageFromUnit
 /// @address 6fdb95d0
 /// Imported by ['D2Client.dll']
-int __stdcall GetItemMaxDamage(D2UnitStrc *pUnit, int a2);
+int __stdcall STATLIST_GetMaxDamageFromUnit(D2UnitStrc *pUnit, int a2);
 
 /// @ordinal 10569
-/// @name GetItemMinDamage
+/// @name STATLIST_GetMinDamageFromUnit
 /// @address 6fdb96f0
 /// Imported by ['D2Client.dll']
-int __stdcall GetItemMinDamage(D2UnitStrc *pUnit, int a2);
+int __stdcall STATLIST_GetMinDamageFromUnit(D2UnitStrc *pUnit, int a2);
 
 /// @ordinal 10570
-/// @name GetItemMaxThrowDamage
+/// @name STATLIST_GetMaxThrowDamageFromUnit
 /// @address 6fdb9810
 /// Not imported by any .dll
-int __stdcall GetItemMaxThrowDamage(D2UnitStrc *pUnit);
+int __stdcall STATLIST_GetMaxThrowDamageFromUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10571
-/// @name GetItemMinThrowDamage
+/// @name STATLIST_GetMinThrowDamageFromUnit
 /// @address 6fdb9900
 /// Not imported by any .dll
-int __stdcall GetItemMinThrowDamage(D2UnitStrc *pUnit);
+int __stdcall STATLIST_GetMinThrowDamageFromUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10572
-/// @name GetItemDefense
+/// @name STATLIST_GetDefenseFromUnit
 /// @address 6fdb99f0
 /// Imported by ['D2Client.dll']
-int __stdcall GetItemDefense(D2UnitStrc *pUnit);
+int __stdcall STATLIST_GetDefenseFromUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 10573
-/// @name MergeBaseStats
+/// @name STATLIST_MergeBaseStats
 /// @address 6fdb8c50
 /// Imported by ['D2Client.dll']
-void __stdcall MergeBaseStats(D2StatListStrc *pTargetStatlist, D2StatListStrc *pSourceStatlist);
+void __stdcall STATLIST_MergeBaseStats(D2StatListStrc *pTargetStatlist, D2StatListStrc *pSourceStatlist);
 
 /// @ordinal 10574
-/// @name D2Common_10574
+/// @name 
 /// @address 6fdb8eb0
 /// Not imported by any .dll
-BOOL __stdcall D2Common_10574(D2UnitStrc *pUnit, int nStateId, int a3);
+BOOL __stdcall(D2UnitStrc *pUnit, int nStateId, int a3);
 
 /// @ordinal 10575
-/// @name UnloadAllBins
+/// @name DATATBLS_UnloadAllBins
 /// @address 6fd50150
 /// Imported by ['D2Client.dll']
-void __stdcall UnloadAllBins();
+void __stdcall DATATBLS_UnloadAllBins();
 
 /// @ordinal 10576
-/// @name LoadAllTxts
+/// @name DATATBLS_LoadAllTxts
 /// @address 6fd504b0
 /// Imported by ['D2Client.dll']
-void __stdcall LoadAllTxts(void *pMemPool, int a2, int a3);
+void __stdcall DATATBLS_LoadAllTxts(void *pMemPool, int a2, int a3);
 
 /// @ordinal 10578
-/// @name CompileTxt
+/// @name DATATBLS_CompileTxt
 /// @address 6fd4fd70
 /// Not imported by any .dll
-void *__stdcall CompileTxt(void *pMemPool, char *szName, D2BinFieldStrc *pTbl, int *pRecordCount, int nSize);
+void *__stdcall DATATBLS_CompileTxt(void *pMemPool, char *szName, D2BinFieldStrc *pTbl, int *pRecordCount, int nSize);
 
 /// @ordinal 10579
-/// @name UnloadBin
+/// @name DATATBLS_UnloadBin
 /// @address 6fd50110
 /// Not imported by any .dll
-void __stdcall UnloadBin(void *pBinFile);
+void __stdcall DATATBLS_UnloadBin(void *pBinFile);
 
 /// @ordinal 10580
-/// @name D2Common_10580
+/// @name DATATBLS_WriteBinFile
 /// @address 6fd4fcf0
 /// Not imported by any .dll
-void __stdcall D2Common_10580(char *szFileName, void *pWriteBuffer, size_t Size, char Str);
+void __stdcall DATATBLS_WriteBinFile(char *szFileName, void *pWriteBuffer, size_t Size, char Str);
 
 /// @ordinal 10583
-/// @name D2Common_10583
+/// @name DATATBLS_GetHirelingTxtRecordFromIdAndLevel
 /// @address 6fd6b1d0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2HirelingTxt *__stdcall D2Common_10583(BOOL bExpansion, int nId, int nLevel);
+D2HirelingTxt *__stdcall DATATBLS_GetHirelingTxtRecordFromIdAndLevel(BOOL bExpansion, int nId, int nLevel);
 
 /// @ordinal 10584
-/// @name D2Common_10584
+/// @name DATATBLS_GetNextHirelingTxtRecordFromActAndDifficulty
 /// @address 6fd6b440
 /// Imported by ['D2Game.dll']
-D2HirelingTxt *__stdcall D2Common_10584(BOOL bExpansion, int nAct, int nDifficulty, D2HirelingTxt *pRecord);
+D2HirelingTxt *__stdcall DATATBLS_GetNextHirelingTxtRecordFromActAndDifficulty(BOOL bExpansion, int nAct, int nDifficulty, D2HirelingTxt *pRecord);
 
 /// @ordinal 10585
-/// @name D2Common_10585
+/// @name DATATBLS_GetNextHirelingTxtRecordFromNameId
 /// @address 6fd6b270
 /// Not imported by any .dll
-D2HirelingTxt *__stdcall D2Common_10585(BOOL bExpansion, WORD nNameId, _DWORD a3);
+D2HirelingTxt *__stdcall DATATBLS_GetNextHirelingTxtRecordFromNameId(BOOL bExpansion, WORD nNameId, _DWORD a3);
 
 /// @ordinal 10586
-/// @name D2Common_10586
+/// @name DATATBLS_GetNextHirelingTxtRecordFromClassId
 /// @address 6fd6b310
 /// Not imported by any .dll
-D2HirelingTxt *__stdcall D2Common_10586(BOOL bExpansion, int nClass, _DWORD a3);
+D2HirelingTxt *__stdcall DATATBLS_GetNextHirelingTxtRecordFromClassId(BOOL bExpansion, int nClass, _DWORD a3);
 
 /// @ordinal 10587
-/// @name GetHirelingTxtRecord
+/// @name DATATBLS_GetNextHirelingTxtRecordFromVendorIdAndDifficulty
 /// @address 6fd6b3a0
 /// Imported by ['D2Game.dll']
-D2HirelingTxt *__stdcall GetHirelingTxtRecord(DWORD bExpansion, DWORD dwVendorId, DWORD dwDifficulty, _DWORD a4);
+D2HirelingTxt *__stdcall DATATBLS_GetNextHirelingTxtRecordFromVendorIdAndDifficulty(DWORD bExpansion, DWORD dwVendorId, DWORD dwDifficulty, _DWORD a4);
 
 /// @ordinal 10588
-/// @name GetNpcTxtRecord
+/// @name DATATBLS_GetNpcTxtRecord
 /// @address 6fd6b820
 /// Not imported by any .dll
-D2NpcTxt *__stdcall GetNpcTxtRecord(DWORD dwNpcId);
+D2NpcTxt *__stdcall DATATBLS_GetNpcTxtRecord(DWORD dwNpcId);
 
 /// @ordinal 10590
-/// @name D2Common_10590
+/// @name DATATBLS_GetMissileVelocityFromMissilesTxt
 /// @address 6fd64be0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 10592
-/// @name GetMonsterChainInfo
+/// @name DATATBLS_GetMonsterChainInfo
 /// @address 6fd64c40
 /// Imported by ['D2Game.dll']
-int __stdcall GetMonsterChainInfo(int nMonsterId, int *pMaxChainId, int *pChainId);
+int __stdcall DATATBLS_GetMonsterChainInfo(int nMonsterId, int *pMaxChainId, int *pChainId);
 
 /// @ordinal 10593
-/// @name GetCharstatsTxtTable
+/// @name DATATBLS_GetCharstatsTxtTable
 /// @address 6fd4e4b0
 /// Not imported by any .dll
-D2CharStatsTxt *__fastcall GetCharstatsTxtTable();
+D2CharStatsTxt *__fastcall DATATBLS_GetCharstatsTxtTable();
 
 /// @ordinal 10596
-/// @name GetArenaTxtRecord
+/// @name DATATBLS_GetArenaTxtRecord
 /// @address 6fd47970
 /// Imported by ['D2Game.dll']
 /// @guessedtype int()
 
 /// @ordinal 10597
-/// @name D2Common_10597
+/// @name DATATBLS_MapOldItemIndexToCurrent
 /// @address 6fd57630
 /// Imported by ['D2Game.dll']
-signed int __stdcall D2Common_10597(int nItemId);
+signed int __stdcall DATATBLS_MapOldItemIndexToCurrent(int nItemId);
 
 /// @ordinal 10599
-/// @name GetItemsTxt
+/// @name DATATBLS_GetItemDataTables
 /// @address 6fd57620
 /// Imported by ['D2Game.dll']
-D2ItemDataTbl *__stdcall GetItemsTxt();
+D2ItemDataTbl *__stdcall DATATBLS_GetItemDataTables();
 
 /// @ordinal 10600
-/// @name GetItemsTxtRecord
+/// @name DATATBLS_GetItemsTxtRecord
 /// @address 6fd57680
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2ItemsTxt *__stdcall GetItemsTxtRecord(DWORD dwItemNo);
+D2ItemsTxt *__stdcall DATATBLS_GetItemsTxtRecord(DWORD dwItemNo);
 
 /// @ordinal 10601
-/// @name GetItemRecordFromItemCode
+/// @name DATATBLS_GetItemRecordFromItemCode
 /// @address 6fd576d0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2ItemsTxt *__stdcall GetItemRecordFromItemCode(DWORD dwCode, int *pItemId);
+D2ItemsTxt *__stdcall DATATBLS_GetItemRecordFromItemCode(DWORD dwCode, int *pItemId);
 
 /// @ordinal 10602
-/// @name GetItemIdFromItemCode
+/// @name DATATBLS_GetItemIdFromItemCode
 /// @address 6fd57720
 /// Imported by ['D2Game.dll']
-int __stdcall GetItemIdFromItemCode(DWORD dwCode);
+int __stdcall DATATBLS_GetItemIdFromItemCode(DWORD dwCode);
 
 /// @ordinal 10603
-/// @name GetMagicAffixInfo
+/// @name DATATBLS_GetMagicAffixDataTables
 /// @address 6fd580b0
 /// Imported by ['D2Game.dll']
-D2MagicAffixInfoStrc *__stdcall GetMagicAffixInfo();
+D2MagicAffixInfoStrc *__stdcall DATATBLS_GetMagicAffixDataTables();
 
 /// @ordinal 10604
-/// @name GetAffixTxtRecord
+/// @name DATATBLS_GetMagicAffixTxtRecord
 /// @address 6fd580c0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2MagicAffixTxt *__stdcall GetAffixTxtRecord(int nIndex);
+D2MagicAffixTxt *__stdcall DATATBLS_GetMagicAffixTxtRecord(int nIndex);
 
 /// @ordinal 10605
-/// @name GetRareAffixTxt
+/// @name DATATBLS_GetRareAffixDataTables
 /// @address 6fd58480
 /// Imported by ['D2Game.dll']
-D2RareAffixDataTbl *__fastcall GetRareAffixTxt();
+D2RareAffixDataTbl *__fastcall DATATBLS_GetRareAffixDataTables();
 
 /// @ordinal 10606
-/// @name GetRareSuffixPrefixTxtRecord
+/// @name DATATBLS_GetRareAffixTxtRecord
 /// @address 6fd58490
 /// Imported by ['D2Client.dll']
 /// @guessedtype int __stdcall(int nId)
 
 /// @ordinal 10611
-/// @name GetQualityItemsTxt
+/// @name DATATBLS_GetQualityItemDataTables
 /// @address 6fd5b260
 /// Imported by ['D2Game.dll']
-D2QualityItemDataTbl *__fastcall GetQualityItemsTxt();
+D2QualityItemDataTbl *__fastcall DATATBLS_GetQualityItemDataTables();
 
 /// @ordinal 10612
-/// @name GetQualityItemsTxtRecord
+/// @name DATATBLS_GetQualityItemsTxtRecord
 /// @address 6fd5b270
 /// Imported by ['D2Game.dll']
-D2QualityItemsTxt *__stdcall GetQualityItemsTxtRecord(int nIndex);
+D2QualityItemsTxt *__stdcall DATATBLS_GetQualityItemsTxtRecord(int nIndex);
 
 /// @ordinal 10613
-/// @name GetLowQualityItemsTxt
+/// @name DATATBLS_GetLowQualityItemDataTables
 /// @address 6fd5be50
 /// Imported by ['D2Game.dll']
-D2LowQualityItemDataTbl *__fastcall GetLowQualityItemsTxt();
+D2LowQualityItemDataTbl *__fastcall DATATBLS_GetLowQualityItemDataTables();
 
 /// @ordinal 10614
-/// @name GetLowQualityItemsTxtRecord
+/// @name DATATBLS_GetLowQualityItemsTxtRecord
 /// @address 6fd5be60
 /// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int __stdcall(int nId)
 
 /// @ordinal 10615
-/// @name GetGemsTxt
+/// @name DATATBLS_GetGemDataTables
 /// @address 6fd5baf0
 /// Not imported by any .dll
-D2GemDataTbl *__fastcall GetGemsTxt();
+D2GemDataTbl *__fastcall DATATBLS_GetGemDataTables();
 
 /// @ordinal 10616
-/// @name GetGemsTxtRecord
+/// @name DATATBLS_GetGemsTxtRecord
 /// @address 6fd5bb00
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2GemsTxt *__stdcall GetGemsTxtRecord(int nGemId);
+D2GemsTxt *__stdcall DATATBLS_GetGemsTxtRecord(int nGemId);
 
 /// @ordinal 10617
-/// @name GetBooksTxt
+/// @name DATATBLS_GetBookDataTables
 /// @address 6fd5bd20
 /// Imported by ['D2Game.dll']
-D2BookDataTbl *__fastcall GetBooksTxt();
+D2BookDataTbl *__fastcall DATATBLS_GetBookDataTables();
 
 /// @ordinal 10618
-/// @name GetBooksTxtRecord
+/// @name DATATBLS_GetBooksTxtRecord
 /// @address 6fd5bd30
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int nBookId)
 
 /// @ordinal 10619
-/// @name GetRunesTxt
+/// @name DATATBLS_GetRuneDataTables
 /// @address 6fd5e9e0
 /// Not imported by any .dll
-D2RuneDataTbl *__fastcall GetRunesTxt();
+D2RuneDataTbl *__fastcall DATATBLS_GetRuneDataTables();
 
 /// @ordinal 10620
-/// @name GetRunesTxtRecord
+/// @name DATATBLS_GetRunesTxtRecord
 /// @address 6fd5eaa0
 /// Not imported by any .dll
-D2RunesTxt *__stdcall GetRunesTxtRecord(int nRunewordId);
+D2RunesTxt *__stdcall DATATBLS_GetRunesTxtRecord(int nRunewordId);
 
 /// @ordinal 10621
-/// @name SetRunesTxtRecord
+/// @name DATATBLS_AddOrChangeRunesTxtRecord
 /// @address 6fd5e9f0
 /// Imported by ['D2Client.dll']
-void __stdcall SetRunesTxtRecord(int nRecordIdx, D2RunesTxt *pRecord);
+void __stdcall DATATBLS_AddOrChangeRunesTxtRecord(int nRecordIdx, D2RunesTxt *pRecord);
 
 /// @ordinal 10622
-/// @name GetItemRatioTxt
+/// @name DATATBLS_GetItemRatioDataTables
 /// @address 6fd5c210
 /// Not imported by any .dll
-D2ItemRatioDataTbl *__fastcall GetItemRatioTxt();
+D2ItemRatioDataTbl *__fastcall DATATBLS_GetItemRatioDataTables();
 
 /// @ordinal 10623
-/// @name GetItemRatioTxtRecord
+/// @name DATATBLS_GetItemRatioTxtRecord
 /// @address 6fd5c220
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int nItemId, char nDifficulty, __int16 wVersion)
 
 /// @ordinal 10624
-/// @name GetShrinesTxtRecord
+/// @name DATATBLS_GetShrinesTxtRecord
 /// @address 6fd72000
 /// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int __stdcall(int nShrineId)
 
 /// @ordinal 10625
-/// @name GetShrinesTxtRecordCount
+/// @name DATATBLS_GetShrinesTxtRecordCount
 /// @address 6fd72070
 /// Imported by ['D2Game.dll']
-int __stdcall GetShrinesTxtRecordCount();
+int __stdcall DATATBLS_GetShrinesTxtRecordCount();
 
 /// @ordinal 10626
-/// @name GetObjectsTxtRecord
+/// @name DATATBLS_GetObjectsTxtRecord
 /// @address 6fd718f0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2ObjectsTxt *__stdcall GetObjectsTxtRecord(int nObjectId);
+D2ObjectsTxt *__stdcall DATATBLS_GetObjectsTxtRecord(int nObjectId);
 
 /// @ordinal 10627
-/// @name GetObjGroupTxtRecord
+/// @name DATATBLS_GetObjGroupTxtRecord
 /// @address 6fd71e00
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int nId)
 
 /// @ordinal 10628
-/// @name GetLevelThreshold
+/// @name DATATBLS_GetLevelThreshold
 /// @address 6fd496b0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall GetLevelThreshold(int nClass, DWORD dwLevel);
+DWORD __stdcall DATATBLS_GetLevelThreshold(int nClass, DWORD dwLevel);
 
 /// @ordinal 10629
-/// @name GetMaxLevel
+/// @name DATATBLS_GetMaxLevel
 /// @address 6fd496e0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetMaxLevel(int nClass);
+int __stdcall DATATBLS_GetMaxLevel(int nClass);
 
 /// @ordinal 10630
-/// @name GetCurrentLevelFromExp
+/// @name DATATBLS_GetCurrentLevelFromExp
 /// @address 6fd49710
 /// Imported by ['D2Game.dll']
-DWORD __stdcall GetCurrentLevelFromExp(int nClass, DWORD dwExperience);
+DWORD __stdcall DATATBLS_GetCurrentLevelFromExp(int nClass, DWORD dwExperience);
 
 /// @ordinal 10631
-/// @name GetLevelsTxtRecord
+/// @name DATATBLS_GetLevelsTxtRecord
 /// @address 6fd603c0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2LevelsTxt *__stdcall GetLevelsTxtRecord(int nLevelId);
+D2LevelsTxt *__stdcall DATATBLS_GetLevelsTxtRecord(int nLevelId);
 
 /// @ordinal 10632
-/// @name GetRainFromLevelsTxt
+/// @name DATATBLS_GetRainFromLevelsTxt
 /// @address 6fd603f0
 /// Imported by ['D2Client.dll']
-BYTE __stdcall GetRainFromLevelsTxt(int nLevelId);
+BYTE __stdcall DATATBLS_GetRainFromLevelsTxt(int nLevelId);
 
 /// @ordinal 10633
-/// @name GetMudFromLevelsTxt
+/// @name DATATBLS_GetMudFromLevelsTxt
 /// @address 6fd60470
 /// Imported by ['D2Client.dll']
-BYTE __stdcall GetMudFromLevelsTxt(int nLevelId);
+BYTE __stdcall DATATBLS_GetMudFromLevelsTxt(int nLevelId);
 
 /// @ordinal 10634
-/// @name GetNoPerFromLevelsTxt
+/// @name DATATBLS_GetNoPerFromLevelsTxt
 /// @address 6fd60430
 /// Imported by ['D2Client.dll']
-BYTE __stdcall GetNoPerFromLevelsTxt(int nLevelId);
+BYTE __stdcall DATATBLS_GetNoPerFromLevelsTxt(int nLevelId);
 
 /// @ordinal 10635
-/// @name GetRectFromInventoryTxt
+/// @name DATATBLS_GetInventoryRect
 /// @address 6fd54f20
 /// Imported by ['D2Client.dll']
-void __stdcall GetRectFromInventoryTxt(int nInventoryTxtId, int bHigherRes, D2InvRectStrc *pInvRect);
+void __stdcall DATATBLS_GetInventoryRect(int nInventoryTxtId, int bHigherRes, D2InvRectStrc *pInvRect);
 
 /// @ordinal 10636
 /// @name DATATBLS_GetInventoryGridInfo
@@ -3697,10 +3697,10 @@ void __stdcall GetRectFromInventoryTxt(int nInventoryTxtId, int bHigherRes, D2In
 void __stdcall DATATBLS_GetInventoryGridInfo(int nInventoryRecordId, BOOL bHigherRes, D2InventoryGridInfoStrc *pInventoryGridInfo);
 
 /// @ordinal 10637
-/// @name GetInventoryComponentGrid
+/// @name DATATBLS_GetInventoryComponentGrid
 /// @address 6fd55030
 /// Imported by ['D2Client.dll']
-void __stdcall GetInventoryComponentGrid(int nInventoryTxtId, int bHigherRes, D2InvCompGridStrc *pInvCompGrid, int nComponent);
+void __stdcall DATATBLS_GetInventoryComponentGrid(int nInventoryTxtId, int bHigherRes, D2InvCompGridStrc *pInvCompGrid, int nComponent);
 
 /// @ordinal 10638
 /// @name DATATBLS_GetBeltsTxtRecord
@@ -3715,40 +3715,40 @@ void __stdcall DATATBLS_GetBeltsTxtRecord(int nIndex, int bHigherRes, D2BeltsTxt
 void __stdcall DATATBLS_GetInvRectFromBeltsTxt(int nIndex, int bHigherRes, D2InvRectStrc *pInvRect, int a4);
 
 /// @ordinal 10640
-/// @name DebugSetAnimDataSpeed
+/// @name DATATBLS_UnitAnimInfoDebugSet
 /// @address 6fd475d0
 /// Not imported by any .dll
-void __stdcall DebugSetAnimDataSpeed(D2UnitStrc *pUnit, int animSpeed);
+void __stdcall DATATBLS_UnitAnimInfoDebugSet(D2UnitStrc *pUnit, int animSpeed);
 
 /// @ordinal 10641
-/// @name GetAnimDataSpeedAndUnk
+/// @name DATATBLS_GetAnimDataInfo
 /// @address 6fd47700
 /// Not imported by any .dll
-signed int __stdcall GetAnimDataSpeedAndUnk(char *szPath, int *pLength, int *pOutAnimSpeed, int *pOutFirstFrameTagged);
+signed int __stdcall DATATBLS_GetAnimDataInfo(char *szPath, int *pLength, int *pOutAnimSpeed, int *pOutFirstFrameTagged);
 
 /// @ordinal 10642
-/// @name SetVelocityInMonStatsTxtRecord
+/// @name DATATBLS_SetVelocityInMonStatsTxtRecord
 /// @address 6fd689b0
 /// Not imported by any .dll
-__int16 __stdcall SetVelocityInMonStatsTxtRecord(int nMonsterId, WORD nVelocity);
+__int16 __stdcall DATATBLS_SetVelocityInMonStatsTxtRecord(int nMonsterId, WORD nVelocity);
 
 /// @ordinal 10643
-/// @name GetPlrMode_TypeTxt
+/// @name DATATBLS_GetPlrMode_TypeDataTables
 /// @address 6fd73150
 /// Not imported by any .dll
-D2PlrModeDataTbl *__fastcall GetPlrMode_TypeTxt();
+D2PlrModeDataTbl *__fastcall DATATBLS_GetPlrMode_TypeDataTables();
 
 /// @ordinal 10644
-/// @name GetMonModeTxt
+/// @name DATATBLS_GetMonModeDataTables
 /// @address 6fd73160
 /// Not imported by any .dll
-D2MonModeDataTbl *__fastcall GetMonModeTxt();
+D2MonModeDataTbl *__fastcall DATATBLS_GetMonModeDataTables();
 
 /// @ordinal 10645
-/// @name GetObjMode_TypeTxt
+/// @name DATATBLS_GetObjMode_TypeDataTables
 /// @address 6fd73170
 /// Not imported by any .dll
-D2ObjModeDataTbl *__fastcall GetObjMode_TypeTxt();
+D2ObjModeDataTbl *__fastcall DATATBLS_GetObjMode_TypeDataTables();
 
 /// @ordinal 10646
 /// @name DATATBLS_GetPlrModeTypeTxtRecord
@@ -3769,70 +3769,70 @@ D2PlrModeTypeTxt *__stdcall DATATBLS_GetPlrModeTypeTxtRecord(unsigned int nIndex
 D2ObjModeTypeTxt *__stdcall DATATBLS_GetObjModeTypeTxtRecord(unsigned int nIndex, int bGetMode);
 
 /// @ordinal 10649
-/// @name GetCompositTxtRecord
+/// @name DATATBLS_GetCompositTxtRecord
 /// @address 6fd73330
 /// Imported by ['D2Client.dll']
 /// @guessedtype int __cdecl(int nComposit)
 
 /// @ordinal 10650
-/// @name GetArmtypeTxtRecord
+/// @name DATATBLS_GetArmTypeTxtRecord
 /// @address 6fd73370
 /// Imported by ['D2Client.dll']
-D2ArmTypeTxt *__stdcall GetArmtypeTxtRecord(int nId);
+D2ArmTypeTxt *__stdcall DATATBLS_GetArmTypeTxtRecord(int nId);
 
 /// @ordinal 10651
-/// @name RollRandomUniqueTitleString
+/// @name DATATBLS_RollRandomUniqueTitleString
 /// @address 6fd68a10
 /// Not imported by any .dll
-wchar_t *__fastcall RollRandomUniqueTitleString(D2UnitStrc *pUnit);
+wchar_t *__fastcall DATATBLS_RollRandomUniqueTitleString(D2UnitStrc *pUnit);
 
 /// @ordinal 10652
-/// @name RollRandomUniquePrefixString
+/// @name DATATBLS_RollRandomUniquePrefixString
 /// @address 6fd68a80
 /// Imported by ['D2Client.dll']
-wchar_t *__fastcall RollRandomUniquePrefixString(D2UnitStrc *pUnit);
+wchar_t *__fastcall DATATBLS_RollRandomUniquePrefixString(D2UnitStrc *pUnit);
 
 /// @ordinal 10653
-/// @name RollRandomUniqueSuffixString
+/// @name DATATBLS_RollRandomUniqueSuffixString
 /// @address 6fd68af0
 /// Imported by ['D2Client.dll']
-wchar_t *__fastcall RollRandomUniqueSuffixString(D2UnitStrc *pUnit);
+wchar_t *__fastcall DATATBLS_RollRandomUniqueSuffixString(D2UnitStrc *pUnit);
 
 /// @ordinal 10654
-/// @name RollRandomUniqueAppellationString
+/// @name DATATBLS_RollRandomUniqueAppellationString
 /// @address 6fd68b60
 /// Imported by ['D2Client.dll']
-wchar_t *__fastcall RollRandomUniqueAppellationString(D2UnitStrc *pUnit);
+wchar_t *__fastcall DATATBLS_RollRandomUniqueAppellationString(D2UnitStrc *pUnit);
 
 /// @ordinal 10655
-/// @name GetDifficultyLevelsTxtRecord
+/// @name DATATBLS_GetDifficultyLevelsTxtRecord
 /// @address 6fd4e4d0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int __stdcall(int nDifficulty)
 
 /// @ordinal 10656
-/// @name ShouldNeverCallInExpansion
+/// @name DATATBLS_ShouldNeverCallInExpansion
 /// @address 6fd69b70
 /// Not imported by any .dll
-int __stdcall ShouldNeverCallInExpansion();
+int __stdcall DATATBLS_ShouldNeverCallInExpansion();
 
 /// @ordinal 10658
-/// @name GetTreasureClassExFromName
+/// @name DATATBLS_GetTreasureClassExRecordFromName
 /// @address 6fd68dc0
 /// Not imported by any .dll
-D2TCExShortStrc *__stdcall GetTreasureClassExFromName(char *szName);
+D2TCExShortStrc *__stdcall DATATBLS_GetTreasureClassExRecordFromName(char *szName);
 
 /// @ordinal 10659
-/// @name GetTCExTxtRecord
+/// @name DATATBLS_GetTreasureClassExRecordFromIdAndLevel
 /// @address 6fd68df0
 /// Imported by ['D2Game.dll']
-D2TCExShortStrc *__stdcall GetTCExTxtRecord(WORD wTCId, int nLvl);
+D2TCExShortStrc *__stdcall DATATBLS_GetTreasureClassExRecordFromIdAndLevel(WORD wTCId, int nLvl);
 
 /// @ordinal 10660
-/// @name GetTreasureClassEx
+/// @name DATATBLS_GetTreasureClassExRecordFromActAndDifficulty
 /// @address 6fd68e50
 /// Imported by ['D2Game.dll']
-D2TCExShortStrc *__stdcall GetTreasureClassEx(int nDifficulty, int nAct, int nIndex);
+D2TCExShortStrc *__stdcall DATATBLS_GetTreasureClassExRecordFromActAndDifficulty(int nDifficulty, int nAct, int nIndex);
 
 /// @ordinal 10661
 /// @name D2Common_11079_Return0
@@ -3841,100 +3841,100 @@ D2TCExShortStrc *__stdcall GetTreasureClassEx(int nDifficulty, int nAct, int nIn
 int __stdcall D2Common_11079_Return0(int arg, int a2);
 
 /// @ordinal 10662
-/// @name GetMonItemPercentTxt
+/// @name DATATBLS_GetMonItemPercentDataTables
 /// @address 6fd69c50
 /// Not imported by any .dll
-D2MonItemPercentDataTbl *__fastcall GetMonItemPercentTxt();
+D2MonItemPercentDataTbl *__fastcall DATATBLS_GetMonItemPercentDataTables();
 
 /// @ordinal 10663
-/// @name GetMonItemPercentTxtRecord
+/// @name DATATBLS_GetMonItemPercentTxtRecord
 /// @address 6fd69c60
 /// Not imported by any .dll
 /// @guessedtype int __stdcall(int nId)
 
 /// @ordinal 10664
-/// @name GetCharTemplateTxtRecordCount
+/// @name DATATBLS_GetCharTemplateTxtRecordCount
 /// @address 6fd48790
 /// Not imported by any .dll
-int __fastcall GetCharTemplateTxtRecordCount();
+int __fastcall DATATBLS_GetCharTemplateTxtRecordCount();
 
 /// @ordinal 10665
-/// @name GetCharTemplateTxtRecord
+/// @name DATATBLS_GetCharTemplateTxtRecord
 /// @address 6fd487a0
 /// Not imported by any .dll
 /// @guessedtype int()
 
 /// @ordinal 10666
-/// @name GetClassFromCharTemplateTxtRecord
+/// @name DATATBLS_GetClassFromCharTemplateTxtRecord
 /// @address 6fd48810
 /// Imported by ['D2Game.dll']
-int __fastcall GetClassFromCharTemplateTxtRecord(int nTemplate, int nLevel);
+int __fastcall DATATBLS_GetClassFromCharTemplateTxtRecord(int nTemplate, int nLevel);
 
 /// @ordinal 10667
-/// @name UNUSED_Return0
+/// @name DATATBLS_UNUSED_Return0
 /// @address 6fd733b0
 /// Not imported by any .dll
-int __stdcall UNUSED_Return0(int a1, int a2);
+int __stdcall DATATBLS_UNUSED_Return0(int a1, int a2);
 
 /// @ordinal 10668
-/// @name GetSuperUniquesTxtRecord
+/// @name DATATBLS_GetSuperUniquesTxtRecord
 /// @address 6fd6a440
 /// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int __stdcall(int nSuperUniqueId)
 
 /// @ordinal 10671
-/// @name GetGambleTxt
+/// @name DATATBLS_GetGambleDataTables
 /// @address 6fd5d7f0
 /// Imported by ['D2Game.dll']
-D2GambleDataTbl *__cdecl GetGambleTxt();
+D2GambleDataTbl *__cdecl DATATBLS_GetGambleDataTables();
 
 /// @ordinal 10674
-/// @name GetFramesFromOverlayTxt
+/// @name DATATBLS_GetFramesFromOverlayTxt
 /// @address 6fd72530
 /// Not imported by any .dll
-DWORD __stdcall GetFramesFromOverlayTxt(int nOverlayId);
+DWORD __stdcall DATATBLS_GetFramesFromOverlayTxt(int nOverlayId);
 
 /// @ordinal 10675
-/// @name GetPreDrawFromOverlayTxt
+/// @name DATABLS_GetPreDrawFromOverlayTxt
 /// @address 6fd72570
 /// Not imported by any .dll
-int __stdcall GetPreDrawFromOverlayTxt(int nOverlayId);
+int __stdcall DATABLS_GetPreDrawFromOverlayTxt(int nOverlayId);
 
 /// @ordinal 10676
-/// @name GetOffsetXFromOverlayTxt
+/// @name DATATBLS_GetOffsetXFromOverlayTxt
 /// @address 6fd725b0
 /// Not imported by any .dll
-DWORD __stdcall GetOffsetXFromOverlayTxt(int nOverlayId);
+DWORD __stdcall DATATBLS_GetOffsetXFromOverlayTxt(int nOverlayId);
 
 /// @ordinal 10677
-/// @name GetOffsetYFromOverlayTxt
+/// @name DATATBLS_GetOffsetYFromOverlayTxt
 /// @address 6fd725f0
 /// Not imported by any .dll
-DWORD __stdcall GetOffsetYFromOverlayTxt(int nOverlayId);
+DWORD __stdcall DATATBLS_GetOffsetYFromOverlayTxt(int nOverlayId);
 
 /// @ordinal 10678
-/// @name GetTransFromOverlayTxt
+/// @name DATATBLS_GetTransFromOverlayTxt
 /// @address 6fd72630
 /// Not imported by any .dll
-int __stdcall GetTransFromOverlayTxt(int nOverlayId);
+int __stdcall DATATBLS_GetTransFromOverlayTxt(int nOverlayId);
 
 /// @ordinal 10679
-/// @name GetRadiusAndColorFromOverlayTxt
+/// @name DATATBLS_GetRadiusAndColorFromOverlayTxt
 /// @address 6fd72670
 /// Not imported by any .dll
-int __stdcall GetRadiusAndColorFromOverlayTxt(int nOverlayId, int *pInitRadius, int *pRadius, BYTE *pRed, BYTE *pGreen, BYTE *pBlue);
+int __stdcall DATATBLS_GetRadiusAndColorFromOverlayTxt(int nOverlayId, int *pInitRadius, int *pRadius, BYTE *pRed, BYTE *pGreen, BYTE *pBlue);
 
 /// @ordinal 10680
-/// @name Get1OfNFromOverlayTxt
+/// @name DATATBLS_Get1OfNFromOverlayTxt
 /// @address 6fd72720
 /// Imported by ['D2Client.dll']
-DWORD __stdcall Get1OfNFromOverlayTxt(int nOverlayId);
+DWORD __stdcall DATATBLS_Get1OfNFromOverlayTxt(int nOverlayId);
 
 /// @ordinal 10681
-/// @name GetDirFromOverlayTxt
+/// @name DATATBLS_GetDirFromOverlayTxt
 /// @address 6fd72760
 /// Not imported by any .dll
-int __stdcall GetDirFromOverlayTxt(int nOverlayId);
+int __stdcall DATATBLS_GetDirFromOverlayTxt(int nOverlayId);
 
 /// @ordinal 10682
 /// @name DATATBLS_GetMonSeqTxtRecordFromUnit
@@ -3961,238 +3961,238 @@ int __stdcall DATATBLS_GetSeqFrameCount(D2UnitStrc *pUnit);
 void __stdcall DATATBLS_ComputeSequenceAnimation(D2MonSeqTxt *pMonSeqTxt, int nTargetFramePoint, int nCurrentFramePoint, int *pMode, int *pFrame, int *pDirection, int *pEvent);
 
 /// @ordinal 10686
-/// @name D2Common_10686
+/// @name DATATBLS_GetSequenceEvent
 /// @address 6fd72990
 /// Imported by ['D2Game.dll']
-void __stdcall D2Common_10686(D2MonSeqTxt *pMonSeqTxt, int nSeqFramePoint, int *pEvent);
+void __stdcall DATATBLS_GetSequenceEvent(D2MonSeqTxt *pMonSeqTxt, int nSeqFramePoint, int *pEvent);
 
 /// @ordinal 10687
-/// @name AllocItemData
+/// @name ITEMS_AllocItemData
 /// @address 6fd98380
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall AllocItemData(void *pMemPool, D2UnitStrc *pItem);
+void __stdcall ITEMS_AllocItemData(void *pMemPool, D2UnitStrc *pItem);
 
 /// @ordinal 10688
-/// @name FreeItemData
+/// @name ITEMS_FreeItemData
 /// @address 6fd983f0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall FreeItemData(void *pMemPool, D2UnitStrc *pItem);
+void __stdcall ITEMS_FreeItemData(void *pMemPool, D2UnitStrc *pItem);
 
 /// @ordinal 10689
-/// @name GetBodylocFromItem
+/// @name ITEMS_GetBodyLocation
 /// @address 6fd98430
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BYTE __stdcall GetBodylocFromItem(D2UnitStrc *pItem);
+BYTE __stdcall ITEMS_GetBodyLocation(D2UnitStrc *pItem);
 
 /// @ordinal 10690
-/// @name SetItemLocation
+/// @name ITEMS_SetBodyLocation
 /// @address 6fd98450
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall SetItemLocation(D2UnitStrc *pItem, BYTE nBodyLoc);
+void __stdcall ITEMS_SetBodyLocation(D2UnitStrc *pItem, BYTE nBodyLoc);
 
 /// @ordinal 10691
-/// @name GetItemSeed
+/// @name ITEMS_GetItemSeed
 /// @address 6fd98470
 /// Imported by ['D2Game.dll']
-D2SeedStrc *__stdcall GetItemSeed(D2UnitStrc *pItem);
+D2SeedStrc *__stdcall ITEMS_GetItemSeed(D2UnitStrc *pItem);
 
 /// @ordinal 10692
-/// @name InitItemSeed
+/// @name ITEMS_InitItemSeed
 /// @address 6fd98490
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall InitItemSeed(D2UnitStrc *pItem);
+void __stdcall ITEMS_InitItemSeed(D2UnitStrc *pItem);
 
 /// @ordinal 10693
-/// @name GetItemStartSeed
+/// @name ITEMS_GetItemStartSeed
 /// @address 6fd984b0
 /// Imported by ['D2Game.dll']
-int __stdcall GetItemStartSeed(D2UnitStrc *pItem);
+int __stdcall ITEMS_GetItemStartSeed(D2UnitStrc *pItem);
 
 /// @ordinal 10694
-/// @name SetItemStartSeed
+/// @name ITEMS_SetItemStartSeed
 /// @address 6fd984d0
 /// Imported by ['D2Game.dll']
-void __stdcall SetItemStartSeed(D2UnitStrc *pItem, int nSeed);
+void __stdcall ITEMS_SetItemStartSeed(D2UnitStrc *pItem, int nSeed);
 
 /// @ordinal 10695
-/// @name GetItemQuality
+/// @name ITEMS_GetItemQuality
 /// @address 6fd98550
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetItemQuality(D2UnitStrc *pItem);
+int __stdcall ITEMS_GetItemQuality(D2UnitStrc *pItem);
 
 /// @ordinal 10696
-/// @name SetItemQuality
+/// @name ITEMS_SetItemQuality
 /// @address 6fd98580
 /// Imported by ['D2Game.dll']
-void __stdcall SetItemQuality(D2UnitStrc *pItem, int nQuality);
+void __stdcall ITEMS_SetItemQuality(D2UnitStrc *pItem, int nQuality);
 
 /// @ordinal 10697
-/// @name GetItemAutomagic
+/// @name ITEMS_GetAutoAffix
 /// @address 6fd98600
 /// Imported by ['D2Game.dll']
-WORD __stdcall GetItemAutomagic(D2UnitStrc *pItem);
+WORD __stdcall ITEMS_GetAutoAffix(D2UnitStrc *pItem);
 
 /// @ordinal 10698
-/// @name SetItemAutomagic
+/// @name ITEMS_SetAutoAffix
 /// @address 6fd98630
 /// Imported by ['D2Game.dll']
-void __stdcall SetItemAutomagic(D2UnitStrc *pItem, WORD nAffix);
+void __stdcall ITEMS_SetAutoAffix(D2UnitStrc *pItem, WORD nAffix);
 
 /// @ordinal 10699
-/// @name GetPrefixIdFromItem
+/// @name ITEMS_GetPrefixId
 /// @address 6fd985a0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-__int16 __stdcall GetPrefixIdFromItem(D2UnitStrc *pItem, int a2);
+__int16 __stdcall ITEMS_GetPrefixId(D2UnitStrc *pItem, int a2);
 
 /// @ordinal 10700
-/// @name AssignPrefixToItem
+/// @name ITEMS_AssignPrefix
 /// @address 6fd985d0
 /// Imported by ['D2Game.dll']
-void __stdcall AssignPrefixToItem(D2UnitStrc *arg, __int16 a2, int a3);
+void __stdcall ITEMS_AssignPrefix(D2UnitStrc *arg, __int16 a2, int a3);
 
 /// @ordinal 10701
-/// @name GetSuffixIdFromItem
+/// @name ITEMS_GetSuffixId
 /// @address 6fd98650
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-__int16 __stdcall GetSuffixIdFromItem(D2UnitStrc *pItem, DWORD suffixId);
+__int16 __stdcall ITEMS_GetSuffixId(D2UnitStrc *pItem, DWORD suffixId);
 
 /// @ordinal 10702
-/// @name AssignSuffixToItem
+/// @name ITEMS_AssignSuffix
 /// @address 6fd98680
 /// Imported by ['D2Game.dll']
-void __stdcall AssignSuffixToItem(D2UnitStrc *pUnit, __int16 nSuffixId, int nArrayPos);
+void __stdcall ITEMS_AssignSuffix(D2UnitStrc *pUnit, __int16 nSuffixId, int nArrayPos);
 
 /// @ordinal 10703
-/// @name GetItemRarePrefix
+/// @name ITEMS_GetRarePrefixId
 /// @address 6fd986b0
 /// Imported by ['D2Client.dll']
-__int16 __stdcall GetItemRarePrefix(D2UnitStrc *pItem);
+__int16 __stdcall ITEMS_GetRarePrefixId(D2UnitStrc *pItem);
 
 /// @ordinal 10704
-/// @name SetItemRarePrefix
+/// @name ITEMS_AssignRarePrefix
 /// @address 6fd986e0
 /// Imported by ['D2Game.dll']
-void __stdcall SetItemRarePrefix(D2UnitStrc *pItem, WORD nPrefix);
+void __stdcall ITEMS_AssignRarePrefix(D2UnitStrc *pItem, WORD nPrefix);
 
 /// @ordinal 10705
-/// @name GetItemRareSuffix
+/// @name ITEMS_GetRareSuffixId
 /// @address 6fd98700
 /// Imported by ['D2Client.dll']
-__int16 __stdcall GetItemRareSuffix(D2UnitStrc *pItem);
+__int16 __stdcall ITEMS_GetRareSuffixId(D2UnitStrc *pItem);
 
 /// @ordinal 10706
-/// @name SetItemRareSuffix
+/// @name ITEMS_AssignRareSuffix
 /// @address 6fd98730
 /// Imported by ['D2Game.dll']
-void __stdcall SetItemRareSuffix(D2UnitStrc *pItem, WORD nSuffix);
+void __stdcall ITEMS_AssignRareSuffix(D2UnitStrc *pItem, WORD nSuffix);
 
 /// @ordinal 10707
-/// @name CheckItemFlag
+/// @name ITEMS_CheckItemFlag
 /// @address 6fd98750
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall CheckItemFlag(D2UnitStrc *pItem, DWORD dwFlag, int nLine, char *szFile);
+BOOL __stdcall ITEMS_CheckItemFlag(D2UnitStrc *pItem, DWORD dwFlag, int nLine, char *szFile);
 
 /// @ordinal 10708
-/// @name SetItemFlag
+/// @name ITEMS_SetItemFlag
 /// @address 6fd98780
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall SetItemFlag(D2UnitStrc *pItem, DWORD dwFlag, BOOL bSet);
+void __stdcall ITEMS_SetItemFlag(D2UnitStrc *pItem, DWORD dwFlag, BOOL bSet);
 
 /// @ordinal 10709
-/// @name GetItemFlags
+/// @name ITEMS_GetItemFlags
 /// @address 6fd987c0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall GetItemFlags(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetItemFlags(D2UnitStrc *pItem);
 
 /// @ordinal 10710
-/// @name SetItemCMDFlags
+/// @name ITEMS_CheckItemCMDFlag
 /// @address 6fd987e0
 /// Imported by ['D2Game.dll']
-int __stdcall SetItemCMDFlags(D2UnitStrc *pItem, int nFlag);
+int __stdcall ITEMS_CheckItemCMDFlag(D2UnitStrc *pItem, int nFlag);
 
 /// @ordinal 10711
-/// @name SetItemCMDFlags
+/// @name ITEMS_SetItemCMDFlag
 /// @address 6fd98810
 /// Imported by ['D2Game.dll']
-void __stdcall SetItemCMDFlags(D2UnitStrc *pItem, int nFlagIndex, BOOL bSet);
+void __stdcall ITEMS_SetItemCMDFlag(D2UnitStrc *pItem, int nFlagIndex, BOOL bSet);
 
 /// @ordinal 10712
-/// @name GetItemCMDFlags
+/// @name ITEMS_GetItemCMDFlags
 /// @address 6fd98850
 /// Not imported by any .dll
-int __stdcall GetItemCMDFlags(D2UnitStrc *pItem);
+int __stdcall ITEMS_GetItemCMDFlags(D2UnitStrc *pItem);
 
 /// @ordinal 10717
-/// @name GetItemLevel
+/// @name ITEMS_GetItemLevel
 /// @address 6fd98870
 /// Imported by ['D2Game.dll']
-int __stdcall GetItemLevel(D2UnitStrc *pItem);
+int __stdcall ITEMS_GetItemLevel(D2UnitStrc *pItem);
 
 /// @ordinal 10718
-/// @name SetItemLevel
+/// @name ITEMS_SetItemLevel
 /// @address 6fd988b0
 /// Imported by ['D2Game.dll']
-void __stdcall SetItemLevel(D2UnitStrc *pItem, int iLvl);
+void __stdcall ITEMS_SetItemLevel(D2UnitStrc *pItem, int iLvl);
 
 /// @ordinal 10719
-/// @name GetStorePageOfItem
+/// @name ITEMS_GetInvPage
 /// @address 6fd988e0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BYTE __stdcall GetStorePageOfItem(D2UnitStrc *pItem);
+BYTE __stdcall ITEMS_GetInvPage(D2UnitStrc *pItem);
 
 /// @ordinal 10720
-/// @name SetStorePageOfItem
+/// @name ITEMS_SetInvPage
 /// @address 6fd98900
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall SetStorePageOfItem(D2UnitStrc *pItem, BYTE nPage);
+void __stdcall ITEMS_SetInvPage(D2UnitStrc *pItem, BYTE nPage);
 
 /// @ordinal 10721
-/// @name GetItemCellOverlap
+/// @name ITEMS_GetCellOverlap
 /// @address 6fd98920
 /// Not imported by any .dll
-BYTE __stdcall GetItemCellOverlap(D2UnitStrc *pItem);
+BYTE __stdcall ITEMS_GetCellOverlap(D2UnitStrc *pItem);
 
 /// @ordinal 10722
-/// @name SetItemCellOverlap
+/// @name ITEMS_SetCellOverlap
 /// @address 6fd98940
 /// Imported by ['D2Game.dll']
-void __stdcall SetItemCellOverlap(D2UnitStrc *pItem, int nValue);
+void __stdcall ITEMS_SetCellOverlap(D2UnitStrc *pItem, int nValue);
 
 /// @ordinal 10723
-/// @name GetItemEarName
+/// @name ITEMS_GetEarName
 /// @address 6fd989a0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-char *__stdcall GetItemEarName(D2UnitStrc *pItem);
+char *__stdcall ITEMS_GetEarName(D2UnitStrc *pItem);
 
 /// @ordinal 10724
-/// @name SetItemEarName
+/// @name ITEMS_SetEarName
 /// @address 6fd989c0
 /// Imported by ['D2Game.dll']
-void __stdcall SetItemEarName(D2UnitStrc *pItem, char *name);
+void __stdcall ITEMS_SetEarName(D2UnitStrc *pItem, char *name);
 
 /// @ordinal 10725
-/// @name GetItemEarLevel
+/// @name ITEMS_GetEarLevel
 /// @address 6fd989f0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetItemEarLevel(D2UnitStrc *pItem);
+int __stdcall ITEMS_GetEarLevel(D2UnitStrc *pItem);
 
 /// @ordinal 10726
-/// @name SetItemEarLevel
+/// @name ITEMS_SetEarLevel
 /// @address 6fd98a10
 /// Imported by ['D2Game.dll']
-void __stdcall SetItemEarLevel(D2UnitStrc *pItem, BYTE nLevel);
+void __stdcall ITEMS_SetEarLevel(D2UnitStrc *pItem, BYTE nLevel);
 
 /// @ordinal 10727
-/// @name GetItemVarGfxIndex
+/// @name ITEMS_GetVarGfxIndex
 /// @address 6fd98a30
 /// Imported by ['D2Client.dll']
-BYTE __stdcall GetItemVarGfxIndex(D2UnitStrc *pItem);
+BYTE __stdcall ITEMS_GetVarGfxIndex(D2UnitStrc *pItem);
 
 /// @ordinal 10728
-/// @name SetItemVarGfxIndex
+/// @name ITEMS_SetVarGfxIndex
 /// @address 6fd98a50
 /// Imported by ['D2Game.dll']
-void __stdcall SetItemVarGfxIndex(D2UnitStrc *pItem, BYTE nIndex);
+void __stdcall ITEMS_SetVarGfxIndex(D2UnitStrc *pItem, BYTE nIndex);
 
 /// @ordinal 10729
 /// @name ITEMS_CheckItemTypeIdByItemId
@@ -4207,610 +4207,610 @@ BOOL __stdcall ITEMS_CheckItemTypeIdByItemId(int nItemId, int nItemType);
 BOOL __stdcall ITEMS_CheckType(int nItemType1, int nItemType2);
 
 /// @ordinal 10731
-/// @name CheckItemTypeId
+/// @name ITEMS_CheckItemTypeId
 /// @address 6fd9dce0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall CheckItemTypeId(D2UnitStrc *pItem, int nItemType);
+BOOL __stdcall ITEMS_CheckItemTypeId(D2UnitStrc *pItem, int nItemType);
 
 /// @ordinal 10732
-/// @name GetItemsFileIndex
+/// @name ITEMS_GetFileIndex
 /// @address 6fd9dee0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetItemsFileIndex(D2UnitStrc *pItem);
+int __stdcall ITEMS_GetFileIndex(D2UnitStrc *pItem);
 
 /// @ordinal 10733
-/// @name SetItemsFileIndex
+/// @name ITEMS_SetFileIndex
 /// @address 6fd9df60
 /// Imported by ['D2Game.dll']
-void __stdcall SetItemsFileIndex(D2UnitStrc *pItem, DWORD dwFileIndex);
+void __stdcall ITEMS_SetFileIndex(D2UnitStrc *pItem, DWORD dwFileIndex);
 
 /// @ordinal 10734
-/// @name SetItemsOwnerId
+/// @name ITEMS_SetOwnerId
 /// @address 6fd9e0a0
 /// Imported by ['D2Game.dll']
-void __stdcall SetItemsOwnerId(D2UnitStrc *pItem, int nOwnerGUID);
+void __stdcall ITEMS_SetOwnerId(D2UnitStrc *pItem, int nOwnerGUID);
 
 /// @ordinal 10735
-/// @name GetItemsOwnerId
+/// @name ITEMS_GetOwnerId
 /// @address 6fd9e120
 /// Imported by ['D2Game.dll']
-DWORD __stdcall GetItemsOwnerId(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetOwnerId(D2UnitStrc *pItem);
 
 /// @ordinal 10736
-/// @name D2Common_10736
+/// @name ITEMS_IsBodyItem
 /// @address 6fd9e1a0
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_10736(D2UnitStrc *pItem);
+int __stdcall ITEMS_IsBodyItem(D2UnitStrc *pItem);
 
 /// @ordinal 10737
-/// @name CheckIfItemsClassIsValid
+/// @name ITEMS_IsClassValid
 /// @address 6fd9e310
 /// Imported by ['D2Client.dll']
-BOOL __stdcall CheckIfItemsClassIsValid(D2UnitStrc *pItem);
+BOOL __stdcall ITEMS_IsClassValid(D2UnitStrc *pItem);
 
 /// @ordinal 10738
-/// @name CheckIfItemIdsClassIsValid
+/// @name ITEMS_IsClassValidByItemId
 /// @address 6fd9e2a0
 /// Not imported by any .dll
-BOOL __stdcall CheckIfItemIdsClassIsValid(DWORD dwItemNo);
+BOOL __stdcall ITEMS_IsClassValidByItemId(DWORD dwItemNo);
 
 /// @ordinal 10739
-/// @name GetClassOfClassSpecificItem
+/// @name ITEMS_GetClassOfClassSpecificItem
 /// @address 6fd9e390
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetClassOfClassSpecificItem(D2UnitStrc *pItem);
+int __stdcall ITEMS_GetClassOfClassSpecificItem(D2UnitStrc *pItem);
 
 /// @ordinal 10740
-/// @name CheckIfItemIsNotQuestItem
+/// @name ITEMS_IsNotQuestItem
 /// @address 6fd9e580
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall CheckIfItemIsNotQuestItem(D2UnitStrc *pItem);
+BOOL __stdcall ITEMS_IsNotQuestItem(D2UnitStrc *pItem);
 
 /// @ordinal 10741
-/// @name D2SecureGetQuestNo
+/// @name ITEMS_GetQuestFromItemId
 /// @address 6fd99bc0
 /// Not imported by any .dll
-DWORD __stdcall D2SecureGetQuestNo(DWORD dwId);
+DWORD __stdcall ITEMS_GetQuestFromItemId(DWORD dwId);
 
 /// @ordinal 10742
-/// @name SecureGetItemQuestNo
+/// @name ITEMS_GetQuest
 /// @address 6fd99c60
 /// Not imported by any .dll
-DWORD __stdcall SecureGetItemQuestNo(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetQuest(D2UnitStrc *pItem);
 
 /// @ordinal 10743
-/// @name GetItemNormalCode
+/// @name ITEMS_GetNormalCode
 /// @address 6fd99d40
 /// Not imported by any .dll
-DWORD __stdcall GetItemNormalCode(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetNormalCode(D2UnitStrc *pItem);
 
 /// @ordinal 10744
-/// @name GetPrimaryWeaponClass
+/// @name ITEMS_GetWeaponClassCode
 /// @address 6fd992c0
 /// Not imported by any .dll
-DWORD __stdcall GetPrimaryWeaponClass(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetWeaponClassCode(D2UnitStrc *pItem);
 
 /// @ordinal 10745
-/// @name GetSecondaryWeaponClass
+/// @name ITEMS_Get2HandWeaponClassCode
 /// @address 6fd992f0
 /// Not imported by any .dll
-DWORD __stdcall GetSecondaryWeaponClass(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_Get2HandWeaponClassCode(D2UnitStrc *pItem);
 
 /// @ordinal 10746
-/// @name GetItemBaseCode
+/// @name ITEMS_GetBaseCode
 /// @address 6fd99370
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall GetItemBaseCode(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetBaseCode(D2UnitStrc *pItem);
 
 /// @ordinal 10747
-/// @name GetItemAltGfx
+/// @name ITEMS_GetAltGfx
 /// @address 6fd993f0
 /// Imported by ['D2Client.dll']
-DWORD __stdcall GetItemAltGfx(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetAltGfx(D2UnitStrc *pItem);
 
 /// @ordinal 10748
-/// @name GetItemCompNo
+/// @name ITEMS_GetComponent
 /// @address 6fd99480
 /// Imported by ['D2Client.dll']
-BYTE __stdcall GetItemCompNo(D2UnitStrc *pItem);
+BYTE __stdcall ITEMS_GetComponent(D2UnitStrc *pItem);
 
 /// @ordinal 10749
-/// @name GetItemDimensions
+/// @name ITEMS_GetDimensions
 /// @address 6fd99500
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall GetItemDimensions(D2UnitStrc *pItem, BYTE *pWidth, BYTE *pHeight);
+void __stdcall ITEMS_GetDimensions(D2UnitStrc *pItem, BYTE *pWidth, BYTE *pHeight);
 
 /// @ordinal 10750
-/// @name GetItemBodylocs
+/// @name ITEMS_GetAllowedBodyLocations
 /// @address 6fd99540
 /// Imported by ['D2Game.dll']
-void __stdcall GetItemBodylocs(D2UnitStrc *pItem, BYTE *pBodyLoc1, BYTE *pBodyLoc2);
+void __stdcall ITEMS_GetAllowedBodyLocations(D2UnitStrc *pItem, BYTE *pBodyLoc1, BYTE *pBodyLoc2);
 
 /// @ordinal 10751
-/// @name GetItemTypeFromItem
+/// @name ITEMS_GetItemType
 /// @address 6fd995d0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall GetItemTypeFromItem(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetItemType(D2UnitStrc *pItem);
 
 /// @ordinal 10752
-/// @name GetItemTypeFromItemId
+/// @name ITEMS_GetItemTypeFromItemId
 /// @address 6fd99640
 /// Imported by ['D2Game.dll']
-DWORD __stdcall GetItemTypeFromItemId(DWORD dwItemId);
+DWORD __stdcall ITEMS_GetItemTypeFromItemId(DWORD dwItemId);
 
 /// @ordinal 10753
-/// @name GetItemQlvl
+/// @name ITEMS_GetItemQlvl
 /// @address 6fd99680
 /// Imported by ['D2Game.dll']
-BYTE __stdcall GetItemQlvl(D2UnitStrc *pItem);
+BYTE __stdcall ITEMS_GetItemQlvl(D2UnitStrc *pItem);
 
 /// @ordinal 10754
-/// @name CheckIfFlagIsSet
+/// @name ITEMS_CheckIfFlagIsSet
 /// @address 6fd99700
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall CheckIfFlagIsSet(int nFlags, int nFlag);
+int __stdcall ITEMS_CheckIfFlagIsSet(int nFlags, int nFlag);
 
 /// @ordinal 10755
-/// @name SetOrRemoveFlag
+/// @name ITEMS_SetOrRemoveFlag
 /// @address 6fd99710
 /// Imported by ['D2Game.dll']
-void __stdcall SetOrRemoveFlag(int *pFlags, int nFlag, int bSet);
+void __stdcall ITEMS_SetOrRemoveFlag(int *pFlags, int nFlag, int bSet);
 
 /// @ordinal 10756
-/// @name CheckItemRequirements
+/// @name ITEMS_CheckRequirements
 /// @address 6fd99740
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall CheckItemRequirements(D2UnitStrc *pItem, D2UnitStrc *pUnit, BOOL bEquipping, BOOL *bStrength, BOOL *bDexterity, BOOL *bLevel);
+BOOL __stdcall ITEMS_CheckRequirements(D2UnitStrc *pItem, D2UnitStrc *pUnit, BOOL bEquipping, BOOL *bStrength, BOOL *bDexterity, BOOL *bLevel);
 
 /// @ordinal 10757
-/// @name GetLevelRequirement
+/// @name ITEMS_GetLevelRequirement
 /// @address 6fd9a3f0
 /// Imported by ['D2Client.dll']
-int __stdcall GetLevelRequirement(D2UnitStrc *pItem, D2UnitStrc *pUnit);
+int __stdcall ITEMS_GetLevelRequirement(D2UnitStrc *pItem, D2UnitStrc *pUnit);
 
 /// @ordinal 10758
-/// @name CheckBodyLocation
+/// @name ITEMS_CheckBodyLocation
 /// @address 6fd9a400
 /// Imported by ['D2Client.dll']
-DWORD __stdcall CheckBodyLocation(D2UnitStrc *pItem, BYTE nBodyLoc);
+DWORD __stdcall ITEMS_CheckBodyLocation(D2UnitStrc *pItem, BYTE nBodyLoc);
 
 /// @ordinal 10759
-/// @name CheckItemIfThrowable
+/// @name ITEMS_CheckIfThrowable
 /// @address 6fd9a530
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall CheckItemIfThrowable(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_CheckIfThrowable(D2UnitStrc *pItem);
 
 /// @ordinal 10760
-/// @name GetItemMissileType
+/// @name ITEMS_GetMissileType
 /// @address 6fd9a5b0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall GetItemMissileType(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetMissileType(D2UnitStrc *pItem);
 
 /// @ordinal 10761
-/// @name GetItemMeleeRange
+/// @name ITEMS_GetMeleeRange
 /// @address 6fd9a5e0
 /// Not imported by any .dll
-BYTE __stdcall GetItemMeleeRange(D2UnitStrc *pItem);
+BYTE __stdcall ITEMS_GetMeleeRange(D2UnitStrc *pItem);
 
 /// @ordinal 10762
-/// @name CheckItemTypeIfThrowable
+/// @name ITEMS_CheckItemTypeIfThrowable
 /// @address 6fd9a4f0
 /// Imported by ['D2Game.dll']
-DWORD __stdcall CheckItemTypeIfThrowable(int nItemType);
+DWORD __stdcall ITEMS_CheckItemTypeIfThrowable(int nItemType);
 
 /// @ordinal 10763
-/// @name CheckPrimaryType
+/// @name ITEMS_CheckWeaponClassByItemId
 /// @address 6fd9a610
 /// Not imported by any .dll
-DWORD __stdcall CheckPrimaryType(int nItem, int nItemType);
+DWORD __stdcall ITEMS_CheckWeaponClassByItemId(int nItem, int nItemType);
 
 /// @ordinal 10764
-/// @name CheckPrimaryItemType
+/// @name ITEMS_CheckWeaponClass
 /// @address 6fd9a660
 /// Not imported by any .dll
-DWORD __stdcall CheckPrimaryItemType(D2UnitStrc *pItem, int nItemType);
+DWORD __stdcall ITEMS_CheckWeaponClass(D2UnitStrc *pItem, int nItemType);
 
 /// @ordinal 10765
-/// @name CheckIfTwoHanded
+/// @name ITEMS_CheckWeaponIfTwoHanded
 /// @address 6fd9a700
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall CheckIfTwoHanded(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_CheckWeaponIfTwoHanded(D2UnitStrc *pItem);
 
 /// @ordinal 10766
-/// @name CheckItemIfTwoHanded
+/// @name ITEMS_CheckWeaponIfTwoHandedByItemId
 /// @address 6fd9a6c0
 /// Not imported by any .dll
-DWORD __stdcall CheckItemIfTwoHanded(int nItem);
+DWORD __stdcall ITEMS_CheckWeaponIfTwoHandedByItemId(int nItem);
 
 /// @ordinal 10767
-/// @name CheckIfItemIsStackable
+/// @name ITEMS_CheckIfStackable
 /// @address 6fd9a750
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall CheckIfItemIsStackable(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_CheckIfStackable(D2UnitStrc *pItem);
 
 /// @ordinal 10768
-/// @name CheckIfItemIsBeltable
+/// @name ITEMS_CheckIfBeltable
 /// @address 6fd9a7a0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall CheckIfItemIsBeltable(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_CheckIfBeltable(D2UnitStrc *pItem);
 
 /// @ordinal 10769
-/// @name ComparePotionTypes
+/// @name ITEMS_ComparePotionTypes
 /// @address 6fd9a820
 /// Not imported by any .dll
-BOOL __stdcall ComparePotionTypes(D2UnitStrc *pItem1, D2UnitStrc *pItem2);
+BOOL __stdcall ITEMS_ComparePotionTypes(D2UnitStrc *pItem1, D2UnitStrc *pItem2);
 
 /// @ordinal 10770
-/// @name CheckIfItemIsAutoBeltable
+/// @name ITEMS_CheckIfAutoBeltable
 /// @address 6fd9a960
 /// Imported by ['D2Game.dll']
-BOOL __stdcall CheckIfItemIsAutoBeltable(D2InventoryStrc *pInventory, D2UnitStrc *pItem);
+BOOL __stdcall ITEMS_CheckIfAutoBeltable(D2InventoryStrc *pInventory, D2UnitStrc *pItem);
 
 /// @ordinal 10771
-/// @name CheckIfItemIsUseable
+/// @name ITEMS_CheckIfUseable
 /// @address 6fd9aa00
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall CheckIfItemIsUseable(D2UnitStrc *pItem);
+BOOL __stdcall ITEMS_CheckIfUseable(D2UnitStrc *pItem);
 
 /// @ordinal 10772
-/// @name GetUniqueColumnFromItemTxt
+/// @name ITEMS_GetUniqueColumnFromItemsTxt
 /// @address 6fd9aa70
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetUniqueColumnFromItemTxt(D2UnitStrc *pItem);
+int __stdcall ITEMS_GetUniqueColumnFromItemsTxt(D2UnitStrc *pItem);
 
 /// @ordinal 10773
-/// @name CheckIfQuestItem
+/// @name ITEMS_IsQuestItem
 /// @address 6fd9ab00
 /// Imported by ['D2Game.dll']
-DWORD __stdcall CheckIfQuestItem(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_IsQuestItem(D2UnitStrc *pItem);
 
 /// @ordinal 10774
-/// @name CheckIfNotQuestItem
+/// @name ITEMS_IsNotQuestItemByItemId
 /// @address 6fd9de90
 /// Not imported by any .dll
-BOOL __stdcall CheckIfNotQuestItem(DWORD dwItemNo);
+BOOL __stdcall ITEMS_IsNotQuestItemByItemId(DWORD dwItemNo);
 
 /// @ordinal 10775
-/// @name GetTransactionCost
+/// @name ITEMS_GetTransactionCost
 /// @address 6fd9cde0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall GetTransactionCost(D2UnitStrc *pPlayer, D2UnitStrc *pItem, int nDifficulty, void *pHistory, int nVendorId, int nTransactionType);
+DWORD __stdcall ITEMS_GetTransactionCost(D2UnitStrc *pPlayer, D2UnitStrc *pItem, int nDifficulty, void *pHistory, int nVendorId, int nTransactionType);
 
 /// @ordinal 10776
-/// @name GetNoOfUnidItems
+/// @name ITEMS_GetNoOfUnidItems
 /// @address 6fd9ff00
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall GetNoOfUnidItems(D2UnitStrc *pUnit);
+DWORD __stdcall ITEMS_GetNoOfUnidItems(D2UnitStrc *pUnit);
 
 /// @ordinal 10777
-/// @name CheckItemIfRepairable
+/// @name ITEMS_IsRepairable
 /// @address 6fd98a70
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall CheckItemIfRepairable(D2UnitStrc *pItem);
+BOOL __stdcall ITEMS_IsRepairable(D2UnitStrc *pItem);
 
 /// @ordinal 10780
-/// @name GetTypeAmmoType
+/// @name ITEMS_GetAmmoTypeFromItemType
 /// @address 6fd98c60
 /// Not imported by any .dll
-DWORD __stdcall GetTypeAmmoType(int nItemType);
+DWORD __stdcall ITEMS_GetAmmoTypeFromItemType(int nItemType);
 
 /// @ordinal 10781
-/// @name GetItemAmmoType
+/// @name ITEMS_GetAmmoType
 /// @address 6fd98ca0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall GetItemAmmoType(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetAmmoType(D2UnitStrc *pItem);
 
 /// @ordinal 10782
-/// @name GetTypeQuiverType
+/// @name ITEMS_GetQuiverTypeFromItemType
 /// @address 6fd98d20
 /// Imported by ['D2Game.dll']
-DWORD __stdcall GetTypeQuiverType(int nItemType);
+DWORD __stdcall ITEMS_GetQuiverTypeFromItemType(int nItemType);
 
 /// @ordinal 10783
-/// @name GetItemQuiverType
+/// @name ITEMS_GetQuiverType
 /// @address 6fd98d60
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall GetItemQuiverType(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetQuiverType(D2UnitStrc *pItem);
 
 /// @ordinal 10784
-/// @name CheckTypeAutoStack
+/// @name ITEMS_GetAutoStackFromItemType
 /// @address 6fd98de0
 /// Not imported by any .dll
-DWORD __stdcall CheckTypeAutoStack(int nItemType);
+DWORD __stdcall ITEMS_GetAutoStackFromItemType(int nItemType);
 
 /// @ordinal 10785
-/// @name CheckItemAutoStack
+/// @name ITEMS_GetAutoStack
 /// @address 6fd98e20
 /// Imported by ['D2Game.dll']
-DWORD __stdcall CheckItemAutoStack(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetAutoStack(D2UnitStrc *pItem);
 
 /// @ordinal 10786
-/// @name CheckItemReLoad
+/// @name ITEMS_GetReload
 /// @address 6fd98ea0
 /// Imported by ['D2Game.dll']
-DWORD __stdcall CheckItemReLoad(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetReload(D2UnitStrc *pItem);
 
 /// @ordinal 10787
-/// @name CheckItemReEquip
+/// @name ITEMS_GetReEquip
 /// @address 6fd98f20
 /// Imported by ['D2Game.dll']
-DWORD __stdcall CheckItemReEquip(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetReEquip(D2UnitStrc *pItem);
 
 /// @ordinal 10788
-/// @name GetItemVendorPage
+/// @name ITEMS_GetStorePage
 /// @address 6fd98fa0
 /// Imported by ['D2Game.dll']
-BYTE __stdcall GetItemVendorPage(D2UnitStrc *pItem);
+BYTE __stdcall ITEMS_GetStorePage(D2UnitStrc *pItem);
 
 /// @ordinal 10789
-/// @name GetVarInvGfxFromItem
+/// @name ITEMS_GetVarInvGfxCount
 /// @address 6fd99020
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BYTE __stdcall GetVarInvGfxFromItem(D2UnitStrc *pItem);
+BYTE __stdcall ITEMS_GetVarInvGfxCount(D2UnitStrc *pItem);
 
 /// @ordinal 10790
-/// @name GetVarInvGfxStringFromItem
+/// @name ITEMS_GetVarInvGfxString
 /// @address 6fd990a0
 /// Imported by ['D2Client.dll']
-char *__stdcall GetVarInvGfxStringFromItem(D2UnitStrc *pItem, int unk);
+char *__stdcall ITEMS_GetVarInvGfxString(D2UnitStrc *pItem, int unk);
 
 /// @ordinal 10791
-/// @name CheckItemTypeMagic
+/// @name ITEMS_CanBeMagic
 /// @address 6fd991c0
 /// Imported by ['D2Game.dll']
-DWORD __stdcall CheckItemTypeMagic(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_CanBeMagic(D2UnitStrc *pItem);
 
 /// @ordinal 10792
-/// @name CheckItemTypeRare
+/// @name ITEMS_CanBeRare
 /// @address 6fd99140
 /// Imported by ['D2Game.dll']
-DWORD __stdcall CheckItemTypeRare(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_CanBeRare(D2UnitStrc *pItem);
 
 /// @ordinal 10793
-/// @name CheckItemTypeNormal
+/// @name ITEMS_CanBeNormal
 /// @address 6fd99240
 /// Imported by ['D2Game.dll']
-DWORD __stdcall CheckItemTypeNormal(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_CanBeNormal(D2UnitStrc *pItem);
 
 /// @ordinal 10794
-/// @name GetMaxStack
+/// @name ITEMS_GetMaxStack
 /// @address 6fd9ce10
 /// Not imported by any .dll
-DWORD __stdcall GetMaxStack(DWORD dwItemId);
+DWORD __stdcall ITEMS_GetMaxStack(DWORD dwItemId);
 
 /// @ordinal 10795
-/// @name GetTotalMaxStack
+/// @name ITEMS_GetTotalMaxStack
 /// @address 6fd9ce50
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall GetTotalMaxStack(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetTotalMaxStack(D2UnitStrc *pItem);
 
 /// @ordinal 10796
-/// @name GetItemMinStack
+/// @name ITEMS_GetMinStackFromItemId
 /// @address 6fd9cfb0
 /// Not imported by any .dll
-DWORD __stdcall GetItemMinStack(DWORD dwItemId);
+DWORD __stdcall ITEMS_GetMinStackFromItemId(DWORD dwItemId);
 
 /// @ordinal 10797
-/// @name SecureGetItemMinStack
+/// @name ITEMS_GetMinStack
 /// @address 6fd9cff0
 /// Imported by ['D2Game.dll']
-DWORD __stdcall SecureGetItemMinStack(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetMinStack(D2UnitStrc *pItem);
 
 /// @ordinal 10798
-/// @name GetItemSpawnStack
+/// @name ITEMS_GetSpawnStackFromItemId
 /// @address 6fd9cef0
 /// Not imported by any .dll
-DWORD __stdcall GetItemSpawnStack(DWORD dwItemId);
+DWORD __stdcall ITEMS_GetSpawnStackFromItemId(DWORD dwItemId);
 
 /// @ordinal 10799
-/// @name SecureGetItemSpawnStack
+/// @name ITEMS_GetSpawnStack
 /// @address 6fd9cf30
 /// Imported by ['D2Game.dll']
-DWORD __stdcall SecureGetItemSpawnStack(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetSpawnStack(D2UnitStrc *pItem);
 
 /// @ordinal 10800
-/// @name GetBitField
+/// @name ITEMS_CheckBitField1Flag8
 /// @address 6fd9d070
 /// Not imported by any .dll
-DWORD __stdcall GetBitField(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_CheckBitField1Flag8(D2UnitStrc *pItem);
 
 /// @ordinal 10801
-/// @name D2Common_10801
+/// @name ITEMS_CheckBitField1Flag4
 /// @address 6fd9de50
 /// Not imported by any .dll
 /// @guessedtype int __stdcall(int dwItemNo)
 
 /// @ordinal 10802
-/// @name D2Common_10802
+/// @name ITEMS_IsMetalItem
 /// @address 6fd9de10
 /// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int __stdcall(int dwItemNo)
 
 /// @ordinal 10803
-/// @name D2Common_10803
+/// @name ITEMS_CheckBitField1Flag1
 /// @address 6fd9ddd0
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int dwItemNo)
 
 /// @ordinal 10804
-/// @name GetSpellIconFromUnit
+/// @name ITEMS_GetSpellIcon
 /// @address 6fd9d0f0
 /// Imported by ['D2Game.dll']
-int __stdcall GetSpellIconFromUnit(D2UnitStrc *pItem);
+int __stdcall ITEMS_GetSpellIcon(D2UnitStrc *pItem);
 
 /// @ordinal 10805
-/// @name GetDurWarnCount
+/// @name ITEMS_GetDurWarnCount
 /// @address 6fd9d1e0
 /// Not imported by any .dll
-BYTE __stdcall GetDurWarnCount(D2UnitStrc *pItem);
+BYTE __stdcall ITEMS_GetDurWarnCount(D2UnitStrc *pItem);
 
 /// @ordinal 10806
-/// @name GetQtyWarnCount
+/// @name ITEMS_GetQtyWarnCount
 /// @address 6fd9d260
 /// Imported by ['D2Client.dll']
-BYTE __stdcall GetQtyWarnCount(D2UnitStrc *pItem);
+BYTE __stdcall ITEMS_GetQtyWarnCount(D2UnitStrc *pItem);
 
 /// @ordinal 10807
-/// @name GetItemStrBonus
+/// @name ITEMS_GetStrengthBonus
 /// @address 6fd9d2e0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-WORD __stdcall GetItemStrBonus(D2UnitStrc *pItem);
+WORD __stdcall ITEMS_GetStrengthBonus(D2UnitStrc *pItem);
 
 /// @ordinal 10808
-/// @name GetItemDexBonus
+/// @name ITEMS_GetDexBonus
 /// @address 6fd9d310
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-WORD __stdcall GetItemDexBonus(D2UnitStrc *pItem);
+WORD __stdcall ITEMS_GetDexBonus(D2UnitStrc *pItem);
 
 /// @ordinal 10809
-/// @name CanHaveSockets
+/// @name ITEMS_CheckIfSocketableByItemId
 /// @address 6fd9d340
 /// Not imported by any .dll
-DWORD __stdcall CanHaveSockets(DWORD dwItemId);
+DWORD __stdcall ITEMS_CheckIfSocketableByItemId(DWORD dwItemId);
 
 /// @ordinal 10810
-/// @name SecureCanHaveSockets
+/// @name ITEMS_CheckIfSocketable
 /// @address 6fd9d360
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall SecureCanHaveSockets(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_CheckIfSocketable(D2UnitStrc *pItem);
 
 /// @ordinal 10811
-/// @name ItemHasDurability
+/// @name ITEMS_HasDurability
 /// @address 6fd9d390
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall ItemHasDurability(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_HasDurability(D2UnitStrc *pItem);
 
 /// @ordinal 10813
-/// @name GetStaffModsFromUnit
+/// @name ITEMS_GetStaffMods
 /// @address 6fd9d3f0
 /// Imported by ['D2Game.dll']
-int __stdcall GetStaffModsFromUnit(D2UnitStrc *pItem);
+int __stdcall ITEMS_GetStaffMods(D2UnitStrc *pItem);
 
 /// @ordinal 10814
-/// @name GetGemSocketsFromId
+/// @name ITEMS_GetAllowedGemSocketsFromItemId
 /// @address 6fd9d470
 /// Not imported by any .dll
-BYTE __stdcall GetGemSocketsFromId(DWORD dwItemId);
+BYTE __stdcall ITEMS_GetAllowedGemSocketsFromItemId(DWORD dwItemId);
 
 /// @ordinal 10815
-/// @name GetMaxSockets
+/// @name ITEMS_GetMaxSockets
 /// @address 6fd9d490
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BYTE __stdcall GetMaxSockets(D2UnitStrc *pItem);
+BYTE __stdcall ITEMS_GetMaxSockets(D2UnitStrc *pItem);
 
 /// @ordinal 10816
-/// @name GetItemSockets
+/// @name ITEMS_GetSockets
 /// @address 6fd9d580
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall GetItemSockets(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetSockets(D2UnitStrc *pItem);
 
 /// @ordinal 10817
-/// @name AddSockets
+/// @name ITEMS_AddSockets
 /// @address 6fd9d5e0
 /// Imported by ['D2Game.dll']
-void __stdcall AddSockets(D2UnitStrc *pItem, DWORD dwSocks);
+void __stdcall ITEMS_AddSockets(D2UnitStrc *pItem, DWORD dwSocks);
 
 /// @ordinal 10818
-/// @name SetSockets
+/// @name ITEMS_SetSockets
 /// @address 6fd9d7c0
 /// Not imported by any .dll
-void __stdcall SetSockets(D2UnitStrc *pUnit, int nValue);
+void __stdcall ITEMS_SetSockets(D2UnitStrc *pUnit, int nValue);
 
 /// @ordinal 10819
-/// @name GetGemApplyTypeFromId
+/// @name ITEMS_GetGemApplyTypeFromItemId
 /// @address 6fd9d900
 /// Not imported by any .dll
-int __stdcall GetGemApplyTypeFromId(DWORD dwItemNo);
+int __stdcall ITEMS_GetGemApplyTypeFromItemId(DWORD dwItemNo);
 
 /// @ordinal 10820
-/// @name GetGemApplyTypeFromUnit
+/// @name ITEMS_GetGemApplyType
 /// @address 6fd9d940
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetGemApplyTypeFromUnit(D2UnitStrc *pItem);
+int __stdcall ITEMS_GetGemApplyType(D2UnitStrc *pItem);
 
 /// @ordinal 10821
-/// @name CheckIfItemIsSocketFiller
+/// @name ITEMS_IsSocketFiller
 /// @address 6fd9d9d0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall CheckIfItemIsSocketFiller(D2UnitStrc *pItem);
+BOOL __stdcall ITEMS_IsSocketFiller(D2UnitStrc *pItem);
 
 /// @ordinal 10822
-/// @name GetRunesTxtRecordFromItem
+/// @name ITEMS_GetRunesTxtRecordFromItem
 /// @address 6fd9d9e0
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int pUnit)
 
 /// @ordinal 10823
-/// @name GetWeaponClassId
+/// @name ITEMS_GetWeaponClassId
 /// @address 6fd9e410
 /// Imported by ['D2Client.dll']
-__int16 __stdcall GetWeaponClassId(D2UnitStrc *pItem);
+__int16 __stdcall ITEMS_GetWeaponClassId(D2UnitStrc *pItem);
 
 /// @ordinal 10824
-/// @name GetTransmogrifyFromId
+/// @name ITEMS_GetTransmogrifyFromItemId
 /// @address 6fd9e480
 /// Not imported by any .dll
-DWORD __stdcall GetTransmogrifyFromId(DWORD dwItemId);
+DWORD __stdcall ITEMS_GetTransmogrifyFromItemId(DWORD dwItemId);
 
 /// @ordinal 10825
-/// @name GetTransmogrifyFromUnit
+/// @name ITEMS_GetTransmogrify
 /// @address 6fd9e4c0
 /// Imported by ['D2Client.dll']
-DWORD __stdcall GetTransmogrifyFromUnit(D2UnitStrc *pItem);
+DWORD __stdcall ITEMS_GetTransmogrify(D2UnitStrc *pItem);
 
 /// @ordinal 10826
-/// @name CheckItemIfMagSetRarUniCrfOrTmp
+/// @name ITEMS_IsMagSetRarUniCrfOrTmp
 /// @address 6fd9e550
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall CheckItemIfMagSetRarUniCrfOrTmp(D2UnitStrc *pItem);
+int __stdcall ITEMS_IsMagSetRarUniCrfOrTmp(D2UnitStrc *pItem);
 
 /// @ordinal 10827
-/// @name GetHitClassFromUnit
+/// @name ITEMS_GetHitClassFromItem
 /// @address 6fd9e5f0
 /// Not imported by any .dll
-BYTE __stdcall GetHitClassFromUnit(D2UnitStrc *pUnit);
+BYTE __stdcall ITEMS_GetHitClassFromItem(D2UnitStrc *pUnit);
 
 /// @ordinal 10828
-/// @name CheckIfItemIs1Or2Handed
+/// @name ITEMS_Is1Or2Handed
 /// @address 6fd9e670
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall CheckIfItemIs1Or2Handed(D2UnitStrc *pPlayer, D2UnitStrc *pItem);
+int __stdcall ITEMS_Is1Or2Handed(D2UnitStrc *pPlayer, D2UnitStrc *pItem);
 
 /// @ordinal 10829
-/// @name GetItemColor
+/// @name ITEMS_GetColor
 /// @address 6fd9e710
 /// Imported by ['D2Client.dll']
-BYTE *__stdcall GetItemColor(D2UnitStrc *pPlayer, D2UnitStrc *pItem, BYTE *pColor, int nTransType);
+BYTE *__stdcall ITEMS_GetColor(D2UnitStrc *pPlayer, D2UnitStrc *pItem, BYTE *pColor, int nTransType);
 
 /// @ordinal 10830
-/// @name CheckItemIfImbueable
+/// @name ITEMS_IsImbueable
 /// @address 6fd9eea0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall CheckItemIfImbueable(D2UnitStrc *pItem);
+BOOL __stdcall ITEMS_IsImbueable(D2UnitStrc *pItem);
 
 /// @ordinal 10831
-/// @name CheckItemIfSocketable
+/// @name ITEMS_IsSocketable
 /// @address 6fd9f260
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall CheckItemIfSocketable(D2UnitStrc *pItem);
+BOOL __stdcall ITEMS_IsSocketable(D2UnitStrc *pItem);
 
 /// @ordinal 10832
-/// @name CheckItemIfPersonalizable
+/// @name ITEMS_IsPersonalizable
 /// @address 6fd9f080
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall CheckItemIfPersonalizable(D2UnitStrc *pItem);
+BOOL __stdcall ITEMS_IsPersonalizable(D2UnitStrc *pItem);
 
 /// @ordinal 10833
-/// @name D2Common_10833
+/// @name ITEMS_AreStackablesEqual
 /// @address 6fd9f720
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-signed int __stdcall D2Common_10833(D2UnitStrc *pItem1, D2UnitStrc *pItem2);
+signed int __stdcall ITEMS_AreStackablesEqual(D2UnitStrc *pItem1, D2UnitStrc *pItem2);
 
 /// @ordinal 10834
-/// @name D2Common_10834
+/// @name ITEMS_CanItemBeUsedForThrowSkill
 /// @address 6fd9fa70
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-signed int __stdcall D2Common_10834(D2UnitStrc *pItem);
+signed int __stdcall ITEMS_CanItemBeUsedForThrowSkill(D2UnitStrc *pItem);
 
 /// @ordinal 10835
 /// @name D2Common_11079_Return0
@@ -4819,52 +4819,52 @@ signed int __stdcall D2Common_10834(D2UnitStrc *pItem);
 int __stdcall D2Common_11079_Return0(int arg, int a2);
 
 /// @ordinal 10836
-/// @name GetSetItemsMask
+/// @name ITEMS_GetSetItemsMask
 /// @address 6fd9fb50
 /// Imported by ['D2Client.dll']
-DWORD __stdcall GetSetItemsMask(D2UnitStrc *pPlayer, D2UnitStrc *pSetItem, BOOL bSkipItem);
+DWORD __stdcall ITEMS_GetSetItemsMask(D2UnitStrc *pPlayer, D2UnitStrc *pSetItem, BOOL bSkipItem);
 
 /// @ordinal 10837
-/// @name GetNoOfSetItemsFromSetItem
+/// @name ITEMS_GetNoOfSetItemsFromItem
 /// @address 6fda42e0
 /// Imported by ['D2Client.dll']
-int __stdcall GetNoOfSetItemsFromSetItem(D2UnitStrc *pItem);
+int __stdcall ITEMS_GetNoOfSetItemsFromItem(D2UnitStrc *pItem);
 
 /// @ordinal 10838
-/// @name GetSetItemsTxtFromUnit
+/// @name ITEMS_GetSetItemsTxtRecordFromItem
 /// @address 6fd9fd80
 /// Imported by ['D2Client.dll']
-D2SetItemsTxt *__stdcall GetSetItemsTxtFromUnit(D2UnitStrc *pUnit);
+D2SetItemsTxt *__stdcall ITEMS_GetSetItemsTxtRecordFromItem(D2UnitStrc *pUnit);
 
 /// @ordinal 10839
-/// @name ItemCanBeEquipped
+/// @name ITEMS_CanBeEquipped
 /// @address 6fd9fe20
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall ItemCanBeEquipped(D2UnitStrc *pItem);
+BOOL __stdcall ITEMS_CanBeEquipped(D2UnitStrc *pItem);
 
 /// @ordinal 10840
-/// @name CheckIfItemIsUsable
+/// @name ITEMS_IsCharmUsable
 /// @address 6fd9fe70
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall CheckIfItemIsUsable(D2UnitStrc *pItem, D2UnitStrc *pPlayer);
+BOOL __stdcall ITEMS_IsCharmUsable(D2UnitStrc *pItem, D2UnitStrc *pPlayer);
 
 /// @ordinal 10841
-/// @name GetBonusLifeBasedOnClass
+/// @name ITEMS_GetBonusLifeBasedOnClass
 /// @address 6fd9ff90
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetBonusLifeBasedOnClass(D2UnitStrc *pPlayer, int nValue);
+int __stdcall ITEMS_GetBonusLifeBasedOnClass(D2UnitStrc *pPlayer, int nValue);
 
 /// @ordinal 10842
-/// @name GetBonusManaBasedOnClass
+/// @name ITEMS_GetBonusManaBasedOnClass
 /// @address 6fd9ffe0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetBonusManaBasedOnClass(D2UnitStrc *pPlayer, int nValue);
+int __stdcall ITEMS_GetBonusManaBasedOnClass(D2UnitStrc *pPlayer, int nValue);
 
 /// @ordinal 10843
-/// @name GetByTimeAdjustment
+/// @name ITEMMODS_GetByTimeAdjustment
 /// @address 6fd928d0
 /// Imported by ['D2Client.dll']
-int __stdcall GetByTimeAdjustment(int nAmount, int nPeriodOfDay, int nBaseTime, int *nItemModPeriodOfDay, int *nItemModMin, int *nItemModMax);
+int __stdcall ITEMMODS_GetByTimeAdjustment(int nAmount, int nPeriodOfDay, int nBaseTime, int *nItemModPeriodOfDay, int *nItemModMin, int *nItemModMax);
 
 /// @ordinal 10844
 /// @name ITEMMODS_First
@@ -4873,172 +4873,172 @@ int __stdcall GetByTimeAdjustment(int nAmount, int nPeriodOfDay, int nBaseTime, 
 void __stdcall ITEMMODS_First(int nDataBits, int *pLayer, int *pValue);
 
 /// @ordinal 10845
-/// @name D2Common_10845
+/// @name 
 /// @address 6fd929b0
 /// Not imported by any .dll
-void __stdcall D2Common_10845(int nDataBits, int *a2, int *a3, int *a4);
+void __stdcall(int nDataBits, int *a2, int *a3, int *a4);
 
 /// @ordinal 10846
-/// @name D2Common_10846
+/// @name 
 /// @address 6fd92670
 /// Not imported by any .dll
-void __stdcall D2Common_10846(int nDataBits, int *a2, int *a3, int *a4, int *a5);
+void __stdcall(int nDataBits, int *a2, int *a3, int *a4, int *a5);
 
 /// @ordinal 10847
-/// @name D2Common_10847
+/// @name ITEMMODS_UpdateItemWithSkillCharges
 /// @address 6fd927d0
 /// Imported by ['D2Game.dll']
-BOOL __stdcall D2Common_10847(D2UnitStrc *pItem, int a2, int a3, int a4);
+BOOL __stdcall ITEMMODS_UpdateItemWithSkillCharges(D2UnitStrc *pItem, int a2, int a3, int a4);
 
 /// @ordinal 10848
-/// @name D2Common_10848
+/// @name 
 /// @address 6fd92a00
 /// Not imported by any .dll
-void __stdcall D2Common_10848(int nDataBits, int *pClass, int *pTab, int *pLevel);
+void __stdcall(int nDataBits, int *pClass, int *pTab, int *pLevel);
 
 /// @ordinal 10849
-/// @name D2Common_10849
+/// @name 
 /// @address 6fd929a0
 /// Not imported by any .dll
-int __stdcall D2Common_10849(int a1, int a2);
+int __stdcall(int a1, int a2);
 
 /// @ordinal 10850
-/// @name D2Common_10850
+/// @name 
 /// @address 6fd929e0
 /// Not imported by any .dll
-int __stdcall D2Common_10850(int a1, int a2, int a3);
+int __stdcall(int a1, int a2, int a3);
 
 /// @ordinal 10851
-/// @name D2Common_10851
+/// @name 
 /// @address 6fd92a60
 /// Not imported by any .dll
-int __stdcall D2Common_10851(int a1, int a2, int a3);
+int __stdcall(int a1, int a2, int a3);
 
 /// @ordinal 10853
-/// @name GetItemCellFromItem
+/// @name ITEMS_GetItemCell
 /// @address 6fd98960
 /// Imported by ['D2Game.dll']
-BYTE __stdcall GetItemCellFromItem(D2UnitStrc *pItem);
+BYTE __stdcall ITEMS_GetItemCell(D2UnitStrc *pItem);
 
 /// @ordinal 10854
-/// @name SetItemCell
+/// @name ITEMS_SetItemCell
 /// @address 6fd98980
 /// Imported by ['D2Game.dll']
-void __stdcall SetItemCell(D2UnitStrc *pItem, int nValue);
+void __stdcall ITEMS_SetItemCell(D2UnitStrc *pItem, int nValue);
 
 /// @ordinal 10855
-/// @name ApplyProperties
+/// @name ITEMMODS_AssignProperty
 /// @address 6fd95430
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall ApplyProperties(int nType, D2UnitStrc *a2, D2UnitStrc *pItem, void *pMods, int nPropSet, int nApplyType);
+void __stdcall ITEMMODS_AssignProperty(int nType, D2UnitStrc *a2, D2UnitStrc *pItem, void *pMods, int nPropSet, int nApplyType);
 
 /// @ordinal 10856
-/// @name D2Common_11240_SKILLS_Return
+/// @name D2Common_11240_Return
 /// @address 6fdb40f0
 /// Not imported by any .dll
-void __stdcall D2Common_11240_SKILLS_Return(int arg, int a2, int a3);
+void __stdcall D2Common_11240_Return(int arg, int a2, int a3);
 
 /// @ordinal 10859
-/// @name D2Common_10859
+/// @name ITEMMODS_CanItemHaveMagicAffix
 /// @address 6fd95be0
 /// Imported by ['D2Game.dll']
-BOOL __stdcall D2Common_10859(D2UnitStrc *pItem, D2MagicAffixTxt *pMagicAffixTxtRecord);
+BOOL __stdcall ITEMMODS_CanItemHaveMagicAffix(D2UnitStrc *pItem, D2MagicAffixTxt *pMagicAffixTxtRecord);
 
 /// @ordinal 10860
-/// @name D2Common_10860
+/// @name ITEMMODS_CanItemHaveRareAffix
 /// @address 6fd95cc0
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int pItem, int pRareAffixTxtRecord)
 
 /// @ordinal 10861
-/// @name D2Common_10861
+/// @name ITEMMODS_CanItemBeHighQuality
 /// @address 6fd95d60
 /// Imported by ['D2Game.dll']
-BOOL __stdcall D2Common_10861(D2UnitStrc *pItem, D2QualityItemsTxt *pQualityItemsTxtRecord);
+BOOL __stdcall ITEMMODS_CanItemBeHighQuality(D2UnitStrc *pItem, D2QualityItemsTxt *pQualityItemsTxtRecord);
 
 /// @ordinal 10862
-/// @name ITEMS_ElixiInitStats
+/// @name ITEMMODS_SetRandomElixirFileIndex
 /// @address 6fd95e90
 /// Imported by ['D2Game.dll']
-void __stdcall ITEMS_ElixiInitStats(D2UnitStrc *pItem);
+void __stdcall ITEMMODS_SetRandomElixirFileIndex(D2UnitStrc *pItem);
 
 /// @ordinal 10865
-/// @name ApplyEthereality
+/// @name ITEMMODS_ApplyEthereality
 /// @address 6fd958d0
 /// Imported by ['D2Game.dll']
-void __stdcall ApplyEthereality(D2UnitStrc *pUnit);
+void __stdcall ITEMMODS_ApplyEthereality(D2UnitStrc *pUnit);
 
 /// @ordinal 10866
-/// @name ITEMS_Last
+/// @name ITEMS_UpdateSets
 /// @address 6fda4640
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall ITEMS_Last(D2UnitStrc *pPlayer, D2UnitStrc *pItem, int a3, int a4);
+BOOL __stdcall ITEMS_UpdateSets(D2UnitStrc *pPlayer, D2UnitStrc *pItem, int a3, int a4);
 
 /// @ordinal 10867
-/// @name ITEMS_UpdateRuneword
+/// @name ITEMMODS_UpdateRuneword
 /// @address 6fd959f0
 /// Imported by ['D2Game.dll']
-BOOL __stdcall ITEMS_UpdateRuneword(D2UnitStrc *pUnit, D2UnitStrc *pItem, int nUnused);
+BOOL __stdcall ITEMMODS_UpdateRuneword(D2UnitStrc *pUnit, D2UnitStrc *pItem, int nUnused);
 
 /// @ordinal 10868
-/// @name D2Common_10868
+/// @name ITEMMODS_AddCraftPropertyList
 /// @address 6fd95f90
 /// Imported by ['D2Game.dll']
-void __stdcall D2Common_10868(D2UnitStrc *pItem, D2PropertyStrc *pProperty, BOOL bExpansion);
+void __stdcall ITEMMODS_AddCraftPropertyList(D2UnitStrc *pItem, D2PropertyStrc *pProperty, BOOL bExpansion);
 
 /// @ordinal 10875
-/// @name GetItemFormat
+/// @name ITEMS_GetItemFormat
 /// @address 6fda0030
 /// Imported by ['D2Game.dll']
-WORD __stdcall GetItemFormat(D2UnitStrc *pItem);
+WORD __stdcall ITEMS_GetItemFormat(D2UnitStrc *pItem);
 
 /// @ordinal 10876
-/// @name SetItemFormat
+/// @name ITEMS_SetItemFormat
 /// @address 6fda00b0
 /// Imported by ['D2Game.dll']
-void __stdcall SetItemFormat(D2UnitStrc *pItem, WORD nItemFormat);
+void __stdcall ITEMS_SetItemFormat(D2UnitStrc *pItem, WORD nItemFormat);
 
 /// @ordinal 10877
-/// @name GetAllRepairCosts
+/// @name ITEMS_GetAllRepairCosts
 /// @address 6fd9f490
 /// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int __stdcall(int pGame, int pPlayer, int nNpcId, int nDifficulty, int pQuestFlags, int pfCallback)
 
 /// @ordinal 10878
-/// @name GetWeaponAttackSpeed
+/// @name ITEMS_GetWeaponAttackSpeed
 /// @address 6fda0130
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetWeaponAttackSpeed(D2UnitStrc *pUnit, D2UnitStrc *pWeapon_nLength);
+int __stdcall ITEMS_GetWeaponAttackSpeed(D2UnitStrc *pUnit, D2UnitStrc *pWeapon_nLength);
 
 /// @ordinal 10879
-/// @name HasUsedCharges
+/// @name ITEMS_HasUsedCharges
 /// @address 6fda02b0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall HasUsedCharges(D2UnitStrc *pItem, BOOL *pHasChargedSkills);
+int __stdcall ITEMS_HasUsedCharges(D2UnitStrc *pItem, BOOL *pHasChargedSkills);
 
 /// @ordinal 10880
-/// @name CheckIfItemIsEthereal
+/// @name ITEMS_IsEthereal
 /// @address 6fda0340
 /// Imported by ['D2Game.dll']
-int __stdcall CheckIfItemIsEthereal(D2UnitStrc *pItem);
+int __stdcall ITEMS_IsEthereal(D2UnitStrc *pItem);
 
 /// @ordinal 10881
-/// @name SerializeItem
+/// @name ITEMS_SerializeItemToBitstream
 /// @address 6fda2ba0
 /// Imported by ['D2Game.dll']
-int __stdcall SerializeItem(D2UnitStrc *pUnit, BYTE *pBitstream, int nSize, BOOL bServer, BOOL bSaveItemInv, BOOL bGamble);
+int __stdcall ITEMS_SerializeItemToBitstream(D2UnitStrc *pUnit, BYTE *pBitstream, int nSize, BOOL bServer, BOOL bSaveItemInv, BOOL bGamble);
 
 /// @ordinal 10882
-/// @name D2Common_10882
+/// @name ITEMS_DecodeItemFromBitstream
 /// @address 6fda0490
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_10882(D2UnitStrc *pItem, BYTE *pBitstream, int nBufferSize, BOOL bCheckForHeader, int *pSocketedItems, unsigned int dwVersion, int *pFail);
+BOOL __stdcall ITEMS_DecodeItemFromBitstream(D2UnitStrc *pItem, BYTE *pBitstream, int nBufferSize, BOOL bCheckForHeader, int *pSocketedItems, unsigned int dwVersion, int *pFail);
 
 /// @ordinal 10883
-/// @name D2Common_10883
+/// @name ITEMS_GetCompactItemDataFromBitstream
 /// @address 6fda0370
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_10883(BYTE *pBitstream, int nBitstreamSize, BOOL bCheckForHeader, D2ItemSaveStrc *pItemSave);
+BOOL __stdcall ITEMS_GetCompactItemDataFromBitstream(BYTE *pBitstream, int nBitstreamSize, BOOL bCheckForHeader, D2ItemSaveStrc *pItemSave);
 
 /// @ordinal 10884
 /// @name COMPOSIT_unk
@@ -5053,16 +5053,16 @@ void __stdcall COMPOSIT_unk(D2UnitStrc *pUnit, int nClass, int nMode, int nUnitT
 void __stdcall COMPOSIT_unk(D2UnitStrc *pUnit, char *szPath, int *pWeaponClass, BOOL bAddPathPrefix, int a9, D2InventoryStrc *pInventory, int nAnimMode);
 
 /// @ordinal 10886
-/// @name COMPOSIT_unk
+/// @name COMPOSIT_GetWeaponClassIdFromCode
 /// @address 6fd46c60
 /// Not imported by any .dll
-int __stdcall COMPOSIT_unk(int weaponClassCode);
+int __stdcall COMPOSIT_GetWeaponClassIdFromCode(int weaponClassCode);
 
 /// @ordinal 10887
-/// @name COMPOSIT_GetWeapon
+/// @name COMPOSIT_GetWeaponClassCode
 /// @address 6fd46c90
 /// Not imported by any .dll
-int __stdcall COMPOSIT_GetWeapon(D2UnitStrc *pUnit, D2C_UnitTypes nUnitType, int nClass, int nMode, D2InventoryStrc *pInventory, int *pWeaponClassId);
+int __stdcall COMPOSIT_GetWeaponClassCode(D2UnitStrc *pUnit, D2C_UnitTypes nUnitType, int nClass, int nMode, D2InventoryStrc *pInventory, int *pWeaponClassId);
 
 /// @ordinal 10888
 /// @name COMPOSIT_GetWeaponClassId
@@ -5077,10 +5077,10 @@ DWORD __stdcall COMPOSIT_GetWeaponClassId(D2UnitStrc *pUnit, D2InventoryStrc *pI
 bool __stdcall COMPOSIT_IsArmorComponent(int nComponent);
 
 /// @ordinal 10890
-/// @name COMPOSIT_WeaponRequiresAmmoItem
+/// @name COMPOSIT_IsWeaponBowOrXBow
 /// @address 6fd47230
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall COMPOSIT_WeaponRequiresAmmoItem(D2UnitStrc *pUnit);
+BOOL __stdcall COMPOSIT_IsWeaponBowOrXBow(D2UnitStrc *pUnit);
 
 /// @ordinal 10891
 /// @name COMPOSIT_GetArmorTypeFromComponent
@@ -5101,16 +5101,16 @@ D2HoverTextStrc *__stdcall CHAT_AllocHoverMsg(void *pMemPool, const char *szText
 void __stdcall CHAT_FreeHoverMsg(void *pMemPool, D2HoverTextStrc *pHoverText);
 
 /// @ordinal 10894
-/// @name CHAT_GetDisplayTime
+/// @name CHAT_GetDisplayTimeFromHoverMsg
 /// @address 6fdc3ca0
 /// Not imported by any .dll
-DWORD __stdcall CHAT_GetDisplayTime(D2HoverTextStrc *pHoverMsg);
+DWORD __stdcall CHAT_GetDisplayTimeFromHoverMsg(D2HoverTextStrc *pHoverMsg);
 
 /// @ordinal 10895
-/// @name CHAT_GetTimeout
+/// @name CHAT_GetTimeoutFromHoverMsg
 /// @address 6fdc3cb0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall CHAT_GetTimeout(D2HoverTextStrc *pHoverMsg);
+DWORD __stdcall CHAT_GetTimeoutFromHoverMsg(D2HoverTextStrc *pHoverMsg);
 
 /// @ordinal 10896
 /// @name CHAT_CopyHoverMsgToBuffer
@@ -5119,28 +5119,28 @@ DWORD __stdcall CHAT_GetTimeout(D2HoverTextStrc *pHoverMsg);
 void __stdcall CHAT_CopyHoverMsgToBuffer(D2HoverTextStrc *pHoverMsg, char *szMessage);
 
 /// @ordinal 10897
-/// @name D2Common_10165_PathGetTargetY
+/// @name CHAT_GetUsedFromHoverMsg
 /// @address 6fdc3ce0
 /// Imported by ['D2Client.dll']
-DWORD __stdcall D2Common_10165_PathGetTargetY(D2DynamicPathStrc *pPath);
+DWORD __stdcall CHAT_GetUsedFromHoverMsg(D2DynamicPathStrc *pPath);
 
 /// @ordinal 10898
-/// @name CHAT_SetUsed
+/// @name CHAT_SetUsedInHoverMsg
 /// @address 6fdc3cf0
 /// Imported by ['D2Client.dll']
-void __stdcall CHAT_SetUsed(D2HoverTextStrc *pHoverMsg, BOOL bUsed);
+void __stdcall CHAT_SetUsedInHoverMsg(D2HoverTextStrc *pHoverMsg, BOOL bUsed);
 
 /// @ordinal 10899
-/// @name CHAT_GetLangId
+/// @name CHAT_GetLangIdFromHoverMsg
 /// @address 6fdc3d00
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-char __stdcall CHAT_GetLangId(D2HoverTextStrc *pHoverMsg);
+char __stdcall CHAT_GetLangIdFromHoverMsg(D2HoverTextStrc *pHoverMsg);
 
 /// @ordinal 10900
-/// @name CHAT_SetLangId
+/// @name CHAT_SetLangIdInHoverMsg
 /// @address 6fdc3d10
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall CHAT_SetLangId(D2HoverTextStrc *pHoverMsg, char nLangId);
+void __stdcall CHAT_SetLangIdInHoverMsg(D2HoverTextStrc *pHoverMsg, char nLangId);
 
 /// @ordinal 10901
 /// @name TEXT_AllocTextHeader
@@ -5233,10 +5233,10 @@ int __fastcall SEED_GetLowSeed(D2SeedStrc *pSeed);
 int __fastcall SEED_GetHighSeed(D2SeedStrc *pSeed);
 
 /// @ordinal 10916
-/// @name MONSTERS_Return
+/// @name SEED_Return
 /// @address 6fda5260
 /// Not imported by any .dll
-void __stdcall MONSTERS_Return();
+void __stdcall SEED_Return();
 
 /// @ordinal 10920
 /// @name SEED_GetRandomValue
@@ -5263,16 +5263,16 @@ void __fastcall SEED_GetSeeds(D2SeedStrc *pSeed, int *pLowSeed, int *pHighSeed);
 bool __stdcall ENVIRONMENT_UpdatePeriodOfDay(D2DrlgActStrc *pAct, D2RoomStrc *pRoom);
 
 /// @ordinal 10924
-/// @name ENVIRONMENT_UpdateTimeIndex
+/// @name ENVIRONMENT_UpdateCycleIndex
 /// @address 6fd8dd60
 /// Imported by ['D2Game.dll']
-BOOL __stdcall ENVIRONMENT_UpdateTimeIndex(D2DrlgActStrc *pAct, int nActNo);
+BOOL __stdcall ENVIRONMENT_UpdateCycleIndex(D2DrlgActStrc *pAct, int nActNo);
 
 /// @ordinal 10925
-/// @name ENVIRONMENT_GetCos_Sin_LastFromAct
+/// @name ENVIRONMENT_GetStatistics
 /// @address 6fd8e0b0
 /// Not imported by any .dll
-void __stdcall ENVIRONMENT_GetCos_Sin_LastFromAct(D2DrlgActStrc *pAct, float *pCos, float *pLast, float *pSin, int *a5);
+void __stdcall ENVIRONMENT_GetStatistics(D2DrlgActStrc *pAct, float *pCos, float *pLast, float *pSin, int *a5);
 
 /// @ordinal 10926
 /// @name ENVIRONMENT_GetIntensityFromAct
@@ -5281,16 +5281,16 @@ void __stdcall ENVIRONMENT_GetCos_Sin_LastFromAct(D2DrlgActStrc *pAct, float *pC
 int __stdcall ENVIRONMENT_GetIntensityFromAct(D2DrlgActStrc *pAct);
 
 /// @ordinal 10927
-/// @name ENVIRONMENT_GetRGBFromAct
+/// @name ENVIRONMENT_GetLightColorFromAct
 /// @address 6fd8ddd0
 /// Imported by ['D2Client.dll']
-void __stdcall ENVIRONMENT_GetRGBFromAct(D2DrlgActStrc *pAct, BYTE *pRed, BYTE *pGreen, BYTE *pBlue);
+void __stdcall ENVIRONMENT_GetLightColorFromAct(D2DrlgActStrc *pAct, BYTE *pRed, BYTE *pGreen, BYTE *pBlue);
 
 /// @ordinal 10928
-/// @name ENVIRONMENT_GetUnkDW0x14
+/// @name ENVIRONMENT_GetUnusedMember
 /// @address 6fd8de70
 /// Not imported by any .dll
-D2DrlgEnvironmentStrc *__stdcall ENVIRONMENT_GetUnkDW0x14(D2DrlgActStrc *pAct);
+D2DrlgEnvironmentStrc *__stdcall ENVIRONMENT_GetUnusedMember(D2DrlgActStrc *pAct);
 
 /// @ordinal 10929
 /// @name ENVIRONMENT_NextEnvCycle
@@ -5299,16 +5299,16 @@ D2DrlgEnvironmentStrc *__stdcall ENVIRONMENT_GetUnkDW0x14(D2DrlgActStrc *pAct);
 char __stdcall ENVIRONMENT_NextEnvCycle(D2DrlgActStrc *pAct, D2RoomStrc *pRoom);
 
 /// @ordinal 10930
-/// @name ENVIRONMENT_GetTimeIndexFromAct
+/// @name ENVIRONMENT_GetCycleIndexFromAct
 /// @address 6fd8df30
 /// Imported by ['D2Client.dll']
-int __stdcall ENVIRONMENT_GetTimeIndexFromAct(D2DrlgActStrc *pAct);
+int __stdcall ENVIRONMENT_GetCycleIndexFromAct(D2DrlgActStrc *pAct);
 
 /// @ordinal 10931
-/// @name ENVIRONMENT_GetTimeIndex_Ticks_EclipseFromAct
+/// @name ENVIRONMENT_GetCycleIndex_Ticks_EclipseFromAct
 /// @address 6fd8e080
 /// Imported by ['D2Game.dll']
-void __stdcall ENVIRONMENT_GetTimeIndex_Ticks_EclipseFromAct(D2DrlgActStrc *pAct, int *pTimeIndex, int *pTicks, int *pEclipse);
+void __stdcall ENVIRONMENT_GetCycleIndex_Ticks_EclipseFromAct(D2DrlgActStrc *pAct, int *pTimeIndex, int *pTicks, int *pEclipse);
 
 /// @ordinal 10932
 /// @name ENVIRONMENT_InitializeEnvironment
@@ -5323,10 +5323,10 @@ void __stdcall ENVIRONMENT_InitializeEnvironment(D2DrlgActStrc *pAct, D2RoomStrc
 int __stdcall ENVIRONMENT_GetPeriodOfDayFromAct(D2DrlgActStrc *pAct, int *pBaseTime);
 
 /// @ordinal 10934
-/// @name ENVIRONMENT_GetimeRateFromAct
+/// @name ENVIRONMENT_GetTimeRateFromAct
 /// @address 6fd8e0f0
 /// Not imported by any .dll
-DWORD __stdcall ENVIRONMENT_GetimeRateFromAct(D2DrlgActStrc *pAct);
+DWORD __stdcall ENVIRONMENT_GetTimeRateFromAct(D2DrlgActStrc *pAct);
 
 /// @ordinal 10935
 /// @name ENVIRONMENT_SetNextTimeRate
@@ -5353,22 +5353,22 @@ void __stdcall ENVIRONMENT_TaintedSunEnd(D2DrlgActStrc *pAct);
 __int16 __stdcall SKILLS_GetPassiveState(int nSkillId);
 
 /// @ordinal 10940
-/// @name RefreshSkill
+/// @name SKILLS_RefreshSkill
 /// @address 6fdaf8c0
 /// Imported by ['D2Game.dll']
-void __stdcall RefreshSkill(D2UnitStrc *pUnit, int nSkillId);
+void __stdcall SKILLS_RefreshSkill(D2UnitStrc *pUnit, int nSkillId);
 
 /// @ordinal 10941
-/// @name UpdateSkills
+/// @name SKILLS_RefreshPassiveSkills
 /// @address 6fdafb40
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall UpdateSkills(D2UnitStrc *pUnit);
+void __stdcall SKILLS_RefreshPassiveSkills(D2UnitStrc *pUnit);
 
 /// @ordinal 10942
-/// @name SKILLS_GetSkillMode
+/// @name SKILLS_GetSkillModeFromUnit
 /// @address 6fdafc80
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall SKILLS_GetSkillMode(D2UnitStrc *pUnit, D2SkillStrc *pSkill);
+int __stdcall SKILLS_GetSkillModeFromUnit(D2UnitStrc *pUnit, D2SkillStrc *pSkill);
 
 /// @ordinal 10943
 /// @name D2Common_11049_SKILLS_Return1
@@ -5437,10 +5437,10 @@ D2SkillStrc *__stdcall SKILLS_AddSkill(D2UnitStrc *pUnit, int nSkillId);
 void __stdcall SKILLS_AssignSkill(D2UnitStrc *pUnit, int nSkillId, int nSkillLevel, int a4, char *szFile, int nLine);
 
 /// @ordinal 10954
-/// @name D2Common_10954
+/// @name 
 /// @address 6fdb05e0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10954(D2UnitStrc *pUnit, int nFlags, int nSkillId, int nSkillLevel, int a5, int a6);
+void __stdcall(D2UnitStrc *pUnit, int nFlags, int nSkillId, int nSkillLevel, int a5, int a6);
 
 /// @ordinal 10955
 /// @name SKILLS_GetSkillInfo
@@ -5449,28 +5449,28 @@ void __stdcall D2Common_10954(D2UnitStrc *pUnit, int nFlags, int nSkillId, int n
 BOOL __stdcall SKILLS_GetSkillInfo(D2SkillStrc *pSkill, int *pFlags, int *pSkillId, int *pSkillLevel, int *a5);
 
 /// @ordinal 10956
-/// @name D2Common_10956
+/// @name SKILLS_SetCharges
 /// @address 6fdb0960
 /// Not imported by any .dll
-BOOL __stdcall D2Common_10956(D2SkillStrc *pSkill, int a2);
+BOOL __stdcall SKILLS_SetCharges(D2SkillStrc *pSkill, int a2);
 
 /// @ordinal 10957
-/// @name SKILLS_GetFlagsFromSkill
+/// @name SKILLS_GetOwnerGUIDFromSkill
 /// @address 6fdb08c0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall SKILLS_GetFlagsFromSkill(D2SkillStrc *pSkill);
+int __stdcall SKILLS_GetOwnerGUIDFromSkill(D2SkillStrc *pSkill);
 
 /// @ordinal 10958
-/// @name D2Common_10958
+/// @name 
 /// @address 6fdb0270
 /// Imported by ['D2Client.dll']
-void __stdcall D2Common_10958(D2UnitStrc *pUnit, int a2);
+void __stdcall(D2UnitStrc *pUnit, int a2);
 
 /// @ordinal 10959
-/// @name D2Common_10959
+/// @name 
 /// @address 6fdb02a0
 /// Not imported by any .dll
-int __stdcall D2Common_10959(D2UnitStrc *pUnit);
+int __stdcall(D2UnitStrc *pUnit);
 
 /// @ordinal 10960
 /// @name SKILLS_FreeSkillList
@@ -5527,34 +5527,34 @@ int __stdcall SKILLS_GetShrineSkillLevelBonus(D2UnitStrc *pUnit);
 int __stdcall SKILLS_GetSkillLevel(D2UnitStrc *pUnit, D2SkillStrc *pSkill, BOOL bBonus);
 
 /// @ordinal 10969
-/// @name D2Common_10969
+/// @name 
 /// @address 6fdb18f0
 /// Not imported by any .dll
-int __stdcall D2Common_10969(D2SkillStrc *pSkill);
+int __stdcall(D2SkillStrc *pSkill);
 
 /// @ordinal 10970
-/// @name D2Common_10970
+/// @name 
 /// @address 6fdb1920
 /// Not imported by any .dll
-void __stdcall D2Common_10970(D2SkillStrc *pSkill, int a2);
+void __stdcall(D2SkillStrc *pSkill, int a2);
 
 /// @ordinal 10971
-/// @name D2Common_10971
+/// @name 
 /// @address 6fdb1950
 /// Not imported by any .dll
-int __stdcall D2Common_10971(D2SkillStrc *pSkill);
+int __stdcall(D2SkillStrc *pSkill);
 
 /// @ordinal 10972
-/// @name D2Common_10972
+/// @name 
 /// @address 6fdb1980
 /// Not imported by any .dll
-void __stdcall D2Common_10972(D2SkillStrc *pSkill, int a2);
+void __stdcall(D2SkillStrc *pSkill, int a2);
 
 /// @ordinal 10973
-/// @name D2Common_10973
+/// @name 
 /// @address 6fdb19b0
 /// Not imported by any .dll
-void __stdcall D2Common_10973(D2SkillStrc *pSkill);
+void __stdcall(D2SkillStrc *pSkill);
 
 /// @ordinal 10974
 /// @name SKILLS_SetSkillMode
@@ -5569,64 +5569,64 @@ void __stdcall SKILLS_SetSkillMode(D2SkillStrc *pSkill, int nSkillMode);
 int __stdcall SKILLS_GetSkillMode(D2SkillStrc *pSkill);
 
 /// @ordinal 10976
-/// @name D2Common_10976
+/// @name SKILLS_GetParam1
 /// @address 6fdb19f0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall D2Common_10976(D2SkillStrc *pSkill);
+int __stdcall SKILLS_GetParam1(D2SkillStrc *pSkill);
 
 /// @ordinal 10977
-/// @name D2Common_10977
+/// @name SKILLS_GetParam2
 /// @address 6fdb1a20
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall D2Common_10977(D2SkillStrc *pSkill);
+int __stdcall SKILLS_GetParam2(D2SkillStrc *pSkill);
 
 /// @ordinal 10978
-/// @name D2Common_10978
+/// @name SKILLS_GetParam3
 /// @address 6fdb1a50
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall D2Common_10978(D2SkillStrc *pSkill);
+int __stdcall SKILLS_GetParam3(D2SkillStrc *pSkill);
 
 /// @ordinal 10979
-/// @name D2Common_10979
+/// @name SKILLS_GetParam4
 /// @address 6fdb1a80
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall D2Common_10979(D2SkillStrc *pSkill);
+int __stdcall SKILLS_GetParam4(D2SkillStrc *pSkill);
 
 /// @ordinal 10980
-/// @name D2Common_10980
+/// @name SKILLS_SetParam1
 /// @address 6fdb1ab0
 /// Imported by ['D2Client.dll', 'D2Game.dll', 'D2Server.dll']
-void __stdcall D2Common_10980(D2SkillStrc *pSkill, int a2);
+void __stdcall SKILLS_SetParam1(D2SkillStrc *pSkill, int a2);
 
 /// @ordinal 10981
-/// @name D2Common_10981
+/// @name SKILLS_SetParam2
 /// @address 6fdb1ae0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10981(D2SkillStrc *pSkill, int a2);
+void __stdcall SKILLS_SetParam2(D2SkillStrc *pSkill, int a2);
 
 /// @ordinal 10982
-/// @name D2Common_10982
+/// @name SKILLS_SetParam3
 /// @address 6fdb1b10
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_10982(D2SkillStrc *pSkill, int a2);
+void __stdcall SKILLS_SetParam3(D2SkillStrc *pSkill, int a2);
 
 /// @ordinal 10983
-/// @name D2Common_10983
+/// @name SKILLS_SetParam4
 /// @address 6fdb1b40
 /// Imported by ['D2Client.dll', 'D2Game.dll', 'D2Server.dll']
-void __stdcall D2Common_10983(D2SkillStrc *pSkill, int a2);
+void __stdcall SKILLS_SetParam4(D2SkillStrc *pSkill, int a2);
 
 /// @ordinal 10984
-/// @name SetEventFlagOnUnit
+/// @name SKILLS_SetFlags
 /// @address 6fdb1b70
 /// Imported by ['D2Client.dll', 'D2Game.dll', 'D2Server.dll']
-void __stdcall SetEventFlagOnUnit(D2SkillStrc *pSkill, int a2);
+void __stdcall SKILLS_SetFlags(D2SkillStrc *pSkill, int a2);
 
 /// @ordinal 10985
-/// @name GetEventFlagOnUnit
+/// @name SKILLS_GetFlags
 /// @address 6fdb1ba0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetEventFlagOnUnit(D2SkillStrc *pSkill);
+int __stdcall SKILLS_GetFlags(D2SkillStrc *pSkill);
 
 /// @ordinal 10986
 /// @name SKILLS_GetRequiredLevel
@@ -5653,16 +5653,16 @@ BOOL __stdcall SKILLS_CheckRequiredSkills(D2UnitStrc *pUnit, int nSkillId);
 BOOL __stdcall SKILLS_CheckRequiredAttributes(D2UnitStrc *pUnit, int nSkillId);
 
 /// @ordinal 10999
-/// @name D2Common_10999
+/// @name SKILLS_GetToHitFactor
 /// @address 6fdb2110
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall D2Common_10999(D2UnitStrc *pUnit, int nSkillId, int nSkillLevel);
+int __stdcall SKILLS_GetToHitFactor(D2UnitStrc *pUnit, int nSkillId, int nSkillLevel);
 
 /// @ordinal 11000
-/// @name D2Common_11000
+/// @name SKILLS_GetHighestSkillLevelById
 /// @address 6fdb21e0
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_11000(D2UnitStrc *pUnit, int nSkillId);
+int __stdcall SKILLS_GetHighestSkillLevelById(D2UnitStrc *pUnit, int nSkillId);
 
 /// @ordinal 11001
 /// @name SKILLS_GetManaCosts
@@ -5671,34 +5671,34 @@ int __stdcall D2Common_11000(D2UnitStrc *pUnit, int nSkillId);
 int __stdcall SKILLS_GetManaCosts(int nSkillId, int nSkillLevel);
 
 /// @ordinal 11002
-/// @name GetMinPhysSkillDamage
+/// @name SKILLS_GetMinPhysDamage
 /// @address 6fdb2390
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetMinPhysSkillDamage(D2UnitStrc *pUnit, int nSkillId, int nLevel, int a4);
+int __stdcall SKILLS_GetMinPhysDamage(D2UnitStrc *pUnit, int nSkillId, int nLevel, int a4);
 
 /// @ordinal 11003
-/// @name GetMaxPhysSkillDamage
+/// @name SKILLS_GetMaxPhysDamage
 /// @address 6fdb25d0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetMaxPhysSkillDamage(D2UnitStrc *pUnit, int nSkillId, int nLevel, int a4);
+int __stdcall SKILLS_GetMaxPhysDamage(D2UnitStrc *pUnit, int nSkillId, int nLevel, int a4);
 
 /// @ordinal 11004
-/// @name GetMinElemSkillDamage
+/// @name SKILLS_GetMinElemDamage
 /// @address 6fdb2810
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetMinElemSkillDamage(D2UnitStrc *pUnit, int nSkillId, int nLevel, int a4);
+int __stdcall SKILLS_GetMinElemDamage(D2UnitStrc *pUnit, int nSkillId, int nLevel, int a4);
 
 /// @ordinal 11005
-/// @name GetMaxElemSkillDamage
+/// @name SKILLS_GetMaxElemDamage
 /// @address 6fdb2b00
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall GetMaxElemSkillDamage(D2UnitStrc *pUnit, int nSkillId, int nLevel, int a4);
+int __stdcall SKILLS_GetMaxElemDamage(D2UnitStrc *pUnit, int nSkillId, int nLevel, int a4);
 
 /// @ordinal 11006
-/// @name D2Common_11006
+/// @name SKILLS_GetElementalLength
 /// @address 6fdb2ca0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall D2Common_11006(D2UnitStrc *pUnit, int nSkillId, int nSkillLevel, int a4);
+int __stdcall SKILLS_GetElementalLength(D2UnitStrc *pUnit, int nSkillId, int nSkillLevel, int a4);
 
 /// @ordinal 11008
 /// @name SKILLS_GetClassIdFromSkillId
@@ -5707,28 +5707,28 @@ int __stdcall D2Common_11006(D2UnitStrc *pUnit, int nSkillId, int nSkillLevel, i
 int __stdcall SKILLS_GetClassIdFromSkillId(int nSkillId);
 
 /// @ordinal 11009
-/// @name D2Common_11239_Return0
+/// @name D2Common_11239_SKILLS_Return0
 /// @address 6fdb2e70
 /// Not imported by any .dll
-int __stdcall D2Common_11239_Return0(int arg);
+int __stdcall D2Common_11239_SKILLS_Return0(int arg);
 
 /// @ordinal 11010
-/// @name SKILLS_GetPlayerClassFromSkillId
+/// @name SKILLS_IsPlayerClassSkill
 /// @address 6fdb2ec0
 /// Imported by ['D2Client.dll']
-BOOL __stdcall SKILLS_GetPlayerClassFromSkillId(int nSkillId, int *pPlayerClass);
+BOOL __stdcall SKILLS_IsPlayerClassSkill(int nSkillId, int *pPlayerClass);
 
 /// @ordinal 11011
-/// @name D2Common_11011
+/// @name SKILLS_GetQuantity
 /// @address 6fdb2f40
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall D2Common_11011(D2SkillStrc *pSkill);
+int __stdcall SKILLS_GetQuantity(D2SkillStrc *pSkill);
 
 /// @ordinal 11012
-/// @name D2Common_11012
+/// @name SKILLS_SetQuantity
 /// @address 6fdb2f70
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_11012(D2SkillStrc *pSkill, int a2);
+void __stdcall SKILLS_SetQuantity(D2SkillStrc *pSkill, int a2);
 
 /// @ordinal 11013
 /// @name ConvertMode
@@ -5737,22 +5737,22 @@ void __stdcall D2Common_11012(D2SkillStrc *pSkill, int a2);
 void __stdcall ConvertMode(D2UnitStrc *pUnit, int *pOutType, int *pOutClass, int *pOutMode, char *szFile, int nLine);
 
 /// @ordinal 11014
-/// @name D2Common_11014
+/// @name ConvertShapeShiftedMode
 /// @address 6fdb2fa0
 /// Not imported by any .dll
-int __stdcall D2Common_11014(int nOriginalMode, int nMonsterId);
+int __stdcall ConvertShapeShiftedMode(int nOriginalMode, int nMonsterId);
 
 /// @ordinal 11015
-/// @name D2Common_11015
+/// @name 
 /// @address 6fdb3290
 /// Not imported by any .dll
 /// @guessedtype int __stdcall(int pUnit, int, int nSkillId)
 
 /// @ordinal 11016
-/// @name D2Common_11016
+/// @name 
 /// @address 6fdb3340
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_11016(D2UnitStrc *a1, D2SkillStrc *a2);
+BOOL __stdcall(D2UnitStrc *a1, D2SkillStrc *a2);
 
 /// @ordinal 11017
 /// @name CheckUnitIfConsumeable
@@ -5761,67 +5761,67 @@ BOOL __stdcall D2Common_11016(D2UnitStrc *a1, D2SkillStrc *a2);
 BOOL __stdcall CheckUnitIfConsumeable(D2UnitStrc *pUnit, int a2);
 
 /// @ordinal 11018
-/// @name D2Common_11020
+/// @name D2Common_11020_
 /// @address 6fdb3480
 /// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int __stdcall(int pUnit)
 
 /// @ordinal 11019
-/// @name D2Common_11022
+/// @name D2Common_11022_SKILLS_CanUnitCorpseBeSelected
 /// @address 6fdb3520
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_11022(D2UnitStrc *pUnit);
+BOOL __stdcall D2Common_11022_SKILLS_CanUnitCorpseBeSelected(D2UnitStrc *pUnit);
 
 /// @ordinal 11020
-/// @name D2Common_11020
+/// @name 
 /// @address 6fdb3480
 /// Imported by ['D2Client.dll']
 /// @guessedtype int __stdcall(int pUnit)
 
 /// @ordinal 11021
-/// @name D2Common_11022
+/// @name D2Common_11022_SKILLS_CanUnitCorpseBeSelected
 /// @address 6fdb3520
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_11022(D2UnitStrc *pUnit);
+BOOL __stdcall D2Common_11022_SKILLS_CanUnitCorpseBeSelected(D2UnitStrc *pUnit);
 
 /// @ordinal 11022
-/// @name D2Common_11022
+/// @name SKILLS_CanUnitCorpseBeSelected
 /// @address 6fdb3520
 /// Imported by ['D2Game.dll']
-BOOL __stdcall D2Common_11022(D2UnitStrc *pUnit);
+BOOL __stdcall SKILLS_CanUnitCorpseBeSelected(D2UnitStrc *pUnit);
 
 /// @ordinal 11023
-/// @name D2Common_11023
+/// @name SKILLS_GetWeaponMasteryBonus
 /// @address 6fdb36d0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall D2Common_11023(D2UnitStrc *pUnit, D2UnitStrc *pItem, D2SkillStrc *pSkill, int nType);
+int __stdcall SKILLS_GetWeaponMasteryBonus(D2UnitStrc *pUnit, D2UnitStrc *pItem, D2SkillStrc *pSkill, int nType);
 
 /// @ordinal 11024
-/// @name D2Common_11024
+/// @name 
 /// @address 6fdb35b0
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_11024(D2UnitStrc *pUnit, D2UnitStrc *pItem, D2SkillStrc *pSkill, int a4, int *a5);
+int __stdcall(D2UnitStrc *pUnit, D2UnitStrc *pItem, D2SkillStrc *pSkill, int a4, int *a5);
 
 /// @ordinal 11025
-/// @name D2Common_11025
+/// @name 
 /// @address 6fdb3910
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-bool __stdcall D2Common_11025(int a1, int a2, int a3, int a4, D2RoomStrc *pRoom, int a6);
+bool __stdcall(int a1, int a2, int a3, int a4, D2RoomStrc *pRoom, int a6);
 
 /// @ordinal 11026
-/// @name D2Common_11026
+/// @name 
 /// @address 6fdb3960
 /// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int __stdcall(int, int, int pUnit, int nCollisionType)
 
 /// @ordinal 11027
-/// @name D2Common_11027
+/// @name SKILLS_GetShiftedManaCosts
 /// @address 6fdb3a10
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_11027(int nSkillId, int nLevel);
+int __stdcall SKILLS_GetShiftedManaCosts(int nSkillId, int nLevel);
 
 /// @ordinal 11028
-/// @name D2Common_11028
+/// @name 
 /// @address 6fdb3a90
 /// Not imported by any .dll
 /// @guessedtype int __stdcall(int)
@@ -5833,40 +5833,40 @@ int __stdcall D2Common_11027(int nSkillId, int nLevel);
 int __stdcall SKILLS_GetBonusSkillLevelFromSkillId(D2UnitStrc *pUnit, int nSkillId);
 
 /// @ordinal 11030
-/// @name D2Common_11030
+/// @name 
 /// @address 6fdb17a0
 /// Imported by ['D2Client.dll']
-void __stdcall D2Common_11030(D2UnitStrc *pUnit, int nSkillId, int a3);
+void __stdcall(D2UnitStrc *pUnit, int nSkillId, int a3);
 
 /// @ordinal 11031
-/// @name D2Common_11031
+/// @name 
 /// @address 6fdb1820
 /// Imported by ['D2Client.dll']
-void __stdcall D2Common_11031(D2UnitStrc *pUnit, int nSkillId, int a3);
+void __stdcall(D2UnitStrc *pUnit, int nSkillId, int a3);
 
 /// @ordinal 11032
-/// @name D2Common_11032
+/// @name 
 /// @address 6fdb37b0
 /// Not imported by any .dll
-int __stdcall D2Common_11032(int a1, int nSkillId, int a3, int a4);
+int __stdcall(int a1, int nSkillId, int a3, int a4);
 
 /// @ordinal 11033
-/// @name D2Common_11033
+/// @name 
 /// @address 6fdb3ab0
 /// Not imported by any .dll
 /// @guessedtype int __stdcall(int, int, int)
 
 /// @ordinal 11034
-/// @name D2Common_11034
+/// @name 
 /// @address 6fdb3b00
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_11034(int nLevel, int nSkillId);
+int __stdcall(int nLevel, int nSkillId);
 
 /// @ordinal 11035
-/// @name D2Common_11035
+/// @name 
 /// @address 6fdb3b90
 /// Not imported by any .dll
-int __stdcall D2Common_11035(int nLevel, int nSkillId);
+int __stdcall(int nLevel, int nSkillId);
 
 /// @ordinal 11036
 /// @name GetMonCurseResistanceSubtraction
@@ -5875,10 +5875,10 @@ int __stdcall D2Common_11035(int nLevel, int nSkillId);
 int __stdcall GetMonCurseResistanceSubtraction(int nLevel, int nSkillId);
 
 /// @ordinal 11037
-/// @name D2Common_11037
+/// @name SKILLS_CheckIfCanLeapTo
 /// @address 6fdb3cb0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_11037(D2UnitStrc *pUnit, D2UnitStrc *pRoom, int *pX, int *pY);
+BOOL __stdcall SKILLS_CheckIfCanLeapTo(D2UnitStrc *pUnit, D2UnitStrc *pRoom, int *pX, int *pY);
 
 /// @ordinal 11039
 /// @name CheckWeaponIsMissileBased
@@ -5887,10 +5887,10 @@ BOOL __stdcall D2Common_11037(D2UnitStrc *pUnit, D2UnitStrc *pRoom, int *pX, int
 int __stdcall CheckWeaponIsMissileBased(D2UnitStrc *pUnit, int *a2);
 
 /// @ordinal 11040
-/// @name D2Common_11040
+/// @name SKILLS_IsEnhanceable
 /// @address 6fdb4020
 /// Imported by ['D2Client.dll']
-BOOL __stdcall D2Common_11040(int nSkillId);
+BOOL __stdcall SKILLS_IsEnhanceable(int nSkillId);
 
 /// @ordinal 11041
 /// @name SKILLS_GetClassSkillId
@@ -5905,7 +5905,7 @@ int __stdcall SKILLS_GetClassSkillId(int nClassId, int nPosition);
 int __stdcall SKILLS_GetPlayerSkillCount(int nClassId);
 
 /// @ordinal 11043
-/// @name D2Common_11043
+/// @name 
 /// @address 6fdb4180
 /// Not imported by any .dll
 /// @guessedtype int __stdcall(int pUnit)
@@ -5929,46 +5929,46 @@ int __stdcall D2Common_11049_SKILLS_Return1(int a1);
 int __stdcall SKILLS_Return1(int a1);
 
 /// @ordinal 11050
-/// @name D2Common_11050
+/// @name 
 /// @address 6fda54e0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-signed int __stdcall D2Common_11050(D2UnitStrc *pFrameCount, signed int nFrame);
+signed int __stdcall(D2UnitStrc *pFrameCount, signed int nFrame);
 
 /// @ordinal 11051
-/// @name D2Common_11051
+/// @name MONSTERS_GetMaximalLightRadius
 /// @address 6fda6410
 /// Imported by ['D2Client.dll']
-BYTE __stdcall D2Common_11051(D2UnitStrc *pUnit);
+BYTE __stdcall MONSTERS_GetMaximalLightRadius(D2UnitStrc *pUnit);
 
 /// @ordinal 11052
-/// @name D2Common_11052
+/// @name 
 /// @address 6fda55e0
 /// Not imported by any .dll
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 11053
-/// @name D2Common_11053
+/// @name 
 /// @address 6fda5600
 /// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 11054
-/// @name D2Common_11054
+/// @name 
 /// @address 6fda5620
 /// Not imported by any .dll
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 11055
-/// @name D2Common_11055
+/// @name 
 /// @address 6fda5640
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_11055(unsigned __int8 a1, int *a2, int *a3);
+void __stdcall(unsigned __int8 a1, int *a2, int *a3);
 
 /// @ordinal 11057
-/// @name D2Common_11057
+/// @name MONSTERS_IsSandLeaper
 /// @address 6fda5750
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_11057(D2UnitStrc *pUnit, int a2);
+BOOL __stdcall MONSTERS_IsSandLeaper(D2UnitStrc *pUnit, int a2);
 
 /// @ordinal 11058
 /// @name MONSTERS_IsDemon
@@ -5983,16 +5983,16 @@ BOOL __stdcall MONSTERS_IsDemon(D2UnitStrc *pUnit);
 BOOL __stdcall MONSTERS_IsUndead(D2UnitStrc *pUnit);
 
 /// @ordinal 11060
-/// @name D2Common_11060
+/// @name MONSTERS_IsBoss
 /// @address 6fda58a0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall D2Common_11060(D2MonStatsTxt *pMonStatsTxt, D2UnitStrc *pUnit);
+DWORD __stdcall MONSTERS_IsBoss(D2MonStatsTxt *pMonStatsTxt, D2UnitStrc *pUnit);
 
 /// @ordinal 11061
-/// @name GetMinionSpawnInfo
+/// @name MONSTERS_GetMinionSpawnInfo
 /// @address 6fda5b30
 /// Imported by ['D2Game.dll']
-void __stdcall GetMinionSpawnInfo(D2UnitStrc *pMonster, int *pId, int *pX, int *pY, int *a5, int a6, int (__fastcall *pfCallback)(D2UnitStrc *));
+void __stdcall MONSTERS_GetMinionSpawnInfo(D2UnitStrc *pMonster, int *pId, int *pX, int *pY, int *a5, int a6, int (__fastcall *pfCallback)(D2UnitStrc *));
 
 /// @ordinal 11062
 /// @name D2Common_11077_Return
@@ -6001,10 +6001,10 @@ void __stdcall GetMinionSpawnInfo(D2UnitStrc *pMonster, int *pId, int *pX, int *
 void __stdcall D2Common_11077_Return(int arg, int a2);
 
 /// @ordinal 11063
-/// @name D2Common_11063
+/// @name 
 /// @address 6fda64b0
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_11063(D2RoomStrc *pRoom, int nMonsterId);
+int __stdcall(D2RoomStrc *pRoom, int nMonsterId);
 
 /// @ordinal 11064
 /// @name MONSTERS_IsDead
@@ -6019,10 +6019,10 @@ int __stdcall MONSTERS_IsDead(D2UnitStrc *pUnit);
 BOOL __stdcall MONSTERS_IsPrimeEvil(D2UnitStrc *pMonster);
 
 /// @ordinal 11066
-/// @name MONSTERS_GetMissileDirectionFromTurretMonster
+/// @name 
 /// @address 6fda6680
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall MONSTERS_GetMissileDirectionFromTurretMonster(D2UnitStrc *pMonster, int *pDirectionX, int *pDirectionY);
+void __stdcall(D2UnitStrc *pMonster, int *pDirectionX, int *pDirectionY);
 
 /// @ordinal 11067
 /// @name MONSTERS_GetHirelingTypeId
@@ -6037,16 +6037,16 @@ int __stdcall MONSTERS_GetHirelingTypeId(D2UnitStrc *pUnit);
 int __stdcall GetCompInfo(D2UnitStrc *pMonster, int nComponent);
 
 /// @ordinal 11069
-/// @name D2Common_11069
+/// @name 
 /// @address 6fda52f0
 /// Imported by ['D2Client.dll']
-DWORD __stdcall D2Common_11069(D2UnitStrc *pMonster, unsigned int nComponent, unsigned int a3);
+DWORD __stdcall(D2UnitStrc *pMonster, unsigned int nComponent, unsigned int a3);
 
 /// @ordinal 11070
-/// @name MONSTERS_GetArmorToken
+/// @name 
 /// @address 6fda5450
 /// Imported by ['D2Client.dll']
-DWORD __stdcall MONSTERS_GetArmorToken(int nMonsterId, unsigned int nMode, unsigned int nCompInfo);
+DWORD __stdcall(int nMonsterId, unsigned int nMode, unsigned int nCompInfo);
 
 /// @ordinal 11076
 /// @name D2Common_11077_Return
@@ -6073,16 +6073,16 @@ int __stdcall D2Common_11079_Return0(int arg, int a2);
 int __stdcall Return0(int arg, int a2);
 
 /// @ordinal 11080
-/// @name D2Common_11296_MONSTERS_Return
+/// @name D2Common_11296_Return
 /// @address 6fda5250
 /// Not imported by any .dll
-void __stdcall D2Common_11296_MONSTERS_Return(D2UnitStrc *pUnit);
+void __stdcall D2Common_11296_Return(D2UnitStrc *pUnit);
 
 /// @ordinal 11081
-/// @name D2Common_11081
+/// @name 
 /// @address 6fda4e20
 /// Not imported by any .dll
-signed int __fastcall D2Common_11081(int nLowSeed, D2HirelingInitStrc *pHirelingInit, unsigned __int8 a3);
+signed int __fastcall(int nLowSeed, D2HirelingInitStrc *pHirelingInit, unsigned __int8 a3);
 
 /// @ordinal 11082
 /// @name MONSTERS_HirelingInit
@@ -6127,109 +6127,109 @@ D2UnitStrc *__stdcall UNITFINDS_FindUnitInNeighboredRooms(D2RoomStrc *pRoom, int
 D2UnitStrc *__stdcall UNITFINDS_GetNearestTestedUnit(D2UnitStrc *pUnit, int nX, int nY, int nSize, int (__fastcall *pfnUnitTest)(D2UnitStrc *, D2UnitStrc *));
 
 /// @ordinal 11089
-/// @name D2Common_11089
+/// @name DATATBLS_InitializeCollisionFieldTable
 /// @address 6fd52010
 /// Not imported by any .dll
-BOOL __stdcall D2Common_11089(char *pExpField, int nSize);
+BOOL __stdcall DATATBLS_InitializeCollisionFieldTable(char *pExpField, int nSize);
 
 /// @ordinal 11090
-/// @name D2Common_11090
+/// @name DATATBLS_FreeCollisionFieldTable
 /// @address 6fd520f0
 /// Not imported by any .dll
-BOOL __stdcall D2Common_11090();
+BOOL __stdcall DATATBLS_FreeCollisionFieldTable();
 
 /// @ordinal 11091
-/// @name D2Common_11091
+/// @name DATATBLS_GetCollisionFieldCenter
 /// @address 6fd52140
 /// Not imported by any .dll
-void __stdcall D2Common_11091(int *a1, int *a2);
+void __stdcall DATATBLS_GetCollisionFieldCenter(int *a1, int *a2);
 
 /// @ordinal 11092
-/// @name D2Common_11092
+/// @name DATATBLS_GetCollisionFieldWidth
 /// @address 6fd52160
 /// Not imported by any .dll
-int __stdcall D2Common_11092();
+int __stdcall DATATBLS_GetCollisionFieldWidth();
 
 /// @ordinal 11093
-/// @name D2Common_11093
+/// @name DATATBLS_GetCollisionFieldHeight
 /// @address 6fd52170
 /// Not imported by any .dll
-int __stdcall D2Common_11093();
+int __stdcall DATATBLS_GetCollisionFieldHeight();
 
 /// @ordinal 11094
-/// @name AllocField
+/// @name DATATBLS_AllocField
 /// @address 6fd52180
 /// Not imported by any .dll
-D2FieldStrc *__stdcall AllocField();
+D2FieldStrc *__stdcall DATATBLS_AllocField();
 
 /// @ordinal 11095
-/// @name FreeField
+/// @name DATATBLS_FreeField
 /// @address 6fd521d0
 /// Not imported by any .dll
-void __stdcall FreeField(D2FieldStrc *pField);
+void __stdcall DATATBLS_FreeField(D2FieldStrc *pField);
 
 /// @ordinal 11096
-/// @name FieldSetCoordinates
+/// @name DATATBLS_SetFieldCoordinates
 /// @address 6fd52210
 /// Not imported by any .dll
-void __stdcall FieldSetCoordinates(D2FieldStrc *pField, int nX, int nY);
+void __stdcall DATATBLS_SetFieldCoordinates(D2FieldStrc *pField, int nX, int nY);
 
 /// @ordinal 11097
-/// @name D2Common_11097
+/// @name 
 /// @address 6fd52250
 /// Not imported by any .dll
-int __stdcall D2Common_11097(D2FieldStrc *pField, int a2, int a3);
+int __stdcall(D2FieldStrc *pField, int a2, int a3);
 
 /// @ordinal 11098
-/// @name D2Common_11098
+/// @name 
 /// @address 6fd522a0
 /// Not imported by any .dll
-int __stdcall D2Common_11098(D2FieldStrc *pField, int *pX, int *pY);
+int __stdcall(D2FieldStrc *pField, int *pX, int *pY);
 
 /// @ordinal 11099
-/// @name D2Common_11099
+/// @name 
 /// @address 6fd52360
 /// Not imported by any .dll
-BOOL __stdcall D2Common_11099(D2FieldStrc *pField, D2RoomStrc *pRoom, int nX, int nY, WORD fMask);
+BOOL __stdcall(D2FieldStrc *pField, D2RoomStrc *pRoom, int nX, int nY, WORD fMask);
 
 /// @ordinal 11100
-/// @name LOG_unk
+/// @name LOG_11100
 /// @address 6fda47a0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void LOG_unk(int a1, int a2, int a3, int a4, char *szFile, int nLine, const char *Format, ...);
+void LOG_11100(int a1, int a2, int a3, int a4, char *szFile, int nLine, const char *Format, ...);
 
 /// @ordinal 11101
-/// @name LOG_unk
+/// @name LOG_11101
 /// @address 6fda48e0
 /// Not imported by any .dll
-void LOG_unk(int nGame, int nFrame, int nClient, int a4, int nSize, const char *Format, ...);
+void LOG_11101(int nGame, int nFrame, int nClient, int a4, int nSize, const char *Format, ...);
 
 /// @ordinal 11102
-/// @name LOG_unk
+/// @name LOG_11102
 /// @address 6fda46c0
 /// Imported by ['D2Client.dll']
 /// @guessedtype int()
 
 /// @ordinal 11103
-/// @name LOG_unk
+/// @name LOG_11103
 /// @address 6fda4790
 /// Not imported by any .dll
 /// @guessedtype int()
 
 /// @ordinal 11104
-/// @name LOG_unk
+/// @name LOG_11104
 /// @address 6fda4aa0
 /// Not imported by any .dll
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 11105
-/// @name LOG_unk
+/// @name LOG_11105
 /// @address 6fda4b00
 /// Imported by ['D2Client.dll']
 /// Failed to extract type
 
 /// @ordinal 11106
-/// @name LOG_unk
+/// @name LOG_11106
 /// @address 6fda4b80
 /// Not imported by any .dll
 /// Failed to extract type
@@ -6253,10 +6253,10 @@ void __stdcall QUESTRECORD_SetQuestState(D2BitBufferStrc *pQuestRecord, int nQue
 void __stdcall QUESTRECORD_ClearQuestState(D2BitBufferStrc *pQuestRecord, int nQuest, int nState);
 
 /// @ordinal 11110
-/// @name QUESTRECORD_ResetIntermediateStates
+/// @name QUESTRECORD_ResetIntermediateStateFlags
 /// @address 6fdae8d0
 /// Imported by ['D2Game.dll']
-void __stdcall QUESTRECORD_ResetIntermediateStates(D2BitBufferStrc *pQuestRecord, int nQuest);
+void __stdcall QUESTRECORD_ResetIntermediateStateFlags(D2BitBufferStrc *pQuestRecord, int nQuest);
 
 /// @ordinal 11111
 /// @name QUESTRECORD_AllocRecord
@@ -6361,10 +6361,10 @@ void __stdcall MISSILE_SetSkill(D2UnitStrc *pMissile, int nSkill);
 DWORD __stdcall MISSILE_GetSkill(D2UnitStrc *pMissile);
 
 /// @ordinal 11128
-/// @name MISSILE_GetId
+/// @name MISSILE_GetClassId
 /// @address 6fdba190
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall MISSILE_GetId(D2UnitStrc *pMissile);
+DWORD __stdcall MISSILE_GetClassId(D2UnitStrc *pMissile);
 
 /// @ordinal 11129
 /// @name MISSILE_SetOwner
@@ -6433,28 +6433,28 @@ DWORD __stdcall MISSILE_GetAnimSpeed(D2UnitStrc *pMissile);
 void __stdcall MISSILE_SetAnimSpeed(D2UnitStrc *pMissile, int nAnimSpeed);
 
 /// @ordinal 11140
-/// @name MISSILE_SetStatus
+/// @name MISSILE_SetTargetX
 /// @address 6fdba490
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall MISSILE_SetStatus(D2UnitStrc *pMissile, int nStatus);
+void __stdcall MISSILE_SetTargetX(D2UnitStrc *pMissile, int nStatus);
 
 /// @ordinal 11141
-/// @name MISSILE_GetStatus
+/// @name MISSILE_GetTargetX
 /// @address 6fdba4b0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-DWORD __stdcall MISSILE_GetStatus(D2UnitStrc *pMissile);
+DWORD __stdcall MISSILE_GetTargetX(D2UnitStrc *pMissile);
 
 /// @ordinal 11142
-/// @name D2Common_11142
+/// @name MISSILE_SetTargetY
 /// @address 6fdba4d0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_11142(D2UnitStrc *pMissile, D2PathPointStrc *pPathPoint);
+void __stdcall MISSILE_SetTargetY(D2UnitStrc *pMissile, D2PathPointStrc *pPathPoint);
 
 /// @ordinal 11143
-/// @name D2Common_11143
+/// @name MISSILE_GetTargetY
 /// @address 6fdba4f0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-D2PathPointStrc *__stdcall D2Common_11143(D2UnitStrc *pMissile);
+D2PathPointStrc *__stdcall MISSILE_GetTargetY(D2UnitStrc *pMissile);
 
 /// @ordinal 11144
 /// @name MISSILE_SetHomeType
@@ -6469,52 +6469,52 @@ void __stdcall MISSILE_SetHomeType(D2UnitStrc *pMissile, D2UnitStrc *pTarget);
 void __stdcall MISSILE_GetHomeType(D2UnitStrc *pMissile, int *nHomeType, int *nHomeGUID);
 
 /// @ordinal 11146
-/// @name WAYPOINT_CheckIfWaypointIsActivated
+/// @name WAYPOINTS_IsActivated
 /// @address 6fdc3de0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int __stdcall(int pHistory, int wField)
 
 /// @ordinal 11147
-/// @name WAYPOINT_ActivateWaypoint
+/// @name WAYPOINTS_ActivateWaypoint
 /// @address 6fdc3e80
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int pHistory, int wField)
 
 /// @ordinal 11148
-/// @name WAYPOINT_AllocWaypointData
+/// @name WAYPOINTS_AllocWaypointData
 /// @address 6fdc3f20
 /// Imported by ['D2Client.dll']
 /// @guessedtype int __stdcall(int pMemPool)
 
 /// @ordinal 11149
-/// @name WAYPOINT_FreeWaypointData
+/// @name WAYPOINTS_FreeWaypointData
 /// @address 6fdc3f70
 /// Imported by ['D2Client.dll']
 /// @guessedtype int __stdcall(int pMemPool, int pFree)
 
 /// @ordinal 11150
-/// @name WAYPOINT_CopyAndCheckWaypointData
+/// @name WAYPOINTS_CopyAndValidateWaypointData
 /// @address 6fdc3fd0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
 /// @guessedtype int __stdcall(int pDestination, int pSource)
 
 /// @ordinal 11151
-/// @name WAYPOINT_CheckAndCopyWaypointData
+/// @name WAYPOINTS_ValidateAndCopyWaypointData
 /// @address 6fdc4060
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int pSource, int pDestination)
 
 /// @ordinal 11152
-/// @name WAYPOINT_GetWaypointNoFromLevelId
+/// @name WAYPOINTS_GetWaypointNoFromLevelId
 /// @address 6fdc3d90
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall WAYPOINT_GetWaypointNoFromLevelId(int nLevelId, WORD *nWpNo);
+BOOL __stdcall WAYPOINTS_GetWaypointNoFromLevelId(int nLevelId, WORD *nWpNo);
 
 /// @ordinal 11153
-/// @name WAYPOINT_GetLevelIdFromWpNo
+/// @name WAYPOINTS_GetLevelIdFromWaypointNo
 /// @address 6fdc3d20
 /// Imported by ['D2Client.dll']
-BOOL __stdcall WAYPOINT_GetLevelIdFromWpNo(WORD nWaypointId, int *nLevelId);
+BOOL __stdcall WAYPOINTS_GetLevelIdFromWaypointNo(WORD nWaypointId, int *nLevelId);
 
 /// @ordinal 11213
 /// @name MISSTREAM_AllocMissileStream
@@ -6529,214 +6529,214 @@ void __stdcall MISSTREAM_AllocMissileStream(D2UnitStrc *pMissile);
 void __stdcall MISSTREAM_FreeMissileStream(D2UnitStrc *pMissile);
 
 /// @ordinal 11215
-/// @name D2Common_11215
+/// @name MISSTREAM_ExecuteHit
 /// @address 6fdbc2e0
 /// Not imported by any .dll
-D2RoomStrc *__stdcall D2Common_11215(D2UnitStrc *pUnit, int a2, int a3, FARPROC pfnHit);
+D2RoomStrc *__stdcall MISSTREAM_ExecuteHit(D2UnitStrc *pUnit, int a2, int a3, FARPROC pfnHit);
 
 /// @ordinal 11216
-/// @name MISSTREAM_Last
+/// @name MISSTREAM_Update
 /// @address 6fdbc3c0
 /// Not imported by any .dll
-int __stdcall MISSTREAM_Last(int a1, D2UnitStrc *pMissile, signed int a3, signed int a4, FARPROC lpfn, void (__thiscall *a6)(_DWORD));
+int __stdcall MISSTREAM_Update(int a1, D2UnitStrc *pMissile, signed int a3, signed int a4, FARPROC lpfn, void (__thiscall *a6)(_DWORD));
 
 /// @ordinal 11217
-/// @name D2Common_11217
+/// @name MISSILE_CalculateDamageData
 /// @address 6fdba5b0
 /// Imported by ['D2Game.dll']
-void __stdcall D2Common_11217(D2MissileDamageDataStrc *pMissileDamageData, D2UnitStrc *pOwner, D2UnitStrc *pOrigin, D2UnitStrc *pMissile, int nLevel);
+void __stdcall MISSILE_CalculateDamageData(D2MissileDamageDataStrc *pMissileDamageData, D2UnitStrc *pOwner, D2UnitStrc *pOrigin, D2UnitStrc *pMissile, int nLevel);
 
 /// @ordinal 11218
-/// @name D2Common_11218
+/// @name MISSILE_SetDamageStats
 /// @address 6fdbb2e0
 /// Imported by ['D2Game.dll']
-void __stdcall D2Common_11218(D2UnitStrc *pOwner, D2UnitStrc *pMissile, D2MissileDamageDataStrc *pMissileDamageData, int nLevel);
+void __stdcall MISSILE_SetDamageStats(D2UnitStrc *pOwner, D2UnitStrc *pMissile, D2MissileDamageDataStrc *pMissileDamageData, int nLevel);
 
 /// @ordinal 11221
-/// @name GetMissileElementalLength
+/// @name MISSILE_GetElementalLength
 /// @address 6fdbbba0
 /// Imported by ['D2Client.dll']
-int __stdcall GetMissileElementalLength(int nUnused, D2UnitStrc *pMissile, int nMissileId, int nLevel);
+int __stdcall MISSILE_GetElementalLength(int nUnused, D2UnitStrc *pMissile, int nMissileId, int nLevel);
 
 /// @ordinal 11222
-/// @name D2Common_11222
+/// @name DRLGPRESET_CountPresetObjectsByAct
 /// @address 6fd859a0
 /// Not imported by any .dll
 /// @guessedtype int __stdcall(int)
 
 /// @ordinal 11223
-/// @name D2Common_11223
+/// @name DRLGPRESET_GetObjectIndexFromObjPreset
 /// @address 6fd859e0
 /// Not imported by any .dll
 /// @guessedtype int __stdcall(int, int)
 
 /// @ordinal 11226
-/// @name CheckActInLevelTypesTxt
+/// @name DATATBLS_CheckActInLevelTypesTxt
 /// @address 6fd614a0
 /// Imported by ['D2Client.dll']
-bool __stdcall CheckActInLevelTypesTxt(int nLevelType, BYTE nAct);
+bool __stdcall DATATBLS_CheckActInLevelTypesTxt(int nLevelType, BYTE nAct);
 
 /// @ordinal 11227
-/// @name D2Common_11227
+/// @name DATATBLS_GetFileNameFromLevelTypeAndFileId
 /// @address 6fd61500
 /// Imported by ['D2Client.dll']
-void __stdcall D2Common_11227(int nLevelType, int nFileId, char *szFile);
+void __stdcall DATATBLS_GetFileNameFromLevelTypeAndFileId(int nLevelType, int nFileId, char *szFile);
 
 /// @ordinal 11229
-/// @name D2Common_11296_MONSTERS_Return
+/// @name D2Common_11296_Return
 /// @address 6fda5250
 /// Not imported by any .dll
-void __stdcall D2Common_11296_MONSTERS_Return(D2UnitStrc *pUnit);
+void __stdcall D2Common_11296_Return(D2UnitStrc *pUnit);
 
 /// @ordinal 11230
-/// @name D2Common_11230
+/// @name SKILLS_RemoveTransformStatesFromShapeshiftedUnit
 /// @address 6fdb4070
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int pUnit)
 
 /// @ordinal 11232
-/// @name GetCubemainTxtRecord
+/// @name DATATBLS_GetCubemainTxtRecord
 /// @address 6fd54260
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int nIndex)
 
 /// @ordinal 11233
-/// @name GetCubemainTxtRecordCount
+/// @name DATATBLS_GetCubemainTxtRecordCount
 /// @address 6fd542c0
 /// Imported by ['D2Game.dll']
-int __fastcall GetCubemainTxtRecordCount();
+int __fastcall DATATBLS_GetCubemainTxtRecordCount();
 
 /// @ordinal 11234
-/// @name D2Common_11234
+/// @name STATES_CheckStateMaskPgsvOnUnit
 /// @address 6fdb4a10
 /// Imported by ['D2Game.dll']
-BOOL __stdcall D2Common_11234(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskPgsvOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 11235
-/// @name D2Common_11239_Return0
+/// @name D2Common_11239_SKILLS_Return0
 /// @address 6fdb2e70
 /// Not imported by any .dll
-int __stdcall D2Common_11239_Return0(int arg);
+int __stdcall D2Common_11239_SKILLS_Return0(int arg);
 
 /// @ordinal 11236
-/// @name D2Common_11240_SKILLS_Return
+/// @name D2Common_11240_Return
 /// @address 6fdb40f0
 /// Not imported by any .dll
-void __stdcall D2Common_11240_SKILLS_Return(int arg, int a2, int a3);
+void __stdcall D2Common_11240_Return(int arg, int a2, int a3);
 
 /// @ordinal 11237
-/// @name D2Common_11240_SKILLS_Return
+/// @name D2Common_11240_Return
 /// @address 6fdb40f0
 /// Not imported by any .dll
-void __stdcall D2Common_11240_SKILLS_Return(int arg, int a2, int a3);
+void __stdcall D2Common_11240_Return(int arg, int a2, int a3);
 
 /// @ordinal 11238
-/// @name D2Common_11238
+/// @name UNITS_IsCorpseUseable
 /// @address 6fdc2860
 /// Imported by ['D2Game.dll']
 /// @guessedtype int __stdcall(int pUnit)
 
 /// @ordinal 11239
-/// @name Return0
+/// @name SKILLS_Return0
 /// @address 6fdb2e70
 /// Not imported by any .dll
-int __stdcall Return0(int arg);
+int __stdcall SKILLS_Return0(int arg);
 
 /// @ordinal 11240
-/// @name SKILLS_Return
+/// @name Return
 /// @address 6fdb40f0
 /// Not imported by any .dll
-void __stdcall SKILLS_Return(int arg, int a2, int a3);
+void __stdcall Return(int arg, int a2, int a3);
 
 /// @ordinal 11241
-/// @name D2Common_11296_MONSTERS_Return
+/// @name D2Common_11296_Return
 /// @address 6fda5250
 /// Not imported by any .dll
-void __stdcall D2Common_11296_MONSTERS_Return(D2UnitStrc *pUnit);
+void __stdcall D2Common_11296_Return(D2UnitStrc *pUnit);
 
 /// @ordinal 11242
-/// @name ToggleDebugMode
+/// @name DATATBLS_ToggleCompileTxtFlag
 /// @address 6fd500f0
 /// Imported by ['D2Client.dll']
-void __stdcall ToggleDebugMode(BOOL bSilent);
+void __stdcall DATATBLS_ToggleCompileTxtFlag(BOOL bSilent);
 
 /// @ordinal 11243
-/// @name GetStatListData
+/// @name STATLIST_GetBaseStatsData
 /// @address 6fdb8c00
 /// Imported by ['D2Game.dll']
-int __stdcall GetStatListData(D2StatListExStrc *pStatList, D2StatStrc *pStatBuffer, int nBufferSize);
+int __stdcall STATLIST_GetBaseStatsData(D2StatListExStrc *pStatList, D2StatStrc *pStatBuffer, int nBufferSize);
 
 /// @ordinal 11244
-/// @name GetItemRealmData
+/// @name ITEMS_GetRealmData
 /// @address 6fd9dfe0
 /// Not imported by any .dll
-void __stdcall GetItemRealmData(D2UnitStrc *pItem, int *pRealmData0, int *pRealmData1);
+void __stdcall ITEMS_GetRealmData(D2UnitStrc *pItem, int *pRealmData0, int *pRealmData1);
 
 /// @ordinal 11245
-/// @name SetItemRealmData
+/// @name ITEMS_SetRealmData
 /// @address 6fd9e070
 /// Not imported by any .dll
-void __stdcall SetItemRealmData(D2UnitStrc *pItem, int a2, int a3);
+void __stdcall ITEMS_SetRealmData(D2UnitStrc *pItem, int a2, int a3);
 
 /// @ordinal 11246
-/// @name D2Common_11246
+/// @name 
 /// @address 6fda6790
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall D2Common_11246(D2UnitStrc *pMonster, int a2, BYTE a3);
+void __stdcall(D2UnitStrc *pMonster, int a2, BYTE a3);
 
 /// @ordinal 11247
-/// @name GetMonsterLevelInArea
+/// @name DATATBLS_GetMonsterLevelInArea
 /// @address 6fd604f0
 /// Imported by ['D2Game.dll']
-int __stdcall GetMonsterLevelInArea(int nLevelId, BYTE nDifficulty, BOOL bExpansion);
+int __stdcall DATATBLS_GetMonsterLevelInArea(int nLevelId, BYTE nDifficulty, BOOL bExpansion);
 
 /// @ordinal 11248
-/// @name D2Common_11248
+/// @name 
 /// @address 6fdb9b10
 /// Imported by ['D2Client.dll']
-int __stdcall D2Common_11248(D2UnitStrc *pUnused, D2UnitStrc *pUnit, int nStatId);
+int __stdcall(D2UnitStrc *pUnused, D2UnitStrc *pUnit, int nStatId);
 
 /// @ordinal 11249
-/// @name GetExpRatio
+/// @name DATATBLS_GetExpRatio
 /// @address 6fd49680
 /// Imported by ['D2Game.dll']
-DWORD __stdcall GetExpRatio(int nClass);
+DWORD __stdcall DATATBLS_GetExpRatio(int nClass);
 
 /// @ordinal 11250
-/// @name GetMonSoundsTxtRecord
+/// @name DATATBLS_GetMonSoundsTxtRecordFromMonsterId
 /// @address 6fd6bf80
 /// Imported by ['D2Client.dll']
 /// @guessedtype int __stdcall(int nMonsterId)
 
 /// @ordinal 11252
-/// @name GetMonSoundsTxtRecord
+/// @name DATATBLS_GetMonSoundsTxtRecordFromSoundId
 /// @address 6fd6bf50
 /// Imported by ['D2Client.dll']
 /// @guessedtype int __stdcall(int nSoundId)
 
 /// @ordinal 11255
-/// @name GetCodeFromCompCodeTxt
+/// @name DATATBLS_GetCodeFromCompCodeTxt
 /// @address 6fd49660
 /// Not imported by any .dll
-DWORD __stdcall GetCodeFromCompCodeTxt(int nCompCode);
+DWORD __stdcall DATATBLS_GetCodeFromCompCodeTxt(int nCompCode);
 
 /// @ordinal 11256
-/// @name GetMonPresetTxtActSection
+/// @name DATATBLS_GetMonPresetTxtActSection
 /// @address 6fd6ef30
 /// Not imported by any .dll
 /// @guessedtype int __stdcall(int nAct, int)
 
 /// @ordinal 11257
-/// @name GetSuperUniquesTxtRecordCount
+/// @name DATATBLS_GetSuperUniquesTxtRecordCount
 /// @address 6fd6a470
 /// Imported by ['D2Game.dll']
-int __fastcall GetSuperUniquesTxtRecordCount();
+int __fastcall DATATBLS_GetSuperUniquesTxtRecordCount();
 
 /// @ordinal 11258
-/// @name MapSuperUniqueId
+/// @name DATATBLS_MapSuperUniqueId
 /// @address 6fd6ef70
 /// Imported by ['D2Game.dll']
-int __stdcall MapSuperUniqueId(int nMonsterType, int nMonsterId);
+int __stdcall DATATBLS_MapSuperUniqueId(int nMonsterType, int nMonsterId);
 
 /// @ordinal 11259
 /// @name UNITS_AllocUnit
@@ -6751,34 +6751,34 @@ D2UnitStrc *__stdcall UNITS_AllocUnit(void *pMemPool, DWORD dwUnitType);
 void __stdcall UNITS_FreeUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 11261
-/// @name D2Common_11261
+/// @name DATATBLS_CalculateMonsterStatsByLevel
 /// @address 6fd67bd0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_11261(int nMonsterId, int nGameType, int nDifficulty, int nLevel, __int16 nFlags, D2UnkMonInitStrc *a6);
+BOOL __stdcall DATATBLS_CalculateMonsterStatsByLevel(int nMonsterId, int nGameType, int nDifficulty, int nLevel, __int16 nFlags, D2UnkMonInitStrc *a6);
 
 /// @ordinal 11262
-/// @name GetMonSeqTableRecord
+/// @name DATATBLS_GetMonSeqTableRecord
 /// @address 6fd6f200
 /// Not imported by any .dll
-D2SeqRecordStrc *__stdcall GetMonSeqTableRecord(int nSequence);
+D2SeqRecordStrc *__stdcall DATATBLS_GetMonSeqTableRecord(int nSequence);
 
 /// @ordinal 11263
-/// @name D2Common_11263
+/// @name COLLISION_RayTrace
 /// @address 6fd45210
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_11263(D2RoomStrc *pRoom, D2CoordStrc *pBeginCoord, D2CoordStrc *pEndCoord, uint16_t nCollisionType);
+BOOL __stdcall COLLISION_RayTrace(D2RoomStrc *pRoom, D2CoordStrc *pBeginCoord, D2CoordStrc *pEndCoord, uint16_t nCollisionType);
 
 /// @ordinal 11264
-/// @name D2Common_10167_PATH_SetRoom
+/// @name STATLIST_SetSkillId
 /// @address 6fda9e60
 /// Imported by ['D2Game.dll']
-void __stdcall D2Common_10167_PATH_SetRoom(D2DynamicPathStrc *pDynamicPath, D2RoomStrc *pRoom);
+void __stdcall STATLIST_SetSkillId(D2DynamicPathStrc *pDynamicPath, D2RoomStrc *pRoom);
 
 /// @ordinal 11265
-/// @name D2Common_10166_PathGetRoom
+/// @name STATLIST_GetSkillId
 /// @address 6fdb9c10
 /// Imported by ['D2Game.dll']
-D2RoomStrc *__stdcall D2Common_10166_PathGetRoom(D2DynamicPathStrc *pPath);
+D2RoomStrc *__stdcall STATLIST_GetSkillId(D2DynamicPathStrc *pPath);
 
 /// @ordinal 11266
 /// @name STATLIST_SetSkillLevel
@@ -6787,16 +6787,16 @@ D2RoomStrc *__stdcall D2Common_10166_PathGetRoom(D2DynamicPathStrc *pPath);
 void __stdcall STATLIST_SetSkillLevel(D2StatListExStrc *pStatList, int nSkillLevel);
 
 /// @ordinal 11267
-/// @name D2Common_10168_PATH_GetNextRoom
+/// @name STATLIST_GetSkillLevel
 /// @address 6fda9e70
 /// Imported by ['D2Game.dll']
-D2RoomStrc *__stdcall D2Common_10168_PATH_GetNextRoom(D2DynamicPathStrc *pDynamicPath);
+D2RoomStrc *__stdcall STATLIST_GetSkillLevel(D2DynamicPathStrc *pDynamicPath);
 
 /// @ordinal 11268
-/// @name D2Common_11268
+/// @name STATLIST_GetFullStatsDataFromUnit
 /// @address 6fdb8ba0
 /// Not imported by any .dll
-int __stdcall D2Common_11268(D2UnitStrc *pUnit, D2StatStrc *pStat, int nStats);
+int __stdcall STATLIST_GetFullStatsDataFromUnit(D2UnitStrc *pUnit, D2StatStrc *pStat, int nStats);
 
 /// @ordinal 11269
 /// @name CopyStats
@@ -6805,166 +6805,166 @@ int __stdcall D2Common_11268(D2UnitStrc *pUnit, D2StatStrc *pStat, int nStats);
 int __stdcall CopyStats(D2StatListExStrc *pStatlist, WORD wStat, D2StatStrc *pBuffer, size_t nBufferSize);
 
 /// @ordinal 11270
-/// @name D2Common_11270
+/// @name STATLIST_CopyStats
 /// @address 6fdb9d20
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall D2Common_11270(D2UnitStrc *a1, WORD wStat, D2StatStrc *pBuffer, size_t nBufferSize);
+int __stdcall STATLIST_CopyStats(D2UnitStrc *a1, WORD wStat, D2StatStrc *pBuffer, size_t nBufferSize);
 
 /// @ordinal 11271
-/// @name D2Common_11271
+/// @name SKILLS_GetSpecialParamValue
 /// @address 6fdaeb60
 /// Not imported by any .dll
-int __stdcall D2Common_11271(D2UnitStrc *pUnit, unsigned __int8 a2, int nSkillId, int nSkillLevel);
+int __stdcall SKILLS_GetSpecialParamValue(D2UnitStrc *pUnit, unsigned __int8 a2, int nSkillId, int nSkillLevel);
 
 /// @ordinal 11272
-/// @name D2Common_11272
+/// @name STATES_CheckStateMaskRemHitOnUnit
 /// @address 6fdb4c30
 /// Imported by ['D2Game.dll']
-BOOL __stdcall D2Common_11272(D2UnitStrc *pUnit);
+BOOL __stdcall STATES_CheckStateMaskRemHitOnUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 11273
-/// @name D2Common_11273
+/// @name 
 /// @address 6fdb9d60
 /// Not imported by any .dll
-int __stdcall D2Common_11273(D2UnitStrc *pUnit, int a2);
+int __stdcall(D2UnitStrc *pUnit, int a2);
 
 /// @ordinal 11274
-/// @name D2Common_11274
+/// @name 
 /// @address 6fdb9d90
 /// Not imported by any .dll
-BOOL __stdcall D2Common_11274(D2UnitStrc *pTarget, D2UnitStrc *pUnit);
+BOOL __stdcall(D2UnitStrc *pTarget, D2UnitStrc *pUnit);
 
 /// @ordinal 11275
-/// @name D2Common_11275
+/// @name 
 /// @address 6fdb9e60
 /// Not imported by any .dll
-BOOL __stdcall D2Common_11275(D2UnitStrc *pTarget, D2UnitStrc *pUnit);
+BOOL __stdcall(D2UnitStrc *pTarget, D2UnitStrc *pUnit);
 
 /// @ordinal 11276
-/// @name EvalSkillCalc
+/// @name SKILLS_EvaluateSkillFormula
 /// @address 6fdaf7e0
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall EvalSkillCalc(D2UnitStrc *pUnit, unsigned int nCalc, int nSkillId, int nSkillLevel);
+int __stdcall SKILLS_EvaluateSkillFormula(D2UnitStrc *pUnit, unsigned int nCalc, int nSkillId, int nSkillLevel);
 
 /// @ordinal 11277
-/// @name D2Common_11296_MONSTERS_Return
+/// @name D2Common_11296_Return
 /// @address 6fda5250
 /// Imported by ['D2Game.dll']
-void __stdcall D2Common_11296_MONSTERS_Return(D2UnitStrc *pUnit);
+void __stdcall D2Common_11296_Return(D2UnitStrc *pUnit);
 
 /// @ordinal 11278
-/// @name INVENTORY_GetItemsXPos
+/// @name INVENTORY_GetItemsXPosition
 /// @address 6fd8fed0
 /// Imported by ['D2Game.dll']
-DWORD __stdcall INVENTORY_GetItemsXPos(D2InventoryStrc *pInventory, D2UnitStrc *pUnit);
+DWORD __stdcall INVENTORY_GetItemsXPosition(D2InventoryStrc *pInventory, D2UnitStrc *pUnit);
 
 /// @ordinal 11279
-/// @name UNITROOM_First
+/// @name UNITROOM_AddUnitToRoomEx
 /// @address 6fdbcf10
 /// Imported by ['D2Game.dll']
-int __stdcall UNITROOM_First(D2UnitStrc *pUnit, D2RoomStrc *pRoom, int nUnused);
+int __stdcall UNITROOM_AddUnitToRoomEx(D2UnitStrc *pUnit, D2RoomStrc *pRoom, int nUnused);
 
 /// @ordinal 11280
-/// @name D2Common_11280
+/// @name MONSTERS_GetSpawnMode_XY
 /// @address 6fda5930
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-signed int __stdcall D2Common_11280(D2UnitStrc *pUnit, int a2, int nSkillId, int nUnused, int *pSpawnMode, int *pX, int *pY);
+signed int __stdcall MONSTERS_GetSpawnMode_XY(D2UnitStrc *pUnit, int a2, int nSkillId, int nUnused, int *pSpawnMode, int *pX, int *pY);
 
 /// @ordinal 11281
-/// @name Unused
+/// @name CollisionPatternFromSize
 /// @address 6fda9250
 /// Not imported by any .dll
-signed int __stdcall Unused(D2UnitStrc *pUnit, int a2);
+signed int __stdcall CollisionPatternFromSize(D2UnitStrc *pUnit, int a2);
 
 /// @ordinal 11282
-/// @name Unused
+/// @name PATH_GetCollisionPatternFromMonStats2Txt
 /// @address 6fda91b0
 /// Not imported by any .dll
-int __stdcall Unused(int nMonsterId);
+int __stdcall PATH_GetCollisionPatternFromMonStats2Txt(int nMonsterId);
 
 /// @ordinal 11283
-/// @name SKILLS_Last
+/// @name SKILLS_CalculateKickDamage
 /// @address 6fdb4260
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall SKILLS_Last(D2UnitStrc *pUnit, int *pMinDamage, int *pMaxDamage, int *pDamagePercent);
+void __stdcall SKILLS_CalculateKickDamage(D2UnitStrc *pUnit, int *pMinDamage, int *pMaxDamage, int *pDamagePercent);
 
 /// @ordinal 11284
-/// @name EvalMissileCalc
+/// @name MISSILE_EvaluateMissileFormula
 /// @address 6fdbc170
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall EvalMissileCalc(D2UnitStrc *pMissile, D2UnitStrc *pOwner, DWORD nId, int nMissile, int nLevel);
+int __stdcall MISSILE_EvaluateMissileFormula(D2UnitStrc *pMissile, D2UnitStrc *pOwner, DWORD nId, int nMissile, int nLevel);
 
 /// @ordinal 11285
-/// @name MissileGetMinDamage
+/// @name MISSILE_GetMinDamage
 /// @address 6fdbb5a0
 /// Imported by ['D2Client.dll']
-int __stdcall MissileGetMinDamage(D2UnitStrc *pMissile, D2UnitStrc *pOwner, int nId, int nLevel);
+int __stdcall MISSILE_GetMinDamage(D2UnitStrc *pMissile, D2UnitStrc *pOwner, int nId, int nLevel);
 
 /// @ordinal 11286
-/// @name MissileGetMaxDamage
+/// @name MISSILE_GetMaxDamage
 /// @address 6fdbb710
 /// Imported by ['D2Client.dll']
-int __stdcall MissileGetMaxDamage(D2UnitStrc *pMissile, D2UnitStrc *pOwner, int nId, int nLevel);
+int __stdcall MISSILE_GetMaxDamage(D2UnitStrc *pMissile, D2UnitStrc *pOwner, int nId, int nLevel);
 
 /// @ordinal 11287
-/// @name MissileGetMinElemDamage
+/// @name MISSILE_GetMinElemDamage
 /// @address 6fdbb8c0
 /// Imported by ['D2Client.dll']
-int __stdcall MissileGetMinElemDamage(D2UnitStrc *pMissile, D2UnitStrc *pOwner, int nId, int nLevel);
+int __stdcall MISSILE_GetMinElemDamage(D2UnitStrc *pMissile, D2UnitStrc *pOwner, int nId, int nLevel);
 
 /// @ordinal 11288
-/// @name MissileGetMaxElemDamage
+/// @name MISSILE_GetMaxElemDamage
 /// @address 6fdbba30
 /// Imported by ['D2Client.dll']
-int __stdcall MissileGetMaxElemDamage(D2UnitStrc *pMissile, D2UnitStrc *pOwner, int nId, int nLevel);
+int __stdcall MISSILE_GetMaxElemDamage(D2UnitStrc *pMissile, D2UnitStrc *pOwner, int nId, int nLevel);
 
 /// @ordinal 11289
-/// @name GetElemTypeFromMissileId
+/// @name MISSILE_GetElemTypeFromMissileId
 /// @address 6fdbb880
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-char __stdcall GetElemTypeFromMissileId(int nMissileId);
+char __stdcall MISSILE_GetElemTypeFromMissileId(int nMissileId);
 
 /// @ordinal 11290
-/// @name D2Common_11290
+/// @name MISSILE_GetSpecialParamValue
 /// @address 6fdbbc50
 /// Not imported by any .dll
-int __stdcall D2Common_11290(D2UnitStrc *pMissile, D2UnitStrc *pOwner, int, int nId, int nLevel);
+int __stdcall MISSILE_GetSpecialParamValue(D2UnitStrc *pMissile, D2UnitStrc *pOwner, int, int nId, int nLevel);
 
 /// @ordinal 11291
-/// @name SetNumberOfPathPoints
+/// @name PATH_SetNumberOfPathPoints
 /// @address 6fda9b90
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-void __stdcall SetNumberOfPathPoints(D2DynamicPathStrc *pDynamicPath, int a2);
+void __stdcall PATH_SetNumberOfPathPoints(D2DynamicPathStrc *pDynamicPath, int a2);
 
 /// @ordinal 11292
-/// @name ITEMS_ItemAssignProperty
+/// @name ItemAssignProperty
 /// @address 6fd98160
 /// Imported by ['D2Game.dll']
-void __stdcall ITEMS_ItemAssignProperty(D2C_PropertyModes nPropertyMode, D2UnitStrc *pUnit, D2UnitStrc *pItem, void *pMods, int nIndex, int nPropSet, D2PropertyStrc *pProperty, int nState, int fStatlist, int nSubType);
+void __stdcall ItemAssignProperty(D2C_PropertyModes nPropertyMode, D2UnitStrc *pUnit, D2UnitStrc *pItem, void *pMods, int nIndex, int nPropSet, D2PropertyStrc *pProperty, int nState, int fStatlist, int nSubType);
 
 /// @ordinal 11293
-/// @name D2Common_11293
+/// @name ITEMMODS_GetItemCharges
 /// @address 6fd926c0
 /// Imported by ['D2Game.dll']
-BOOL __stdcall D2Common_11293(D2UnitStrc *pItem, int nSkillId, int a3, int *pValue, D2StatListStrc **ppStatList);
+BOOL __stdcall ITEMMODS_GetItemCharges(D2UnitStrc *pItem, int nSkillId, int a3, int *pValue, D2StatListStrc **ppStatList);
 
 /// @ordinal 11294
-/// @name D2Common_SetBaseStat_11294
+/// @name STATLIST_SetBaseStat
 /// @address 6fdb7930
 /// Not imported by any .dll
-BOOL __stdcall D2Common_SetBaseStat_11294(D2StatListStrc *pStatList, int a2, int nValue, unsigned __int16 a4, int a5);
+BOOL __stdcall STATLIST_SetBaseStat(D2StatListStrc *pStatList, int a2, int nValue, unsigned __int16 a4, int a5);
 
 /// @ordinal 11295
-/// @name D2Common_11295
+/// @name STATLIST_SetBaseStat2
 /// @address 6fdb7a90
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_11295(D2StatListStrc *a1, int a2, int a3, unsigned __int16 a4, int a5);
+BOOL __stdcall STATLIST_SetBaseStat2(D2StatListStrc *a1, int a2, int a3, unsigned __int16 a4, int a5);
 
 /// @ordinal 11296
-/// @name MONSTERS_Return
+/// @name Return
 /// @address 6fda5250
 /// Not imported by any .dll
-void __stdcall MONSTERS_Return(D2UnitStrc *pUnit);
+void __stdcall Return(D2UnitStrc *pUnit);
 
 /// @ordinal 11297
 /// @name MONSTERS_SetMonsterNameInMonsterData
@@ -6973,62 +6973,62 @@ void __stdcall MONSTERS_Return(D2UnitStrc *pUnit);
 void __fastcall MONSTERS_SetMonsterNameInMonsterData(D2UnitStrc *pUnit, wchar_t *wszName);
 
 /// @ordinal 11298
-/// @name D2Common_11298
+/// @name DATATBLS_GetUnitNameFromUnit
 /// @address 6fd4f990
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-char *__stdcall D2Common_11298(D2UnitStrc *pUnit, char *szName);
+char *__stdcall DATATBLS_GetUnitNameFromUnit(D2UnitStrc *pUnit, char *szName);
 
 /// @ordinal 11299
-/// @name D2Common_11299
+/// @name DATATBLS_GetUnitNameFromUnitTypeAndClassId
 /// @address 6fd4fb50
 /// Not imported by any .dll
-char *__stdcall D2Common_11299(D2C_UnitTypes nUnitType, int nUnitId, char *Format);
+char *__stdcall DATATBLS_GetUnitNameFromUnitTypeAndClassId(D2C_UnitTypes nUnitType, int nUnitId, char *Format);
 
 /// @ordinal 11300
-/// @name EvalItemCalc
+/// @name ITEMMODS_EvaluateItemFormula
 /// @address 6fd98300
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-int __stdcall EvalItemCalc(D2UnitStrc *pUnit, D2UnitStrc *pItem, unsigned int nCalc);
+int __stdcall ITEMMODS_EvaluateItemFormula(D2UnitStrc *pUnit, D2UnitStrc *pItem, unsigned int nCalc);
 
 /// @ordinal 11301
-/// @name D2Common_11301
+/// @name INVENTORY_GetSecondaryWeapon
 /// @address 6fd8fd10
 /// Imported by ['D2Game.dll']
-D2UnitStrc *__stdcall D2Common_11301(D2InventoryStrc *pInventory);
+D2UnitStrc *__stdcall INVENTORY_GetSecondaryWeapon(D2InventoryStrc *pInventory);
 
 /// @ordinal 11302
-/// @name EvalSkillDescCalc
+/// @name SKILLS_EvaluateSkillDescFormula
 /// @address 6fdaf850
 /// Imported by ['D2Client.dll']
-int __stdcall EvalSkillDescCalc(D2UnitStrc *pUnit, int nCalc, int nSkillId, int nSkillLevel);
+int __stdcall SKILLS_EvaluateSkillDescFormula(D2UnitStrc *pUnit, int nCalc, int nSkillId, int nSkillLevel);
 
 /// @ordinal 11303
-/// @name D2Common_11303
+/// @name STATES_CheckStateMaskOnUnit
 /// @address 6fdb5740
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-BOOL __stdcall D2Common_11303(D2UnitStrc *pUnit, int nStateMask);
+BOOL __stdcall STATES_CheckStateMaskOnUnit(D2UnitStrc *pUnit, int nStateMask);
 
 /// @ordinal 11304
-/// @name STATLIST_GetStatCount
+/// @name STATLIST_GetBaseStatsCount
 /// @address 6fdb7280
 /// Not imported by any .dll
-int __stdcall STATLIST_GetStatCount(D2StatListExStrc *pStatListEx);
+int __stdcall STATLIST_GetBaseStatsCount(D2StatListExStrc *pStatListEx);
 
 /// @ordinal 11305
-/// @name D2Common_11305
+/// @name STATLIST_GetFullStatsCountFromUnit
 /// @address 6fdb72a0
 /// Imported by ['D2Game.dll']
-int __stdcall D2Common_11305(D2UnitStrc *pUnit);
+int __stdcall STATLIST_GetFullStatsCountFromUnit(D2UnitStrc *pUnit);
 
 /// @ordinal 11306
-/// @name D2Common_11306
+/// @name INVENTORY_GetBackPackItemByCode
 /// @address 6fd90d50
 /// Not imported by any .dll
-D2UnitStrc *__stdcall D2Common_11306(D2InventoryStrc *pInventory, int nItemCode, D2UnitStrc *a3);
+D2UnitStrc *__stdcall INVENTORY_GetBackPackItemByCode(D2InventoryStrc *pInventory, int nItemCode, D2UnitStrc *a3);
 
 /// @ordinal 11307
-/// @name D2Common_11307
+/// @name UNITS_IsObjectInInteractRange
 /// @address 6fdc2910
 /// Imported by ['D2Client.dll', 'D2Game.dll']
-signed int __stdcall D2Common_11307(D2UnitStrc *a1, D2UnitStrc *pUnit);
+signed int __stdcall UNITS_IsObjectInInteractRange(D2UnitStrc *a1, D2UnitStrc *pUnit);
 
